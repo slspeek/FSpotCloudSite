@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2011-04-13T22:37:01.877">
+<pmd version="4.2.5" timestamp="2011-04-17T22:33:24.659">
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/admin/TagPanel.java">
 <violation beginline="12" endline="12" begincolumn="39" endcolumn="48" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.admin" class="TagPanel" variable="tagService" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'tagService'.
@@ -39,20 +39,6 @@ Avoid unused private fields such as 'log'.
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/MVPSetup.java">
 <violation beginline="17" endline="17" begincolumn="1" endcolumn="38" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.main" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'fspotcloud.client.view.TagView'
-</violation>
-</file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/gin/AppModule.java">
-<violation beginline="8" endline="8" begincolumn="1" endcolumn="36" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.main.gin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'com.google.inject.name.Names'
-</violation>
-<violation beginline="20" endline="20" begincolumn="1" endcolumn="44" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.main.gin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'fspotcloud.client.view.ImageActivity'
-</violation>
-<violation beginline="25" endline="25" begincolumn="1" endcolumn="44" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.main.gin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'fspotcloud.client.view.PagerActivity'
-</violation>
-<violation beginline="35" endline="35" begincolumn="1" endcolumn="42" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.main.gin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'fspotcloud.client.view.TagActivity'
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/ImageViewFactory.java">
