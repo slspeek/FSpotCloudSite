@@ -10,14 +10,14 @@
 
 <a class="jxr_linenumber" name="1" href="#1">1</a>   <strong class="jxr_keyword">package</strong> fspotcloud.server.admin;
 <a class="jxr_linenumber" name="2" href="#2">2</a>   
-<a class="jxr_linenumber" name="3" href="#3">3</a>   <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> com.google.appengine.api.labs.taskqueue.TaskOptions.Builder.url;
+<a class="jxr_linenumber" name="3" href="#3">3</a>   <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> com.google.appengine.api.taskqueue.TaskOptions.Builder.withUrl;
 <a class="jxr_linenumber" name="4" href="#4">4</a>   
 <a class="jxr_linenumber" name="5" href="#5">5</a>   <strong class="jxr_keyword">import</strong> java.util.Collections;
 <a class="jxr_linenumber" name="6" href="#6">6</a>   <strong class="jxr_keyword">import</strong> java.util.TreeSet;
 <a class="jxr_linenumber" name="7" href="#7">7</a>   <strong class="jxr_keyword">import</strong> java.util.logging.Logger;
 <a class="jxr_linenumber" name="8" href="#8">8</a>   
-<a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> com.google.appengine.api.labs.taskqueue.Queue;
-<a class="jxr_linenumber" name="10" href="#10">10</a>  <strong class="jxr_keyword">import</strong> com.google.appengine.api.labs.taskqueue.QueueFactory;
+<a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> com.google.appengine.api.taskqueue.Queue;
+<a class="jxr_linenumber" name="10" href="#10">10</a>  <strong class="jxr_keyword">import</strong> com.google.appengine.api.taskqueue.QueueFactory;
 <a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> com.google.gwt.user.server.rpc.RemoteServiceServlet;
 <a class="jxr_linenumber" name="12" href="#12">12</a>  <strong class="jxr_keyword">import</strong> com.google.inject.Inject;
 <a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">import</strong> com.google.inject.Singleton;
@@ -59,7 +59,7 @@
 <a class="jxr_linenumber" name="49" href="#49">49</a>  		<strong class="jxr_keyword">long</strong> batchId = batchManager.save(batch);
 <a class="jxr_linenumber" name="50" href="#50">50</a>  
 <a class="jxr_linenumber" name="51" href="#51">51</a>  		Queue queue = QueueFactory.getDefaultQueue();
-<a class="jxr_linenumber" name="52" href="#52">52</a>  		queue.add(url(<span class="jxr_string">"/admin/task/photoDelete"</span>).param(<span class="jxr_string">"deleteCount"</span>, <span class="jxr_string">"0"</span>)
+<a class="jxr_linenumber" name="52" href="#52">52</a>  		queue.add(withUrl(<span class="jxr_string">"/admin/task/photoDelete"</span>).param(<span class="jxr_string">"deleteCount"</span>, <span class="jxr_string">"0"</span>)
 <a class="jxr_linenumber" name="53" href="#53">53</a>  				.param(<span class="jxr_string">"batchId"</span>, String.valueOf(batchId)));
 <a class="jxr_linenumber" name="54" href="#54">54</a>  		<strong class="jxr_keyword">return</strong> batchId;
 <a class="jxr_linenumber" name="55" href="#55">55</a>  	}
@@ -91,7 +91,7 @@
 <a class="jxr_linenumber" name="81" href="#81">81</a>  		Batch batch = batchManager.create(<span class="jxr_string">"getServerPhotoCount"</span>);
 <a class="jxr_linenumber" name="82" href="#82">82</a>  		<strong class="jxr_keyword">long</strong> batchId = batchManager.save(batch);
 <a class="jxr_linenumber" name="83" href="#83">83</a>  		Queue queue = QueueFactory.getDefaultQueue();
-<a class="jxr_linenumber" name="84" href="#84">84</a>  		queue.add(url(<span class="jxr_string">"/admin/task/photoCount"</span>).param(<span class="jxr_string">"minDate"</span>, <span class="jxr_string">"0"</span>).param(
+<a class="jxr_linenumber" name="84" href="#84">84</a>  		queue.add(withUrl(<span class="jxr_string">"/admin/task/photoCount"</span>).param(<span class="jxr_string">"minDate"</span>, <span class="jxr_string">"0"</span>).param(
 <a class="jxr_linenumber" name="85" href="#85">85</a>  				<span class="jxr_string">"count"</span>, <span class="jxr_string">"0"</span>).param(<span class="jxr_string">"batchId"</span>, String.valueOf(batchId)));
 <a class="jxr_linenumber" name="86" href="#86">86</a>  		<strong class="jxr_keyword">return</strong> batchId;
 <a class="jxr_linenumber" name="87" href="#87">87</a>  	}
@@ -115,7 +115,7 @@
 <a class="jxr_linenumber" name="105" href="#105">105</a> 		Tag tag = tagManager.getById(tagId);
 <a class="jxr_linenumber" name="106" href="#106">106</a> 		tag.setCachedPhotoList(<strong class="jxr_keyword">new</strong> TreeSet&lt;PhotoInfo&gt;());
 <a class="jxr_linenumber" name="107" href="#107">107</a> 		Queue queue = QueueFactory.getDefaultQueue();
-<a class="jxr_linenumber" name="108" href="#108">108</a> 		queue.add(url(<span class="jxr_string">"/main/task/tagView"</span>).param(<span class="jxr_string">"tagId"</span>, tagId).param(
+<a class="jxr_linenumber" name="108" href="#108">108</a> 		queue.add(withUrl(<span class="jxr_string">"/main/task/tagView"</span>).param(<span class="jxr_string">"tagId"</span>, tagId).param(
 <a class="jxr_linenumber" name="109" href="#109">109</a> 				<span class="jxr_string">"minDate"</span>, <span class="jxr_string">"0"</span>).param(<span class="jxr_string">"batchId"</span>, String.valueOf(batchId)));
 <a class="jxr_linenumber" name="110" href="#110">110</a> 		<strong class="jxr_keyword">return</strong> batchId;
 <a class="jxr_linenumber" name="111" href="#111">111</a> 	}
