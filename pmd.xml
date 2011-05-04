@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2011-05-02T23:53:38.722">
+<pmd version="4.2.5" timestamp="2011-05-05T00:10:33.953">
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/admin/TagPanel.java">
 <violation beginline="12" endline="12" begincolumn="39" endcolumn="48" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.admin" class="TagPanel" variable="tagService" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'tagService'.
@@ -41,22 +41,14 @@ Avoid unused private fields such as 'log'.
 Avoid unused imports such as 'fspotcloud.client.view.TagView'
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/ImageViewFactory.java">
-<violation beginline="13" endline="13" begincolumn="43" endcolumn="53" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.main.ui" class="ImageViewFactory" variable="pagerMapper" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
-Avoid unused private fields such as 'pagerMapper'.
-</violation>
-<violation beginline="14" endline="14" begincolumn="47" endcolumn="61" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.main.ui" class="ImageViewFactory" variable="slideshowMapper" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
-Avoid unused private fields such as 'slideshowMapper'.
-</violation>
-</file>
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/SlideshowTimer.java">
 <violation beginline="25" endline="27" begincolumn="16" endcolumn="9" rule="UselessOverridingMethod" ruleset="Basic Rules" package="fspotcloud.client.main.ui" class="SlideshowTimer" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#UselessOverridingMethod" priority="3">
 Overriding method merely calls super
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/TagViewFactory.java">
-<violation beginline="12" endline="12" begincolumn="47" endcolumn="57" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.main.ui" class="TagViewFactory" variable="imageMapper" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
-Avoid unused private fields such as 'imageMapper'.
+<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/TagViewImpl.java">
+<violation beginline="3" endline="3" begincolumn="1" endcolumn="31" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.main.ui" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.util.logging.Level'
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/TreePanel.java">
@@ -82,17 +74,6 @@ Avoid unused imports such as 'com.google.gwt.activity.shared.ActivityMapper'
 Ensure you override both equals() and hashCode()
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/view/MainWindowActivityMapper.java">
-<violation beginline="9" endline="9" begincolumn="1" endcolumn="36" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.view" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'com.google.inject.name.Named'
-</violation>
-<violation beginline="11" endline="11" begincolumn="1" endcolumn="55" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.view" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'fspotcloud.client.view.ImageView.ImagePresenter'
-</violation>
-<violation beginline="12" endline="12" begincolumn="1" endcolumn="51" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.view" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'fspotcloud.client.view.TagView.TagPresenter'
-</violation>
-</file>
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/view/PagerActivity.java">
 <violation beginline="9" endline="9" begincolumn="1" endcolumn="32" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.view" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'com.google.inject.Inject'
@@ -103,14 +84,27 @@ Avoid unused imports such as 'com.google.inject.Inject'
 Avoid unused private fields such as 'log'.
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/view/TagActivity.java">
-<violation beginline="114" endline="118" begincolumn="25" endcolumn="25" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="fspotcloud.client.view" class="TagActivity" method="onSelectionChange" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="3">
-These nested if statements could be combined
+<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/view/TagView.java">
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="52" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.view" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'com.google.gwt.user.cellview.client.TreeNode'
+</violation>
+<violation beginline="8" endline="8" begincolumn="1" endcolumn="48" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.view" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'com.google.gwt.view.client.TreeViewModel'
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/view/TagViewingPlace.java">
 <violation beginline="14" endline="14" begincolumn="24" endcolumn="43" rule="OverrideBothEqualsAndHashcode" ruleset="Basic Rules" package="fspotcloud.client.view" class="TagViewingPlace" method="equals" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#OverrideBothEqualsAndHashcode" priority="3">
 Ensure you override both equals() and hashCode()
+</violation>
+</file>
+<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/view/TreePresenterImpl.java">
+<violation beginline="85" endline="85" begincolumn="22" endcolumn="34" rule="UnusedPrivateMethod" ruleset="Unused Code Rules" package="fspotcloud.client.view" class="TreePresenterImpl" method="updatePlace" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateMethod" priority="3">
+Avoid unused private methods such as 'updatePlace()'.
+</violation>
+</file>
+<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/view/TreeSelectionHandler.java">
+<violation beginline="26" endline="30" begincolumn="25" endcolumn="25" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="fspotcloud.client.view" class="TreeSelectionHandler" method="onSelectionChange" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="3">
+These nested if statements could be combined
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/view/action/ToggleFullscreenAction.java">
