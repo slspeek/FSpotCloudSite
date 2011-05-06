@@ -47,50 +47,52 @@
 <a class="jxr_linenumber" name="37" href="#37">37</a>  		root1.setCachedPhotoList(<strong class="jxr_keyword">new</strong> PhotoInfoStore(photoList));
 <a class="jxr_linenumber" name="38" href="#38">38</a>  		
 <a class="jxr_linenumber" name="39" href="#39">39</a>  		TagNode cats = createNode(<span class="jxr_string">"2"</span>, <span class="jxr_string">"Cats"</span>, 10);
-<a class="jxr_linenumber" name="40" href="#40">40</a>  		pi1 = <strong class="jxr_keyword">new</strong> PhotoInfo(<span class="jxr_string">"4"</span>, <span class="jxr_string">""</span>, <strong class="jxr_keyword">new</strong> Date());
-<a class="jxr_linenumber" name="41" href="#41">41</a>  		pi2 = <strong class="jxr_keyword">new</strong> PhotoInfo(<span class="jxr_string">"5"</span>, <span class="jxr_string">""</span>, <strong class="jxr_keyword">new</strong> Date());
-<a class="jxr_linenumber" name="42" href="#42">42</a>  		pi3 = <strong class="jxr_keyword">new</strong> PhotoInfo(<span class="jxr_string">"6"</span>, <span class="jxr_string">""</span>, <strong class="jxr_keyword">new</strong> Date());
+<a class="jxr_linenumber" name="40" href="#40">40</a>  		pi1 = <strong class="jxr_keyword">new</strong> PhotoInfo(<span class="jxr_string">"4"</span>, <span class="jxr_string">""</span>, <strong class="jxr_keyword">new</strong> Date(1));
+<a class="jxr_linenumber" name="41" href="#41">41</a>  		pi2 = <strong class="jxr_keyword">new</strong> PhotoInfo(<span class="jxr_string">"5"</span>, <span class="jxr_string">""</span>, <strong class="jxr_keyword">new</strong> Date(2));
+<a class="jxr_linenumber" name="42" href="#42">42</a>  		pi3 = <strong class="jxr_keyword">new</strong> PhotoInfo(<span class="jxr_string">"6"</span>, <span class="jxr_string">""</span>, <strong class="jxr_keyword">new</strong> Date(3));
 <a class="jxr_linenumber" name="43" href="#43">43</a>  		photoList = ImmutableSortedSet.of(pi1, pi2, pi3);
 <a class="jxr_linenumber" name="44" href="#44">44</a>  		cats.setCachedPhotoList(<strong class="jxr_keyword">new</strong> PhotoInfoStore(photoList));
 <a class="jxr_linenumber" name="45" href="#45">45</a>  		
 <a class="jxr_linenumber" name="46" href="#46">46</a>  		TagNode root3 = createNode(<span class="jxr_string">"3"</span>, <span class="jxr_string">"Languages"</span>, 10);
-<a class="jxr_linenumber" name="47" href="#47">47</a>  		pi1 = <strong class="jxr_keyword">new</strong> PhotoInfo(<span class="jxr_string">"7"</span>, <span class="jxr_string">""</span>, <strong class="jxr_keyword">new</strong> Date());
-<a class="jxr_linenumber" name="48" href="#48">48</a>  		pi2 = <strong class="jxr_keyword">new</strong> PhotoInfo(<span class="jxr_string">"8"</span>, <span class="jxr_string">""</span>, <strong class="jxr_keyword">new</strong> Date());
-<a class="jxr_linenumber" name="49" href="#49">49</a>  		pi3 = <strong class="jxr_keyword">new</strong> PhotoInfo(<span class="jxr_string">"9"</span>, <span class="jxr_string">""</span>, <strong class="jxr_keyword">new</strong> Date());
-<a class="jxr_linenumber" name="50" href="#50">50</a>  		photoList = ImmutableSortedSet.of(pi1, pi2, pi3);
-<a class="jxr_linenumber" name="51" href="#51">51</a>  		root3.setCachedPhotoList(<strong class="jxr_keyword">new</strong> PhotoInfoStore(photoList));
-<a class="jxr_linenumber" name="52" href="#52">52</a>  		
-<a class="jxr_linenumber" name="53" href="#53">53</a>  		TagNode felix = createNode(<span class="jxr_string">"4"</span>, <span class="jxr_string">"Felix"</span>, 2);
-<a class="jxr_linenumber" name="54" href="#54">54</a>  		pi1 = <strong class="jxr_keyword">new</strong> PhotoInfo(<span class="jxr_string">"11"</span>, <span class="jxr_string">""</span>, <strong class="jxr_keyword">new</strong> Date());
-<a class="jxr_linenumber" name="55" href="#55">55</a>  		pi2 = <strong class="jxr_keyword">new</strong> PhotoInfo(<span class="jxr_string">"12"</span>, <span class="jxr_string">""</span>, <strong class="jxr_keyword">new</strong> Date());
-<a class="jxr_linenumber" name="56" href="#56">56</a>  		pi3 = <strong class="jxr_keyword">new</strong> PhotoInfo(<span class="jxr_string">"13"</span>, <span class="jxr_string">""</span>, <strong class="jxr_keyword">new</strong> Date());
-<a class="jxr_linenumber" name="57" href="#57">57</a>  		photoList = ImmutableSortedSet.of(pi1, pi2, pi3);
-<a class="jxr_linenumber" name="58" href="#58">58</a>  		felix.setCachedPhotoList(<strong class="jxr_keyword">new</strong> PhotoInfoStore(photoList));	
-<a class="jxr_linenumber" name="59" href="#59">59</a>  		
-<a class="jxr_linenumber" name="60" href="#60">60</a>  		TagNode woefje = createNode(<span class="jxr_string">"5"</span>, <span class="jxr_string">"Woefje"</span>, 1);
-<a class="jxr_linenumber" name="61" href="#61">61</a>  		pi1 = <strong class="jxr_keyword">new</strong> PhotoInfo(<span class="jxr_string">"21"</span>, <span class="jxr_string">""</span>, <strong class="jxr_keyword">new</strong> Date());
-<a class="jxr_linenumber" name="62" href="#62">62</a>  		pi2 = <strong class="jxr_keyword">new</strong> PhotoInfo(<span class="jxr_string">"22"</span>, <span class="jxr_string">""</span>, <strong class="jxr_keyword">new</strong> Date());
-<a class="jxr_linenumber" name="63" href="#63">63</a>  		pi3 = <strong class="jxr_keyword">new</strong> PhotoInfo(<span class="jxr_string">"23"</span>, <span class="jxr_string">""</span>, <strong class="jxr_keyword">new</strong> Date());
-<a class="jxr_linenumber" name="64" href="#64">64</a>  		photoList = ImmutableSortedSet.of(pi1, pi2, pi3);
-<a class="jxr_linenumber" name="65" href="#65">65</a>  		woefje.setCachedPhotoList(<strong class="jxr_keyword">new</strong> PhotoInfoStore(photoList));
-<a class="jxr_linenumber" name="66" href="#66">66</a>  		
-<a class="jxr_linenumber" name="67" href="#67">67</a>  		cats.addChild(felix);
-<a class="jxr_linenumber" name="68" href="#68">68</a>  		cats.addChild(woefje);
-<a class="jxr_linenumber" name="69" href="#69">69</a>  		tagTreeData = ImmutableList.of(root1, cats, root3);
-<a class="jxr_linenumber" name="70" href="#70">70</a>  		<strong class="jxr_keyword">return</strong> tagTreeData;
-<a class="jxr_linenumber" name="71" href="#71">71</a>  	}
-<a class="jxr_linenumber" name="72" href="#72">72</a>  	
-<a class="jxr_linenumber" name="73" href="#73">73</a>  	@Override
-<a class="jxr_linenumber" name="74" href="#74">74</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> keysForTag(String tagId, AsyncCallback&lt;List&lt;String&gt;&gt; callback) {
-<a class="jxr_linenumber" name="75" href="#75">75</a>  		<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> UnsupportedOperationException();
-<a class="jxr_linenumber" name="76" href="#76">76</a>  	}
-<a class="jxr_linenumber" name="77" href="#77">77</a>  
-<a class="jxr_linenumber" name="78" href="#78">78</a>  	@Override
-<a class="jxr_linenumber" name="79" href="#79">79</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> loadTagTree(AsyncCallback&lt;List&lt;TagNode&gt;&gt; callback) {
-<a class="jxr_linenumber" name="80" href="#80">80</a>  		callback.onSuccess(tagTreeData);
-<a class="jxr_linenumber" name="81" href="#81">81</a>  	}
-<a class="jxr_linenumber" name="82" href="#82">82</a>  
-<a class="jxr_linenumber" name="83" href="#83">83</a>  }
+<a class="jxr_linenumber" name="47" href="#47">47</a>  		pi1 = <strong class="jxr_keyword">new</strong> PhotoInfo(<span class="jxr_string">"7"</span>, <span class="jxr_string">"Latin"</span>, <strong class="jxr_keyword">new</strong> Date(1));
+<a class="jxr_linenumber" name="48" href="#48">48</a>  		pi2 = <strong class="jxr_keyword">new</strong> PhotoInfo(<span class="jxr_string">"8"</span>, <span class="jxr_string">"Greek"</span>, <strong class="jxr_keyword">new</strong> Date(2));
+<a class="jxr_linenumber" name="49" href="#49">49</a>  		pi3 = <strong class="jxr_keyword">new</strong> PhotoInfo(<span class="jxr_string">"9"</span>, <span class="jxr_string">"Lisp"</span>, <strong class="jxr_keyword">new</strong> Date(3));
+<a class="jxr_linenumber" name="50" href="#50">50</a>  		PhotoInfo pi4 = <strong class="jxr_keyword">new</strong> PhotoInfo(<span class="jxr_string">"9"</span>, <span class="jxr_string">"Python"</span>, <strong class="jxr_keyword">new</strong> Date(4));
+<a class="jxr_linenumber" name="51" href="#51">51</a>  		photoList = ImmutableSortedSet.of(pi1, pi2, pi3, pi4);
+<a class="jxr_linenumber" name="52" href="#52">52</a>  		root3.setCachedPhotoList(<strong class="jxr_keyword">new</strong> PhotoInfoStore(photoList));
+<a class="jxr_linenumber" name="53" href="#53">53</a>  		
+<a class="jxr_linenumber" name="54" href="#54">54</a>  		TagNode felix = createNode(<span class="jxr_string">"4"</span>, <span class="jxr_string">"Felix"</span>, 2);
+<a class="jxr_linenumber" name="55" href="#55">55</a>  		pi1 = <strong class="jxr_keyword">new</strong> PhotoInfo(<span class="jxr_string">"11"</span>, <span class="jxr_string">"Snowie"</span>, <strong class="jxr_keyword">new</strong> Date(1));
+<a class="jxr_linenumber" name="56" href="#56">56</a>  		pi2 = <strong class="jxr_keyword">new</strong> PhotoInfo(<span class="jxr_string">"12"</span>, <span class="jxr_string">"Siepie"</span>, <strong class="jxr_keyword">new</strong> Date(2));
+<a class="jxr_linenumber" name="57" href="#57">57</a>  		pi3 = <strong class="jxr_keyword">new</strong> PhotoInfo(<span class="jxr_string">"13"</span>, <span class="jxr_string">"Pluk"</span>, <strong class="jxr_keyword">new</strong> Date(3));
+<a class="jxr_linenumber" name="58" href="#58">58</a>  		photoList = ImmutableSortedSet.of(pi1, pi2, pi3);
+<a class="jxr_linenumber" name="59" href="#59">59</a>  		felix.setCachedPhotoList(<strong class="jxr_keyword">new</strong> PhotoInfoStore(photoList));	
+<a class="jxr_linenumber" name="60" href="#60">60</a>  		
+<a class="jxr_linenumber" name="61" href="#61">61</a>  		TagNode woefje = createNode(<span class="jxr_string">"5"</span>, <span class="jxr_string">"Woefje"</span>, 1);
+<a class="jxr_linenumber" name="62" href="#62">62</a>  		pi1 = <strong class="jxr_keyword">new</strong> PhotoInfo(<span class="jxr_string">"21"</span>, <span class="jxr_string">""</span>, <strong class="jxr_keyword">new</strong> Date(1));
+<a class="jxr_linenumber" name="63" href="#63">63</a>  		pi2 = <strong class="jxr_keyword">new</strong> PhotoInfo(<span class="jxr_string">"22"</span>, <span class="jxr_string">""</span>, <strong class="jxr_keyword">new</strong> Date(2));
+<a class="jxr_linenumber" name="64" href="#64">64</a>  		pi3 = <strong class="jxr_keyword">new</strong> PhotoInfo(<span class="jxr_string">"23"</span>, <span class="jxr_string">""</span>, <strong class="jxr_keyword">new</strong> Date(3));
+<a class="jxr_linenumber" name="65" href="#65">65</a>  		photoList = ImmutableSortedSet.of(pi1, pi2, pi3);
+<a class="jxr_linenumber" name="66" href="#66">66</a>  		woefje.setCachedPhotoList(<strong class="jxr_keyword">new</strong> PhotoInfoStore(photoList));
+<a class="jxr_linenumber" name="67" href="#67">67</a>  		
+<a class="jxr_linenumber" name="68" href="#68">68</a>  		cats.addChild(felix);
+<a class="jxr_linenumber" name="69" href="#69">69</a>  		cats.addChild(woefje);
+<a class="jxr_linenumber" name="70" href="#70">70</a>  		tagTreeData = ImmutableList.of(root1, cats, root3);
+<a class="jxr_linenumber" name="71" href="#71">71</a>  		System.out.println(felix.getCachedPhotoList());
+<a class="jxr_linenumber" name="72" href="#72">72</a>  		<strong class="jxr_keyword">return</strong> tagTreeData;
+<a class="jxr_linenumber" name="73" href="#73">73</a>  	}
+<a class="jxr_linenumber" name="74" href="#74">74</a>  	
+<a class="jxr_linenumber" name="75" href="#75">75</a>  	@Override
+<a class="jxr_linenumber" name="76" href="#76">76</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> keysForTag(String tagId, AsyncCallback&lt;List&lt;String&gt;&gt; callback) {
+<a class="jxr_linenumber" name="77" href="#77">77</a>  		<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> UnsupportedOperationException();
+<a class="jxr_linenumber" name="78" href="#78">78</a>  	}
+<a class="jxr_linenumber" name="79" href="#79">79</a>  
+<a class="jxr_linenumber" name="80" href="#80">80</a>  	@Override
+<a class="jxr_linenumber" name="81" href="#81">81</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> loadTagTree(AsyncCallback&lt;List&lt;TagNode&gt;&gt; callback) {
+<a class="jxr_linenumber" name="82" href="#82">82</a>  		callback.onSuccess(tagTreeData);
+<a class="jxr_linenumber" name="83" href="#83">83</a>  	}
+<a class="jxr_linenumber" name="84" href="#84">84</a>  
+<a class="jxr_linenumber" name="85" href="#85">85</a>  }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>
