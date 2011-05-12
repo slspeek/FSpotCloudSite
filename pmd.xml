@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2011-05-10T00:01:50.444">
+<pmd version="4.2.5" timestamp="2011-05-12T22:30:19.356">
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/admin/TagPanel.java">
 <violation beginline="12" endline="12" begincolumn="39" endcolumn="48" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.admin" class="TagPanel" variable="tagService" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'tagService'.
@@ -37,17 +37,8 @@ Ensure you override both equals() and hashCode()
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/view/ImagePanelActivity.java">
-<violation beginline="19" endline="19" begincolumn="33" endcolumn="37" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.view" class="ImagePanelActivity" variable="place" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
-Avoid unused private fields such as 'place'.
-</violation>
-<violation beginline="20" endline="20" begincolumn="38" endcolumn="51" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.view" class="ImagePanelActivity" variable="pagerPresenter" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<violation beginline="21" endline="21" begincolumn="42" endcolumn="55" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.view" class="ImagePanelActivity" variable="pagerPresenter" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'pagerPresenter'.
-</violation>
-<violation beginline="22" endline="22" begincolumn="32" endcolumn="39" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.view" class="ImagePanelActivity" variable="eventBus" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
-Avoid unused private fields such as 'eventBus'.
-</violation>
-<violation beginline="23" endline="23" begincolumn="46" endcolumn="63" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.view" class="ImagePanelActivity" variable="slideshowPresenter" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
-Avoid unused private fields such as 'slideshowPresenter'.
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/view/ImageViewingPlace.java">
@@ -58,14 +49,6 @@ Ensure you override both equals() and hashCode()
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/view/PagerPresenterImpl.java">
 <violation beginline="13" endline="13" begincolumn="33" endcolumn="41" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.view" class="PagerPresenterImpl" variable="pagerView" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'pagerView'.
-</violation>
-</file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/view/SlideShowPresenterImpl.java">
-<violation beginline="13" endline="13" begincolumn="32" endcolumn="39" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.view" class="SlideShowPresenterImpl" variable="eventBus" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
-Avoid unused private fields such as 'eventBus'.
-</violation>
-<violation beginline="24" endline="24" begincolumn="22" endcolumn="29" rule="UnusedPrivateMethod" ruleset="Unused Code Rules" package="fspotcloud.client.view" class="SlideShowPresenterImpl" method="redraw" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateMethod" priority="3">
-Avoid unused private methods such as 'redraw()'.
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/view/TagViewingPlace.java">
