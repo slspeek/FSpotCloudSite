@@ -30,27 +30,31 @@
 <a class="jxr_linenumber" name="20" href="#20">20</a>  	}
 <a class="jxr_linenumber" name="21" href="#21">21</a>  
 <a class="jxr_linenumber" name="22" href="#22">22</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testSomeNavigation() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="23" href="#23">23</a>  		selenium.open(<span class="jxr_string">"/"</span>);
+<a class="jxr_linenumber" name="23" href="#23">23</a>  		selenium.open(<span class="jxr_string">"/#TagViewingPlace:10:26"</span>);
 <a class="jxr_linenumber" name="24" href="#24">24</a>  		selenium.waitForPageToLoad(<span class="jxr_string">"30000"</span>);
-<a class="jxr_linenumber" name="25" href="#25">25</a>  		selenium.click(<span class="jxr_string">"//td[3]/div"</span>);
-<a class="jxr_linenumber" name="26" href="#26">26</a>  		Thread.sleep(900);
-<a class="jxr_linenumber" name="27" href="#27">27</a>  		selenium.click(<span class="jxr_string">"//td[3]/div"</span>);
-<a class="jxr_linenumber" name="28" href="#28">28</a>  		Thread.sleep(900);
-<a class="jxr_linenumber" name="29" href="#29">29</a>  		selenium.click(<span class="jxr_string">"//div[1]/div[2]/div[1]/div/div[2]"</span>);
-<a class="jxr_linenumber" name="30" href="#30">30</a>  		selenium.waitForPageToLoad(<span class="jxr_string">"30000"</span>);
-<a class="jxr_linenumber" name="31" href="#31">31</a>  
-<a class="jxr_linenumber" name="32" href="#32">32</a>  		selenium.click(<span class="jxr_string">"//td[3]/div"</span>);
-<a class="jxr_linenumber" name="33" href="#33">33</a>  		selenium.waitForPageToLoad(<span class="jxr_string">"30000"</span>);
-<a class="jxr_linenumber" name="34" href="#34">34</a>  		Thread.sleep(900);
-<a class="jxr_linenumber" name="35" href="#35">35</a>  		selenium.click(<span class="jxr_string">"//td[5]/div"</span>);
-<a class="jxr_linenumber" name="36" href="#36">36</a>  		Thread.sleep(100);
-<a class="jxr_linenumber" name="37" href="#37">37</a>  		assertTrue(selenium.isTextPresent(<span class="jxr_string">"4 seconds."</span>));
-<a class="jxr_linenumber" name="38" href="#38">38</a>  		selenium.open(<span class="jxr_string">"/#ImageViewingPlace:1:27"</span>);
-<a class="jxr_linenumber" name="39" href="#39">39</a>  		selenium.waitForPageToLoad(<span class="jxr_string">"30000"</span>);
-<a class="jxr_linenumber" name="40" href="#40">40</a>  		selenium.click(<span class="jxr_string">"//td[1]/div/table/tbody/tr/td[1]/div"</span>);
-<a class="jxr_linenumber" name="41" href="#41">41</a>  		selenium.waitForPageToLoad(<span class="jxr_string">"30000"</span>);
-<a class="jxr_linenumber" name="42" href="#42">42</a>  	}
-<a class="jxr_linenumber" name="43" href="#43">43</a>  }
+<a class="jxr_linenumber" name="25" href="#25">25</a>  		sleepShort();
+<a class="jxr_linenumber" name="26" href="#26">26</a>  		selenium.click(<span class="jxr_string">"//td[3]/div"</span>);
+<a class="jxr_linenumber" name="27" href="#27">27</a>  		sleepShort();
+<a class="jxr_linenumber" name="28" href="#28">28</a>  		selenium.click(<span class="jxr_string">"//td[3]/div"</span>);
+<a class="jxr_linenumber" name="29" href="#29">29</a>  		sleepShort();
+<a class="jxr_linenumber" name="30" href="#30">30</a>  		selenium.click(<span class="jxr_string">"//div[3]/div[1]/div/div[2]"</span>);
+<a class="jxr_linenumber" name="31" href="#31">31</a>  		selenium.waitForPageToLoad(<span class="jxr_string">"30000"</span>);
+<a class="jxr_linenumber" name="32" href="#32">32</a>  		sleepShort();
+<a class="jxr_linenumber" name="33" href="#33">33</a>  		selenium.click(<span class="jxr_string">"//td[3]/div"</span>);
+<a class="jxr_linenumber" name="34" href="#34">34</a>  		selenium.waitForPageToLoad(<span class="jxr_string">"30000"</span>);
+<a class="jxr_linenumber" name="35" href="#35">35</a>  		sleepShort();
+<a class="jxr_linenumber" name="36" href="#36">36</a>  		selenium.click(<span class="jxr_string">"//td[5]/div"</span>);
+<a class="jxr_linenumber" name="37" href="#37">37</a>  		sleepShort();
+<a class="jxr_linenumber" name="38" href="#38">38</a>  		assertTrue(selenium.isTextPresent(<span class="jxr_string">"5.333 seconds."</span>));
+<a class="jxr_linenumber" name="39" href="#39">39</a>  		selenium.open(<span class="jxr_string">"/#ImageViewingPlace:12:25"</span>);
+<a class="jxr_linenumber" name="40" href="#40">40</a>  		sleepShort();
+<a class="jxr_linenumber" name="41" href="#41">41</a>  		selenium.click(<span class="jxr_string">"gwt-debug-pager-last-button"</span>);
+<a class="jxr_linenumber" name="42" href="#42">42</a>  		sleepShort();
+<a class="jxr_linenumber" name="43" href="#43">43</a>  		selenium.click(<span class="jxr_string">"gwt-debug-pager-previous-button"</span>);
+<a class="jxr_linenumber" name="44" href="#44">44</a>  		sleepShort();
+<a class="jxr_linenumber" name="45" href="#45">45</a>  		selenium.click(<span class="jxr_string">"gwt-debug-pager-previous-button"</span>);
+<a class="jxr_linenumber" name="46" href="#46">46</a>  	}
+<a class="jxr_linenumber" name="47" href="#47">47</a>  }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

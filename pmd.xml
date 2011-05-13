@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2011-05-13T16:12:48.647">
+<pmd version="4.2.5" timestamp="2011-05-13T21:55:40.460">
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/admin/TagPanel.java">
 <violation beginline="12" endline="12" begincolumn="39" endcolumn="48" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.admin" class="TagPanel" variable="tagService" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'tagService'.
@@ -134,5 +134,6 @@ Do not use if statements that are always true or always false
 </file>
 <suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/GlobalShortcutController.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/ImagePanelViewImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/PagerViewImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/admin/task/PhotoCountTaskServlet.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 </pmd>
