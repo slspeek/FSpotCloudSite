@@ -13,77 +13,84 @@
 <a class="jxr_linenumber" name="3" href="#3">3</a>   <strong class="jxr_keyword">import</strong> java.util.ArrayList;
 <a class="jxr_linenumber" name="4" href="#4">4</a>   <strong class="jxr_keyword">import</strong> java.util.List;
 <a class="jxr_linenumber" name="5" href="#5">5</a>   
-<a class="jxr_linenumber" name="6" href="#6">6</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.event.shared.EventBus;
-<a class="jxr_linenumber" name="7" href="#7">7</a>   <strong class="jxr_keyword">import</strong> com.google.inject.Inject;
-<a class="jxr_linenumber" name="8" href="#8">8</a>   <strong class="jxr_keyword">import</strong> com.google.inject.Provider;
-<a class="jxr_linenumber" name="9" href="#9">9</a>   
-<a class="jxr_linenumber" name="10" href="#10">10</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.shared.NavigationEvent;
-<a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.shared.SlideshowEvent;
-<a class="jxr_linenumber" name="12" href="#12">12</a>  
-<a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../fspotcloud/client/view/action/KeyDispatcherProvider.html">KeyDispatcherProvider</a> <strong class="jxr_keyword">implements</strong> Provider&lt;KeyDispatcher&gt; {
-<a class="jxr_linenumber" name="14" href="#14">14</a>  
-<a class="jxr_linenumber" name="15" href="#15">15</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <a href="../../../../fspotcloud/client/view/action/KeyDispatcher.html">KeyDispatcher</a> keyDispatcher = <strong class="jxr_keyword">new</strong> <a href="../../../../fspotcloud/client/view/action/KeyDispatcher.html">KeyDispatcher</a>();
-<a class="jxr_linenumber" name="16" href="#16">16</a>  	<strong class="jxr_keyword">private</strong> EventBus eventBus;
-<a class="jxr_linenumber" name="17" href="#17">17</a>  
-<a class="jxr_linenumber" name="18" href="#18">18</a>  	@Inject
-<a class="jxr_linenumber" name="19" href="#19">19</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../fspotcloud/client/view/action/KeyDispatcherProvider.html">KeyDispatcherProvider</a>(<a href="../../../../fspotcloud/client/view/action/ToggleFullscreenAction.html">ToggleFullscreenAction</a> toggleFullscreen,EventBus eventBus) {
-<a class="jxr_linenumber" name="20" href="#20">20</a>  		<strong class="jxr_keyword">this</strong>.eventBus = eventBus;
-<a class="jxr_linenumber" name="21" href="#21">21</a>  		List&lt;Character&gt; list = <strong class="jxr_keyword">new</strong> ArrayList&lt;Character&gt;();
-<a class="jxr_linenumber" name="22" href="#22">22</a>  		list.add('f');
-<a class="jxr_linenumber" name="23" href="#23">23</a>  		list.add('1');
-<a class="jxr_linenumber" name="24" href="#24">24</a>  		list.add('`');
-<a class="jxr_linenumber" name="25" href="#25">25</a>  		keyDispatcher.register(toggleFullscreen, list);
-<a class="jxr_linenumber" name="26" href="#26">26</a>  		list = <strong class="jxr_keyword">new</strong> ArrayList&lt;Character&gt;();
-<a class="jxr_linenumber" name="27" href="#27">27</a>  		list.add('n');
-<a class="jxr_linenumber" name="28" href="#28">28</a>  		list.add('.');
-<a class="jxr_linenumber" name="29" href="#29">29</a>  		keyDispatcher.register(getNavigationAction(NavigationEvent.FORWARD), list);
-<a class="jxr_linenumber" name="30" href="#30">30</a>  		list = <strong class="jxr_keyword">new</strong> ArrayList&lt;Character&gt;();
-<a class="jxr_linenumber" name="31" href="#31">31</a>  		list.add('p');
-<a class="jxr_linenumber" name="32" href="#32">32</a>  		list.add(',');
-<a class="jxr_linenumber" name="33" href="#33">33</a>  		keyDispatcher.register(getNavigationAction(NavigationEvent.BACK), list);
-<a class="jxr_linenumber" name="34" href="#34">34</a>  		list = <strong class="jxr_keyword">new</strong> ArrayList&lt;Character&gt;();
-<a class="jxr_linenumber" name="35" href="#35">35</a>  		list.add('b');
-<a class="jxr_linenumber" name="36" href="#36">36</a>  		list.add('h');
-<a class="jxr_linenumber" name="37" href="#37">37</a>  		keyDispatcher.register(getNavigationAction(NavigationEvent.BEGIN), list);
-<a class="jxr_linenumber" name="38" href="#38">38</a>  		list = <strong class="jxr_keyword">new</strong> ArrayList&lt;Character&gt;();
-<a class="jxr_linenumber" name="39" href="#39">39</a>  		list.add('e');
-<a class="jxr_linenumber" name="40" href="#40">40</a>  		list.add('z');
-<a class="jxr_linenumber" name="41" href="#41">41</a>  		list.add('9');
-<a class="jxr_linenumber" name="42" href="#42">42</a>  		keyDispatcher.register(getNavigationAction(NavigationEvent.END), list);
-<a class="jxr_linenumber" name="43" href="#43">43</a>  		list = <strong class="jxr_keyword">new</strong> ArrayList&lt;Character&gt;();
-<a class="jxr_linenumber" name="44" href="#44">44</a>  		list.add('s');
-<a class="jxr_linenumber" name="45" href="#45">45</a>  		list.add('g');
-<a class="jxr_linenumber" name="46" href="#46">46</a>  		list.add('0');
-<a class="jxr_linenumber" name="47" href="#47">47</a>  		keyDispatcher.register(getSlideshowActio(SlideshowEvent.ACTION_START), list);
-<a class="jxr_linenumber" name="48" href="#48">48</a>  		list = <strong class="jxr_keyword">new</strong> ArrayList&lt;Character&gt;();
-<a class="jxr_linenumber" name="49" href="#49">49</a>  		list.add('x');
-<a class="jxr_linenumber" name="50" href="#50">50</a>  		list.add('q');
-<a class="jxr_linenumber" name="51" href="#51">51</a>  		keyDispatcher.register(getSlideshowActio(SlideshowEvent.ACTION_STOP), list);
-<a class="jxr_linenumber" name="52" href="#52">52</a>  		list = <strong class="jxr_keyword">new</strong> ArrayList&lt;Character&gt;();
-<a class="jxr_linenumber" name="53" href="#53">53</a>  		list.add('d');
-<a class="jxr_linenumber" name="54" href="#54">54</a>  		list.add('-');
-<a class="jxr_linenumber" name="55" href="#55">55</a>  		keyDispatcher.register(getSlideshowActio(SlideshowEvent.ACTION_SLOWER), list);
-<a class="jxr_linenumber" name="56" href="#56">56</a>  		list = <strong class="jxr_keyword">new</strong> ArrayList&lt;Character&gt;();
-<a class="jxr_linenumber" name="57" href="#57">57</a>  		list.add('i');
-<a class="jxr_linenumber" name="58" href="#58">58</a>  		list.add('=');
-<a class="jxr_linenumber" name="59" href="#59">59</a>  		list.add('+');
-<a class="jxr_linenumber" name="60" href="#60">60</a>  		keyDispatcher.register(getSlideshowActio(SlideshowEvent.ACTION_FASTER), list);
-<a class="jxr_linenumber" name="61" href="#61">61</a>  	}
-<a class="jxr_linenumber" name="62" href="#62">62</a>  	
-<a class="jxr_linenumber" name="63" href="#63">63</a>  	NavigationAction getNavigationAction(<strong class="jxr_keyword">int</strong> actionType) {
-<a class="jxr_linenumber" name="64" href="#64">64</a>  		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../fspotcloud/client/view/action/NavigationAction.html">NavigationAction</a>(actionType, eventBus);
-<a class="jxr_linenumber" name="65" href="#65">65</a>  	}
-<a class="jxr_linenumber" name="66" href="#66">66</a>  	
-<a class="jxr_linenumber" name="67" href="#67">67</a>  	SlideshowAction getSlideshowActio(<strong class="jxr_keyword">int</strong> actionType) {
-<a class="jxr_linenumber" name="68" href="#68">68</a>  		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../fspotcloud/client/view/action/SlideshowAction.html">SlideshowAction</a>(actionType, eventBus);
-<a class="jxr_linenumber" name="69" href="#69">69</a>  	}
-<a class="jxr_linenumber" name="70" href="#70">70</a>  
-<a class="jxr_linenumber" name="71" href="#71">71</a>  	@Override
-<a class="jxr_linenumber" name="72" href="#72">72</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../fspotcloud/client/view/action/KeyDispatcher.html">KeyDispatcher</a> get() {
-<a class="jxr_linenumber" name="73" href="#73">73</a>  		<strong class="jxr_keyword">return</strong> keyDispatcher;
-<a class="jxr_linenumber" name="74" href="#74">74</a>  	}
-<a class="jxr_linenumber" name="75" href="#75">75</a>  
-<a class="jxr_linenumber" name="76" href="#76">76</a>  }
+<a class="jxr_linenumber" name="6" href="#6">6</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.event.dom.client.KeyCodes;
+<a class="jxr_linenumber" name="7" href="#7">7</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.event.shared.EventBus;
+<a class="jxr_linenumber" name="8" href="#8">8</a>   <strong class="jxr_keyword">import</strong> com.google.inject.Inject;
+<a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> com.google.inject.Provider;
+<a class="jxr_linenumber" name="10" href="#10">10</a>  
+<a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.shared.NavigationEvent;
+<a class="jxr_linenumber" name="12" href="#12">12</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.shared.SlideshowEvent;
+<a class="jxr_linenumber" name="13" href="#13">13</a>  
+<a class="jxr_linenumber" name="14" href="#14">14</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../fspotcloud/client/view/action/KeyDispatcherProvider.html">KeyDispatcherProvider</a> <strong class="jxr_keyword">implements</strong> Provider&lt;KeyDispatcher&gt; {
+<a class="jxr_linenumber" name="15" href="#15">15</a>  
+<a class="jxr_linenumber" name="16" href="#16">16</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <a href="../../../../fspotcloud/client/view/action/KeyDispatcher.html">KeyDispatcher</a> keyDispatcher = <strong class="jxr_keyword">new</strong> <a href="../../../../fspotcloud/client/view/action/KeyDispatcher.html">KeyDispatcher</a>();
+<a class="jxr_linenumber" name="17" href="#17">17</a>  	<strong class="jxr_keyword">private</strong> EventBus eventBus;
+<a class="jxr_linenumber" name="18" href="#18">18</a>  
+<a class="jxr_linenumber" name="19" href="#19">19</a>  	@Inject
+<a class="jxr_linenumber" name="20" href="#20">20</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../fspotcloud/client/view/action/KeyDispatcherProvider.html">KeyDispatcherProvider</a>(<a href="../../../../fspotcloud/client/view/action/ToggleFullscreenAction.html">ToggleFullscreenAction</a> toggleFullscreen,EventBus eventBus) {
+<a class="jxr_linenumber" name="21" href="#21">21</a>  		<strong class="jxr_keyword">this</strong>.eventBus = eventBus;
+<a class="jxr_linenumber" name="22" href="#22">22</a>  		List&lt;Integer&gt; list = <strong class="jxr_keyword">new</strong> ArrayList&lt;Integer&gt;();
+<a class="jxr_linenumber" name="23" href="#23">23</a>  		list.add((<strong class="jxr_keyword">int</strong>)'F');
+<a class="jxr_linenumber" name="24" href="#24">24</a>  		list.add((<strong class="jxr_keyword">int</strong>)'1');
+<a class="jxr_linenumber" name="25" href="#25">25</a>  		list.add((<strong class="jxr_keyword">int</strong>)'`');
+<a class="jxr_linenumber" name="26" href="#26">26</a>  		keyDispatcher.register(toggleFullscreen, list);
+<a class="jxr_linenumber" name="27" href="#27">27</a>  		list = <strong class="jxr_keyword">new</strong> ArrayList&lt;Integer&gt;();
+<a class="jxr_linenumber" name="28" href="#28">28</a>  		list.add((<strong class="jxr_keyword">int</strong>)'N');
+<a class="jxr_linenumber" name="29" href="#29">29</a>  		list.add((<strong class="jxr_keyword">int</strong>)'.');
+<a class="jxr_linenumber" name="30" href="#30">30</a>  		list.add(KeyCodes.KEY_RIGHT);
+<a class="jxr_linenumber" name="31" href="#31">31</a>  		keyDispatcher.register(getNavigationAction(NavigationEvent.FORWARD), list);
+<a class="jxr_linenumber" name="32" href="#32">32</a>  		list = <strong class="jxr_keyword">new</strong> ArrayList&lt;Integer&gt;();
+<a class="jxr_linenumber" name="33" href="#33">33</a>  		list.add((<strong class="jxr_keyword">int</strong>)'P');
+<a class="jxr_linenumber" name="34" href="#34">34</a>  		list.add((<strong class="jxr_keyword">int</strong>)',');
+<a class="jxr_linenumber" name="35" href="#35">35</a>  		list.add(KeyCodes.KEY_LEFT);
+<a class="jxr_linenumber" name="36" href="#36">36</a>  		keyDispatcher.register(getNavigationAction(NavigationEvent.BACK), list);
+<a class="jxr_linenumber" name="37" href="#37">37</a>  		list = <strong class="jxr_keyword">new</strong> ArrayList&lt;Integer&gt;();
+<a class="jxr_linenumber" name="38" href="#38">38</a>  		list.add((<strong class="jxr_keyword">int</strong>)'B');
+<a class="jxr_linenumber" name="39" href="#39">39</a>  		list.add((<strong class="jxr_keyword">int</strong>)'0');
+<a class="jxr_linenumber" name="40" href="#40">40</a>  		list.add(KeyCodes.KEY_HOME);
+<a class="jxr_linenumber" name="41" href="#41">41</a>  		keyDispatcher.register(getNavigationAction(NavigationEvent.BEGIN), list);
+<a class="jxr_linenumber" name="42" href="#42">42</a>  		list = <strong class="jxr_keyword">new</strong> ArrayList&lt;Integer&gt;();
+<a class="jxr_linenumber" name="43" href="#43">43</a>  		list.add((<strong class="jxr_keyword">int</strong>)'E');
+<a class="jxr_linenumber" name="44" href="#44">44</a>  		list.add((<strong class="jxr_keyword">int</strong>)'Z');
+<a class="jxr_linenumber" name="45" href="#45">45</a>  		list.add(KeyCodes.KEY_END);
+<a class="jxr_linenumber" name="46" href="#46">46</a>  		keyDispatcher.register(getNavigationAction(NavigationEvent.END), list);
+<a class="jxr_linenumber" name="47" href="#47">47</a>  		list = <strong class="jxr_keyword">new</strong> ArrayList&lt;Integer&gt;();
+<a class="jxr_linenumber" name="48" href="#48">48</a>  		list.add((<strong class="jxr_keyword">int</strong>)'S');
+<a class="jxr_linenumber" name="49" href="#49">49</a>  		list.add((<strong class="jxr_keyword">int</strong>)'G');
+<a class="jxr_linenumber" name="50" href="#50">50</a>  		keyDispatcher.register(getSlideshowAction(SlideshowEvent.ACTION_START), list);
+<a class="jxr_linenumber" name="51" href="#51">51</a>  		list = <strong class="jxr_keyword">new</strong> ArrayList&lt;Integer&gt;();
+<a class="jxr_linenumber" name="52" href="#52">52</a>  		list.add((<strong class="jxr_keyword">int</strong>)'X');
+<a class="jxr_linenumber" name="53" href="#53">53</a>  		list.add((<strong class="jxr_keyword">int</strong>)'Q');
+<a class="jxr_linenumber" name="54" href="#54">54</a>  		keyDispatcher.register(getSlideshowAction(SlideshowEvent.ACTION_STOP), list);
+<a class="jxr_linenumber" name="55" href="#55">55</a>  		list = <strong class="jxr_keyword">new</strong> ArrayList&lt;Integer&gt;();
+<a class="jxr_linenumber" name="56" href="#56">56</a>  		list.add((<strong class="jxr_keyword">int</strong>)'D');
+<a class="jxr_linenumber" name="57" href="#57">57</a>  		list.add((<strong class="jxr_keyword">int</strong>)'-');
+<a class="jxr_linenumber" name="58" href="#58">58</a>  		keyDispatcher.register(getSlideshowAction(SlideshowEvent.ACTION_SLOWER), list);
+<a class="jxr_linenumber" name="59" href="#59">59</a>  		list = <strong class="jxr_keyword">new</strong> ArrayList&lt;Integer&gt;();
+<a class="jxr_linenumber" name="60" href="#60">60</a>  		list.add((<strong class="jxr_keyword">int</strong>)'I');
+<a class="jxr_linenumber" name="61" href="#61">61</a>  		list.add((<strong class="jxr_keyword">int</strong>)'=');
+<a class="jxr_linenumber" name="62" href="#62">62</a>  		list.add((<strong class="jxr_keyword">int</strong>)'+');
+<a class="jxr_linenumber" name="63" href="#63">63</a>  		keyDispatcher.register(getSlideshowAction(SlideshowEvent.ACTION_FASTER), list);
+<a class="jxr_linenumber" name="64" href="#64">64</a>  		list = <strong class="jxr_keyword">new</strong> ArrayList&lt;Integer&gt;();
+<a class="jxr_linenumber" name="65" href="#65">65</a>  		list.add((<strong class="jxr_keyword">int</strong>)'H');
+<a class="jxr_linenumber" name="66" href="#66">66</a>  		list.add(KeyCodes.KEY_ESCAPE);
+<a class="jxr_linenumber" name="67" href="#67">67</a>  		keyDispatcher.register(<strong class="jxr_keyword">new</strong> <a href="../../../../fspotcloud/client/view/action/HelpAction.html">HelpAction</a>(), list);
+<a class="jxr_linenumber" name="68" href="#68">68</a>  	}
+<a class="jxr_linenumber" name="69" href="#69">69</a>  	
+<a class="jxr_linenumber" name="70" href="#70">70</a>  	NavigationAction getNavigationAction(<strong class="jxr_keyword">int</strong> actionType) {
+<a class="jxr_linenumber" name="71" href="#71">71</a>  		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../fspotcloud/client/view/action/NavigationAction.html">NavigationAction</a>(actionType, eventBus);
+<a class="jxr_linenumber" name="72" href="#72">72</a>  	}
+<a class="jxr_linenumber" name="73" href="#73">73</a>  	
+<a class="jxr_linenumber" name="74" href="#74">74</a>  	SlideshowAction getSlideshowAction(<strong class="jxr_keyword">int</strong> actionType) {
+<a class="jxr_linenumber" name="75" href="#75">75</a>  		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../fspotcloud/client/view/action/SlideshowAction.html">SlideshowAction</a>(actionType, eventBus);
+<a class="jxr_linenumber" name="76" href="#76">76</a>  	}
+<a class="jxr_linenumber" name="77" href="#77">77</a>  
+<a class="jxr_linenumber" name="78" href="#78">78</a>  	@Override
+<a class="jxr_linenumber" name="79" href="#79">79</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../fspotcloud/client/view/action/KeyDispatcher.html">KeyDispatcher</a> get() {
+<a class="jxr_linenumber" name="80" href="#80">80</a>  		<strong class="jxr_keyword">return</strong> keyDispatcher;
+<a class="jxr_linenumber" name="81" href="#81">81</a>  	}
+<a class="jxr_linenumber" name="82" href="#82">82</a>  
+<a class="jxr_linenumber" name="83" href="#83">83</a>  }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

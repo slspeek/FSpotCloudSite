@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2011-05-13T21:55:40.460">
+<pmd version="4.2.5" timestamp="2011-05-15T21:39:45.597">
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/admin/TagPanel.java">
 <violation beginline="12" endline="12" begincolumn="39" endcolumn="48" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.admin" class="TagPanel" variable="tagService" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'tagService'.
@@ -59,6 +59,14 @@ Ensure you override both equals() and hashCode()
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/view/TreePresenterImpl.java">
 <violation beginline="10" endline="10" begincolumn="1" endcolumn="63" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.view" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'com.google.gwt.view.client.SelectionChangeEvent.Handler'
+</violation>
+</file>
+<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/view/action/HelpAction.java">
+<violation beginline="7" endline="7" begincolumn="34" endcolumn="44" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.view.action" class="HelpAction" variable="ACTION_SHOW" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'ACTION_SHOW'.
+</violation>
+<violation beginline="8" endline="8" begincolumn="34" endcolumn="44" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.view.action" class="HelpAction" variable="ACTION_HIDE" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'ACTION_HIDE'.
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/view/action/ToggleFullscreenAction.java">
