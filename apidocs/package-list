@@ -1,5 +1,6 @@
 fspotcloud.client.admin
 fspotcloud.client.admin.ui
+fspotcloud.client.admin.view
 fspotcloud.client.data
 fspotcloud.client.main
 fspotcloud.client.main.gin
