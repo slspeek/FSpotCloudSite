@@ -22,10 +22,10 @@
 <a class="jxr_linenumber" name="12" href="#12">12</a>  <strong class="jxr_keyword">import</strong> com.google.gwt.user.client.ui.Widget;
 <a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">import</strong> com.google.gwt.view.client.TreeViewModel;
 <a class="jxr_linenumber" name="14" href="#14">14</a>  
-<a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.view.CustomCellTree;
-<a class="jxr_linenumber" name="16" href="#16">16</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.view.TreeView;
+<a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.CustomCellTree;
+<a class="jxr_linenumber" name="16" href="#16">16</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.TreeView;
 <a class="jxr_linenumber" name="17" href="#17">17</a>  
-<a class="jxr_linenumber" name="18" href="#18">18</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../fspotcloud/client/main/ui/TreeViewImpl.html">TreeViewImpl</a> <strong class="jxr_keyword">extends</strong> ResizeComposite <strong class="jxr_keyword">implements</strong> <a href="../../../../fspotcloud/client/view/TreeView.html">TreeView</a> {
+<a class="jxr_linenumber" name="18" href="#18">18</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../fspotcloud/client/main/ui/TreeViewImpl.html">TreeViewImpl</a> <strong class="jxr_keyword">extends</strong> ResizeComposite <strong class="jxr_keyword">implements</strong> <a href="../../../../fspotcloud/client/main/view/api/TreeView.html">TreeView</a> {
 <a class="jxr_linenumber" name="19" href="#19">19</a>  
 <a class="jxr_linenumber" name="20" href="#20">20</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger log = Logger.getLogger(TreeViewImpl.<strong class="jxr_keyword">class</strong>
 <a class="jxr_linenumber" name="21" href="#21">21</a>  			.getName());
@@ -47,7 +47,7 @@
 <a class="jxr_linenumber" name="37" href="#37">37</a>  
 <a class="jxr_linenumber" name="38" href="#38">38</a>  	@Override
 <a class="jxr_linenumber" name="39" href="#39">39</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setTreeModel(TreeViewModel model) {
-<a class="jxr_linenumber" name="40" href="#40">40</a>  		cellTree = <strong class="jxr_keyword">new</strong> <a href="../../../../fspotcloud/client/view/CustomCellTree.html">CustomCellTree</a>(model, <strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="40" href="#40">40</a>  		cellTree = <strong class="jxr_keyword">new</strong> <a href="../../../../fspotcloud/client/main/view/CustomCellTree.html">CustomCellTree</a>(model, <strong class="jxr_keyword">null</strong>);
 <a class="jxr_linenumber" name="41" href="#41">41</a>  		tagTreeViewPanel.setWidget(cellTree);
 <a class="jxr_linenumber" name="42" href="#42">42</a>  	}
 <a class="jxr_linenumber" name="43" href="#43">43</a>  	

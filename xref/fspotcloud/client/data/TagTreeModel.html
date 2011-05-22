@@ -16,17 +16,17 @@
 <a class="jxr_linenumber" name="6" href="#6">6</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.view.client.ListDataProvider;
 <a class="jxr_linenumber" name="7" href="#7">7</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.view.client.TreeViewModel;
 <a class="jxr_linenumber" name="8" href="#8">8</a>   
-<a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> fspotcloud.client.main.TagCell;
+<a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.TagCell;
 <a class="jxr_linenumber" name="10" href="#10">10</a>  <strong class="jxr_keyword">import</strong> fspotcloud.shared.tag.TagNode;
 <a class="jxr_linenumber" name="11" href="#11">11</a>  
-<a class="jxr_linenumber" name="12" href="#12">12</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../fspotcloud/client/data/TagTreeModel.html">TagTreeModel</a> <strong class="jxr_keyword">implements</strong> TreeViewModel {
+<a class="jxr_linenumber" name="12" href="#12">12</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../fspotcloud/client/main/view/TagTreeModel.html">TagTreeModel</a> <strong class="jxr_keyword">implements</strong> TreeViewModel {
 <a class="jxr_linenumber" name="13" href="#13">13</a>  	
 <a class="jxr_linenumber" name="14" href="#14">14</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger log = Logger.getLogger(TagTreeModel.<strong class="jxr_keyword">class</strong>
 <a class="jxr_linenumber" name="15" href="#15">15</a>  			.getName());
 <a class="jxr_linenumber" name="16" href="#16">16</a>  
 <a class="jxr_linenumber" name="17" href="#17">17</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> List&lt;TagNode&gt; roots;
 <a class="jxr_linenumber" name="18" href="#18">18</a>  
-<a class="jxr_linenumber" name="19" href="#19">19</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../fspotcloud/client/data/TagTreeModel.html">TagTreeModel</a>(List&lt;TagNode&gt; roots) {
+<a class="jxr_linenumber" name="19" href="#19">19</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../fspotcloud/client/main/view/TagTreeModel.html">TagTreeModel</a>(List&lt;TagNode&gt; roots) {
 <a class="jxr_linenumber" name="20" href="#20">20</a>  		<strong class="jxr_keyword">this</strong>.roots = roots;
 <a class="jxr_linenumber" name="21" href="#21">21</a>  	}
 <a class="jxr_linenumber" name="22" href="#22">22</a>  
@@ -37,12 +37,12 @@
 <a class="jxr_linenumber" name="27" href="#27">27</a>  		<strong class="jxr_keyword">if</strong> (value == <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="28" href="#28">28</a>  			ListDataProvider&lt;TagNode&gt; dataProvider = <strong class="jxr_keyword">new</strong> ListDataProvider&lt;TagNode&gt;(
 <a class="jxr_linenumber" name="29" href="#29">29</a>  					roots);
-<a class="jxr_linenumber" name="30" href="#30">30</a>  			<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> DefaultNodeInfo(dataProvider, <strong class="jxr_keyword">new</strong> <a href="../../../fspotcloud/client/main/TagCell.html">TagCell</a>());
+<a class="jxr_linenumber" name="30" href="#30">30</a>  			<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> DefaultNodeInfo(dataProvider, <strong class="jxr_keyword">new</strong> <a href="../../../fspotcloud/client/main/view/TagCell.html">TagCell</a>());
 <a class="jxr_linenumber" name="31" href="#31">31</a>  		}
 <a class="jxr_linenumber" name="32" href="#32">32</a>  		TagNode node = (TagNode) value;
 <a class="jxr_linenumber" name="33" href="#33">33</a>  		ListDataProvider&lt;TagNode&gt; dataProvider = <strong class="jxr_keyword">new</strong> ListDataProvider&lt;TagNode&gt;(
 <a class="jxr_linenumber" name="34" href="#34">34</a>  				node.getChildren());
-<a class="jxr_linenumber" name="35" href="#35">35</a>  		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> DefaultNodeInfo(dataProvider, <strong class="jxr_keyword">new</strong> <a href="../../../fspotcloud/client/main/TagCell.html">TagCell</a>());
+<a class="jxr_linenumber" name="35" href="#35">35</a>  		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> DefaultNodeInfo(dataProvider, <strong class="jxr_keyword">new</strong> <a href="../../../fspotcloud/client/main/view/TagCell.html">TagCell</a>());
 <a class="jxr_linenumber" name="36" href="#36">36</a>  	}
 <a class="jxr_linenumber" name="37" href="#37">37</a>  
 <a class="jxr_linenumber" name="38" href="#38">38</a>  	@Override

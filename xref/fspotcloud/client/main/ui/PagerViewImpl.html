@@ -24,9 +24,9 @@
 <a class="jxr_linenumber" name="14" href="#14">14</a>  <strong class="jxr_keyword">import</strong> com.google.gwt.user.client.ui.Widget;
 <a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">import</strong> com.google.inject.Inject;
 <a class="jxr_linenumber" name="16" href="#16">16</a>  
-<a class="jxr_linenumber" name="17" href="#17">17</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.view.PagerView;
+<a class="jxr_linenumber" name="17" href="#17">17</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.PagerView;
 <a class="jxr_linenumber" name="18" href="#18">18</a>  
-<a class="jxr_linenumber" name="19" href="#19">19</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../fspotcloud/client/main/ui/PagerViewImpl.html">PagerViewImpl</a> <strong class="jxr_keyword">extends</strong> Composite <strong class="jxr_keyword">implements</strong> <a href="../../../../fspotcloud/client/view/PagerView.html">PagerView</a> {
+<a class="jxr_linenumber" name="19" href="#19">19</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../fspotcloud/client/main/ui/PagerViewImpl.html">PagerViewImpl</a> <strong class="jxr_keyword">extends</strong> Composite <strong class="jxr_keyword">implements</strong> <a href="../../../../fspotcloud/client/main/view/api/PagerView.html">PagerView</a> {
 <a class="jxr_linenumber" name="20" href="#20">20</a>  	@SuppressWarnings(<span class="jxr_string">"unused"</span>)
 <a class="jxr_linenumber" name="21" href="#21">21</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger log = Logger.getLogger(PagerViewImpl.<strong class="jxr_keyword">class</strong>
 <a class="jxr_linenumber" name="22" href="#22">22</a>  			.getName());
@@ -37,7 +37,7 @@
 <a class="jxr_linenumber" name="27" href="#27">27</a>  	<strong class="jxr_keyword">interface</strong> <a href="../../../../fspotcloud/client/main/ui/PagerViewImpl.html">PagerViewImplUiBinder</a> <strong class="jxr_keyword">extends</strong> UiBinder&lt;Widget, PagerViewImpl&gt; {
 <a class="jxr_linenumber" name="28" href="#28">28</a>  	}
 <a class="jxr_linenumber" name="29" href="#29">29</a>  
-<a class="jxr_linenumber" name="30" href="#30">30</a>  	<strong class="jxr_keyword">private</strong> <a href="../../../../fspotcloud/client/view/PagerView.html">PagerPresenter</a> presenter;
+<a class="jxr_linenumber" name="30" href="#30">30</a>  	<strong class="jxr_keyword">private</strong> <a href="../../../../fspotcloud/client/main/view/api/PagerView.html">PagerPresenter</a> presenter;
 <a class="jxr_linenumber" name="31" href="#31">31</a>  
 <a class="jxr_linenumber" name="32" href="#32">32</a>  	@UiField
 <a class="jxr_linenumber" name="33" href="#33">33</a>  	HorizontalPanel mainPanel;
@@ -106,7 +106,7 @@
 <a class="jxr_linenumber" name="96" href="#96">96</a>  	}
 <a class="jxr_linenumber" name="97" href="#97">97</a>  
 <a class="jxr_linenumber" name="98" href="#98">98</a>  	@Override
-<a class="jxr_linenumber" name="99" href="#99">99</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setPresenter(<a href="../../../../fspotcloud/client/view/PagerView.html">PagerPresenter</a> presenter) {
+<a class="jxr_linenumber" name="99" href="#99">99</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setPresenter(<a href="../../../../fspotcloud/client/main/view/api/PagerView.html">PagerPresenter</a> presenter) {
 <a class="jxr_linenumber" name="100" href="#100">100</a> 		<strong class="jxr_keyword">this</strong>.presenter = presenter;
 <a class="jxr_linenumber" name="101" href="#101">101</a> 
 <a class="jxr_linenumber" name="102" href="#102">102</a> 	}
