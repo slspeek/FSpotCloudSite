@@ -55,12 +55,12 @@
 <a class="jxr_linenumber" name="45" href="#45">45</a>  	}
 <a class="jxr_linenumber" name="46" href="#46">46</a>  
 <a class="jxr_linenumber" name="47" href="#47">47</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> setModel(List&lt;TagNode&gt; roots) {
-<a class="jxr_linenumber" name="48" href="#48">48</a>  		TagTreeModel treeModel = <strong class="jxr_keyword">new</strong> <a href="../../../../fspotcloud/client/data/TagTreeModel.html">TagTreeModel</a>(roots, selectionModel);
+<a class="jxr_linenumber" name="48" href="#48">48</a>  		TagTreeModel treeModel = <strong class="jxr_keyword">new</strong> <a href="../../../../fspotcloud/client/main/view/TagTreeModel.html">TagTreeModel</a>(roots, selectionModel);
 <a class="jxr_linenumber" name="49" href="#49">49</a>  		treeView.setTreeModel(treeModel);
 <a class="jxr_linenumber" name="50" href="#50">50</a>  	}
 <a class="jxr_linenumber" name="51" href="#51">51</a>  
 <a class="jxr_linenumber" name="52" href="#52">52</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> requestTagTreeData() {
-<a class="jxr_linenumber" name="53" href="#53">53</a>  		dataManager.getTagTree(<strong class="jxr_keyword">new</strong> AsyncCallback&lt;List&lt;TagNode&gt;&gt;() {
+<a class="jxr_linenumber" name="53" href="#53">53</a>  		dataManager.getAdminTagTree(<strong class="jxr_keyword">new</strong> AsyncCallback&lt;List&lt;TagNode&gt;&gt;() {
 <a class="jxr_linenumber" name="54" href="#54">54</a>  			@Override
 <a class="jxr_linenumber" name="55" href="#55">55</a>  			<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> onFailure(Throwable caught) {
 <a class="jxr_linenumber" name="56" href="#56">56</a>  				Window.alert(<span class="jxr_string">"Exception: "</span> + caught);
