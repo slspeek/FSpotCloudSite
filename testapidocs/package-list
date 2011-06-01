@@ -5,6 +5,8 @@ fspotcloud.client.view.action
 fspotcloud.peer
 fspotcloud.peer.db
 fspotcloud.server.control
+fspotcloud.server.control.reciever
+fspotcloud.server.mapreduce
 fspotcloud.server.model
 fspotcloud.server.model.batch
 fspotcloud.server.model.command

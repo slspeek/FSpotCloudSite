@@ -23,7 +23,7 @@
 <a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">import</strong> com.google.inject.Singleton;
 <a class="jxr_linenumber" name="14" href="#14">14</a>  
 <a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">import</strong> fspotcloud.rpc.AdminService;
-<a class="jxr_linenumber" name="16" href="#16">16</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.control.Scheduler;
+<a class="jxr_linenumber" name="16" href="#16">16</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.control.SchedulerInterface;
 <a class="jxr_linenumber" name="17" href="#17">17</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.Batch;
 <a class="jxr_linenumber" name="18" href="#18">18</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.Batches;
 <a class="jxr_linenumber" name="19" href="#19">19</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.PeerDatabase;
@@ -52,7 +52,7 @@
 <a class="jxr_linenumber" name="42" href="#42">42</a>  	<strong class="jxr_keyword">private</strong> <a href="../../../fspotcloud/server/model/api/PeerDatabases.html">PeerDatabases</a> defaultPeer;
 <a class="jxr_linenumber" name="43" href="#43">43</a>  	
 <a class="jxr_linenumber" name="44" href="#44">44</a>  	@Inject
-<a class="jxr_linenumber" name="45" href="#45">45</a>  	<strong class="jxr_keyword">private</strong> <a href="../../../fspotcloud/server/control/Scheduler.html">Scheduler</a> scheduler;
+<a class="jxr_linenumber" name="45" href="#45">45</a>  	<strong class="jxr_keyword">private</strong> <a href="../../../fspotcloud/server/control/SchedulerInterface.html">SchedulerInterface</a> scheduler;
 <a class="jxr_linenumber" name="46" href="#46">46</a>  
 <a class="jxr_linenumber" name="47" href="#47">47</a>  	@Override
 <a class="jxr_linenumber" name="48" href="#48">48</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">long</strong> deleteAllPhotos() {
