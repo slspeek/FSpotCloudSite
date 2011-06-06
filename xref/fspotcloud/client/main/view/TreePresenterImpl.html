@@ -62,7 +62,7 @@
 <a class="jxr_linenumber" name="52" href="#52">52</a>  		dataManager.getTagTree(<strong class="jxr_keyword">new</strong> AsyncCallback&lt;List&lt;TagNode&gt;&gt;() {
 <a class="jxr_linenumber" name="53" href="#53">53</a>  			@Override
 <a class="jxr_linenumber" name="54" href="#54">54</a>  			<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> onFailure(Throwable caught) {
-<a class="jxr_linenumber" name="55" href="#55">55</a>  				Window.alert(<span class="jxr_string">"Exception: "</span> + caught);
+<a class="jxr_linenumber" name="55" href="#55">55</a>  				log.warning(<span class="jxr_string">"Loading of the tree data failed: "</span> + caught);
 <a class="jxr_linenumber" name="56" href="#56">56</a>  			}
 <a class="jxr_linenumber" name="57" href="#57">57</a>  
 <a class="jxr_linenumber" name="58" href="#58">58</a>  			@Override
