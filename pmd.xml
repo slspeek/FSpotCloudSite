@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2011-06-06T23:20:42.158">
+<pmd version="4.2.5" timestamp="2011-06-15T23:26:35.733">
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/admin/DashboardEntryPoint.java">
 <violation beginline="8" endline="8" begincolumn="1" endcolumn="53" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'com.google.gwt.user.client.ui.RootLayoutPanel'
@@ -86,11 +86,6 @@ Avoid unused private methods such as 'getArgsString()'.
 <file name="/home/steven/fspotcloud/model/src/main/java/fspotcloud/server/model/peerdatabase/PeerDatabaseManager.java">
 <violation beginline="4" endline="4" begincolumn="1" endcolumn="29" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.server.model.peerdatabase" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'java.util.Collections'
-</violation>
-</file>
-<file name="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/admin/AdminServiceImpl.java">
-<violation beginline="36" endline="36" begincolumn="37" endcolumn="39" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.server.admin" class="AdminServiceImpl" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
-Avoid unused private fields such as 'log'.
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/admin/task/PhotoCountTask.java">
