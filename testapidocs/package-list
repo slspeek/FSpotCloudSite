@@ -1,5 +1,6 @@
 fspotcloud.client.main
 fspotcloud.client.main.data
+fspotcloud.client.place
 fspotcloud.client.view
 fspotcloud.client.view.action
 fspotcloud.peer
