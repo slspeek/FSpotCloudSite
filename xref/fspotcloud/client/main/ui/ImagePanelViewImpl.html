@@ -22,7 +22,7 @@
 <a class="jxr_linenumber" name="12" href="#12">12</a>  <strong class="jxr_keyword">import</strong> com.google.inject.Inject;
 <a class="jxr_linenumber" name="13" href="#13">13</a>  
 <a class="jxr_linenumber" name="14" href="#14">14</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ImagePanelView;
-<a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ImageView;
+<a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ImageRasterView;
 <a class="jxr_linenumber" name="16" href="#16">16</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.PagerView;
 <a class="jxr_linenumber" name="17" href="#17">17</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.SlideshowView;
 <a class="jxr_linenumber" name="18" href="#18">18</a>  
@@ -40,7 +40,7 @@
 <a class="jxr_linenumber" name="30" href="#30">30</a>  			UiBinder&lt;DockLayoutPanel, ImagePanelViewImpl&gt; {
 <a class="jxr_linenumber" name="31" href="#31">31</a>  	}
 <a class="jxr_linenumber" name="32" href="#32">32</a>  
-<a class="jxr_linenumber" name="33" href="#33">33</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <a href="../../../../fspotcloud/client/main/view/api/ImageView.html">ImageView</a> imageView;
+<a class="jxr_linenumber" name="33" href="#33">33</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <a href="../../../../fspotcloud/client/main/view/api/ImageRasterView.html">ImageRasterView</a> imageRasterView;
 <a class="jxr_linenumber" name="34" href="#34">34</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <a href="../../../../fspotcloud/client/main/view/api/PagerView.html">PagerView</a> pagerView;
 <a class="jxr_linenumber" name="35" href="#35">35</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <a href="../../../../fspotcloud/client/main/view/api/SlideshowView.html">SlideshowView</a> slideshowView;
 <a class="jxr_linenumber" name="36" href="#36">36</a>  	@UiField
@@ -49,9 +49,9 @@
 <a class="jxr_linenumber" name="39" href="#39">39</a>  	HTMLPanel buttonPanel;
 <a class="jxr_linenumber" name="40" href="#40">40</a>  
 <a class="jxr_linenumber" name="41" href="#41">41</a>  	@Inject
-<a class="jxr_linenumber" name="42" href="#42">42</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../fspotcloud/client/main/ui/ImagePanelViewImpl.html">ImagePanelViewImpl</a>(<a href="../../../../fspotcloud/client/main/view/api/ImageView.html">ImageView</a> imageView, <a href="../../../../fspotcloud/client/main/view/api/PagerView.html">PagerView</a> pagerView,
+<a class="jxr_linenumber" name="42" href="#42">42</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../fspotcloud/client/main/ui/ImagePanelViewImpl.html">ImagePanelViewImpl</a>(<a href="../../../../fspotcloud/client/main/view/api/ImageRasterView.html">ImageRasterView</a> imageRasterView, <a href="../../../../fspotcloud/client/main/view/api/PagerView.html">PagerView</a> pagerView,
 <a class="jxr_linenumber" name="43" href="#43">43</a>  			SlideshowView slideshowView) {
-<a class="jxr_linenumber" name="44" href="#44">44</a>  		<strong class="jxr_keyword">this</strong>.imageView = imageView;
+<a class="jxr_linenumber" name="44" href="#44">44</a>  		<strong class="jxr_keyword">this</strong>.imageRasterView = imageRasterView;
 <a class="jxr_linenumber" name="45" href="#45">45</a>  		<strong class="jxr_keyword">this</strong>.pagerView = pagerView;
 <a class="jxr_linenumber" name="46" href="#46">46</a>  		<strong class="jxr_keyword">this</strong>.slideshowView = slideshowView;
 <a class="jxr_linenumber" name="47" href="#47">47</a>  		initWidget(uiBinder.createAndBindUi(<strong class="jxr_keyword">this</strong>));
@@ -60,8 +60,8 @@
 <a class="jxr_linenumber" name="50" href="#50">50</a>  	}
 <a class="jxr_linenumber" name="51" href="#51">51</a>  
 <a class="jxr_linenumber" name="52" href="#52">52</a>  	@UiFactory
-<a class="jxr_linenumber" name="53" href="#53">53</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../fspotcloud/client/main/ui/ImageViewImpl.html">ImageViewImpl</a> getImageView() {
-<a class="jxr_linenumber" name="54" href="#54">54</a>  		<strong class="jxr_keyword">return</strong> (ImageViewImpl) imageView;
+<a class="jxr_linenumber" name="53" href="#53">53</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../fspotcloud/client/main/ui/ImageRasterViewImpl.html">ImageRasterViewImpl</a> getImageRasterView() {
+<a class="jxr_linenumber" name="54" href="#54">54</a>  		<strong class="jxr_keyword">return</strong> (ImageRasterViewImpl) imageRasterView;
 <a class="jxr_linenumber" name="55" href="#55">55</a>  	}
 <a class="jxr_linenumber" name="56" href="#56">56</a>  
 <a class="jxr_linenumber" name="57" href="#57">57</a>  	@UiFactory
