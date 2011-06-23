@@ -1,3 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pmd-cpd>
+<duplication lines="24" tokens="108">
+<file line="15" path="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/PlaceSwapper.java"/>
+<file line="38" path="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/PlaceSwapper.java"/>
+<codefragment>
+<![CDATA[
+		String photoId = e.getPhotoId();
+		int width = place.getColumnCount();
+		int height=place.getRowCount();
+		if (width * height > 1) {
+			//Zoom in
+			width = 1;
+			height = 1;
+		} else {
+			//Zoom out
+			width = PlaceSwapper.DEFAULT_RASTER_WIDTH;
+			height = PlaceSwapper.DEFAULT_RASTER_HEIGHT;
+		}
+		BasePlace result;
+		if (place instanceof ImageViewingPlace) {
+			result = new ImageViewingPlace(tagId, photoId, width, height);
+		} else if (place instanceof TagViewingPlace) {
+			result = new TagViewingPlace(tagId, photoId, width, height);
+		} else {
+			throw new IllegalStateException("We only have TagViewingPlaces and ImageViewingPlaces.");
+		}
+		return result;
+	}
+	
+	public BasePlace toggleTreeViewVisible(BasePlace place) {
+]]>
+</codefragment>
+</duplication>
 </pmd-cpd>
