@@ -17,7 +17,7 @@
 <a class="jxr_linenumber" name="7" href="#7">7</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../fspotcloud/test/ChromeRemoteSuite.html">ChromeRemoteSuite</a> <strong class="jxr_keyword">extends</strong> <a href="../../fspotcloud/test/WebDriverSuite.html">WebDriverSuite</a> {
 <a class="jxr_linenumber" name="8" href="#8">8</a>   	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> TestSuite suite() {
 <a class="jxr_linenumber" name="9" href="#9">9</a>   		WebDriverSuite suite = <strong class="jxr_keyword">new</strong> <a href="../../fspotcloud/test/ChromeRemoteSuite.html">ChromeRemoteSuite</a>();
-<a class="jxr_linenumber" name="10" href="#10">10</a>  		suite.addTest(<strong class="jxr_keyword">new</strong> <a href="../../fspotcloud/test/NavigationITest.html">NavigationITest</a>(suite.factory.chromeProvider(),suite.remote));
+<a class="jxr_linenumber" name="10" href="#10">10</a>  		suite.addTest(<strong class="jxr_keyword">new</strong> <a href="../../fspotcloud/test/TabularITest.html">TabularITest</a>(suite.factory.chromeProvider(),suite.remote));
 <a class="jxr_linenumber" name="11" href="#11">11</a>  		<strong class="jxr_keyword">return</strong> suite;
 <a class="jxr_linenumber" name="12" href="#12">12</a>  	}
 <a class="jxr_linenumber" name="13" href="#13">13</a>  }
