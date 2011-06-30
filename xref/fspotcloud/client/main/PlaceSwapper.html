@@ -70,18 +70,18 @@
 <a class="jxr_linenumber" name="60" href="#60">60</a>  	
 <a class="jxr_linenumber" name="61" href="#61">61</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../fspotcloud/client/place/BasePlace.html">BasePlace</a> toggleTreeViewVisible(<a href="../../../fspotcloud/client/place/BasePlace.html">BasePlace</a> place) {
 <a class="jxr_linenumber" name="62" href="#62">62</a>  		BasePlace result = <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="63" href="#63">63</a>  		<strong class="jxr_keyword">if</strong> (place instanceof TagViewingPlace &amp;&amp; !(place instanceof ImageViewingPlace)) {
-<a class="jxr_linenumber" name="64" href="#64">64</a>  			TagViewingPlace tagPlace = (TagViewingPlace) place;
-<a class="jxr_linenumber" name="65" href="#65">65</a>  			ImageViewingPlace imagePlace = <strong class="jxr_keyword">new</strong> <a href="../../../fspotcloud/client/place/ImageViewingPlace.html">ImageViewingPlace</a>(
-<a class="jxr_linenumber" name="66" href="#66">66</a>  					tagPlace.getTagId(), tagPlace.getPhotoId());
-<a class="jxr_linenumber" name="67" href="#67">67</a>  			result = imagePlace;
-<a class="jxr_linenumber" name="68" href="#68">68</a>  		} <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (place instanceof ImageViewingPlace) {
-<a class="jxr_linenumber" name="69" href="#69">69</a>  			ImageViewingPlace imagePlace = (ImageViewingPlace) place;
-<a class="jxr_linenumber" name="70" href="#70">70</a>  			TagViewingPlace tagPlace = <strong class="jxr_keyword">new</strong> <a href="../../../fspotcloud/client/place/TagViewingPlace.html">TagViewingPlace</a>(imagePlace
-<a class="jxr_linenumber" name="71" href="#71">71</a>  					.getTagId(), imagePlace.getPhotoId());
+<a class="jxr_linenumber" name="63" href="#63">63</a>  		String tagId  = place.getTagId();
+<a class="jxr_linenumber" name="64" href="#64">64</a>  		String photoId = place.getPhotoId();
+<a class="jxr_linenumber" name="65" href="#65">65</a>  		<strong class="jxr_keyword">int</strong> width = place.getColumnCount();
+<a class="jxr_linenumber" name="66" href="#66">66</a>  		<strong class="jxr_keyword">int</strong> height=place.getRowCount();
+<a class="jxr_linenumber" name="67" href="#67">67</a>  		<strong class="jxr_keyword">if</strong> (place instanceof TagViewingPlace &amp;&amp; !(place instanceof ImageViewingPlace)) {
+<a class="jxr_linenumber" name="68" href="#68">68</a>  			ImageViewingPlace imagePlace = <strong class="jxr_keyword">new</strong> <a href="../../../fspotcloud/client/place/ImageViewingPlace.html">ImageViewingPlace</a>(tagId, photoId, width, height);
+<a class="jxr_linenumber" name="69" href="#69">69</a>  			result = imagePlace;
+<a class="jxr_linenumber" name="70" href="#70">70</a>  		} <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (place instanceof ImageViewingPlace) {
+<a class="jxr_linenumber" name="71" href="#71">71</a>  			TagViewingPlace tagPlace = <strong class="jxr_keyword">new</strong> <a href="../../../fspotcloud/client/place/TagViewingPlace.html">TagViewingPlace</a>(tagId, photoId, width, height);
 <a class="jxr_linenumber" name="72" href="#72">72</a>  			result = tagPlace;
 <a class="jxr_linenumber" name="73" href="#73">73</a>  		} <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="74" href="#74">74</a>  			<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IllegalStateException();
+<a class="jxr_linenumber" name="74" href="#74">74</a>  			<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IllegalStateException(<span class="jxr_string">"We only have TagViewingPlaces and ImageViewingPlaces."</span>);
 <a class="jxr_linenumber" name="75" href="#75">75</a>  		}
 <a class="jxr_linenumber" name="76" href="#76">76</a>  		<strong class="jxr_keyword">return</strong> result;
 <a class="jxr_linenumber" name="77" href="#77">77</a>  	}

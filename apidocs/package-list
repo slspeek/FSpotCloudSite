@@ -17,13 +17,11 @@ fspotcloud.peer
 fspotcloud.peer.db
 fspotcloud.rpc
 fspotcloud.server.admin
-fspotcloud.server.admin.task
 fspotcloud.server.control
 fspotcloud.server.control.reciever
 fspotcloud.server.control.task
 fspotcloud.server.inject
 fspotcloud.server.main
-fspotcloud.server.main.task
 fspotcloud.server.mapreduce
 fspotcloud.server.model
 fspotcloud.server.model.api
