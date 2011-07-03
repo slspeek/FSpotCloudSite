@@ -43,7 +43,7 @@
 <a class="jxr_linenumber" name="33" href="#33">33</a>  		timer.setRunnable(<strong class="jxr_keyword">new</strong> Runnable() {
 <a class="jxr_linenumber" name="34" href="#34">34</a>  			@Override
 <a class="jxr_linenumber" name="35" href="#35">35</a>  			<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> run() {
-<a class="jxr_linenumber" name="36" href="#36">36</a>  				navigator.canGo(<strong class="jxr_keyword">true</strong>, <strong class="jxr_keyword">new</strong> AsyncCallback&lt;Boolean&gt;() {
+<a class="jxr_linenumber" name="36" href="#36">36</a>  				navigator.canGoAsync(<strong class="jxr_keyword">true</strong>, <strong class="jxr_keyword">new</strong> AsyncCallback&lt;Boolean&gt;() {
 <a class="jxr_linenumber" name="37" href="#37">37</a>  					@Override
 <a class="jxr_linenumber" name="38" href="#38">38</a>  					<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> onFailure(Throwable caught) {
 <a class="jxr_linenumber" name="39" href="#39">39</a>  						log.warning(caught.getMessage());
@@ -61,7 +61,7 @@
 <a class="jxr_linenumber" name="51" href="#51">51</a>  
 <a class="jxr_linenumber" name="52" href="#52">52</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> go(<strong class="jxr_keyword">boolean</strong> canGo) {
 <a class="jxr_linenumber" name="53" href="#53">53</a>  		<strong class="jxr_keyword">if</strong> (canGo) {
-<a class="jxr_linenumber" name="54" href="#54">54</a>  			navigator.go(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="54" href="#54">54</a>  			navigator.goAsync(<strong class="jxr_keyword">true</strong>);
 <a class="jxr_linenumber" name="55" href="#55">55</a>  		} <strong class="jxr_keyword">else</strong> {
 <a class="jxr_linenumber" name="56" href="#56">56</a>  			stop();
 <a class="jxr_linenumber" name="57" href="#57">57</a>  			log.info(<span class="jxr_string">"Timer stopped, because the end was reached."</span>);

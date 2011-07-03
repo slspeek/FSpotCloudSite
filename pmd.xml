@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2011-06-30T22:07:42.659">
+<pmd version="4.2.5" timestamp="2011-07-03T22:18:44.036">
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/admin/DashboardEntryPoint.java">
 <violation beginline="8" endline="8" begincolumn="1" endcolumn="53" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'com.google.gwt.user.client.ui.RootLayoutPanel'
@@ -14,6 +14,11 @@ Avoid unused imports such as 'fspotcloud.client.admin.view.DashboardPresenter'
 Avoid unused imports such as 'fspotcloud.client.admin.view.api.DashboardView'
 </violation>
 </file>
+<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/MVPSetup.java">
+<violation beginline="35" endline="35" begincolumn="27" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.main" class="MVPSetup" variable="navigator" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'navigator'.
+</violation>
+</file>
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/TreePanel.java">
 <violation beginline="41" endline="41" begincolumn="22" endcolumn="47" rule="UnusedPrivateMethod" ruleset="Unused Code Rules" package="fspotcloud.client.main.ui" class="TreePanel" method="requestTagTreeFromServer" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateMethod" priority="3">
 Avoid unused private methods such as 'requestTagTreeFromServer()'.
@@ -22,6 +27,9 @@ Avoid unused private methods such as 'requestTagTreeFromServer()'.
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/PagerPresenterImpl.java">
 <violation beginline="15" endline="15" begincolumn="33" endcolumn="41" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.main.view" class="PagerPresenterImpl" variable="pagerView" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'pagerView'.
+</violation>
+<violation beginline="17" endline="17" begincolumn="33" endcolumn="37" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.main.view" class="PagerPresenterImpl" variable="place" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'place'.
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/TreePresenterImpl.java">
@@ -58,6 +66,11 @@ Avoid unused private fields such as 'ACTION_HIDE'.
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/view/action/ToggleFullscreenAction.java">
 <violation beginline="15" endline="15" begincolumn="37" endcolumn="39" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.view.action" class="ToggleFullscreenAction" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'log'.
+</violation>
+</file>
+<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/view/action/ZoomViewEventHandler.java">
+<violation beginline="8" endline="8" begincolumn="1" endcolumn="41" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.view.action" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'fspotcloud.client.place.BasePlace'
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/model/src/main/java/fspotcloud/server/model/batch/BatchManager.java">

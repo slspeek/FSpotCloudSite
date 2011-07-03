@@ -16,7 +16,7 @@
 <a class="jxr_linenumber" name="6" href="#6">6</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.event.shared.EventBus;
 <a class="jxr_linenumber" name="7" href="#7">7</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.user.client.rpc.AsyncCallback;
 <a class="jxr_linenumber" name="8" href="#8">8</a>   
-<a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> fspotcloud.client.main.PagingNavigator;
+<a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> fspotcloud.client.main.Navigator;
 <a class="jxr_linenumber" name="10" href="#10">10</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ImageRasterView;
 <a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ImageView;
 <a class="jxr_linenumber" name="12" href="#12">12</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.place.BasePlace;
@@ -35,13 +35,13 @@
 <a class="jxr_linenumber" name="25" href="#25">25</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong> pageSize;
 <a class="jxr_linenumber" name="26" href="#26">26</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">boolean</strong> thumb;
 <a class="jxr_linenumber" name="27" href="#27">27</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <a href="../../../../fspotcloud/client/main/view/api/ImageRasterView.html">ImageRasterView</a> imageRasterView;
-<a class="jxr_linenumber" name="28" href="#28">28</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <a href="../../../../fspotcloud/client/main/PagingNavigator.html">PagingNavigator</a> pager;
+<a class="jxr_linenumber" name="28" href="#28">28</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <a href="../../../../fspotcloud/client/main/Navigator.html">Navigator</a> pager;
 <a class="jxr_linenumber" name="29" href="#29">29</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> EventBus eventBus;
 <a class="jxr_linenumber" name="30" href="#30">30</a>  
 <a class="jxr_linenumber" name="31" href="#31">31</a>  	List&lt;ImageView&gt; imageViewList;
 <a class="jxr_linenumber" name="32" href="#32">32</a>  
 <a class="jxr_linenumber" name="33" href="#33">33</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../fspotcloud/client/main/view/ImageRasterPresenterImpl.html">ImageRasterPresenterImpl</a>(<a href="../../../../fspotcloud/client/place/BasePlace.html">BasePlace</a> place,
-<a class="jxr_linenumber" name="34" href="#34">34</a>  			ImageRasterView imageRasterView, <a href="../../../../fspotcloud/client/main/PagingNavigator.html">PagingNavigator</a> pager,
+<a class="jxr_linenumber" name="34" href="#34">34</a>  			ImageRasterView imageRasterView, <a href="../../../../fspotcloud/client/main/Navigator.html">Navigator</a> pager,
 <a class="jxr_linenumber" name="35" href="#35">35</a>  			EventBus eventBus) {
 <a class="jxr_linenumber" name="36" href="#36">36</a>  		tagId = place.getTagId();
 <a class="jxr_linenumber" name="37" href="#37">37</a>  		photoId = place.getPhotoId();
@@ -77,7 +77,7 @@
 <a class="jxr_linenumber" name="67" href="#67">67</a>  	}
 <a class="jxr_linenumber" name="68" href="#68">68</a>  
 <a class="jxr_linenumber" name="69" href="#69">69</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setImages() {
-<a class="jxr_linenumber" name="70" href="#70">70</a>  		pager.getPage(tagId, photoId, pageSize,
+<a class="jxr_linenumber" name="70" href="#70">70</a>  		pager.getPageAsync(tagId, photoId, pageSize,
 <a class="jxr_linenumber" name="71" href="#71">71</a>  				<strong class="jxr_keyword">new</strong> AsyncCallback&lt;List&lt;BasePlace&gt;&gt;() {
 <a class="jxr_linenumber" name="72" href="#72">72</a>  
 <a class="jxr_linenumber" name="73" href="#73">73</a>  					@Override
