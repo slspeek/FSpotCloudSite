@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2011-07-04T22:03:08.925">
+<pmd version="4.2.5" timestamp="2011-07-04T23:21:38.929">
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/admin/DashboardEntryPoint.java">
 <violation beginline="8" endline="8" begincolumn="1" endcolumn="53" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'com.google.gwt.user.client.ui.RootLayoutPanel'
@@ -19,9 +19,9 @@ Avoid unused imports such as 'fspotcloud.client.admin.view.api.DashboardView'
 Avoid unused private fields such as 'navigator'.
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/TreePanel.java">
-<violation beginline="41" endline="41" begincolumn="22" endcolumn="47" rule="UnusedPrivateMethod" ruleset="Unused Code Rules" package="fspotcloud.client.main.ui" class="TreePanel" method="requestTagTreeFromServer" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateMethod" priority="3">
-Avoid unused private methods such as 'requestTagTreeFromServer()'.
+<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/ImageViewImpl.java">
+<violation beginline="21" endline="21" begincolumn="28" endcolumn="34" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.main.ui" class="ImageViewImpl" variable="counter" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'counter'.
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/PagerPresenterImpl.java">
@@ -61,11 +61,6 @@ Avoid unused private fields such as 'ACTION_SHOW'.
 </violation>
 <violation beginline="8" endline="8" begincolumn="34" endcolumn="44" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.view.action" class="HelpAction" variable="ACTION_HIDE" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'ACTION_HIDE'.
-</violation>
-</file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/view/action/ToggleFullscreenAction.java">
-<violation beginline="15" endline="15" begincolumn="37" endcolumn="39" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.view.action" class="ToggleFullscreenAction" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
-Avoid unused private fields such as 'log'.
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/view/action/ZoomViewEventHandler.java">
@@ -137,6 +132,7 @@ Avoid unused imports such as 'fspotcloud.server.model.api.PeerDatabases'
 <suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/ImageRasterViewImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/PagerViewImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/SlideshowTimer.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/view/action/ToggleFullscreenAction.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/view/action/ToggleRasterViewAction.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/inject/FSpotCloudServletModule.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/mapreduce/ImageDataMapper.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>

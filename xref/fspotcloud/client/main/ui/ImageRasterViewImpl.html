@@ -52,7 +52,7 @@
 <a class="jxr_linenumber" name="42" href="#42">42</a>  		List&lt;ImageView&gt; result = <strong class="jxr_keyword">new</strong> ArrayList&lt;ImageView&gt;();
 <a class="jxr_linenumber" name="43" href="#43">43</a>  		<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> row = 0; row &lt; rowCount; row++) {
 <a class="jxr_linenumber" name="44" href="#44">44</a>  			<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> column = 0; column &lt; columnCount; column++) {
-<a class="jxr_linenumber" name="45" href="#45">45</a>  				ImageView view = <strong class="jxr_keyword">new</strong> <a href="../../../../fspotcloud/client/main/ui/ImageViewImpl.html">ImageViewImpl</a>();
+<a class="jxr_linenumber" name="45" href="#45">45</a>  				ImageView view = <strong class="jxr_keyword">new</strong> <a href="../../../../fspotcloud/client/main/ui/ImageViewImpl.html">ImageViewImpl</a>(column+<span class="jxr_string">"x"</span>+row);
 <a class="jxr_linenumber" name="46" href="#46">46</a>  				grid.setWidget(row, column, view.asWidget());
 <a class="jxr_linenumber" name="47" href="#47">47</a>  				result.add(view);
 <a class="jxr_linenumber" name="48" href="#48">48</a>  			}
