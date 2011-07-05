@@ -347,20 +347,41 @@
 <a class="jxr_linenumber" name="337" href="#337">337</a> 				+ amount);
 <a class="jxr_linenumber" name="338" href="#338">338</a> 		reloadCurrentPlaceOnNewSize();
 <a class="jxr_linenumber" name="339" href="#339">339</a> 	}
-<a class="jxr_linenumber" name="340" href="#340">340</a> 
-<a class="jxr_linenumber" name="341" href="#341">341</a> 	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> reloadCurrentPlaceOnNewSize() {
-<a class="jxr_linenumber" name="342" href="#342">342</a> 		BasePlace now = placeWhere.where();
-<a class="jxr_linenumber" name="343" href="#343">343</a> 		BasePlace destination = placeCalculator.getTabularPlace(now);
-<a class="jxr_linenumber" name="344" href="#344">344</a> 		placeGoTo.goTo(destination);
-<a class="jxr_linenumber" name="345" href="#345">345</a> 	}
-<a class="jxr_linenumber" name="346" href="#346">346</a> 
-<a class="jxr_linenumber" name="347" href="#347">347</a> 	@Override
-<a class="jxr_linenumber" name="348" href="#348">348</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> toggleShowTagTree() {
-<a class="jxr_linenumber" name="349" href="#349">349</a> 		BasePlace now = placeWhere.where();
-<a class="jxr_linenumber" name="350" href="#350">350</a> 		BasePlace destination = placeCalculator.toggleTreeViewVisible(now);
-<a class="jxr_linenumber" name="351" href="#351">351</a> 		placeGoTo.goTo(destination);
-<a class="jxr_linenumber" name="352" href="#352">352</a> 	}
-<a class="jxr_linenumber" name="353" href="#353">353</a> }
+<a class="jxr_linenumber" name="340" href="#340">340</a> 	
+<a class="jxr_linenumber" name="341" href="#341">341</a> 	@Override
+<a class="jxr_linenumber" name="342" href="#342">342</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setRasterDimension(<strong class="jxr_keyword">int</strong> i, <strong class="jxr_keyword">int</strong> j) {
+<a class="jxr_linenumber" name="343" href="#343">343</a> 		placeCalculator.setRasterWidth(i);
+<a class="jxr_linenumber" name="344" href="#344">344</a> 		placeCalculator.setRasterHeight(j);
+<a class="jxr_linenumber" name="345" href="#345">345</a> 		reloadCurrentPlaceOnNewSize();
+<a class="jxr_linenumber" name="346" href="#346">346</a> 	}
+<a class="jxr_linenumber" name="347" href="#347">347</a> 
+<a class="jxr_linenumber" name="348" href="#348">348</a> 
+<a class="jxr_linenumber" name="349" href="#349">349</a> 	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> reloadCurrentPlaceOnNewSize() {
+<a class="jxr_linenumber" name="350" href="#350">350</a> 		BasePlace now = placeWhere.where();
+<a class="jxr_linenumber" name="351" href="#351">351</a> 		BasePlace destination = placeCalculator.getTabularPlace(now);
+<a class="jxr_linenumber" name="352" href="#352">352</a> 		placeGoTo.goTo(destination);
+<a class="jxr_linenumber" name="353" href="#353">353</a> 	}
+<a class="jxr_linenumber" name="354" href="#354">354</a> 
+<a class="jxr_linenumber" name="355" href="#355">355</a> 	@Override
+<a class="jxr_linenumber" name="356" href="#356">356</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> toggleShowTagTree() {
+<a class="jxr_linenumber" name="357" href="#357">357</a> 		BasePlace now = placeWhere.where();
+<a class="jxr_linenumber" name="358" href="#358">358</a> 		BasePlace destination = placeCalculator.toggleTreeViewVisible(now);
+<a class="jxr_linenumber" name="359" href="#359">359</a> 		placeGoTo.goTo(destination);
+<a class="jxr_linenumber" name="360" href="#360">360</a> 	}
+<a class="jxr_linenumber" name="361" href="#361">361</a> 
+<a class="jxr_linenumber" name="362" href="#362">362</a> 	@Override
+<a class="jxr_linenumber" name="363" href="#363">363</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> toggleRasterView() {
+<a class="jxr_linenumber" name="364" href="#364">364</a> 		BasePlace now = placeWhere.where();
+<a class="jxr_linenumber" name="365" href="#365">365</a> 		BasePlace destination = placeCalculator.toggleRasterView(now);
+<a class="jxr_linenumber" name="366" href="#366">366</a> 		placeGoTo.goTo(destination);
+<a class="jxr_linenumber" name="367" href="#367">367</a> 	}
+<a class="jxr_linenumber" name="368" href="#368">368</a> 
+<a class="jxr_linenumber" name="369" href="#369">369</a> 	@Override
+<a class="jxr_linenumber" name="370" href="#370">370</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> resetRasterSize() {
+<a class="jxr_linenumber" name="371" href="#371">371</a> 		setRasterDimension(PlaceCalculator.DEFAULT_RASTER_WIDTH, PlaceCalculator.DEFAULT_RASTER_HEIGHT);
+<a class="jxr_linenumber" name="372" href="#372">372</a> 	}
+<a class="jxr_linenumber" name="373" href="#373">373</a> 
+<a class="jxr_linenumber" name="374" href="#374">374</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

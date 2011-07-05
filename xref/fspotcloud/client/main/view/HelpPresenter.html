@@ -25,9 +25,9 @@
 <a class="jxr_linenumber" name="15" href="#15">15</a>  
 <a class="jxr_linenumber" name="16" href="#16">16</a>  	<strong class="jxr_keyword">private</strong> String initHelpText() {
 <a class="jxr_linenumber" name="17" href="#17">17</a>  		helptext = <span class="jxr_string">"&lt;table&gt;"</span>;
-<a class="jxr_linenumber" name="18" href="#18">18</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"t"</span>, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>,
+<a class="jxr_linenumber" name="18" href="#18">18</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"t"</span>, <span class="jxr_string">"1"</span>, <strong class="jxr_keyword">null</strong>,
 <a class="jxr_linenumber" name="19" href="#19">19</a>  				<span class="jxr_string">"Toggle single/tabular image view"</span>);
-<a class="jxr_linenumber" name="20" href="#20">20</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"f"</span>, <span class="jxr_string">"1"</span>, <strong class="jxr_keyword">null</strong>,
+<a class="jxr_linenumber" name="20" href="#20">20</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"f"</span>, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>,
 <a class="jxr_linenumber" name="21" href="#21">21</a>  				<span class="jxr_string">"Toggle fullscreen (hides/shows the tree view)"</span>);
 <a class="jxr_linenumber" name="22" href="#22">22</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"ENTER"</span>, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>,
 <a class="jxr_linenumber" name="23" href="#23">23</a>  				<span class="jxr_string">"Puts keyboard focus on the category tree"</span>);
@@ -39,37 +39,50 @@
 <a class="jxr_linenumber" name="29" href="#29">29</a>  		<span class="jxr_string">"Adds one row to raster"</span>);
 <a class="jxr_linenumber" name="30" href="#30">30</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"e"</span>, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>,
 <a class="jxr_linenumber" name="31" href="#31">31</a>  		<span class="jxr_string">"Removes one row from the raster"</span>);
-<a class="jxr_linenumber" name="32" href="#32">32</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"b"</span>, <span class="jxr_string">"HOME"</span>, <strong class="jxr_keyword">null</strong>,
-<a class="jxr_linenumber" name="33" href="#33">33</a>  				<span class="jxr_string">"Go to the first image of the category"</span>);
-<a class="jxr_linenumber" name="34" href="#34">34</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"e"</span>, <span class="jxr_string">"z"</span>, <span class="jxr_string">"END"</span>,
-<a class="jxr_linenumber" name="35" href="#35">35</a>  				<span class="jxr_string">"Go to the last image of the category"</span>);
-<a class="jxr_linenumber" name="36" href="#36">36</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"p"</span>, <span class="jxr_string">"LEFT"</span>, <strong class="jxr_keyword">null</strong>,
-<a class="jxr_linenumber" name="37" href="#37">37</a>  				<span class="jxr_string">"Previous image in this category"</span>);
-<a class="jxr_linenumber" name="38" href="#38">38</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"n"</span>, <span class="jxr_string">"RIGHT"</span>, <strong class="jxr_keyword">null</strong>,
-<a class="jxr_linenumber" name="39" href="#39">39</a>  				<span class="jxr_string">"Next image in this category"</span>);
-<a class="jxr_linenumber" name="40" href="#40">40</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"s"</span>, <span class="jxr_string">"g"</span>, <strong class="jxr_keyword">null</strong>, <span class="jxr_string">"Start slideshow"</span>);
-<a class="jxr_linenumber" name="41" href="#41">41</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"q"</span>, <span class="jxr_string">"x"</span>, <strong class="jxr_keyword">null</strong>, <span class="jxr_string">"Stop slideshow"</span>);
-<a class="jxr_linenumber" name="42" href="#42">42</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"i"</span>, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>,
-<a class="jxr_linenumber" name="43" href="#43">43</a>  				<span class="jxr_string">"Make the slideshow go faster"</span>);
-<a class="jxr_linenumber" name="44" href="#44">44</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"d"</span>, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>,
-<a class="jxr_linenumber" name="45" href="#45">45</a>  				<span class="jxr_string">"Make the slideshow go slower"</span>);
-<a class="jxr_linenumber" name="46" href="#46">46</a>  
-<a class="jxr_linenumber" name="47" href="#47">47</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"h"</span>, <span class="jxr_string">"ESCAPE"</span>, <strong class="jxr_keyword">null</strong>,
-<a class="jxr_linenumber" name="48" href="#48">48</a>  				<span class="jxr_string">"Show/Hide keyboard shortcuts"</span>);
-<a class="jxr_linenumber" name="49" href="#49">49</a>  		helptext += <span class="jxr_string">"&lt;/table&gt;"</span>;
-<a class="jxr_linenumber" name="50" href="#50">50</a>  		<strong class="jxr_keyword">return</strong> helptext;
-<a class="jxr_linenumber" name="51" href="#51">51</a>  	}
-<a class="jxr_linenumber" name="52" href="#52">52</a>  
-<a class="jxr_linenumber" name="53" href="#53">53</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> show() {
-<a class="jxr_linenumber" name="54" href="#54">54</a>  		popupView.setGlassEnabled(<strong class="jxr_keyword">true</strong>);
-<a class="jxr_linenumber" name="55" href="#55">55</a>  		popupView.center();
-<a class="jxr_linenumber" name="56" href="#56">56</a>  		popupView.show();
-<a class="jxr_linenumber" name="57" href="#57">57</a>  	}
-<a class="jxr_linenumber" name="58" href="#58">58</a>  
-<a class="jxr_linenumber" name="59" href="#59">59</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> hide() {
-<a class="jxr_linenumber" name="60" href="#60">60</a>  		popupView.hide();
-<a class="jxr_linenumber" name="61" href="#61">61</a>  	}
-<a class="jxr_linenumber" name="62" href="#62">62</a>  }
+<a class="jxr_linenumber" name="32" href="#32">32</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"d"</span>, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>,
+<a class="jxr_linenumber" name="33" href="#33">33</a>  		<span class="jxr_string">"Make the slideshow go slower"</span>);
+<a class="jxr_linenumber" name="34" href="#34">34</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"d"</span>, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>,
+<a class="jxr_linenumber" name="35" href="#35">35</a>  		<span class="jxr_string">"Make the slideshow go slower"</span>);
+<a class="jxr_linenumber" name="36" href="#36">36</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"2"</span>, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>,
+<a class="jxr_linenumber" name="37" href="#37">37</a>  		<span class="jxr_string">"Sets the raster to 2 x 2"</span>);
+<a class="jxr_linenumber" name="38" href="#38">38</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"3"</span>, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>,
+<a class="jxr_linenumber" name="39" href="#39">39</a>  		<span class="jxr_string">"Sets the raster to 3 x 3"</span>);
+<a class="jxr_linenumber" name="40" href="#40">40</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"4"</span>, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>,
+<a class="jxr_linenumber" name="41" href="#41">41</a>  		<span class="jxr_string">"Sets the raster to 4 x 4"</span>);
+<a class="jxr_linenumber" name="42" href="#42">42</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"5"</span>, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>,
+<a class="jxr_linenumber" name="43" href="#43">43</a>  		<span class="jxr_string">"Sets the raster to 5 x 5"</span>);
+<a class="jxr_linenumber" name="44" href="#44">44</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"0"</span>, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>,
+<a class="jxr_linenumber" name="45" href="#45">45</a>  		<span class="jxr_string">"Reset to raster to its defaults"</span>);
+<a class="jxr_linenumber" name="46" href="#46">46</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"b"</span>, <span class="jxr_string">"HOME"</span>, <strong class="jxr_keyword">null</strong>,
+<a class="jxr_linenumber" name="47" href="#47">47</a>  				<span class="jxr_string">"Go to the first image of the category"</span>);
+<a class="jxr_linenumber" name="48" href="#48">48</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"e"</span>, <span class="jxr_string">"z"</span>, <span class="jxr_string">"END"</span>,
+<a class="jxr_linenumber" name="49" href="#49">49</a>  				<span class="jxr_string">"Go to the last image of the category"</span>);
+<a class="jxr_linenumber" name="50" href="#50">50</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"p"</span>, <span class="jxr_string">"LEFT"</span>, <strong class="jxr_keyword">null</strong>,
+<a class="jxr_linenumber" name="51" href="#51">51</a>  				<span class="jxr_string">"Previous image in this category"</span>);
+<a class="jxr_linenumber" name="52" href="#52">52</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"n"</span>, <span class="jxr_string">"RIGHT"</span>, <strong class="jxr_keyword">null</strong>,
+<a class="jxr_linenumber" name="53" href="#53">53</a>  				<span class="jxr_string">"Next image in this category"</span>);
+<a class="jxr_linenumber" name="54" href="#54">54</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"s"</span>, <span class="jxr_string">"g"</span>, <strong class="jxr_keyword">null</strong>, <span class="jxr_string">"Start slideshow"</span>);
+<a class="jxr_linenumber" name="55" href="#55">55</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"q"</span>, <span class="jxr_string">"x"</span>, <strong class="jxr_keyword">null</strong>, <span class="jxr_string">"Stop slideshow"</span>);
+<a class="jxr_linenumber" name="56" href="#56">56</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"i"</span>, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>,
+<a class="jxr_linenumber" name="57" href="#57">57</a>  				<span class="jxr_string">"Make the slideshow go faster"</span>);
+<a class="jxr_linenumber" name="58" href="#58">58</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"d"</span>, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>,
+<a class="jxr_linenumber" name="59" href="#59">59</a>  				<span class="jxr_string">"Make the slideshow go slower"</span>);
+<a class="jxr_linenumber" name="60" href="#60">60</a>  		helptext += generator.getHelpRow(<span class="jxr_string">"h"</span>, <span class="jxr_string">"ESCAPE"</span>, <strong class="jxr_keyword">null</strong>,
+<a class="jxr_linenumber" name="61" href="#61">61</a>  				<span class="jxr_string">"Show/Hide keyboard shortcuts"</span>);
+<a class="jxr_linenumber" name="62" href="#62">62</a>  		helptext += <span class="jxr_string">"&lt;/table&gt;"</span>;
+<a class="jxr_linenumber" name="63" href="#63">63</a>  		<strong class="jxr_keyword">return</strong> helptext;
+<a class="jxr_linenumber" name="64" href="#64">64</a>  	}
+<a class="jxr_linenumber" name="65" href="#65">65</a>  
+<a class="jxr_linenumber" name="66" href="#66">66</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> show() {
+<a class="jxr_linenumber" name="67" href="#67">67</a>  		popupView.setGlassEnabled(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="68" href="#68">68</a>  		popupView.center();
+<a class="jxr_linenumber" name="69" href="#69">69</a>  		popupView.show();
+<a class="jxr_linenumber" name="70" href="#70">70</a>  	}
+<a class="jxr_linenumber" name="71" href="#71">71</a>  
+<a class="jxr_linenumber" name="72" href="#72">72</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> hide() {
+<a class="jxr_linenumber" name="73" href="#73">73</a>  		popupView.hide();
+<a class="jxr_linenumber" name="74" href="#74">74</a>  	}
+<a class="jxr_linenumber" name="75" href="#75">75</a>  }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>
