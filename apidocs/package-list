@@ -13,6 +13,8 @@ fspotcloud.client.main.view
 fspotcloud.client.main.view.api
 fspotcloud.client.main.view.factory
 fspotcloud.client.place
+fspotcloud.client.place.api
+fspotcloud.client.util
 fspotcloud.client.view.action
 fspotcloud.peer
 fspotcloud.peer.db

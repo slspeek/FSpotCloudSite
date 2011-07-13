@@ -23,8 +23,8 @@
 <a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">import</strong> com.google.inject.Inject;
 <a class="jxr_linenumber" name="14" href="#14">14</a>  
 <a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.MainWindowActivityMapper;
-<a class="jxr_linenumber" name="16" href="#16">16</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.place.MainPlaceHistoryMapper;
-<a class="jxr_linenumber" name="17" href="#17">17</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.place.TagViewingPlace;
+<a class="jxr_linenumber" name="16" href="#16">16</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.place.BasePlace;
+<a class="jxr_linenumber" name="17" href="#17">17</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.place.MainPlaceHistoryMapper;
 <a class="jxr_linenumber" name="18" href="#18">18</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.view.action.NavigationEventHandler;
 <a class="jxr_linenumber" name="19" href="#19">19</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.view.action.SlideshowEventHandler;
 <a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.view.action.ZoomViewEventHandler;
@@ -33,7 +33,7 @@
 <a class="jxr_linenumber" name="23" href="#23">23</a>  
 <a class="jxr_linenumber" name="24" href="#24">24</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger log = Logger
 <a class="jxr_linenumber" name="25" href="#25">25</a>  			.getLogger(MVPSetup.<strong class="jxr_keyword">class</strong>.getName());
-<a class="jxr_linenumber" name="26" href="#26">26</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> Place defaultPlace = <strong class="jxr_keyword">new</strong> <a href="../../../fspotcloud/client/place/TagViewingPlace.html">TagViewingPlace</a>(<span class="jxr_string">"latest"</span>, <span class="jxr_string">"latest"</span>);
+<a class="jxr_linenumber" name="26" href="#26">26</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> Place defaultPlace = <strong class="jxr_keyword">new</strong> <a href="../../../fspotcloud/client/place/BasePlace.html">BasePlace</a>(<span class="jxr_string">"latest"</span>, <span class="jxr_string">"latest"</span>, 1, 1, <strong class="jxr_keyword">true</strong>);
 <a class="jxr_linenumber" name="27" href="#27">27</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> SimplePanel appWidget = <strong class="jxr_keyword">new</strong> SimplePanel();
 <a class="jxr_linenumber" name="28" href="#28">28</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> EventBus eventBus;
 <a class="jxr_linenumber" name="29" href="#29">29</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <a href="../../../fspotcloud/client/main/view/MainWindowActivityMapper.html">MainWindowActivityMapper</a> activityMapper;
