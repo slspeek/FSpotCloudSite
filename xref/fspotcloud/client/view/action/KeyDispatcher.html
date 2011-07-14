@@ -20,9 +20,9 @@
 <a class="jxr_linenumber" name="10" href="#10">10</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger log = Logger.getLogger(KeyDispatcher.<strong class="jxr_keyword">class</strong>
 <a class="jxr_linenumber" name="11" href="#11">11</a>  			.getName());
 <a class="jxr_linenumber" name="12" href="#12">12</a>  
-<a class="jxr_linenumber" name="13" href="#13">13</a>  	Map&lt;Integer, GestureAction&gt; registeredActions = <strong class="jxr_keyword">new</strong> HashMap&lt;Integer, GestureAction&gt;();
+<a class="jxr_linenumber" name="13" href="#13">13</a>  	Map&lt;Integer, UserAction&gt; registeredActions = <strong class="jxr_keyword">new</strong> HashMap&lt;Integer, UserAction&gt;();
 <a class="jxr_linenumber" name="14" href="#14">14</a>  
-<a class="jxr_linenumber" name="15" href="#15">15</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> register(<a href="../../../../fspotcloud/client/view/action/GestureAction.html">GestureAction</a> action, <a href="../../../../fspotcloud/client/view/action/Shortcut.html">Shortcut</a> shortcut) {
+<a class="jxr_linenumber" name="15" href="#15">15</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> register(<a href="../../../../fspotcloud/client/view/action/UserAction.html">UserAction</a> action, <a href="../../../../fspotcloud/client/view/action/Shortcut.html">Shortcut</a> shortcut) {
 <a class="jxr_linenumber" name="16" href="#16">16</a>  		<strong class="jxr_keyword">int</strong>[] keys;
 <a class="jxr_linenumber" name="17" href="#17">17</a>  		<strong class="jxr_keyword">if</strong> (shortcut.getAlternateKey() != <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="18" href="#18">18</a>  			keys = <strong class="jxr_keyword">new</strong> <strong class="jxr_keyword">int</strong>[2];
@@ -39,7 +39,7 @@
 <a class="jxr_linenumber" name="29" href="#29">29</a>  	@Override
 <a class="jxr_linenumber" name="30" href="#30">30</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> handle(<strong class="jxr_keyword">int</strong> keycode) {
 <a class="jxr_linenumber" name="31" href="#31">31</a>  		log.info(<span class="jxr_string">"Handling: code "</span> + keycode);
-<a class="jxr_linenumber" name="32" href="#32">32</a>  		GestureAction action = registeredActions.get(keycode);
+<a class="jxr_linenumber" name="32" href="#32">32</a>  		UserAction action = registeredActions.get(keycode);
 <a class="jxr_linenumber" name="33" href="#33">33</a>  		<strong class="jxr_keyword">if</strong> (action != <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="34" href="#34">34</a>  			action.perform();
 <a class="jxr_linenumber" name="35" href="#35">35</a>  			<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
