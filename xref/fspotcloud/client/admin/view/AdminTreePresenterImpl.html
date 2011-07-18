@@ -24,8 +24,8 @@
 <a class="jxr_linenumber" name="14" href="#14">14</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.TagTreeModel;
 <a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.TreeView;
 <a class="jxr_linenumber" name="16" href="#16">16</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.place.BasePlace;
-<a class="jxr_linenumber" name="17" href="#17">17</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.place.PlaceGoTo;
-<a class="jxr_linenumber" name="18" href="#18">18</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.place.TagPlace;
+<a class="jxr_linenumber" name="17" href="#17">17</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.place.TagPlace;
+<a class="jxr_linenumber" name="18" href="#18">18</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.place.api.PlaceGoTo;
 <a class="jxr_linenumber" name="19" href="#19">19</a>  <strong class="jxr_keyword">import</strong> fspotcloud.shared.tag.TagNode;
 <a class="jxr_linenumber" name="20" href="#20">20</a>  
 <a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../fspotcloud/client/admin/view/AdminTreePresenterImpl.html">AdminTreePresenterImpl</a> <strong class="jxr_keyword">implements</strong> TreeView.TreePresenter, Handler {
@@ -36,11 +36,11 @@
 <a class="jxr_linenumber" name="26" href="#26">26</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <a href="../../../../fspotcloud/client/main/view/api/TreeView.html">TreeView</a> treeView;
 <a class="jxr_linenumber" name="27" href="#27">27</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <a href="../../../../fspotcloud/client/data/DataManager.html">DataManager</a> dataManager;
 <a class="jxr_linenumber" name="28" href="#28">28</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> SingleSelectionModel&lt;TagNode&gt; selectionModel;
-<a class="jxr_linenumber" name="29" href="#29">29</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <a href="../../../../fspotcloud/client/place/PlaceGoTo.html">PlaceGoTo</a> placeGoTo;
+<a class="jxr_linenumber" name="29" href="#29">29</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <a href="../../../../fspotcloud/client/place/api/PlaceGoTo.html">PlaceGoTo</a> placeGoTo;
 <a class="jxr_linenumber" name="30" href="#30">30</a>  
 <a class="jxr_linenumber" name="31" href="#31">31</a>  	@Inject
 <a class="jxr_linenumber" name="32" href="#32">32</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../fspotcloud/client/admin/view/AdminTreePresenterImpl.html">AdminTreePresenterImpl</a>(<a href="../../../../fspotcloud/client/main/view/api/TreeView.html">TreeView</a> treeView, <a href="../../../../fspotcloud/client/data/DataManager.html">DataManager</a> dataManager,
-<a class="jxr_linenumber" name="33" href="#33">33</a>  			SingleSelectionModel&lt;TagNode&gt; selectionModel, <a href="../../../../fspotcloud/client/place/PlaceGoTo.html">PlaceGoTo</a> placeGoTo) {
+<a class="jxr_linenumber" name="33" href="#33">33</a>  			SingleSelectionModel&lt;TagNode&gt; selectionModel, <a href="../../../../fspotcloud/client/place/api/PlaceGoTo.html">PlaceGoTo</a> placeGoTo) {
 <a class="jxr_linenumber" name="34" href="#34">34</a>  		<strong class="jxr_keyword">super</strong>();
 <a class="jxr_linenumber" name="35" href="#35">35</a>  		<strong class="jxr_keyword">this</strong>.treeView = treeView;
 <a class="jxr_linenumber" name="36" href="#36">36</a>  		<strong class="jxr_keyword">this</strong>.dataManager = dataManager;

@@ -1,22 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pmd-cpd>
-<duplication lines="11" tokens="119">
-<file line="71" path="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/gin/AppModule.java"/>
-<file line="56" path="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/gin/FakeForGrapherAppModule.java"/>
-<codefragment>
-<![CDATA[
-		bind(MVPSetup.class);
-		bind(PlaceCalculator.class);
-		bind(TagCell.class);
-		bind(TagView.class).to(TagViewImpl.class);
-		bind(ImagePanelView.class).to(ImagePanelViewImpl.class);
-		bind(PlaceGoTo.class).to(PlaceGoToImpl.class);
-		bind(PlaceWhere.class).to(PlaceWhereImpl.class);
-		bind(PlaceController.class).toProvider(PlaceControllerProvider.class);
-		bind(PlaceControllerProvider.class).in(Singleton.class);
-		bind(EventBus.class).to(SimpleEventBus.class).in(Singleton.class);
-		bind(KeyDispatcherProvider.class);
-]]>
-</codefragment>
-</duplication>
 </pmd-cpd>
