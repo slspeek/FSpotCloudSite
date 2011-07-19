@@ -3,6 +3,7 @@ fspotcloud.client.main.data
 fspotcloud.client.main.help
 fspotcloud.client.main.shared
 fspotcloud.client.main.ui
+fspotcloud.client.main.view
 fspotcloud.client.place
 fspotcloud.client.view
 fspotcloud.client.view.action

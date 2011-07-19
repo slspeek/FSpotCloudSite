@@ -1,3 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pmd-cpd>
+<duplication lines="33" tokens="230">
+<file line="106" path="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/gin/AppModule.java"/>
+<file line="119" path="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/gin/FakeForGrapherAppModule.java"/>
+<codefragment>
+<![CDATA[
+		bind(Slideshow.class).to(SlideshowImpl.class);
+		bind(ImageRasterView.class).to(ImageRasterViewImpl.class);
+		install(new GinFactoryModuleBuilder().implement(
+				PagerView.PagerPresenter.class, PagerPresenterImpl.class)
+				.build(PagerPresenterFactory.class));
+		install(new GinFactoryModuleBuilder().implement(
+				SlideshowView.SlideshowPresenter.class,
+				SlideshowPresenterImpl.class).build(
+				SlideshowPresenterFactory.class));
+		install(new GinFactoryModuleBuilder().implement(
+				ImageRasterView.ImageRasterPresenter.class,
+				ImageRasterPresenterImpl.class).build(
+				ImageRasterPresenterFactory.class));
+		install(new GinFactoryModuleBuilder().implement(
+				ImageView.ImagePresenter.class, ImagePresenterImpl.class)
+				.build(ImagePresenterFactory.class));
+		install(new GinFactoryModuleBuilder().implement(ImageView.class,
+				ImageViewImpl.class).build(ImageViewFactory.class));
+
+		install(new GinFactoryModuleBuilder().implement(DemoStep.class,
+				ShortcutDemoStep.class).build(DemoStepFactory.class));
+
+		install(new GinFactoryModuleBuilder().implement(
+				ImagePanelView.ImagePanelPresenter.class,
+				FullscreenImagePanelActivity.class).build(
+				FullscreenImagePanelPresenterAssistedFactory.class));
+
+		install(new GinFactoryModuleBuilder().implement(
+				ImagePanelView.ImagePanelPresenter.class,
+				ImagePanelActivity.class).build(
+				EmbeddedImagePanelPresenterAssistedFactory.class));
+
+		bind(AllUserActions.class).to(AllShortcuts.class);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="24" tokens="142">
+<file line="38" path="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/gin/ActionModule.java"/>
+<file line="157" path="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/gin/FakeForGrapherAppModule.java"/>
+<codefragment>
+<![CDATA[
+		bind(TagServiceAsync.class).to(TagServiceAsyncTestImpl.class);
+
+		install(new GinFactoryModuleBuilder()
+				.build(NavigationEventProviderFactory.class));
+		install(new GinFactoryModuleBuilder()
+				.build(SlideshowEventProviderFactory.class));
+		install(new GinFactoryModuleBuilder()
+				.build(RasterEventProviderFactory.class));
+		install(new GinFactoryModuleBuilder()
+				.build(ApplicationEventProviderFactory.class));
+
+		install(new GinFactoryModuleBuilder()
+				.build(NavigationEventFactory.class));
+		install(new GinFactoryModuleBuilder()
+				.build(SlideshowEventFactory.class));
+		install(new GinFactoryModuleBuilder()
+				.build(ApplicationEventFactory.class));
+		install(new GinFactoryModuleBuilder().build(RasterEventFactory.class));
+
+		install(new GinFactoryModuleBuilder().implement(UserAction.class,
+				Shortcut.class).build(ShortcutAssistedFactory.class));
+
+	}
+}
+]]>
+</codefragment>
+</duplication>
 </pmd-cpd>
