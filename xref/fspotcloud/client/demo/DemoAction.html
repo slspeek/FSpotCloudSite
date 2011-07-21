@@ -67,7 +67,7 @@
 <a class="jxr_linenumber" name="57" href="#57">57</a>  
 <a class="jxr_linenumber" name="58" href="#58">58</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> addStep(<a href="../../../fspotcloud/client/view/action/api/UserAction.html">UserAction</a> shortcut, <strong class="jxr_keyword">int</strong> pause,
 <a class="jxr_linenumber" name="59" href="#59">59</a>  			String descriptionOverride) {
-<a class="jxr_linenumber" name="60" href="#60">60</a>  		DemoStep step = factory.getDemoStep(shortcutFactory.get(shortcut.getCaption(), descriptionOverride,
+<a class="jxr_linenumber" name="60" href="#60">60</a>  		DemoStep step = factory.getDemoStep(shortcutFactory.get(shortcut.getId(), shortcut.getCaption(), descriptionOverride,
 <a class="jxr_linenumber" name="61" href="#61">61</a>  				shortcut.getKey(), shortcut.getAlternateKey(), shortcut.getIcon(), shortcut.getEventProvider()), pause);
 <a class="jxr_linenumber" name="62" href="#62">62</a>  		demo.add(step);
 <a class="jxr_linenumber" name="63" href="#63">63</a>  	}

@@ -14,61 +14,65 @@
 <a class="jxr_linenumber" name="4" href="#4">4</a>   
 <a class="jxr_linenumber" name="5" href="#5">5</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.activity.shared.ActivityManager;
 <a class="jxr_linenumber" name="6" href="#6">6</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.core.client.GWT;
-<a class="jxr_linenumber" name="7" href="#7">7</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.event.shared.EventBus;
-<a class="jxr_linenumber" name="8" href="#8">8</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.place.shared.Place;
-<a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.place.shared.PlaceController;
-<a class="jxr_linenumber" name="10" href="#10">10</a>  <strong class="jxr_keyword">import</strong> com.google.gwt.place.shared.PlaceHistoryHandler;
-<a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> com.google.inject.Inject;
-<a class="jxr_linenumber" name="12" href="#12">12</a>  
-<a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.ui.AppWidget;
-<a class="jxr_linenumber" name="14" href="#14">14</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.MainWindowActivityMapper;
-<a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.place.BasePlace;
-<a class="jxr_linenumber" name="16" href="#16">16</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.place.MainPlaceHistoryMapper;
-<a class="jxr_linenumber" name="17" href="#17">17</a>  
-<a class="jxr_linenumber" name="18" href="#18">18</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../fspotcloud/client/main/MVPSetup.html">MVPSetup</a> {
-<a class="jxr_linenumber" name="19" href="#19">19</a>  
-<a class="jxr_linenumber" name="20" href="#20">20</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger log = Logger
-<a class="jxr_linenumber" name="21" href="#21">21</a>  			.getLogger(MVPSetup.<strong class="jxr_keyword">class</strong>.getName());
-<a class="jxr_linenumber" name="22" href="#22">22</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> Place defaultPlace = <strong class="jxr_keyword">new</strong> <a href="../../../fspotcloud/client/place/BasePlace.html">BasePlace</a>(<span class="jxr_string">"latest"</span>, <span class="jxr_string">"latest"</span>, 1, 1, <strong class="jxr_keyword">true</strong>);
-<a class="jxr_linenumber" name="23" href="#23">23</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <a href="../../../fspotcloud/client/main/ui/AppWidget.html">AppWidget</a> appWidget = <strong class="jxr_keyword">new</strong> <a href="../../../fspotcloud/client/main/ui/AppWidget.html">AppWidget</a>();
-<a class="jxr_linenumber" name="24" href="#24">24</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> EventBus eventBus;
-<a class="jxr_linenumber" name="25" href="#25">25</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <a href="../../../fspotcloud/client/main/view/MainWindowActivityMapper.html">MainWindowActivityMapper</a> activityMapper;
-<a class="jxr_linenumber" name="26" href="#26">26</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> PlaceController placeController;
-<a class="jxr_linenumber" name="27" href="#27">27</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <a href="../../../fspotcloud/client/main/GlobalShortcutController.html">GlobalShortcutController</a> keyboardHandler;
-<a class="jxr_linenumber" name="28" href="#28">28</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <a href="../../../fspotcloud/client/main/EventHandlersSetup.html">EventHandlersSetup</a> eventSetup;
-<a class="jxr_linenumber" name="29" href="#29">29</a>  	
-<a class="jxr_linenumber" name="30" href="#30">30</a>  	@Inject
-<a class="jxr_linenumber" name="31" href="#31">31</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../fspotcloud/client/main/MVPSetup.html">MVPSetup</a>(<a href="../../../fspotcloud/client/main/view/MainWindowActivityMapper.html">MainWindowActivityMapper</a> activityMapper, EventBus eventBus,
-<a class="jxr_linenumber" name="32" href="#32">32</a>  			PlaceController placeController,
-<a class="jxr_linenumber" name="33" href="#33">33</a>  			GlobalShortcutController keyboardHandler,
-<a class="jxr_linenumber" name="34" href="#34">34</a>  			EventHandlersSetup eventSetup
-<a class="jxr_linenumber" name="35" href="#35">35</a>  			) {
-<a class="jxr_linenumber" name="36" href="#36">36</a>  		<strong class="jxr_keyword">this</strong>.activityMapper = activityMapper;
-<a class="jxr_linenumber" name="37" href="#37">37</a>  		<strong class="jxr_keyword">this</strong>.eventBus = eventBus;
-<a class="jxr_linenumber" name="38" href="#38">38</a>  		<strong class="jxr_keyword">this</strong>.placeController = placeController;
-<a class="jxr_linenumber" name="39" href="#39">39</a>  		<strong class="jxr_keyword">this</strong>.keyboardHandler = keyboardHandler;
-<a class="jxr_linenumber" name="40" href="#40">40</a>  		<strong class="jxr_keyword">this</strong>.eventSetup = eventSetup;
-<a class="jxr_linenumber" name="41" href="#41">41</a>  	}
-<a class="jxr_linenumber" name="42" href="#42">42</a>  
-<a class="jxr_linenumber" name="43" href="#43">43</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setup() {
-<a class="jxr_linenumber" name="44" href="#44">44</a>  		keyboardHandler.setup();
-<a class="jxr_linenumber" name="45" href="#45">45</a>  		log.info(<span class="jxr_string">"Starting MVP setup"</span>);
-<a class="jxr_linenumber" name="46" href="#46">46</a>  		eventSetup.setUp();
-<a class="jxr_linenumber" name="47" href="#47">47</a>  		ActivityManager activityManager = <strong class="jxr_keyword">new</strong> ActivityManager(activityMapper,
-<a class="jxr_linenumber" name="48" href="#48">48</a>  				eventBus);
-<a class="jxr_linenumber" name="49" href="#49">49</a>  		activityManager.setDisplay(appWidget);
-<a class="jxr_linenumber" name="50" href="#50">50</a>  
-<a class="jxr_linenumber" name="51" href="#51">51</a>  		MainPlaceHistoryMapper historyMapper = GWT
-<a class="jxr_linenumber" name="52" href="#52">52</a>  				.create(MainPlaceHistoryMapper.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="53" href="#53">53</a>  		PlaceHistoryHandler historyHandler = <strong class="jxr_keyword">new</strong> PlaceHistoryHandler(
-<a class="jxr_linenumber" name="54" href="#54">54</a>  				historyMapper);
-<a class="jxr_linenumber" name="55" href="#55">55</a>  		historyHandler.register(placeController, eventBus, defaultPlace);
-<a class="jxr_linenumber" name="56" href="#56">56</a>  		
-<a class="jxr_linenumber" name="57" href="#57">57</a>  		log.info(<span class="jxr_string">"Just before handleCurrentHistory()"</span>);
-<a class="jxr_linenumber" name="58" href="#58">58</a>  		historyHandler.handleCurrentHistory();
-<a class="jxr_linenumber" name="59" href="#59">59</a>  		log.info(<span class="jxr_string">"Setup finished"</span>);
-<a class="jxr_linenumber" name="60" href="#60">60</a>  	}
-<a class="jxr_linenumber" name="61" href="#61">61</a>  }
+<a class="jxr_linenumber" name="7" href="#7">7</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.dom.client.Style.Unit;
+<a class="jxr_linenumber" name="8" href="#8">8</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.event.shared.EventBus;
+<a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.place.shared.Place;
+<a class="jxr_linenumber" name="10" href="#10">10</a>  <strong class="jxr_keyword">import</strong> com.google.gwt.place.shared.PlaceController;
+<a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> com.google.gwt.place.shared.PlaceHistoryHandler;
+<a class="jxr_linenumber" name="12" href="#12">12</a>  <strong class="jxr_keyword">import</strong> com.google.gwt.user.client.ui.DockLayoutPanel;
+<a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">import</strong> com.google.gwt.user.client.ui.RootLayoutPanel;
+<a class="jxr_linenumber" name="14" href="#14">14</a>  <strong class="jxr_keyword">import</strong> com.google.inject.Inject;
+<a class="jxr_linenumber" name="15" href="#15">15</a>  
+<a class="jxr_linenumber" name="16" href="#16">16</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.ui.HasOneWidgetAdapter;
+<a class="jxr_linenumber" name="17" href="#17">17</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.MainWindowActivityMapper;
+<a class="jxr_linenumber" name="18" href="#18">18</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.place.BasePlace;
+<a class="jxr_linenumber" name="19" href="#19">19</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.place.MainPlaceHistoryMapper;
+<a class="jxr_linenumber" name="20" href="#20">20</a>  
+<a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../fspotcloud/client/main/MVPSetup.html">MVPSetup</a> {
+<a class="jxr_linenumber" name="22" href="#22">22</a>  
+<a class="jxr_linenumber" name="23" href="#23">23</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger log = Logger
+<a class="jxr_linenumber" name="24" href="#24">24</a>  			.getLogger(MVPSetup.<strong class="jxr_keyword">class</strong>.getName());
+<a class="jxr_linenumber" name="25" href="#25">25</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> Place defaultPlace = <strong class="jxr_keyword">new</strong> <a href="../../../fspotcloud/client/place/BasePlace.html">BasePlace</a>(<span class="jxr_string">"latest"</span>, <span class="jxr_string">"latest"</span>, 1, 1, <strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="26" href="#26">26</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> DockLayoutPanel appWidget = <strong class="jxr_keyword">new</strong> DockLayoutPanel(Unit.PX);
+<a class="jxr_linenumber" name="27" href="#27">27</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> EventBus eventBus;
+<a class="jxr_linenumber" name="28" href="#28">28</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <a href="../../../fspotcloud/client/main/view/MainWindowActivityMapper.html">MainWindowActivityMapper</a> activityMapper;
+<a class="jxr_linenumber" name="29" href="#29">29</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> PlaceController placeController;
+<a class="jxr_linenumber" name="30" href="#30">30</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <a href="../../../fspotcloud/client/main/GlobalShortcutController.html">GlobalShortcutController</a> keyboardHandler;
+<a class="jxr_linenumber" name="31" href="#31">31</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <a href="../../../fspotcloud/client/main/EventHandlersSetup.html">EventHandlersSetup</a> eventSetup;
+<a class="jxr_linenumber" name="32" href="#32">32</a>  	
+<a class="jxr_linenumber" name="33" href="#33">33</a>  	@Inject
+<a class="jxr_linenumber" name="34" href="#34">34</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../fspotcloud/client/main/MVPSetup.html">MVPSetup</a>(<a href="../../../fspotcloud/client/main/view/MainWindowActivityMapper.html">MainWindowActivityMapper</a> activityMapper, EventBus eventBus,
+<a class="jxr_linenumber" name="35" href="#35">35</a>  			PlaceController placeController,
+<a class="jxr_linenumber" name="36" href="#36">36</a>  			GlobalShortcutController keyboardHandler,
+<a class="jxr_linenumber" name="37" href="#37">37</a>  			EventHandlersSetup eventSetup
+<a class="jxr_linenumber" name="38" href="#38">38</a>  			) {
+<a class="jxr_linenumber" name="39" href="#39">39</a>  		<strong class="jxr_keyword">this</strong>.activityMapper = activityMapper;
+<a class="jxr_linenumber" name="40" href="#40">40</a>  		<strong class="jxr_keyword">this</strong>.eventBus = eventBus;
+<a class="jxr_linenumber" name="41" href="#41">41</a>  		<strong class="jxr_keyword">this</strong>.placeController = placeController;
+<a class="jxr_linenumber" name="42" href="#42">42</a>  		<strong class="jxr_keyword">this</strong>.keyboardHandler = keyboardHandler;
+<a class="jxr_linenumber" name="43" href="#43">43</a>  		<strong class="jxr_keyword">this</strong>.eventSetup = eventSetup;
+<a class="jxr_linenumber" name="44" href="#44">44</a>  	}
+<a class="jxr_linenumber" name="45" href="#45">45</a>  
+<a class="jxr_linenumber" name="46" href="#46">46</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setup() {
+<a class="jxr_linenumber" name="47" href="#47">47</a>  		keyboardHandler.setup();
+<a class="jxr_linenumber" name="48" href="#48">48</a>  		log.info(<span class="jxr_string">"Starting MVP setup"</span>);
+<a class="jxr_linenumber" name="49" href="#49">49</a>  		eventSetup.setUp();
+<a class="jxr_linenumber" name="50" href="#50">50</a>  		ActivityManager activityManager = <strong class="jxr_keyword">new</strong> ActivityManager(activityMapper,
+<a class="jxr_linenumber" name="51" href="#51">51</a>  				eventBus);
+<a class="jxr_linenumber" name="52" href="#52">52</a>  		activityManager.setDisplay(<strong class="jxr_keyword">new</strong> <a href="../../../fspotcloud/client/main/ui/HasOneWidgetAdapter.html">HasOneWidgetAdapter</a>(appWidget));
+<a class="jxr_linenumber" name="53" href="#53">53</a>  
+<a class="jxr_linenumber" name="54" href="#54">54</a>  		MainPlaceHistoryMapper historyMapper = GWT
+<a class="jxr_linenumber" name="55" href="#55">55</a>  				.create(MainPlaceHistoryMapper.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="56" href="#56">56</a>  		PlaceHistoryHandler historyHandler = <strong class="jxr_keyword">new</strong> PlaceHistoryHandler(
+<a class="jxr_linenumber" name="57" href="#57">57</a>  				historyMapper);
+<a class="jxr_linenumber" name="58" href="#58">58</a>  		historyHandler.register(placeController, eventBus, defaultPlace);
+<a class="jxr_linenumber" name="59" href="#59">59</a>  		
+<a class="jxr_linenumber" name="60" href="#60">60</a>  		log.info(<span class="jxr_string">"Just before handleCurrentHistory()"</span>);
+<a class="jxr_linenumber" name="61" href="#61">61</a>  		RootLayoutPanel.get().add(appWidget);
+<a class="jxr_linenumber" name="62" href="#62">62</a>  		historyHandler.handleCurrentHistory();
+<a class="jxr_linenumber" name="63" href="#63">63</a>  		log.info(<span class="jxr_string">"Setup finished"</span>);
+<a class="jxr_linenumber" name="64" href="#64">64</a>  	}
+<a class="jxr_linenumber" name="65" href="#65">65</a>  }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

@@ -13,19 +13,19 @@
 <a class="jxr_linenumber" name="3" href="#3">3</a>   <strong class="jxr_keyword">import</strong> java.util.logging.Logger;
 <a class="jxr_linenumber" name="4" href="#4">4</a>   
 <a class="jxr_linenumber" name="5" href="#5">5</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.event.shared.EventBus;
-<a class="jxr_linenumber" name="6" href="#6">6</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.user.client.Window;
-<a class="jxr_linenumber" name="7" href="#7">7</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.user.client.ui.AcceptsOneWidget;
-<a class="jxr_linenumber" name="8" href="#8">8</a>   <strong class="jxr_keyword">import</strong> com.google.inject.Inject;
-<a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> com.google.inject.assistedinject.Assisted;
-<a class="jxr_linenumber" name="10" href="#10">10</a>  
-<a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ButtonPanelPresenterFactory;
-<a class="jxr_linenumber" name="12" href="#12">12</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ImagePanelView;
-<a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ImageRasterPresenterFactory;
-<a class="jxr_linenumber" name="14" href="#14">14</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.PagerPresenterFactory;
-<a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.SlideshowPresenterFactory;
-<a class="jxr_linenumber" name="16" href="#16">16</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.place.BasePlace;
-<a class="jxr_linenumber" name="17" href="#17">17</a>  
-<a class="jxr_linenumber" name="18" href="#18">18</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../fspotcloud/client/main/view/FullscreenImagePanelActivity.html">FullscreenImagePanelActivity</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../fspotcloud/client/main/view/ImagePanelActivity.html">ImagePanelActivity</a> {
+<a class="jxr_linenumber" name="6" href="#6">6</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.user.client.ui.AcceptsOneWidget;
+<a class="jxr_linenumber" name="7" href="#7">7</a>   <strong class="jxr_keyword">import</strong> com.google.inject.Inject;
+<a class="jxr_linenumber" name="8" href="#8">8</a>   <strong class="jxr_keyword">import</strong> com.google.inject.assistedinject.Assisted;
+<a class="jxr_linenumber" name="9" href="#9">9</a>   
+<a class="jxr_linenumber" name="10" href="#10">10</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ButtonPanelPresenterFactory;
+<a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ImagePanelView;
+<a class="jxr_linenumber" name="12" href="#12">12</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ImageRasterPresenterFactory;
+<a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.PagerPresenterFactory;
+<a class="jxr_linenumber" name="14" href="#14">14</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.SlideshowPresenterFactory;
+<a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.place.BasePlace;
+<a class="jxr_linenumber" name="16" href="#16">16</a>  
+<a class="jxr_linenumber" name="17" href="#17">17</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../fspotcloud/client/main/view/FullscreenImagePanelActivity.html">FullscreenImagePanelActivity</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../fspotcloud/client/main/view/ImagePanelActivity.html">ImagePanelActivity</a> {
+<a class="jxr_linenumber" name="18" href="#18">18</a>  	@SuppressWarnings(<span class="jxr_string">"unused"</span>)
 <a class="jxr_linenumber" name="19" href="#19">19</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger log = Logger
 <a class="jxr_linenumber" name="20" href="#20">20</a>  			.getLogger(FullscreenImagePanelActivity.<strong class="jxr_keyword">class</strong>.getName());
 <a class="jxr_linenumber" name="21" href="#21">21</a>  
@@ -42,18 +42,9 @@
 <a class="jxr_linenumber" name="32" href="#32">32</a>  
 <a class="jxr_linenumber" name="33" href="#33">33</a>  	@Override
 <a class="jxr_linenumber" name="34" href="#34">34</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> start(AcceptsOneWidget panel, EventBus eventBus) {
-<a class="jxr_linenumber" name="35" href="#35">35</a>  		adjustSize();
-<a class="jxr_linenumber" name="36" href="#36">36</a>  		<strong class="jxr_keyword">super</strong>.start(panel, eventBus);
-<a class="jxr_linenumber" name="37" href="#37">37</a>  	}
-<a class="jxr_linenumber" name="38" href="#38">38</a>  
-<a class="jxr_linenumber" name="39" href="#39">39</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> adjustSize() {
-<a class="jxr_linenumber" name="40" href="#40">40</a>  		<strong class="jxr_keyword">int</strong> width = Window.getClientWidth();
-<a class="jxr_linenumber" name="41" href="#41">41</a>  		<strong class="jxr_keyword">int</strong> height = Window.getClientHeight();
-<a class="jxr_linenumber" name="42" href="#42">42</a>  		imagePanelView.setSize(width, height);
-<a class="jxr_linenumber" name="43" href="#43">43</a>  		log.info(<span class="jxr_string">"set size: "</span> + width + <span class="jxr_string">" , "</span> + height);
-<a class="jxr_linenumber" name="44" href="#44">44</a>  	}
-<a class="jxr_linenumber" name="45" href="#45">45</a>  
-<a class="jxr_linenumber" name="46" href="#46">46</a>  }
+<a class="jxr_linenumber" name="35" href="#35">35</a>  		<strong class="jxr_keyword">super</strong>.start(panel, eventBus);
+<a class="jxr_linenumber" name="36" href="#36">36</a>  	}
+<a class="jxr_linenumber" name="37" href="#37">37</a>  }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

@@ -43,22 +43,22 @@
 <a class="jxr_linenumber" name="33" href="#33">33</a>  	}
 <a class="jxr_linenumber" name="34" href="#34">34</a>  
 <a class="jxr_linenumber" name="35" href="#35">35</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> init() {
-<a class="jxr_linenumber" name="36" href="#36">36</a>  		HOME = createNavigation(<span class="jxr_string">"Home"</span>, 'B', KeyCodes.KEY_HOME,
+<a class="jxr_linenumber" name="36" href="#36">36</a>  		HOME = createNavigation(<span class="jxr_string">"home"</span>, <span class="jxr_string">"Home"</span>, 'B', KeyCodes.KEY_HOME,
 <a class="jxr_linenumber" name="37" href="#37">37</a>  				<span class="jxr_string">"Go to the first image of the category"</span>, <strong class="jxr_keyword">null</strong>,
 <a class="jxr_linenumber" name="38" href="#38">38</a>  				NavigationEvent.ActionType.HOME);
-<a class="jxr_linenumber" name="39" href="#39">39</a>  		END = createNavigation(<span class="jxr_string">"End"</span>, KeyCodes.KEY_END, <strong class="jxr_keyword">null</strong>,
+<a class="jxr_linenumber" name="39" href="#39">39</a>  		END = createNavigation(<span class="jxr_string">"end"</span>, <span class="jxr_string">"End"</span>, KeyCodes.KEY_END, <strong class="jxr_keyword">null</strong>,
 <a class="jxr_linenumber" name="40" href="#40">40</a>  				<span class="jxr_string">"Go to the last image of the category"</span>, <strong class="jxr_keyword">null</strong>,
 <a class="jxr_linenumber" name="41" href="#41">41</a>  				NavigationEvent.ActionType.END);
-<a class="jxr_linenumber" name="42" href="#42">42</a>  		BACK = createNavigation(<span class="jxr_string">"Back"</span>, 'N', KeyCodes.KEY_LEFT,
+<a class="jxr_linenumber" name="42" href="#42">42</a>  		BACK = createNavigation(<span class="jxr_string">"back"</span>, <span class="jxr_string">"Back"</span>, 'N', KeyCodes.KEY_LEFT,
 <a class="jxr_linenumber" name="43" href="#43">43</a>  				<span class="jxr_string">"Previous image in this category"</span>, <strong class="jxr_keyword">null</strong>, NavigationEvent.ActionType.BACK);
-<a class="jxr_linenumber" name="44" href="#44">44</a>  		NEXT = createNavigation(<span class="jxr_string">"Next"</span>, 'M', KeyCodes.KEY_RIGHT,
+<a class="jxr_linenumber" name="44" href="#44">44</a>  		NEXT = createNavigation(<span class="jxr_string">"next"</span>, <span class="jxr_string">"Next"</span>, 'M', KeyCodes.KEY_RIGHT,
 <a class="jxr_linenumber" name="45" href="#45">45</a>  				<span class="jxr_string">"Next image in this category"</span>, <strong class="jxr_keyword">null</strong>, NavigationEvent.ActionType.NEXT);
 <a class="jxr_linenumber" name="46" href="#46">46</a>  		all = Arrays.asList(HOME, END, BACK, NEXT);
 <a class="jxr_linenumber" name="47" href="#47">47</a>  	}
 <a class="jxr_linenumber" name="48" href="#48">48</a>  
-<a class="jxr_linenumber" name="49" href="#49">49</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../fspotcloud/client/view/action/api/UserAction.html">UserAction</a> createNavigation(String caption, <strong class="jxr_keyword">int</strong> key, Integer altKey,
+<a class="jxr_linenumber" name="49" href="#49">49</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../fspotcloud/client/view/action/api/UserAction.html">UserAction</a> createNavigation(String id, String caption, <strong class="jxr_keyword">int</strong> key, Integer altKey,
 <a class="jxr_linenumber" name="50" href="#50">50</a>  			String description, ImageResource icon, NavigationEvent.ActionType actionType) {
-<a class="jxr_linenumber" name="51" href="#51">51</a>  		<strong class="jxr_keyword">return</strong> create(caption, key, altKey, description, icon, navigation.get(actionType));
+<a class="jxr_linenumber" name="51" href="#51">51</a>  		<strong class="jxr_keyword">return</strong> create(id, caption, key, altKey, description, icon, navigation.get(actionType));
 <a class="jxr_linenumber" name="52" href="#52">52</a>  	}
 <a class="jxr_linenumber" name="53" href="#53">53</a>  
 <a class="jxr_linenumber" name="54" href="#54">54</a>  
