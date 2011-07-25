@@ -6,6 +6,7 @@ fspotcloud.client.admin.view.api
 fspotcloud.client.data
 fspotcloud.client.demo
 fspotcloud.client.main
+fspotcloud.client.main.api
 fspotcloud.client.main.gin
 fspotcloud.client.main.help
 fspotcloud.client.main.shared

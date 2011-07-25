@@ -13,87 +13,43 @@
 <a class="jxr_linenumber" name="3" href="#3">3</a>   <strong class="jxr_keyword">import</strong> java.util.logging.Logger;
 <a class="jxr_linenumber" name="4" href="#4">4</a>   
 <a class="jxr_linenumber" name="5" href="#5">5</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.core.client.GWT;
-<a class="jxr_linenumber" name="6" href="#6">6</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.event.dom.client.ClickEvent;
-<a class="jxr_linenumber" name="7" href="#7">7</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.uibinder.client.UiBinder;
-<a class="jxr_linenumber" name="8" href="#8">8</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.uibinder.client.UiFactory;
-<a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.uibinder.client.UiField;
-<a class="jxr_linenumber" name="10" href="#10">10</a>  <strong class="jxr_keyword">import</strong> com.google.gwt.uibinder.client.UiHandler;
-<a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> com.google.gwt.user.client.ui.Composite;
-<a class="jxr_linenumber" name="12" href="#12">12</a>  <strong class="jxr_keyword">import</strong> com.google.gwt.user.client.ui.HorizontalPanel;
-<a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">import</strong> com.google.gwt.user.client.ui.Image;
-<a class="jxr_linenumber" name="14" href="#14">14</a>  <strong class="jxr_keyword">import</strong> com.google.gwt.user.client.ui.Label;
-<a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">import</strong> com.google.gwt.user.client.ui.PushButton;
-<a class="jxr_linenumber" name="16" href="#16">16</a>  <strong class="jxr_keyword">import</strong> com.google.gwt.user.client.ui.Widget;
-<a class="jxr_linenumber" name="17" href="#17">17</a>  
-<a class="jxr_linenumber" name="18" href="#18">18</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.SlideshowView;
-<a class="jxr_linenumber" name="19" href="#19">19</a>  
-<a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../fspotcloud/client/main/ui/SlideshowViewImpl.html">SlideshowViewImpl</a> <strong class="jxr_keyword">extends</strong> Composite <strong class="jxr_keyword">implements</strong> <a href="../../../../fspotcloud/client/main/view/api/SlideshowView.html">SlideshowView</a> {
-<a class="jxr_linenumber" name="21" href="#21">21</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger log = Logger.getLogger(SlideshowViewImpl.<strong class="jxr_keyword">class</strong>
-<a class="jxr_linenumber" name="22" href="#22">22</a>  			.getName());
-<a class="jxr_linenumber" name="23" href="#23">23</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../fspotcloud/client/main/ui/SlideshowViewImpl.html">SlideshowViewImplUiBinder</a> uiBinder = GWT
-<a class="jxr_linenumber" name="24" href="#24">24</a>  			.create(SlideshowViewImplUiBinder.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="6" href="#6">6</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.uibinder.client.UiBinder;
+<a class="jxr_linenumber" name="7" href="#7">7</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.uibinder.client.UiField;
+<a class="jxr_linenumber" name="8" href="#8">8</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.user.client.ui.Composite;
+<a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.user.client.ui.HorizontalPanel;
+<a class="jxr_linenumber" name="10" href="#10">10</a>  <strong class="jxr_keyword">import</strong> com.google.gwt.user.client.ui.Label;
+<a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> com.google.gwt.user.client.ui.Widget;
+<a class="jxr_linenumber" name="12" href="#12">12</a>  
+<a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.SlideshowView;
+<a class="jxr_linenumber" name="14" href="#14">14</a>  
+<a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../fspotcloud/client/main/ui/SlideshowViewImpl.html">SlideshowViewImpl</a> <strong class="jxr_keyword">extends</strong> Composite <strong class="jxr_keyword">implements</strong> <a href="../../../../fspotcloud/client/main/view/api/SlideshowView.html">SlideshowView</a> {
+<a class="jxr_linenumber" name="16" href="#16">16</a>  	@SuppressWarnings(<span class="jxr_string">"unused"</span>)
+<a class="jxr_linenumber" name="17" href="#17">17</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger log = Logger.getLogger(SlideshowViewImpl.<strong class="jxr_keyword">class</strong>
+<a class="jxr_linenumber" name="18" href="#18">18</a>  			.getName());
+<a class="jxr_linenumber" name="19" href="#19">19</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../fspotcloud/client/main/ui/SlideshowViewImpl.html">SlideshowViewImplUiBinder</a> uiBinder = GWT
+<a class="jxr_linenumber" name="20" href="#20">20</a>  			.create(SlideshowViewImplUiBinder.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="21" href="#21">21</a>  
+<a class="jxr_linenumber" name="22" href="#22">22</a>  	<strong class="jxr_keyword">interface</strong> <a href="../../../../fspotcloud/client/main/ui/SlideshowViewImpl.html">SlideshowViewImplUiBinder</a> <strong class="jxr_keyword">extends</strong>
+<a class="jxr_linenumber" name="23" href="#23">23</a>  			UiBinder&lt;Widget, SlideshowViewImpl&gt; {
+<a class="jxr_linenumber" name="24" href="#24">24</a>  	}
 <a class="jxr_linenumber" name="25" href="#25">25</a>  
-<a class="jxr_linenumber" name="26" href="#26">26</a>  	<strong class="jxr_keyword">interface</strong> <a href="../../../../fspotcloud/client/main/ui/SlideshowViewImpl.html">SlideshowViewImplUiBinder</a> <strong class="jxr_keyword">extends</strong>
-<a class="jxr_linenumber" name="27" href="#27">27</a>  			UiBinder&lt;Widget, SlideshowViewImpl&gt; {
-<a class="jxr_linenumber" name="28" href="#28">28</a>  	}
-<a class="jxr_linenumber" name="29" href="#29">29</a>  
-<a class="jxr_linenumber" name="30" href="#30">30</a>  	@UiField
-<a class="jxr_linenumber" name="31" href="#31">31</a>  	HorizontalPanel mainPanel;
-<a class="jxr_linenumber" name="32" href="#32">32</a>  	@UiField
-<a class="jxr_linenumber" name="33" href="#33">33</a>  	PushButton slowerButton;
-<a class="jxr_linenumber" name="34" href="#34">34</a>  	@UiField
-<a class="jxr_linenumber" name="35" href="#35">35</a>  	PushButton startButton;
-<a class="jxr_linenumber" name="36" href="#36">36</a>  	@UiField
-<a class="jxr_linenumber" name="37" href="#37">37</a>  	Label intervalLabel;
-<a class="jxr_linenumber" name="38" href="#38">38</a>  	@UiField
-<a class="jxr_linenumber" name="39" href="#39">39</a>  	PushButton stopButton;
-<a class="jxr_linenumber" name="40" href="#40">40</a>  	@UiField
-<a class="jxr_linenumber" name="41" href="#41">41</a>  	PushButton fasterButton;
-<a class="jxr_linenumber" name="42" href="#42">42</a>  
-<a class="jxr_linenumber" name="43" href="#43">43</a>  	SlideshowPresenter presenter;
-<a class="jxr_linenumber" name="44" href="#44">44</a>  	
-<a class="jxr_linenumber" name="45" href="#45">45</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../fspotcloud/client/main/ui/SlideshowViewImpl.html">SlideshowViewImpl</a>() {
-<a class="jxr_linenumber" name="46" href="#46">46</a>  		initWidget(uiBinder.createAndBindUi(<strong class="jxr_keyword">this</strong>));
-<a class="jxr_linenumber" name="47" href="#47">47</a>  		mainPanel.addStyleName(<span class="jxr_string">"fsc-slideshow"</span>);
-<a class="jxr_linenumber" name="48" href="#48">48</a>  		slowerButton.addStyleName(<span class="jxr_string">"fsc-slideshow-increase"</span>);
-<a class="jxr_linenumber" name="49" href="#49">49</a>  		startButton.addStyleName(<span class="jxr_string">"fsc-slideshow-start"</span>);
-<a class="jxr_linenumber" name="50" href="#50">50</a>  		stopButton.addStyleName(<span class="jxr_string">"fsc-slideshow-stop"</span>);
-<a class="jxr_linenumber" name="51" href="#51">51</a>  		fasterButton.addStyleName(<span class="jxr_string">"fsc-slideshow-decrease"</span>);
-<a class="jxr_linenumber" name="52" href="#52">52</a>  		intervalLabel.addStyleName(<span class="jxr_string">"fsc-slideshow-interval"</span>);
-<a class="jxr_linenumber" name="53" href="#53">53</a>  		
-<a class="jxr_linenumber" name="54" href="#54">54</a>  	}
-<a class="jxr_linenumber" name="55" href="#55">55</a>  
-<a class="jxr_linenumber" name="56" href="#56">56</a>  	@UiHandler(<span class="jxr_string">"slowerButton"</span>)
-<a class="jxr_linenumber" name="57" href="#57">57</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> onSlower(ClickEvent event) {
-<a class="jxr_linenumber" name="58" href="#58">58</a>  		presenter.slower();
-<a class="jxr_linenumber" name="59" href="#59">59</a>  	}
-<a class="jxr_linenumber" name="60" href="#60">60</a>  	
-<a class="jxr_linenumber" name="61" href="#61">61</a>  	@UiHandler(<span class="jxr_string">"fasterButton"</span>)
-<a class="jxr_linenumber" name="62" href="#62">62</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> onFaster(ClickEvent event) {
-<a class="jxr_linenumber" name="63" href="#63">63</a>  		presenter.faster();
-<a class="jxr_linenumber" name="64" href="#64">64</a>  	}
-<a class="jxr_linenumber" name="65" href="#65">65</a>  	
-<a class="jxr_linenumber" name="66" href="#66">66</a>  	@UiHandler(<span class="jxr_string">"stopButton"</span>)
-<a class="jxr_linenumber" name="67" href="#67">67</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> onStop(ClickEvent event) {
-<a class="jxr_linenumber" name="68" href="#68">68</a>  		presenter.stop();
-<a class="jxr_linenumber" name="69" href="#69">69</a>  	}
-<a class="jxr_linenumber" name="70" href="#70">70</a>  	
-<a class="jxr_linenumber" name="71" href="#71">71</a>  	@UiHandler(<span class="jxr_string">"startButton"</span>)
-<a class="jxr_linenumber" name="72" href="#72">72</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> onStart(ClickEvent event) {
-<a class="jxr_linenumber" name="73" href="#73">73</a>  		log.info(<span class="jxr_string">"Slideshow start button"</span>);
-<a class="jxr_linenumber" name="74" href="#74">74</a>  		presenter.start();
-<a class="jxr_linenumber" name="75" href="#75">75</a>  	}
-<a class="jxr_linenumber" name="76" href="#76">76</a>  	
-<a class="jxr_linenumber" name="77" href="#77">77</a>  	@Override
-<a class="jxr_linenumber" name="78" href="#78">78</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setLabelText(String text) {
-<a class="jxr_linenumber" name="79" href="#79">79</a>  		intervalLabel.setText(text);
-<a class="jxr_linenumber" name="80" href="#80">80</a>  	}
-<a class="jxr_linenumber" name="81" href="#81">81</a>  
-<a class="jxr_linenumber" name="82" href="#82">82</a>  	@Override
-<a class="jxr_linenumber" name="83" href="#83">83</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setPresenter(<a href="../../../../fspotcloud/client/main/view/api/SlideshowView.html">SlideshowPresenter</a> presenter) {
-<a class="jxr_linenumber" name="84" href="#84">84</a>  		<strong class="jxr_keyword">this</strong>.presenter = presenter;
-<a class="jxr_linenumber" name="85" href="#85">85</a>  	}
-<a class="jxr_linenumber" name="86" href="#86">86</a>  }
+<a class="jxr_linenumber" name="26" href="#26">26</a>  	@UiField
+<a class="jxr_linenumber" name="27" href="#27">27</a>  	HorizontalPanel mainPanel;
+<a class="jxr_linenumber" name="28" href="#28">28</a>  
+<a class="jxr_linenumber" name="29" href="#29">29</a>  	@UiField
+<a class="jxr_linenumber" name="30" href="#30">30</a>  	Label intervalLabel;
+<a class="jxr_linenumber" name="31" href="#31">31</a>  
+<a class="jxr_linenumber" name="32" href="#32">32</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../fspotcloud/client/main/ui/SlideshowViewImpl.html">SlideshowViewImpl</a>() {
+<a class="jxr_linenumber" name="33" href="#33">33</a>  		initWidget(uiBinder.createAndBindUi(<strong class="jxr_keyword">this</strong>));
+<a class="jxr_linenumber" name="34" href="#34">34</a>  		mainPanel.addStyleName(<span class="jxr_string">"fsc-slideshow"</span>);
+<a class="jxr_linenumber" name="35" href="#35">35</a>  		intervalLabel.addStyleName(<span class="jxr_string">"fsc-slideshow-interval"</span>);
+<a class="jxr_linenumber" name="36" href="#36">36</a>  	}
+<a class="jxr_linenumber" name="37" href="#37">37</a>  
+<a class="jxr_linenumber" name="38" href="#38">38</a>  	@Override
+<a class="jxr_linenumber" name="39" href="#39">39</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setLabelText(String text) {
+<a class="jxr_linenumber" name="40" href="#40">40</a>  		intervalLabel.setText(text);
+<a class="jxr_linenumber" name="41" href="#41">41</a>  	}
+<a class="jxr_linenumber" name="42" href="#42">42</a>  }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>
