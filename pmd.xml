@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2011-08-03T20:02:56.505">
+<pmd version="4.2.5" timestamp="2011-08-03T22:31:58.119">
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/admin/DashboardEntryPoint.java">
 <violation beginline="8" endline="8" begincolumn="1" endcolumn="53" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'com.google.gwt.user.client.ui.RootLayoutPanel'
@@ -93,6 +93,11 @@ Avoid unused private methods such as 'getArgsString()'.
 Avoid unused imports such as 'java.util.Collections'
 </violation>
 </file>
+<file name="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/admin/AdminServiceImpl.java">
+<violation beginline="52" endline="52" begincolumn="45" endcolumn="64" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.server.admin" class="AdminServiceImpl" variable="dataSchedulerFactory" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'dataSchedulerFactory'.
+</violation>
+</file>
 <file name="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/control/GuiceXmlRpcServlet.java">
 <violation beginline="8" endline="8" begincolumn="1" endcolumn="41" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.server.control" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'org.apache.xmlrpc.XmlRpcException'
@@ -118,14 +123,32 @@ Avoid unused imports such as 'com.google.appengine.api.images.ImagesServiceFacto
 Avoid unused imports such as 'com.google.appengine.api.images.Transform'
 </violation>
 </file>
+<file name="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/inject/FSpotCloudModule.java">
+<violation beginline="19" endline="19" begincolumn="1" endcolumn="52" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.server.inject" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'fspotcloud.server.control.task.DataScheduler'
+</violation>
+<violation beginline="20" endline="20" begincolumn="1" endcolumn="67" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.server.inject" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'fspotcloud.server.control.task.DataSchedulerAssistedFactory'
+</violation>
+<violation beginline="21" endline="21" begincolumn="1" endcolumn="59" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.server.inject" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'fspotcloud.server.control.task.DataSchedulerFactory'
+</violation>
+<violation beginline="22" endline="22" begincolumn="1" endcolumn="56" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.server.inject" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'fspotcloud.server.control.task.DataSchedulerImpl'
+</violation>
+<violation beginline="23" endline="23" begincolumn="1" endcolumn="66" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.server.inject" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'fspotcloud.server.control.task.DefaultDataSchedulerFactory'
+</violation>
+<violation beginline="24" endline="24" begincolumn="1" endcolumn="59" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.server.inject" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'fspotcloud.server.control.task.DelayedDataScheduler'
+</violation>
+<violation beginline="25" endline="25" begincolumn="1" endcolumn="66" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.server.inject" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'fspotcloud.server.control.task.DelayedDataSchedulerFactory'
+</violation>
+</file>
 <file name="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/main/TagServiceImpl.java">
 <violation beginline="36" endline="36" begincolumn="21" endcolumn="25" rule="UnconditionalIfStatement" ruleset="Basic Rules" package="fspotcloud.server.main" class="TagServiceImpl" method="loadTagTree" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#UnconditionalIfStatement" priority="3">
 Do not use if statements that are always true or always false
-</violation>
-</file>
-<file name="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/mapreduce/ImageDataImporter.java">
-<violation beginline="11" endline="11" begincolumn="1" endcolumn="49" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.server.mapreduce" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'fspotcloud.server.model.api.PeerDatabases'
 </violation>
 </file>
 <suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/data/IndexingUtil.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
