@@ -11,6 +11,7 @@ fspotcloud.peer
 fspotcloud.peer.db
 fspotcloud.server.control
 fspotcloud.server.control.reciever
+fspotcloud.server.control.task
 fspotcloud.server.mapreduce
 fspotcloud.server.model
 fspotcloud.server.model.batch
