@@ -6,7 +6,7 @@
 <link type="text/css" rel="stylesheet" href="../../../stylesheet.css" />
 </head>
 <body>
-<div id="overview"><a href="../../../../../../../../../site/apidocs/fspotcloud/peer/db/Data.html">View Javadoc</a></div><pre>
+<div id="overview"><a href="../../../../apidocs/fspotcloud/peer/db/Data.html">View Javadoc</a></div><pre>
 
 <a class="jxr_linenumber" name="1" href="#1">1</a>   <strong class="jxr_keyword">package</strong> fspotcloud.peer.db;
 <a class="jxr_linenumber" name="2" href="#2">2</a>   
@@ -140,81 +140,82 @@
 <a class="jxr_linenumber" name="130" href="#130">130</a> 		<strong class="jxr_keyword">return</strong> photoList.toArray();
 <a class="jxr_linenumber" name="131" href="#131">131</a> 	}
 <a class="jxr_linenumber" name="132" href="#132">132</a> 
-<a class="jxr_linenumber" name="133" href="#133">133</a> 	<strong class="jxr_keyword">public</strong> Object getImageData(String photoId, String width, String height,
+<a class="jxr_linenumber" name="133" href="#133">133</a> 	<strong class="jxr_keyword">public</strong> Object[] getImageData(String photoId, String width, String height,
 <a class="jxr_linenumber" name="134" href="#134">134</a> 			String imageType) <strong class="jxr_keyword">throws</strong> Exception {
 <a class="jxr_linenumber" name="135" href="#135">135</a> 		URL url = getImageURL(photoId);
 <a class="jxr_linenumber" name="136" href="#136">136</a> 		Dimension size = <strong class="jxr_keyword">new</strong> Dimension(Integer.valueOf(width),
 <a class="jxr_linenumber" name="137" href="#137">137</a> 				Integer.valueOf(height));
-<a class="jxr_linenumber" name="138" href="#138">138</a> 		byte[] data = imageData.getScaledImageData(url, size);
-<a class="jxr_linenumber" name="139" href="#139">139</a> 		<strong class="jxr_keyword">return</strong> data;
-<a class="jxr_linenumber" name="140" href="#140">140</a> 	}
-<a class="jxr_linenumber" name="141" href="#141">141</a> 
-<a class="jxr_linenumber" name="142" href="#142">142</a> 	<strong class="jxr_keyword">public</strong> URL getImageURL(String photoId) <strong class="jxr_keyword">throws</strong> SQLException,
-<a class="jxr_linenumber" name="143" href="#143">143</a> 			MalformedURLException {
-<a class="jxr_linenumber" name="144" href="#144">144</a> 		String url = <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="145" href="#145">145</a> 		Connection conn = getConnection();
-<a class="jxr_linenumber" name="146" href="#146">146</a> 		Statement stmt = conn.createStatement();
-<a class="jxr_linenumber" name="147" href="#147">147</a> 		String query = <span class="jxr_string">"SELECT default_version_id, base_uri, filename "</span>
-<a class="jxr_linenumber" name="148" href="#148">148</a> 				+ <span class="jxr_string">"FROM photos WHERE id = "</span> + photoId;
-<a class="jxr_linenumber" name="149" href="#149">149</a> 		ResultSet rs = stmt.executeQuery(query);
-<a class="jxr_linenumber" name="150" href="#150">150</a> 		<strong class="jxr_keyword">if</strong> (rs.next()) {
-<a class="jxr_linenumber" name="151" href="#151">151</a> 			<strong class="jxr_keyword">int</strong> version = rs.getInt(1);
-<a class="jxr_linenumber" name="152" href="#152">152</a> 			<strong class="jxr_keyword">if</strong> (version == 1) {
-<a class="jxr_linenumber" name="153" href="#153">153</a> 				url = rs.getString(2) + rs.getString(3);
-<a class="jxr_linenumber" name="154" href="#154">154</a> 			} <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="155" href="#155">155</a> 				stmt = conn.createStatement();
-<a class="jxr_linenumber" name="156" href="#156">156</a> 				query = <span class="jxr_string">"SELECT base_uri, filename "</span>
-<a class="jxr_linenumber" name="157" href="#157">157</a> 						+ <span class="jxr_string">"FROM photo_versions WHERE photo_id ="</span> + photoId
-<a class="jxr_linenumber" name="158" href="#158">158</a> 						+ <span class="jxr_string">" AND version_id="</span> + version;
-<a class="jxr_linenumber" name="159" href="#159">159</a> 				rs = stmt.executeQuery(query);
-<a class="jxr_linenumber" name="160" href="#160">160</a> 				<strong class="jxr_keyword">if</strong> (rs.next()) {
-<a class="jxr_linenumber" name="161" href="#161">161</a> 					url = rs.getString(1) + rs.getString(2);
-<a class="jxr_linenumber" name="162" href="#162">162</a> 				}
-<a class="jxr_linenumber" name="163" href="#163">163</a> 			}
-<a class="jxr_linenumber" name="164" href="#164">164</a> 		}
-<a class="jxr_linenumber" name="165" href="#165">165</a> 		rs.close();
-<a class="jxr_linenumber" name="166" href="#166">166</a> 		conn.close();
-<a class="jxr_linenumber" name="167" href="#167">167</a> 		<strong class="jxr_keyword">if</strong> (photoDirectoryOverride != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="168" href="#168">168</a> 			url = url.replaceFirst(photoDirectoryOriginalPath,
-<a class="jxr_linenumber" name="169" href="#169">169</a> 					photoDirectoryOverride);
-<a class="jxr_linenumber" name="170" href="#170">170</a> 		}
-<a class="jxr_linenumber" name="171" href="#171">171</a> 		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> URL(url);
-<a class="jxr_linenumber" name="172" href="#172">172</a> 	}
-<a class="jxr_linenumber" name="173" href="#173">173</a> 
-<a class="jxr_linenumber" name="174" href="#174">174</a> 	<strong class="jxr_keyword">private</strong> Object[] getTagsForPhoto(<strong class="jxr_keyword">int</strong> id) <strong class="jxr_keyword">throws</strong> SQLException {
-<a class="jxr_linenumber" name="175" href="#175">175</a> 		Connection conn = getConnection();
-<a class="jxr_linenumber" name="176" href="#176">176</a> 		Statement stmt = conn.createStatement();
-<a class="jxr_linenumber" name="177" href="#177">177</a> 		List&lt;String&gt; tagList = <strong class="jxr_keyword">new</strong> ArrayList&lt;String&gt;();
-<a class="jxr_linenumber" name="178" href="#178">178</a> 		ResultSet rs = stmt.executeQuery(<span class="jxr_string">"SELECT tag_id, photo_id "</span>
-<a class="jxr_linenumber" name="179" href="#179">179</a> 				+ <span class="jxr_string">"FROM photo_tags WHERE photo_id="</span> + String.valueOf(id));
-<a class="jxr_linenumber" name="180" href="#180">180</a> 		<strong class="jxr_keyword">while</strong> (rs.next()) {
-<a class="jxr_linenumber" name="181" href="#181">181</a> 			String tagId = rs.getString(1);
-<a class="jxr_linenumber" name="182" href="#182">182</a> 			tagList.add(tagId);
-<a class="jxr_linenumber" name="183" href="#183">183</a> 		}
-<a class="jxr_linenumber" name="184" href="#184">184</a> 		rs.close();
-<a class="jxr_linenumber" name="185" href="#185">185</a> 		conn.close();
-<a class="jxr_linenumber" name="186" href="#186">186</a> 
-<a class="jxr_linenumber" name="187" href="#187">187</a> 		<strong class="jxr_keyword">return</strong> tagList.toArray();
-<a class="jxr_linenumber" name="188" href="#188">188</a> 	}
-<a class="jxr_linenumber" name="189" href="#189">189</a> 
-<a class="jxr_linenumber" name="190" href="#190">190</a> 	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong> getPhotoCountForTag(<strong class="jxr_keyword">int</strong> tagId) <strong class="jxr_keyword">throws</strong> SQLException {
-<a class="jxr_linenumber" name="191" href="#191">191</a> 		Connection conn = getConnection();
-<a class="jxr_linenumber" name="192" href="#192">192</a> 		PreparedStatement prep = conn
-<a class="jxr_linenumber" name="193" href="#193">193</a> 				.prepareStatement(<span class="jxr_string">"SELECT COUNT(photos.id) FROM photo_tags, photos WHERE tag_id=? AND photos.id=photo_tags.photo_id "</span>);
-<a class="jxr_linenumber" name="194" href="#194">194</a> 		prep.setInt(1, tagId);
-<a class="jxr_linenumber" name="195" href="#195">195</a> 		ResultSet rs = prep.executeQuery();
-<a class="jxr_linenumber" name="196" href="#196">196</a> 		<strong class="jxr_keyword">if</strong> (rs.next()) {
-<a class="jxr_linenumber" name="197" href="#197">197</a> 			<strong class="jxr_keyword">int</strong> count = rs.getInt(1);
-<a class="jxr_linenumber" name="198" href="#198">198</a> 			rs.close();
-<a class="jxr_linenumber" name="199" href="#199">199</a> 			conn.close();
-<a class="jxr_linenumber" name="200" href="#200">200</a> 			<strong class="jxr_keyword">return</strong> count;
-<a class="jxr_linenumber" name="201" href="#201">201</a> 		}
-<a class="jxr_linenumber" name="202" href="#202">202</a> 		rs.close();
-<a class="jxr_linenumber" name="203" href="#203">203</a> 		conn.close();
-<a class="jxr_linenumber" name="204" href="#204">204</a> 		<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IllegalStateException();
-<a class="jxr_linenumber" name="205" href="#205">205</a> 	}
-<a class="jxr_linenumber" name="206" href="#206">206</a> 
-<a class="jxr_linenumber" name="207" href="#207">207</a> }
+<a class="jxr_linenumber" name="138" href="#138">138</a> 		byte[] imageBytes = imageData.getScaledImageData(url, size);
+<a class="jxr_linenumber" name="139" href="#139">139</a> 		Object[] params = <strong class="jxr_keyword">new</strong> Object[] { photoId, imageBytes, Integer.valueOf(imageType) };
+<a class="jxr_linenumber" name="140" href="#140">140</a> 		<strong class="jxr_keyword">return</strong> params;
+<a class="jxr_linenumber" name="141" href="#141">141</a> 	}
+<a class="jxr_linenumber" name="142" href="#142">142</a> 
+<a class="jxr_linenumber" name="143" href="#143">143</a> 	<strong class="jxr_keyword">public</strong> URL getImageURL(String photoId) <strong class="jxr_keyword">throws</strong> SQLException,
+<a class="jxr_linenumber" name="144" href="#144">144</a> 			MalformedURLException {
+<a class="jxr_linenumber" name="145" href="#145">145</a> 		String url = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="146" href="#146">146</a> 		Connection conn = getConnection();
+<a class="jxr_linenumber" name="147" href="#147">147</a> 		Statement stmt = conn.createStatement();
+<a class="jxr_linenumber" name="148" href="#148">148</a> 		String query = <span class="jxr_string">"SELECT default_version_id, base_uri, filename "</span>
+<a class="jxr_linenumber" name="149" href="#149">149</a> 				+ <span class="jxr_string">"FROM photos WHERE id = "</span> + photoId;
+<a class="jxr_linenumber" name="150" href="#150">150</a> 		ResultSet rs = stmt.executeQuery(query);
+<a class="jxr_linenumber" name="151" href="#151">151</a> 		<strong class="jxr_keyword">if</strong> (rs.next()) {
+<a class="jxr_linenumber" name="152" href="#152">152</a> 			<strong class="jxr_keyword">int</strong> version = rs.getInt(1);
+<a class="jxr_linenumber" name="153" href="#153">153</a> 			<strong class="jxr_keyword">if</strong> (version == 1) {
+<a class="jxr_linenumber" name="154" href="#154">154</a> 				url = rs.getString(2) + rs.getString(3);
+<a class="jxr_linenumber" name="155" href="#155">155</a> 			} <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="156" href="#156">156</a> 				stmt = conn.createStatement();
+<a class="jxr_linenumber" name="157" href="#157">157</a> 				query = <span class="jxr_string">"SELECT base_uri, filename "</span>
+<a class="jxr_linenumber" name="158" href="#158">158</a> 						+ <span class="jxr_string">"FROM photo_versions WHERE photo_id ="</span> + photoId
+<a class="jxr_linenumber" name="159" href="#159">159</a> 						+ <span class="jxr_string">" AND version_id="</span> + version;
+<a class="jxr_linenumber" name="160" href="#160">160</a> 				rs = stmt.executeQuery(query);
+<a class="jxr_linenumber" name="161" href="#161">161</a> 				<strong class="jxr_keyword">if</strong> (rs.next()) {
+<a class="jxr_linenumber" name="162" href="#162">162</a> 					url = rs.getString(1) + rs.getString(2);
+<a class="jxr_linenumber" name="163" href="#163">163</a> 				}
+<a class="jxr_linenumber" name="164" href="#164">164</a> 			}
+<a class="jxr_linenumber" name="165" href="#165">165</a> 		}
+<a class="jxr_linenumber" name="166" href="#166">166</a> 		rs.close();
+<a class="jxr_linenumber" name="167" href="#167">167</a> 		conn.close();
+<a class="jxr_linenumber" name="168" href="#168">168</a> 		<strong class="jxr_keyword">if</strong> (photoDirectoryOverride != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="169" href="#169">169</a> 			url = url.replaceFirst(photoDirectoryOriginalPath,
+<a class="jxr_linenumber" name="170" href="#170">170</a> 					photoDirectoryOverride);
+<a class="jxr_linenumber" name="171" href="#171">171</a> 		}
+<a class="jxr_linenumber" name="172" href="#172">172</a> 		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> URL(url);
+<a class="jxr_linenumber" name="173" href="#173">173</a> 	}
+<a class="jxr_linenumber" name="174" href="#174">174</a> 
+<a class="jxr_linenumber" name="175" href="#175">175</a> 	<strong class="jxr_keyword">private</strong> Object[] getTagsForPhoto(<strong class="jxr_keyword">int</strong> id) <strong class="jxr_keyword">throws</strong> SQLException {
+<a class="jxr_linenumber" name="176" href="#176">176</a> 		Connection conn = getConnection();
+<a class="jxr_linenumber" name="177" href="#177">177</a> 		Statement stmt = conn.createStatement();
+<a class="jxr_linenumber" name="178" href="#178">178</a> 		List&lt;String&gt; tagList = <strong class="jxr_keyword">new</strong> ArrayList&lt;String&gt;();
+<a class="jxr_linenumber" name="179" href="#179">179</a> 		ResultSet rs = stmt.executeQuery(<span class="jxr_string">"SELECT tag_id, photo_id "</span>
+<a class="jxr_linenumber" name="180" href="#180">180</a> 				+ <span class="jxr_string">"FROM photo_tags WHERE photo_id="</span> + String.valueOf(id));
+<a class="jxr_linenumber" name="181" href="#181">181</a> 		<strong class="jxr_keyword">while</strong> (rs.next()) {
+<a class="jxr_linenumber" name="182" href="#182">182</a> 			String tagId = rs.getString(1);
+<a class="jxr_linenumber" name="183" href="#183">183</a> 			tagList.add(tagId);
+<a class="jxr_linenumber" name="184" href="#184">184</a> 		}
+<a class="jxr_linenumber" name="185" href="#185">185</a> 		rs.close();
+<a class="jxr_linenumber" name="186" href="#186">186</a> 		conn.close();
+<a class="jxr_linenumber" name="187" href="#187">187</a> 
+<a class="jxr_linenumber" name="188" href="#188">188</a> 		<strong class="jxr_keyword">return</strong> tagList.toArray();
+<a class="jxr_linenumber" name="189" href="#189">189</a> 	}
+<a class="jxr_linenumber" name="190" href="#190">190</a> 
+<a class="jxr_linenumber" name="191" href="#191">191</a> 	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong> getPhotoCountForTag(<strong class="jxr_keyword">int</strong> tagId) <strong class="jxr_keyword">throws</strong> SQLException {
+<a class="jxr_linenumber" name="192" href="#192">192</a> 		Connection conn = getConnection();
+<a class="jxr_linenumber" name="193" href="#193">193</a> 		PreparedStatement prep = conn
+<a class="jxr_linenumber" name="194" href="#194">194</a> 				.prepareStatement(<span class="jxr_string">"SELECT COUNT(photos.id) FROM photo_tags, photos WHERE tag_id=? AND photos.id=photo_tags.photo_id "</span>);
+<a class="jxr_linenumber" name="195" href="#195">195</a> 		prep.setInt(1, tagId);
+<a class="jxr_linenumber" name="196" href="#196">196</a> 		ResultSet rs = prep.executeQuery();
+<a class="jxr_linenumber" name="197" href="#197">197</a> 		<strong class="jxr_keyword">if</strong> (rs.next()) {
+<a class="jxr_linenumber" name="198" href="#198">198</a> 			<strong class="jxr_keyword">int</strong> count = rs.getInt(1);
+<a class="jxr_linenumber" name="199" href="#199">199</a> 			rs.close();
+<a class="jxr_linenumber" name="200" href="#200">200</a> 			conn.close();
+<a class="jxr_linenumber" name="201" href="#201">201</a> 			<strong class="jxr_keyword">return</strong> count;
+<a class="jxr_linenumber" name="202" href="#202">202</a> 		}
+<a class="jxr_linenumber" name="203" href="#203">203</a> 		rs.close();
+<a class="jxr_linenumber" name="204" href="#204">204</a> 		conn.close();
+<a class="jxr_linenumber" name="205" href="#205">205</a> 		<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IllegalStateException();
+<a class="jxr_linenumber" name="206" href="#206">206</a> 	}
+<a class="jxr_linenumber" name="207" href="#207">207</a> 
+<a class="jxr_linenumber" name="208" href="#208">208</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

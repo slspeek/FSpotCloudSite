@@ -19,6 +19,7 @@ fspotcloud.client.place.api
 fspotcloud.client.util
 fspotcloud.client.view.action
 fspotcloud.client.view.action.api
+fspotcloud.grapher
 fspotcloud.peer
 fspotcloud.peer.db
 fspotcloud.rpc
