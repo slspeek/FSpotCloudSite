@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2011-08-07T23:07:59.063">
+<pmd version="4.2.5" timestamp="2011-08-08T21:20:09.149">
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/admin/DashboardEntryPoint.java">
 <violation beginline="8" endline="8" begincolumn="1" endcolumn="53" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'com.google.gwt.user.client.ui.RootLayoutPanel'
@@ -88,14 +88,19 @@ Avoid unused imports such as 'java.util.Collection'
 Avoid unused private methods such as 'getArgsString()'.
 </violation>
 </file>
+<file name="/home/steven/fspotcloud/model/src/main/java/fspotcloud/server/model/command/CommandManager.java">
+<violation beginline="105" endline="105" begincolumn="44" endcolumn="44" rule="EmptyStatementNotInLoop" ruleset="Basic Rules" package="fspotcloud.server.model.command" class="CommandManager" method="getCountUnderAThousend" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyStatementNotInLoop" priority="3">
+An empty statement (semicolon) not part of a loop
+</violation>
+</file>
 <file name="/home/steven/fspotcloud/model/src/main/java/fspotcloud/server/model/peerdatabase/PeerDatabaseManager.java">
 <violation beginline="4" endline="4" begincolumn="1" endcolumn="29" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.server.model.peerdatabase" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'java.util.Collections'
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/admin/AdminServiceImpl.java">
-<violation beginline="52" endline="52" begincolumn="45" endcolumn="64" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.server.admin" class="AdminServiceImpl" variable="dataSchedulerFactory" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
-Avoid unused private fields such as 'dataSchedulerFactory'.
+<file name="/home/steven/fspotcloud/rpc/src/main/java/fspotcloud/rpc/AdminService.java">
+<violation beginline="6" endline="6" begincolumn="1" endcolumn="41" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.rpc" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'fspotcloud.shared.admin.BatchInfo'
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/control/GuiceXmlRpcServlet.java">
