@@ -34,9 +34,9 @@
 <a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.ui.TimerImpl;
 <a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.ui.TreeViewImpl;
 <a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.ButtonPanelPresenterImpl;
-<a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.FullscreenImagePanelActivity;
-<a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.ImagePanelActivity;
-<a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.ImagePresenterImpl;
+<a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.ImagePanelActivity;
+<a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.ImagePresenterImpl;
+<a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.ImageRasterActivity;
 <a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.ImageRasterPresenterImpl;
 <a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.MainWindowActivityMapper;
 <a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.SlideshowPresenterImpl;
@@ -46,11 +46,11 @@
 <a class="jxr_linenumber" name="36" href="#36">36</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.UserButtonPresenterImpl;
 <a class="jxr_linenumber" name="37" href="#37">37</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ButtonPanelPresenterFactory;
 <a class="jxr_linenumber" name="38" href="#38">38</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ButtonPanelView;
-<a class="jxr_linenumber" name="39" href="#39">39</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.EmbeddedImagePanelPresenterAssistedFactory;
-<a class="jxr_linenumber" name="40" href="#40">40</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.FullscreenImagePanelPresenterAssistedFactory;
-<a class="jxr_linenumber" name="41" href="#41">41</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ImagePanelActivityFactory;
-<a class="jxr_linenumber" name="42" href="#42">42</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ImagePanelView;
-<a class="jxr_linenumber" name="43" href="#43">43</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ImagePresenterFactory;
+<a class="jxr_linenumber" name="39" href="#39">39</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ImagePanelActivityFactory;
+<a class="jxr_linenumber" name="40" href="#40">40</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ImagePanelPresenterAssistedFactory;
+<a class="jxr_linenumber" name="41" href="#41">41</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ImagePanelView;
+<a class="jxr_linenumber" name="42" href="#42">42</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ImagePresenterFactory;
+<a class="jxr_linenumber" name="43" href="#43">43</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ImageRasterActivityFactory;
 <a class="jxr_linenumber" name="44" href="#44">44</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ImageRasterPresenterFactory;
 <a class="jxr_linenumber" name="45" href="#45">45</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ImageRasterView;
 <a class="jxr_linenumber" name="46" href="#46">46</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ImageView;
@@ -134,30 +134,28 @@
 <a class="jxr_linenumber" name="124" href="#124">124</a> 
 <a class="jxr_linenumber" name="125" href="#125">125</a> 		install(<strong class="jxr_keyword">new</strong> GinFactoryModuleBuilder().implement(
 <a class="jxr_linenumber" name="126" href="#126">126</a> 				ImagePanelView.ImagePanelPresenter.<strong class="jxr_keyword">class</strong>,
-<a class="jxr_linenumber" name="127" href="#127">127</a> 				FullscreenImagePanelActivity.<strong class="jxr_keyword">class</strong>).build(
-<a class="jxr_linenumber" name="128" href="#128">128</a> 				FullscreenImagePanelPresenterAssistedFactory.<strong class="jxr_keyword">class</strong>));
-<a class="jxr_linenumber" name="129" href="#129">129</a> 
+<a class="jxr_linenumber" name="127" href="#127">127</a> 				ImagePanelActivity.<strong class="jxr_keyword">class</strong>).build(
+<a class="jxr_linenumber" name="128" href="#128">128</a> 				ImagePanelPresenterAssistedFactory.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="129" href="#129">129</a> 		bind(UserButtonViewFactory.<strong class="jxr_keyword">class</strong>).to(UserButtonViewFactoryImpl.<strong class="jxr_keyword">class</strong>);
 <a class="jxr_linenumber" name="130" href="#130">130</a> 		install(<strong class="jxr_keyword">new</strong> GinFactoryModuleBuilder().implement(
-<a class="jxr_linenumber" name="131" href="#131">131</a> 				ImagePanelView.ImagePanelPresenter.<strong class="jxr_keyword">class</strong>,
-<a class="jxr_linenumber" name="132" href="#132">132</a> 				ImagePanelActivity.<strong class="jxr_keyword">class</strong>).build(
-<a class="jxr_linenumber" name="133" href="#133">133</a> 				EmbeddedImagePanelPresenterAssistedFactory.<strong class="jxr_keyword">class</strong>));
-<a class="jxr_linenumber" name="134" href="#134">134</a> 		bind(UserButtonViewFactory.<strong class="jxr_keyword">class</strong>).to(UserButtonViewFactoryImpl.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="135" href="#135">135</a> 		install(<strong class="jxr_keyword">new</strong> GinFactoryModuleBuilder().implement(
-<a class="jxr_linenumber" name="136" href="#136">136</a> 				UserButtonView.UserButtonPresenter.<strong class="jxr_keyword">class</strong>,
-<a class="jxr_linenumber" name="137" href="#137">137</a> 				UserButtonPresenterImpl.<strong class="jxr_keyword">class</strong>).build(UserButtonPresenterFactory.<strong class="jxr_keyword">class</strong>));
-<a class="jxr_linenumber" name="138" href="#138">138</a> 		install(<strong class="jxr_keyword">new</strong> GinFactoryModuleBuilder().implement(
-<a class="jxr_linenumber" name="139" href="#139">139</a> 				ButtonPanelView.ButtonPanelPresenter.<strong class="jxr_keyword">class</strong>,
-<a class="jxr_linenumber" name="140" href="#140">140</a> 				ButtonPanelPresenterImpl.<strong class="jxr_keyword">class</strong>).build(
-<a class="jxr_linenumber" name="141" href="#141">141</a> 				ButtonPanelPresenterFactory.<strong class="jxr_keyword">class</strong>));
-<a class="jxr_linenumber" name="142" href="#142">142</a> 		bind(ButtonPanelView.<strong class="jxr_keyword">class</strong>).to(ButtonPanelViewImpl.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="143" href="#143">143</a> 		bind(TreeSelectionHandlerInterface.<strong class="jxr_keyword">class</strong>)
-<a class="jxr_linenumber" name="144" href="#144">144</a> 				.to(TreeSelectionHandler.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="145" href="#145">145</a> 		install(<strong class="jxr_keyword">new</strong> GinFactoryModuleBuilder()
-<a class="jxr_linenumber" name="146" href="#146">146</a> 				.build(LoadNewLocationActionFactory.<strong class="jxr_keyword">class</strong>));
-<a class="jxr_linenumber" name="147" href="#147">147</a> 		bind(LoadNewLocation.<strong class="jxr_keyword">class</strong>).to(LoadNewLocationImpl.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="148" href="#148">148</a> 
-<a class="jxr_linenumber" name="149" href="#149">149</a> 	}
-<a class="jxr_linenumber" name="150" href="#150">150</a> }
+<a class="jxr_linenumber" name="131" href="#131">131</a> 				UserButtonView.UserButtonPresenter.<strong class="jxr_keyword">class</strong>,
+<a class="jxr_linenumber" name="132" href="#132">132</a> 				UserButtonPresenterImpl.<strong class="jxr_keyword">class</strong>).build(UserButtonPresenterFactory.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="133" href="#133">133</a> 		install(<strong class="jxr_keyword">new</strong> GinFactoryModuleBuilder().implement(
+<a class="jxr_linenumber" name="134" href="#134">134</a> 				ButtonPanelView.ButtonPanelPresenter.<strong class="jxr_keyword">class</strong>,
+<a class="jxr_linenumber" name="135" href="#135">135</a> 				ButtonPanelPresenterImpl.<strong class="jxr_keyword">class</strong>).build(
+<a class="jxr_linenumber" name="136" href="#136">136</a> 				ButtonPanelPresenterFactory.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="137" href="#137">137</a> 		bind(ButtonPanelView.<strong class="jxr_keyword">class</strong>).to(ButtonPanelViewImpl.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="138" href="#138">138</a> 		bind(TreeSelectionHandlerInterface.<strong class="jxr_keyword">class</strong>)
+<a class="jxr_linenumber" name="139" href="#139">139</a> 				.to(TreeSelectionHandler.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="140" href="#140">140</a> 		install(<strong class="jxr_keyword">new</strong> GinFactoryModuleBuilder()
+<a class="jxr_linenumber" name="141" href="#141">141</a> 				.build(LoadNewLocationActionFactory.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="142" href="#142">142</a> 		bind(LoadNewLocation.<strong class="jxr_keyword">class</strong>).to(LoadNewLocationImpl.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="143" href="#143">143</a> 		
+<a class="jxr_linenumber" name="144" href="#144">144</a> 		install(<strong class="jxr_keyword">new</strong> GinFactoryModuleBuilder().implement(ImageRasterView.ImageRasterPresenter.<strong class="jxr_keyword">class</strong>,
+<a class="jxr_linenumber" name="145" href="#145">145</a> 				ImageRasterActivity.<strong class="jxr_keyword">class</strong>).build(ImageRasterActivityFactory.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="146" href="#146">146</a> 
+<a class="jxr_linenumber" name="147" href="#147">147</a> 	}
+<a class="jxr_linenumber" name="148" href="#148">148</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

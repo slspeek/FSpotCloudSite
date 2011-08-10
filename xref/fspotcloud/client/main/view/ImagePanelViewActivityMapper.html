@@ -36,7 +36,7 @@
 <a class="jxr_linenumber" name="26" href="#26">26</a>  	<strong class="jxr_keyword">public</strong> Activity getActivity(Place place) {
 <a class="jxr_linenumber" name="27" href="#27">27</a>  		log.info(<span class="jxr_string">"getActivity for : "</span> + place + <span class="jxr_string">"("</span> + <strong class="jxr_keyword">this</strong> +<span class="jxr_string">")"</span>);
 <a class="jxr_linenumber" name="28" href="#28">28</a>  		<strong class="jxr_keyword">if</strong> (place instanceof BasePlace) {
-<a class="jxr_linenumber" name="29" href="#29">29</a>  			ImagePanelPresenter activity = imagePanelPresenterFactory.getEmbedded((BasePlace) place);
+<a class="jxr_linenumber" name="29" href="#29">29</a>  			ImagePanelPresenter activity = imagePanelPresenterFactory.get((BasePlace) place);
 <a class="jxr_linenumber" name="30" href="#30">30</a>  			<strong class="jxr_keyword">return</strong> activity;
 <a class="jxr_linenumber" name="31" href="#31">31</a>  		} <strong class="jxr_keyword">else</strong> {
 <a class="jxr_linenumber" name="32" href="#32">32</a>  			log.warning(<span class="jxr_string">"getActivity will return null for place: "</span> + place);
