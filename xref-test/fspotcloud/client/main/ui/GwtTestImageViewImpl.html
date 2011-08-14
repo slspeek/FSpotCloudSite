@@ -28,8 +28,8 @@
 <a class="jxr_linenumber" name="18" href="#18">18</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testSetUrl() {
 <a class="jxr_linenumber" name="19" href="#19">19</a>  		testConstructor();
 <a class="jxr_linenumber" name="20" href="#20">20</a>  		imageView.setImageUrl(<span class="jxr_string">"foo"</span>);
-<a class="jxr_linenumber" name="21" href="#21">21</a>  		<em class="jxr_comment">//assertEquals("gwt-debug-image-view-0x0", imageView.getElement().getId());</em>
-<a class="jxr_linenumber" name="22" href="#22">22</a>  		<em class="jxr_comment">//assertEquals("foo", imageView.getElement().getAttribute("src"));</em>
+<a class="jxr_linenumber" name="21" href="#21">21</a>  		assertEquals(<span class="jxr_string">"gwt-debug-image-view-0x0"</span>, imageView.getElement().getId());
+<a class="jxr_linenumber" name="22" href="#22">22</a>  		assertEquals(<span class="jxr_string">"foo"</span>, imageView.getElement().getAttribute(<span class="jxr_string">"src"</span>));
 <a class="jxr_linenumber" name="23" href="#23">23</a>  	}
 <a class="jxr_linenumber" name="24" href="#24">24</a>  	@Override
 <a class="jxr_linenumber" name="25" href="#25">25</a>  	<strong class="jxr_keyword">public</strong> String getModuleName() {
