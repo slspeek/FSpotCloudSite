@@ -15,44 +15,49 @@
 <a class="jxr_linenumber" name="5" href="#5">5</a>   <strong class="jxr_keyword">import</strong> org.jmock.Expectations;
 <a class="jxr_linenumber" name="6" href="#6">6</a>   <strong class="jxr_keyword">import</strong> org.jmock.Mockery;
 <a class="jxr_linenumber" name="7" href="#7">7</a>   
-<a class="jxr_linenumber" name="8" href="#8">8</a>   <strong class="jxr_keyword">import</strong> fspotcloud.client.main.ui.Resources;
-<a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> fspotcloud.client.main.ui.Resources.Style;
-<a class="jxr_linenumber" name="10" href="#10">10</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.view.action.KeyStroke;
-<a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.view.action.Shortcut;
-<a class="jxr_linenumber" name="12" href="#12">12</a>  
-<a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../fspotcloud/client/main/help/HelpContentGeneratorTest.html">HelpContentGeneratorTest</a> <strong class="jxr_keyword">extends</strong> TestCase {
+<a class="jxr_linenumber" name="8" href="#8">8</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.resources.client.ImageResource;
+<a class="jxr_linenumber" name="9" href="#9">9</a>   
+<a class="jxr_linenumber" name="10" href="#10">10</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.ui.Resources;
+<a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.ui.Resources.Style;
+<a class="jxr_linenumber" name="12" href="#12">12</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.view.action.KeyStroke;
+<a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.view.action.Shortcut;
 <a class="jxr_linenumber" name="14" href="#14">14</a>  
-<a class="jxr_linenumber" name="15" href="#15">15</a>  	<strong class="jxr_keyword">private</strong> HelpContentGenerator gen;
-<a class="jxr_linenumber" name="16" href="#16">16</a>  	<strong class="jxr_keyword">private</strong> Mockery context;
-<a class="jxr_linenumber" name="17" href="#17">17</a>  	<strong class="jxr_keyword">private</strong> Style style;
-<a class="jxr_linenumber" name="18" href="#18">18</a>  	<strong class="jxr_keyword">private</strong> Resources resources;
-<a class="jxr_linenumber" name="19" href="#19">19</a>  	
-<a class="jxr_linenumber" name="20" href="#20">20</a>  
-<a class="jxr_linenumber" name="21" href="#21">21</a>  	@Override
-<a class="jxr_linenumber" name="22" href="#22">22</a>  	<strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> setUp() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="23" href="#23">23</a>  		context = <strong class="jxr_keyword">new</strong> Mockery();
-<a class="jxr_linenumber" name="24" href="#24">24</a>  		style = context.mock(Resources.Style.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="25" href="#25">25</a>  		resources = context.mock(Resources.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="26" href="#26">26</a>  		
-<a class="jxr_linenumber" name="27" href="#27">27</a>  		<strong class="jxr_keyword">super</strong>.setUp();
-<a class="jxr_linenumber" name="28" href="#28">28</a>  	}
-<a class="jxr_linenumber" name="29" href="#29">29</a>  
-<a class="jxr_linenumber" name="30" href="#30">30</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testOne() {
-<a class="jxr_linenumber" name="31" href="#31">31</a>  		context.checking(<strong class="jxr_keyword">new</strong> Expectations() {{
-<a class="jxr_linenumber" name="32" href="#32">32</a>  			exactly(1).of(resources).style(); will(returnValue(style));
-<a class="jxr_linenumber" name="33" href="#33">33</a>  			exactly(3).of(style).helpKey(); will(returnValue(<span class="jxr_string">"fsc-help-key"</span>));
-<a class="jxr_linenumber" name="34" href="#34">34</a>  			exactly(1).of(style).helpDescription(); will(returnValue(<span class="jxr_string">"fsc-help-description"</span>));
-<a class="jxr_linenumber" name="35" href="#35">35</a>  			exactly(1).of(style).helpSeparator(); will(returnValue(<span class="jxr_string">"fsc-help-separator"</span>));
-<a class="jxr_linenumber" name="36" href="#36">36</a>  		}});
-<a class="jxr_linenumber" name="37" href="#37">37</a>  		gen = <strong class="jxr_keyword">new</strong> HelpContentGenerator(resources);
-<a class="jxr_linenumber" name="38" href="#38">38</a>  		Shortcut s = <strong class="jxr_keyword">new</strong> Shortcut(<span class="jxr_string">""</span>, <span class="jxr_string">""</span>,<span class="jxr_string">"Start slideshow"</span>, <strong class="jxr_keyword">new</strong> KeyStroke('s'), <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="39" href="#39">39</a>  		String row = gen.getHelpText(s);
-<a class="jxr_linenumber" name="40" href="#40">40</a>  		String desired = <span class="jxr_string">"&lt;span class='fsc-help-key'&gt;s&lt;/span&gt;&lt;/td&gt;"</span> 
-<a class="jxr_linenumber" name="41" href="#41">41</a>  			 + <span class="jxr_string">"&lt;td&gt;&lt;span class='fsc-help-separator'&gt;:&lt;/span&gt;&lt;/td&gt;"</span>
-<a class="jxr_linenumber" name="42" href="#42">42</a>  			 + <span class="jxr_string">"&lt;td&gt;&lt;span class='fsc-help-description'&gt;Start slideshow&lt;/span&gt;"</span>;
-<a class="jxr_linenumber" name="43" href="#43">43</a>  		assertEquals(desired, row);
-<a class="jxr_linenumber" name="44" href="#44">44</a>  	}
-<a class="jxr_linenumber" name="45" href="#45">45</a>  }
+<a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../fspotcloud/client/main/help/HelpContentGeneratorTest.html">HelpContentGeneratorTest</a> <strong class="jxr_keyword">extends</strong> TestCase {
+<a class="jxr_linenumber" name="16" href="#16">16</a>  
+<a class="jxr_linenumber" name="17" href="#17">17</a>  	<strong class="jxr_keyword">private</strong> HelpContentGenerator gen;
+<a class="jxr_linenumber" name="18" href="#18">18</a>  	<strong class="jxr_keyword">private</strong> Mockery context;
+<a class="jxr_linenumber" name="19" href="#19">19</a>  	<strong class="jxr_keyword">private</strong> Style style;
+<a class="jxr_linenumber" name="20" href="#20">20</a>  	<strong class="jxr_keyword">private</strong> Resources resources;
+<a class="jxr_linenumber" name="21" href="#21">21</a>  	<strong class="jxr_keyword">private</strong> ImageResource icon;
+<a class="jxr_linenumber" name="22" href="#22">22</a>  	
+<a class="jxr_linenumber" name="23" href="#23">23</a>  
+<a class="jxr_linenumber" name="24" href="#24">24</a>  	@Override
+<a class="jxr_linenumber" name="25" href="#25">25</a>  	<strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> setUp() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="26" href="#26">26</a>  		context = <strong class="jxr_keyword">new</strong> Mockery();
+<a class="jxr_linenumber" name="27" href="#27">27</a>  		style = context.mock(Resources.Style.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="28" href="#28">28</a>  		resources = context.mock(Resources.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="29" href="#29">29</a>  		icon = context.mock(ImageResource.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="30" href="#30">30</a>  		
+<a class="jxr_linenumber" name="31" href="#31">31</a>  		<strong class="jxr_keyword">super</strong>.setUp();
+<a class="jxr_linenumber" name="32" href="#32">32</a>  	}
+<a class="jxr_linenumber" name="33" href="#33">33</a>  
+<a class="jxr_linenumber" name="34" href="#34">34</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testOne() {
+<a class="jxr_linenumber" name="35" href="#35">35</a>  		context.checking(<strong class="jxr_keyword">new</strong> Expectations() {{
+<a class="jxr_linenumber" name="36" href="#36">36</a>  			exactly(1).of(icon).getURL(); will(returnValue(<span class="jxr_string">"bar"</span>));
+<a class="jxr_linenumber" name="37" href="#37">37</a>  			exactly(1).of(resources).style(); will(returnValue(style));
+<a class="jxr_linenumber" name="38" href="#38">38</a>  			exactly(3).of(style).helpKey(); will(returnValue(<span class="jxr_string">"fsc-help-key"</span>));
+<a class="jxr_linenumber" name="39" href="#39">39</a>  			exactly(1).of(style).helpDescription(); will(returnValue(<span class="jxr_string">"fsc-help-description"</span>));
+<a class="jxr_linenumber" name="40" href="#40">40</a>  			exactly(1).of(style).helpSeparator(); will(returnValue(<span class="jxr_string">"fsc-help-separator"</span>));
+<a class="jxr_linenumber" name="41" href="#41">41</a>  		}});
+<a class="jxr_linenumber" name="42" href="#42">42</a>  		gen = <strong class="jxr_keyword">new</strong> HelpContentGenerator(resources);
+<a class="jxr_linenumber" name="43" href="#43">43</a>  		Shortcut s = <strong class="jxr_keyword">new</strong> Shortcut(<span class="jxr_string">""</span>, <span class="jxr_string">""</span>,<span class="jxr_string">"Start slideshow"</span>, <strong class="jxr_keyword">new</strong> KeyStroke('s'), <strong class="jxr_keyword">null</strong>, icon, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="44" href="#44">44</a>  		String row = gen.getHelpText(s);
+<a class="jxr_linenumber" name="45" href="#45">45</a>  		String desired = <span class="jxr_string">"&lt;span class='fsc-help-key'&gt;s&lt;/span&gt;&lt;/td&gt;"</span> 
+<a class="jxr_linenumber" name="46" href="#46">46</a>  			 + <span class="jxr_string">"&lt;td&gt;&lt;span class='fsc-help-separator'&gt;:&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;img src='bar' /&gt;&lt;/td&gt;"</span>
+<a class="jxr_linenumber" name="47" href="#47">47</a>  			 + <span class="jxr_string">"&lt;td&gt;&lt;span class='fsc-help-description'&gt;Start slideshow&lt;/span&gt;"</span>;
+<a class="jxr_linenumber" name="48" href="#48">48</a>  		assertEquals(desired, row);
+<a class="jxr_linenumber" name="49" href="#49">49</a>  	}
+<a class="jxr_linenumber" name="50" href="#50">50</a>  }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>
