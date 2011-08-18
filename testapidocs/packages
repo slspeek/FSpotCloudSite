@@ -19,7 +19,6 @@ fspotcloud.client.main.ui
 fspotcloud.client.main.data
 fspotcloud.client.main.view
 fspotcloud.client.main.shared
-fspotcloud.client.main.gin
 fspotcloud.client.view.action
 fspotcloud.client.place
 fspotcloud.peer.db

@@ -26,6 +26,12 @@ fspotcloud.client.main.view.api
 fspotcloud.client.main.view.factory
 fspotcloud.client.main.shared
 fspotcloud.client.main.gin
+fspotcloud.client.main.event.navigation
+fspotcloud.client.main.event.slideshow
+fspotcloud.client.main.event
+fspotcloud.client.main.event.about
+fspotcloud.client.main.event.application
+fspotcloud.client.main.event.raster
 fspotcloud.client.data
 fspotcloud.client.view.action
 fspotcloud.client.view.action.api

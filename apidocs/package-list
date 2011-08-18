@@ -7,6 +7,12 @@ fspotcloud.client.data
 fspotcloud.client.demo
 fspotcloud.client.main
 fspotcloud.client.main.api
+fspotcloud.client.main.event
+fspotcloud.client.main.event.about
+fspotcloud.client.main.event.application
+fspotcloud.client.main.event.navigation
+fspotcloud.client.main.event.raster
+fspotcloud.client.main.event.slideshow
 fspotcloud.client.main.gin
 fspotcloud.client.main.help
 fspotcloud.client.main.shared

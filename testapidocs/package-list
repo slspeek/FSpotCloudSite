@@ -1,6 +1,5 @@
 fspotcloud.client.main
 fspotcloud.client.main.data
-fspotcloud.client.main.gin
 fspotcloud.client.main.help
 fspotcloud.client.main.shared
 fspotcloud.client.main.ui
