@@ -1,6 +1,7 @@
 fspotcloud.rpc
 fspotcloud.shared.tag
 fspotcloud.shared.photo
+fspotcloud.shared.actions
 fspotcloud.shared.admin
 fspotcloud.server.model.api
 fspotcloud.server.model.tag
@@ -15,6 +16,7 @@ fspotcloud.server.inject
 fspotcloud.server.control
 fspotcloud.server.control.task
 fspotcloud.server.control.reciever
+fspotcloud.server.actions
 fspotcloud.server.util
 fspotcloud.server.admin
 fspotcloud.client.main.help
