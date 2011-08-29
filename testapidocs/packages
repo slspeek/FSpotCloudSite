@@ -6,12 +6,14 @@ fspotcloud.server.model.peerdatabase
 fspotcloud.server.model.photo
 fspotcloud.server.model.batch
 fspotcloud.server.model.command
+fspotcloud.server.cron
 fspotcloud.server.mapreduce
 fspotcloud.server.inject
 fspotcloud.server.control
 fspotcloud.server.control.task
 fspotcloud.server.control.reciever
 fspotcloud.server.util
+fspotcloud.server.admin.actions
 fspotcloud.server.test
 fspotcloud.client.main.help
 fspotcloud.client.main

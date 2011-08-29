@@ -29,11 +29,11 @@ fspotcloud.grapher
 fspotcloud.peer
 fspotcloud.peer.db
 fspotcloud.rpc
-fspotcloud.server.actions
-fspotcloud.server.admin
+fspotcloud.server.admin.actions
 fspotcloud.server.control
 fspotcloud.server.control.reciever
 fspotcloud.server.control.task
+fspotcloud.server.cron
 fspotcloud.server.inject
 fspotcloud.server.main
 fspotcloud.server.mapreduce
@@ -45,7 +45,7 @@ fspotcloud.server.model.peerdatabase
 fspotcloud.server.model.photo
 fspotcloud.server.model.tag
 fspotcloud.server.util
-fspotcloud.shared.actions
 fspotcloud.shared.admin
+fspotcloud.shared.dashboard.actions
 fspotcloud.shared.photo
 fspotcloud.shared.tag

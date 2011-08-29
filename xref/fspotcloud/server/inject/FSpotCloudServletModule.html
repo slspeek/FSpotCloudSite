@@ -18,9 +18,9 @@
 <a class="jxr_linenumber" name="8" href="#8">8</a>   
 <a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> com.google.inject.servlet.ServletModule;
 <a class="jxr_linenumber" name="10" href="#10">10</a>  
-<a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.admin.AdminServiceImpl;
-<a class="jxr_linenumber" name="12" href="#12">12</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.control.GuiceXmlRpcServlet;
-<a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.control.task.DataTaskServlet;
+<a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.control.GuiceXmlRpcServlet;
+<a class="jxr_linenumber" name="12" href="#12">12</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.control.task.DataTaskServlet;
+<a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.cron.CronServlet;
 <a class="jxr_linenumber" name="14" href="#14">14</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.main.ImageServlet;
 <a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.main.TagServiceImpl;
 <a class="jxr_linenumber" name="16" href="#16">16</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.mapreduce.CounterCompletedServlet;
@@ -28,26 +28,29 @@
 <a class="jxr_linenumber" name="18" href="#18">18</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../fspotcloud/server/inject/FSpotCloudServletModule.html">FSpotCloudServletModule</a> <strong class="jxr_keyword">extends</strong> ServletModule {
 <a class="jxr_linenumber" name="19" href="#19">19</a>  
 <a class="jxr_linenumber" name="20" href="#20">20</a>  	@SuppressWarnings(<span class="jxr_string">"unused"</span>)
-<a class="jxr_linenumber" name="21" href="#21">21</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger log = Logger.getLogger(FSpotCloudServletModule.<strong class="jxr_keyword">class</strong>
-<a class="jxr_linenumber" name="22" href="#22">22</a>  			.getName());
-<a class="jxr_linenumber" name="23" href="#23">23</a>  	@Override
-<a class="jxr_linenumber" name="24" href="#24">24</a>  	<strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> configureServlets() {
-<a class="jxr_linenumber" name="25" href="#25">25</a>  		serve(<span class="jxr_string">"/fspotcloud/dispatch"</span>).with(GuiceStandardDispatchServlet.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="26" href="#26">26</a>  		serve(<span class="jxr_string">"/fspotcloud.dashboard/dispatch"</span>).with(GuiceStandardDispatchServlet.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="27" href="#27">27</a>  		serve(<span class="jxr_string">"/control/task/data"</span>).with(DataTaskServlet.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="28" href="#28">28</a>  		serve(<span class="jxr_string">"/fspotcloud/tag"</span>).with(TagServiceImpl.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="29" href="#29">29</a>  		serve(<span class="jxr_string">"/fspotcloud.dashboard/tag"</span>).with(TagServiceImpl.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="30" href="#30">30</a>  		serve(<span class="jxr_string">"/fspotcloud.dashboard/admin"</span>).with(AdminServiceImpl.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="31" href="#31">31</a>  		serve(<span class="jxr_string">"/callbacks/counter_completed"</span>).with(CounterCompletedServlet.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="32" href="#32">32</a>  		serve(<span class="jxr_string">"/image"</span>).with(ImageServlet.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="33" href="#33">33</a>  
-<a class="jxr_linenumber" name="34" href="#34">34</a>  		Map&lt;String, String&gt; params = <strong class="jxr_keyword">new</strong> HashMap&lt;String, String&gt;();
-<a class="jxr_linenumber" name="35" href="#35">35</a>  		params.put(<span class="jxr_string">"enabledForExtensions"</span>, <span class="jxr_string">"true"</span>);
-<a class="jxr_linenumber" name="36" href="#36">36</a>  		String botSecret = System.getProperty(<span class="jxr_string">"bot.secret"</span>);
-<a class="jxr_linenumber" name="37" href="#37">37</a>  		serve(<span class="jxr_string">"/xmlrpc/"</span> + botSecret).with(GuiceXmlRpcServlet.<strong class="jxr_keyword">class</strong>, params);
-<a class="jxr_linenumber" name="38" href="#38">38</a>  	}
-<a class="jxr_linenumber" name="39" href="#39">39</a>  
-<a class="jxr_linenumber" name="40" href="#40">40</a>  }
+<a class="jxr_linenumber" name="21" href="#21">21</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger log = Logger
+<a class="jxr_linenumber" name="22" href="#22">22</a>  			.getLogger(FSpotCloudServletModule.<strong class="jxr_keyword">class</strong>.getName());
+<a class="jxr_linenumber" name="23" href="#23">23</a>  
+<a class="jxr_linenumber" name="24" href="#24">24</a>  	@Override
+<a class="jxr_linenumber" name="25" href="#25">25</a>  	<strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> configureServlets() {
+<a class="jxr_linenumber" name="26" href="#26">26</a>  		serve(<span class="jxr_string">"/fspotcloud/dispatch"</span>).with(GuiceStandardDispatchServlet.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="27" href="#27">27</a>  		serve(<span class="jxr_string">"/fspotcloud.dashboard/dispatch"</span>).with(
+<a class="jxr_linenumber" name="28" href="#28">28</a>  				GuiceStandardDispatchServlet.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="29" href="#29">29</a>  		serve(<span class="jxr_string">"/control/task/data"</span>).with(DataTaskServlet.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="30" href="#30">30</a>  		serve(<span class="jxr_string">"/fspotcloud/tag"</span>).with(TagServiceImpl.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="31" href="#31">31</a>  		serve(<span class="jxr_string">"/fspotcloud.dashboard/tag"</span>).with(TagServiceImpl.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="32" href="#32">32</a>  		serve(<span class="jxr_string">"/callbacks/counter_completed"</span>).with(
+<a class="jxr_linenumber" name="33" href="#33">33</a>  				CounterCompletedServlet.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="34" href="#34">34</a>  		serve(<span class="jxr_string">"/image"</span>).with(ImageServlet.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="35" href="#35">35</a>  		serve(<span class="jxr_string">"/cron"</span>).with(CronServlet.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="36" href="#36">36</a>  
+<a class="jxr_linenumber" name="37" href="#37">37</a>  		Map&lt;String, String&gt; params = <strong class="jxr_keyword">new</strong> HashMap&lt;String, String&gt;();
+<a class="jxr_linenumber" name="38" href="#38">38</a>  		params.put(<span class="jxr_string">"enabledForExtensions"</span>, <span class="jxr_string">"true"</span>);
+<a class="jxr_linenumber" name="39" href="#39">39</a>  		String botSecret = System.getProperty(<span class="jxr_string">"bot.secret"</span>);
+<a class="jxr_linenumber" name="40" href="#40">40</a>  		serve(<span class="jxr_string">"/xmlrpc/"</span> + botSecret).with(GuiceXmlRpcServlet.<strong class="jxr_keyword">class</strong>, params);
+<a class="jxr_linenumber" name="41" href="#41">41</a>  	}
+<a class="jxr_linenumber" name="42" href="#42">42</a>  
+<a class="jxr_linenumber" name="43" href="#43">43</a>  }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

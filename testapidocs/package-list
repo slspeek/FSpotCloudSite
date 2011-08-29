@@ -8,9 +8,11 @@ fspotcloud.client.place
 fspotcloud.client.view.action
 fspotcloud.peer
 fspotcloud.peer.db
+fspotcloud.server.admin.actions
 fspotcloud.server.control
 fspotcloud.server.control.reciever
 fspotcloud.server.control.task
+fspotcloud.server.cron
 fspotcloud.server.inject
 fspotcloud.server.mapreduce
 fspotcloud.server.model
