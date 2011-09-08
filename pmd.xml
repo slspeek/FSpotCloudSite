@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2011-09-08T00:03:26.229">
+<pmd version="4.2.5" timestamp="2011-09-08T23:25:40.428">
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/admin/DashboardEntryPoint.java">
 <violation beginline="8" endline="8" begincolumn="1" endcolumn="53" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'com.google.gwt.user.client.ui.RootLayoutPanel'
@@ -34,11 +34,6 @@ Avoid unused imports such as 'fspotcloud.client.main.event.slideshow.SlideshowEv
 Avoid unused imports such as 'com.google.gwt.uibinder.client.UiHandler'
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/ImageRasterViewImpl.java">
-<violation beginline="8" endline="8" begincolumn="1" endcolumn="51" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.main.ui" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'com.google.gwt.resources.client.CssResource'
-</violation>
-</file>
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/TagViewImpl.java">
 <violation beginline="22" endline="22" begincolumn="37" endcolumn="39" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.main.ui" class="TagViewImpl" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'log'.
@@ -47,6 +42,11 @@ Avoid unused private fields such as 'log'.
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/ImagePresenterImpl.java">
 <violation beginline="76" endline="76" begincolumn="25" endcolumn="39" rule="UselessOperationOnImmutable" ruleset="Basic Rules" package="fspotcloud.client.main.view" class="ImagePresenterImpl" method="imageDoubleClicked" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#UselessOperationOnImmutable" priority="3">
 An operation on an Immutable object (String, BigDecimal or BigInteger) won't change the object itself
+</violation>
+</file>
+<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/ImageRasterPresenterImpl.java">
+<violation beginline="27" endline="27" begincolumn="34" endcolumn="45" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.main.view" class="ImageRasterPresenterImpl" variable="LABEL_HEIGHT" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'LABEL_HEIGHT'.
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/TreeSelectionHandler.java">
