@@ -141,25 +141,27 @@
 <a class="jxr_linenumber" name="131" href="#131">131</a> 		bind(UserButtonViewFactory.<strong class="jxr_keyword">class</strong>).to(UserButtonViewFactoryImpl.<strong class="jxr_keyword">class</strong>);
 <a class="jxr_linenumber" name="132" href="#132">132</a> 		install(<strong class="jxr_keyword">new</strong> GinFactoryModuleBuilder().implement(
 <a class="jxr_linenumber" name="133" href="#133">133</a> 				UserButtonView.UserButtonPresenter.<strong class="jxr_keyword">class</strong>,
-<a class="jxr_linenumber" name="134" href="#134">134</a> 				UserButtonPresenterImpl.<strong class="jxr_keyword">class</strong>).build(UserButtonPresenterFactory.<strong class="jxr_keyword">class</strong>));
-<a class="jxr_linenumber" name="135" href="#135">135</a> 		install(<strong class="jxr_keyword">new</strong> GinFactoryModuleBuilder().implement(
-<a class="jxr_linenumber" name="136" href="#136">136</a> 				ButtonPanelView.ButtonPanelPresenter.<strong class="jxr_keyword">class</strong>,
-<a class="jxr_linenumber" name="137" href="#137">137</a> 				ButtonPanelPresenterImpl.<strong class="jxr_keyword">class</strong>).build(
-<a class="jxr_linenumber" name="138" href="#138">138</a> 				ButtonPanelPresenterFactory.<strong class="jxr_keyword">class</strong>));
-<a class="jxr_linenumber" name="139" href="#139">139</a> 		bind(ButtonPanelView.<strong class="jxr_keyword">class</strong>).to(ButtonPanelViewImpl.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="140" href="#140">140</a> 		bind(TreeSelectionHandlerInterface.<strong class="jxr_keyword">class</strong>)
-<a class="jxr_linenumber" name="141" href="#141">141</a> 				.to(TreeSelectionHandler.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="142" href="#142">142</a> 		install(<strong class="jxr_keyword">new</strong> GinFactoryModuleBuilder()
-<a class="jxr_linenumber" name="143" href="#143">143</a> 				.build(LoadNewLocationActionFactory.<strong class="jxr_keyword">class</strong>));
-<a class="jxr_linenumber" name="144" href="#144">144</a> 		bind(LoadNewLocation.<strong class="jxr_keyword">class</strong>).to(LoadNewLocationImpl.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="145" href="#145">145</a> 		
-<a class="jxr_linenumber" name="146" href="#146">146</a> 		install(<strong class="jxr_keyword">new</strong> GinFactoryModuleBuilder().implement(ImageRasterView.ImageRasterPresenter.<strong class="jxr_keyword">class</strong>,
-<a class="jxr_linenumber" name="147" href="#147">147</a> 				ImageRasterActivity.<strong class="jxr_keyword">class</strong>).build(ImageRasterActivityFactory.<strong class="jxr_keyword">class</strong>));
-<a class="jxr_linenumber" name="148" href="#148">148</a> 		
-<a class="jxr_linenumber" name="149" href="#149">149</a> 		bind(PopupView.<strong class="jxr_keyword">class</strong>).to(HelpPopup.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="150" href="#150">150</a> 
-<a class="jxr_linenumber" name="151" href="#151">151</a> 	}
-<a class="jxr_linenumber" name="152" href="#152">152</a> }
+<a class="jxr_linenumber" name="134" href="#134">134</a> 				UserButtonPresenterImpl.<strong class="jxr_keyword">class</strong>).build(
+<a class="jxr_linenumber" name="135" href="#135">135</a> 				UserButtonPresenterFactory.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="136" href="#136">136</a> 		install(<strong class="jxr_keyword">new</strong> GinFactoryModuleBuilder().implement(
+<a class="jxr_linenumber" name="137" href="#137">137</a> 				ButtonPanelView.ButtonPanelPresenter.<strong class="jxr_keyword">class</strong>,
+<a class="jxr_linenumber" name="138" href="#138">138</a> 				ButtonPanelPresenterImpl.<strong class="jxr_keyword">class</strong>).build(
+<a class="jxr_linenumber" name="139" href="#139">139</a> 				ButtonPanelPresenterFactory.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="140" href="#140">140</a> 		bind(ButtonPanelView.<strong class="jxr_keyword">class</strong>).to(ButtonPanelViewImpl.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="141" href="#141">141</a> 		bind(TreeSelectionHandlerInterface.<strong class="jxr_keyword">class</strong>)
+<a class="jxr_linenumber" name="142" href="#142">142</a> 				.to(TreeSelectionHandler.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="143" href="#143">143</a> 		install(<strong class="jxr_keyword">new</strong> GinFactoryModuleBuilder()
+<a class="jxr_linenumber" name="144" href="#144">144</a> 				.build(LoadNewLocationActionFactory.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="145" href="#145">145</a> 		bind(LoadNewLocation.<strong class="jxr_keyword">class</strong>).to(LoadNewLocationImpl.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="146" href="#146">146</a> 
+<a class="jxr_linenumber" name="147" href="#147">147</a> 		install(<strong class="jxr_keyword">new</strong> GinFactoryModuleBuilder().implement(
+<a class="jxr_linenumber" name="148" href="#148">148</a> 				ImageRasterView.ImageRasterPresenter.<strong class="jxr_keyword">class</strong>,
+<a class="jxr_linenumber" name="149" href="#149">149</a> 				ImageRasterActivity.<strong class="jxr_keyword">class</strong>).build(
+<a class="jxr_linenumber" name="150" href="#150">150</a> 				ImageRasterActivityFactory.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="151" href="#151">151</a> 
+<a class="jxr_linenumber" name="152" href="#152">152</a> 		bind(PopupView.<strong class="jxr_keyword">class</strong>).to(HelpPopup.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="153" href="#153">153</a> 	}
+<a class="jxr_linenumber" name="154" href="#154">154</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>
