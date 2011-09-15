@@ -39,7 +39,6 @@ fspotcloud.server.main
 fspotcloud.server.mapreduce
 fspotcloud.server.model
 fspotcloud.server.model.api
-fspotcloud.server.model.batch
 fspotcloud.server.model.command
 fspotcloud.server.model.peerdatabase
 fspotcloud.server.model.photo

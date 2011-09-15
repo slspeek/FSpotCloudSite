@@ -1,10 +1,10 @@
 fspotcloud.shared.tag
 fspotcloud.shared.photo
+fspotcloud.shared.admin
 fspotcloud.server.model
 fspotcloud.server.model.tag
 fspotcloud.server.model.peerdatabase
 fspotcloud.server.model.photo
-fspotcloud.server.model.batch
 fspotcloud.server.model.command
 fspotcloud.server.cron
 fspotcloud.server.mapreduce
