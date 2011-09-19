@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2011-09-15T23:01:46.340">
+<pmd version="4.2.5" timestamp="2011-09-19T22:06:03.791">
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/admin/DashboardEntryPoint.java">
 <violation beginline="8" endline="8" begincolumn="1" endcolumn="53" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'com.google.gwt.user.client.ui.RootLayoutPanel'
@@ -45,18 +45,18 @@ An operation on an Immutable object (String, BigDecimal or BigInteger) won't cha
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/ImageRasterPresenterImpl.java">
-<violation beginline="27" endline="27" begincolumn="34" endcolumn="45" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.main.view" class="ImageRasterPresenterImpl" variable="LABEL_HEIGHT" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<violation beginline="29" endline="29" begincolumn="34" endcolumn="45" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.main.view" class="ImageRasterPresenterImpl" variable="LABEL_HEIGHT" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'LABEL_HEIGHT'.
-</violation>
-</file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/TreeSelectionHandler.java">
-<violation beginline="6" endline="6" begincolumn="1" endcolumn="49" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.main.view" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'com.google.gwt.view.client.SelectionModel'
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/UserButtonPresenterImpl.java">
 <violation beginline="16" endline="16" begincolumn="37" endcolumn="39" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.main.view" class="UserButtonPresenterImpl" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'log'.
+</violation>
+</file>
+<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/place/PlaceCalculator.java">
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="46" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.place" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'fspotcloud.client.place.api.PhotoInTag'
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/view/action/NavigationEventHandler.java">

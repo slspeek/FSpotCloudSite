@@ -52,7 +52,7 @@
 <a class="jxr_linenumber" name="42" href="#42">42</a>  		BasePlace tagViewingPlace = <strong class="jxr_keyword">new</strong> BasePlace(<span class="jxr_string">"1"</span>, <span class="jxr_string">"10"</span>, 2, 1, <strong class="jxr_keyword">true</strong>);
 <a class="jxr_linenumber" name="43" href="#43">43</a>  		BasePlace newPlace = (BasePlace) placeCalculator.toggleZoomView(tagViewingPlace,<span class="jxr_string">"1"</span>, <span class="jxr_string">"11"</span>);
 <a class="jxr_linenumber" name="44" href="#44">44</a>  		assertEquals(<span class="jxr_string">"1"</span>, ((BasePlace)newPlace).getTagId());
-<a class="jxr_linenumber" name="45" href="#45">45</a>  		assertEquals(<span class="jxr_string">"11"</span>, ((BasePlace)newPlace).getPhotoId());
+<a class="jxr_linenumber" name="45" href="#45">45</a>  		assertEquals(<span class="jxr_string">"10"</span>, ((BasePlace)newPlace).getPhotoId());
 <a class="jxr_linenumber" name="46" href="#46">46</a>  		assertEquals(1, newPlace.getColumnCount());
 <a class="jxr_linenumber" name="47" href="#47">47</a>  		assertEquals(1, newPlace.getRowCount());
 <a class="jxr_linenumber" name="48" href="#48">48</a>  		assertEquals(<strong class="jxr_keyword">true</strong>, newPlace.hasTreeVisible());
@@ -62,7 +62,7 @@
 <a class="jxr_linenumber" name="52" href="#52">52</a>  		BasePlace tagViewingPlace = <strong class="jxr_keyword">new</strong> BasePlace(<span class="jxr_string">"1"</span>, <span class="jxr_string">"10"</span>, 2, 1, false);
 <a class="jxr_linenumber" name="53" href="#53">53</a>  		BasePlace newPlace = (BasePlace) placeCalculator.toggleZoomView(tagViewingPlace,<span class="jxr_string">"1"</span>, <span class="jxr_string">"11"</span>);
 <a class="jxr_linenumber" name="54" href="#54">54</a>  		assertEquals(<span class="jxr_string">"1"</span>, ((BasePlace)newPlace).getTagId());
-<a class="jxr_linenumber" name="55" href="#55">55</a>  		assertEquals(<span class="jxr_string">"11"</span>, ((BasePlace)newPlace).getPhotoId());
+<a class="jxr_linenumber" name="55" href="#55">55</a>  		assertEquals(<span class="jxr_string">"10"</span>, ((BasePlace)newPlace).getPhotoId());
 <a class="jxr_linenumber" name="56" href="#56">56</a>  		assertEquals(1, newPlace.getColumnCount());
 <a class="jxr_linenumber" name="57" href="#57">57</a>  		assertEquals(1, newPlace.getRowCount());
 <a class="jxr_linenumber" name="58" href="#58">58</a>  		assertEquals(false, newPlace.hasTreeVisible());
