@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2011-09-19T23:05:44.923">
+<pmd version="4.2.5" timestamp="2011-09-22T00:02:19.946">
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/admin/DashboardEntryPoint.java">
 <violation beginline="8" endline="8" begincolumn="1" endcolumn="53" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'com.google.gwt.user.client.ui.RootLayoutPanel'
@@ -24,19 +24,8 @@ Avoid unused local variables such as 'runner'.
 Avoid unused private fields such as 'log'.
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/DecoratedImageViewImpl.java">
-<violation beginline="9" endline="9" begincolumn="1" endcolumn="48" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.main.ui" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'com.google.gwt.uibinder.client.UiHandler'
-</violation>
-</file>
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/ImagePanelViewImpl.java">
-<violation beginline="6" endline="6" begincolumn="1" endcolumn="55" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.main.ui" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'com.google.gwt.event.dom.client.MouseWheelEvent'
-</violation>
-<violation beginline="7" endline="7" begincolumn="1" endcolumn="57" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.main.ui" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'com.google.gwt.event.dom.client.MouseWheelHandler'
-</violation>
-<violation beginline="40" endline="40" begincolumn="37" endcolumn="45" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.main.ui" class="ImagePanelViewImpl" variable="presenter" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<violation beginline="37" endline="37" begincolumn="37" endcolumn="45" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.main.ui" class="ImagePanelViewImpl" variable="presenter" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'presenter'.
 </violation>
 </file>
@@ -55,12 +44,13 @@ Avoid unused private fields such as 'resources'.
 Avoid unused private fields such as 'navigator'.
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/ImagePresenterImpl.java">
-<violation beginline="76" endline="76" begincolumn="25" endcolumn="39" rule="UselessOperationOnImmutable" ruleset="Basic Rules" package="fspotcloud.client.main.view" class="ImagePresenterImpl" method="imageDoubleClicked" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#UselessOperationOnImmutable" priority="3">
-An operation on an Immutable object (String, BigDecimal or BigInteger) won't change the object itself
-</violation>
-</file>
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/ImageRasterPresenterImpl.java">
+<violation beginline="9" endline="9" begincolumn="1" endcolumn="42" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.main.view" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'com.google.gwt.user.client.Command'
+</violation>
+<violation beginline="10" endline="10" begincolumn="1" endcolumn="50" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.main.view" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'com.google.gwt.user.client.DeferredCommand'
+</violation>
 <violation beginline="29" endline="29" begincolumn="34" endcolumn="45" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.main.view" class="ImageRasterPresenterImpl" variable="LABEL_HEIGHT" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'LABEL_HEIGHT'.
 </violation>
@@ -140,7 +130,6 @@ Avoid unused private fields such as 'log'.
 <suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/GlobalShortcutController.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ToggleButtonsAction.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ToggleFullscreenAction.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/SlideshowViewImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/TimerImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/ButtonPanelPresenterImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/admin/actions/CountPhotosHandler.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
