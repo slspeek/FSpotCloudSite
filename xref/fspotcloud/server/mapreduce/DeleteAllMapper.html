@@ -23,15 +23,15 @@
 <a class="jxr_linenumber" name="13" href="#13">13</a>  
 <a class="jxr_linenumber" name="14" href="#14">14</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../fspotcloud/server/mapreduce/DeleteAllMapper.html">DeleteAllMapper</a> <strong class="jxr_keyword">extends</strong>
 <a class="jxr_linenumber" name="15" href="#15">15</a>  		AppEngineMapper&lt;Key, Entity, NullWritable, NullWritable&gt; {
-<a class="jxr_linenumber" name="16" href="#16">16</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger log = Logger.getLogger(DeleteAllMapper.<strong class="jxr_keyword">class</strong>
-<a class="jxr_linenumber" name="17" href="#17">17</a>  			.getName());
-<a class="jxr_linenumber" name="18" href="#18">18</a>  
-<a class="jxr_linenumber" name="19" href="#19">19</a>  	@Override
-<a class="jxr_linenumber" name="20" href="#20">20</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> map(Key key, Entity value, Context context) {
-<a class="jxr_linenumber" name="21" href="#21">21</a>  		log.info(<span class="jxr_string">"Adding key to deletion pool: "</span> + key);
+<a class="jxr_linenumber" name="16" href="#16">16</a>  	@SuppressWarnings(<span class="jxr_string">"unused"</span>)
+<a class="jxr_linenumber" name="17" href="#17">17</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger log = Logger.getLogger(DeleteAllMapper.<strong class="jxr_keyword">class</strong>
+<a class="jxr_linenumber" name="18" href="#18">18</a>  			.getName());
+<a class="jxr_linenumber" name="19" href="#19">19</a>  
+<a class="jxr_linenumber" name="20" href="#20">20</a>  	@Override
+<a class="jxr_linenumber" name="21" href="#21">21</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> map(Key key, Entity value, Context context) {
 <a class="jxr_linenumber" name="22" href="#22">22</a>  		DatastoreMutationPool mutationPool = <strong class="jxr_keyword">this</strong>.getAppEngineContext(context)
 <a class="jxr_linenumber" name="23" href="#23">23</a>  				.getMutationPool();
-<a class="jxr_linenumber" name="24" href="#24">24</a>  		mutationPool.delete(value.getKey());
+<a class="jxr_linenumber" name="24" href="#24">24</a>  		mutationPool.delete(key);
 <a class="jxr_linenumber" name="25" href="#25">25</a>  	}
 <a class="jxr_linenumber" name="26" href="#26">26</a>  }
 </pre>

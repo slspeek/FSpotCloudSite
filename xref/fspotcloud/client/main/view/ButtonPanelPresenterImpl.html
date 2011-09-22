@@ -57,38 +57,32 @@
 <a class="jxr_linenumber" name="47" href="#47">47</a>  		addActionGroup(allActions.get(<span class="jxr_string">"Raster"</span>), <strong class="jxr_keyword">true</strong>);
 <a class="jxr_linenumber" name="48" href="#48">48</a>  
 <a class="jxr_linenumber" name="49" href="#49">49</a>  		ActionMap actions = allActions.get(<span class="jxr_string">"Slideshow"</span>);
-<a class="jxr_linenumber" name="50" href="#50">50</a>  		addAction(actions.get(SlideshowType.SLIDESHOW_SLOWER), false);
-<a class="jxr_linenumber" name="51" href="#51">51</a>  		addAction(actions.get(SlideshowType.SLIDESHOW__END), false);
+<a class="jxr_linenumber" name="50" href="#50">50</a>  		
+<a class="jxr_linenumber" name="51" href="#51">51</a>  		addAction(actions.get(SlideshowType.SLIDESHOW_START), false);
 <a class="jxr_linenumber" name="52" href="#52">52</a>  		addSpacer(false);
-<a class="jxr_linenumber" name="53" href="#53">53</a>  		Widget w = slideshowPresenter.getView().asWidget();
-<a class="jxr_linenumber" name="54" href="#54">54</a>  		buttonPanelView.add(w, false);
-<a class="jxr_linenumber" name="55" href="#55">55</a>  		addSpacer(false);
-<a class="jxr_linenumber" name="56" href="#56">56</a>  		addAction(actions.get(SlideshowType.SLIDESHOW_START), false);
-<a class="jxr_linenumber" name="57" href="#57">57</a>  		addAction(actions.get(SlideshowType.SLIDESHOW_FASTER), false);
-<a class="jxr_linenumber" name="58" href="#58">58</a>  		addSpacer(false);
-<a class="jxr_linenumber" name="59" href="#59">59</a>  
-<a class="jxr_linenumber" name="60" href="#60">60</a>  		addActionGroup(allActions.get(<span class="jxr_string">"Application"</span>), false);
-<a class="jxr_linenumber" name="61" href="#61">61</a>  		slideshowPresenter.init();
+<a class="jxr_linenumber" name="53" href="#53">53</a>  
+<a class="jxr_linenumber" name="54" href="#54">54</a>  		addActionGroup(allActions.get(<span class="jxr_string">"Application"</span>), false);
+<a class="jxr_linenumber" name="55" href="#55">55</a>  		slideshowPresenter.init();
+<a class="jxr_linenumber" name="56" href="#56">56</a>  	}
+<a class="jxr_linenumber" name="57" href="#57">57</a>  
+<a class="jxr_linenumber" name="58" href="#58">58</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> addActionGroup(<a href="../../../../fspotcloud/client/main/event/ActionMap.html">ActionMap</a> group, <strong class="jxr_keyword">boolean</strong> north) {
+<a class="jxr_linenumber" name="59" href="#59">59</a>  		<strong class="jxr_keyword">for</strong> (UserAction action : group.allActions()) {
+<a class="jxr_linenumber" name="60" href="#60">60</a>  			addAction(action, north);
+<a class="jxr_linenumber" name="61" href="#61">61</a>  		}
 <a class="jxr_linenumber" name="62" href="#62">62</a>  	}
 <a class="jxr_linenumber" name="63" href="#63">63</a>  
-<a class="jxr_linenumber" name="64" href="#64">64</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> addActionGroup(<a href="../../../../fspotcloud/client/main/event/ActionMap.html">ActionMap</a> group, <strong class="jxr_keyword">boolean</strong> north) {
-<a class="jxr_linenumber" name="65" href="#65">65</a>  		<strong class="jxr_keyword">for</strong> (UserAction action : group.allActions()) {
-<a class="jxr_linenumber" name="66" href="#66">66</a>  			addAction(action, north);
-<a class="jxr_linenumber" name="67" href="#67">67</a>  		}
-<a class="jxr_linenumber" name="68" href="#68">68</a>  	}
-<a class="jxr_linenumber" name="69" href="#69">69</a>  
-<a class="jxr_linenumber" name="70" href="#70">70</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> addAction(<a href="../../../../fspotcloud/client/view/action/api/UserAction.html">UserAction</a> action, <strong class="jxr_keyword">boolean</strong> north) {
-<a class="jxr_linenumber" name="71" href="#71">71</a>  		UserButtonView.UserButtonPresenter buttonPresenter = buttonPresenterFactory
-<a class="jxr_linenumber" name="72" href="#72">72</a>  				.get(action);
-<a class="jxr_linenumber" name="73" href="#73">73</a>  		buttonPresenter.init();
-<a class="jxr_linenumber" name="74" href="#74">74</a>  		buttonPanelView.add(buttonPresenter.getView(), north);
-<a class="jxr_linenumber" name="75" href="#75">75</a>  	}
-<a class="jxr_linenumber" name="76" href="#76">76</a>  
-<a class="jxr_linenumber" name="77" href="#77">77</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> addSpacer(<strong class="jxr_keyword">boolean</strong> north) {
-<a class="jxr_linenumber" name="78" href="#78">78</a>  		Widget space = buttonPanelView.getSpacer();
-<a class="jxr_linenumber" name="79" href="#79">79</a>  		buttonPanelView.add(space, north);
-<a class="jxr_linenumber" name="80" href="#80">80</a>  	}
-<a class="jxr_linenumber" name="81" href="#81">81</a>  }
+<a class="jxr_linenumber" name="64" href="#64">64</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> addAction(<a href="../../../../fspotcloud/client/view/action/api/UserAction.html">UserAction</a> action, <strong class="jxr_keyword">boolean</strong> north) {
+<a class="jxr_linenumber" name="65" href="#65">65</a>  		UserButtonView.UserButtonPresenter buttonPresenter = buttonPresenterFactory
+<a class="jxr_linenumber" name="66" href="#66">66</a>  				.get(action);
+<a class="jxr_linenumber" name="67" href="#67">67</a>  		buttonPresenter.init();
+<a class="jxr_linenumber" name="68" href="#68">68</a>  		buttonPanelView.add(buttonPresenter.getView(), north);
+<a class="jxr_linenumber" name="69" href="#69">69</a>  	}
+<a class="jxr_linenumber" name="70" href="#70">70</a>  
+<a class="jxr_linenumber" name="71" href="#71">71</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> addSpacer(<strong class="jxr_keyword">boolean</strong> north) {
+<a class="jxr_linenumber" name="72" href="#72">72</a>  		Widget space = buttonPanelView.getSpacer();
+<a class="jxr_linenumber" name="73" href="#73">73</a>  		buttonPanelView.add(space, north);
+<a class="jxr_linenumber" name="74" href="#74">74</a>  	}
+<a class="jxr_linenumber" name="75" href="#75">75</a>  }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>
