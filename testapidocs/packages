@@ -26,3 +26,6 @@ fspotcloud.client.place
 fspotcloud.peer.db
 fspotcloud.peer
 fspotcloud.test
+fspotcloud.botdispatch.model
+fspotcloud.botdispatch.model.command
+fspotcloud.botdispatch.bot

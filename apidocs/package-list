@@ -1,3 +1,7 @@
+fspotcloud.botdispatch.bot
+fspotcloud.botdispatch.model
+fspotcloud.botdispatch.model.api
+fspotcloud.botdispatch.model.command
 fspotcloud.client.admin
 fspotcloud.client.admin.gin
 fspotcloud.client.admin.ui

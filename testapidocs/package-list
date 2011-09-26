@@ -1,3 +1,6 @@
+fspotcloud.botdispatch.bot
+fspotcloud.botdispatch.model
+fspotcloud.botdispatch.model.command
 fspotcloud.client.main
 fspotcloud.client.main.data
 fspotcloud.client.main.help

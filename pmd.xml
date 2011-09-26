@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2011-09-23T00:19:43.240">
+<pmd version="4.2.5" timestamp="2011-09-26T23:55:07.910">
+<file name="/home/steven/fspotcloud/bot-dispatch/bot/src/main/java/fspotcloud/botdispatch/bot/BotDispatchServer.java">
+<violation beginline="9" endline="9" begincolumn="38" endcolumn="44" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.botdispatch.bot" class="BotDispatchServer" variable="fetcher" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'fetcher'.
+</violation>
+<violation beginline="10" endline="10" begincolumn="36" endcolumn="41" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.botdispatch.bot" class="BotDispatchServer" variable="sender" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'sender'.
+</violation>
+<violation beginline="11" endline="11" begincolumn="32" endcolumn="39" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.botdispatch.bot" class="BotDispatchServer" variable="dispatch" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'dispatch'.
+</violation>
+</file>
+<file name="/home/steven/fspotcloud/bot-dispatch/gae-command/src/main/java/fspotcloud/botdispatch/model/command/CommandDO.java">
+<violation beginline="91" endline="91" begincolumn="24" endcolumn="38" rule="UnusedPrivateMethod" ruleset="Unused Code Rules" package="fspotcloud.botdispatch.model.command" class="CommandDO" method="getArgsString" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateMethod" priority="3">
+Avoid unused private methods such as 'getArgsString()'.
+</violation>
+</file>
+<file name="/home/steven/fspotcloud/bot-dispatch/gae-command/src/main/java/fspotcloud/botdispatch/model/command/CommandManager.java">
+<violation beginline="105" endline="105" begincolumn="44" endcolumn="44" rule="EmptyStatementNotInLoop" ruleset="Basic Rules" package="fspotcloud.botdispatch.model.command" class="CommandManager" method="getCountUnderAThousend" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyStatementNotInLoop" priority="3">
+An empty statement (semicolon) not part of a loop
+</violation>
+</file>
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/admin/DashboardEntryPoint.java">
 <violation beginline="8" endline="8" begincolumn="1" endcolumn="53" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'com.google.gwt.user.client.ui.RootLayoutPanel'
@@ -98,17 +119,6 @@ Avoid unused private fields such as 'log'.
 <file name="/home/steven/fspotcloud/rpc/src/main/java/fspotcloud/shared/dashboard/actions/ResetSynchronizationPoint.java">
 <violation beginline="4" endline="4" begincolumn="1" endcolumn="49" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.shared.dashboard.actions" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'fspotcloud.shared.admin.GetMetaDataResult'
-</violation>
-</file>
-<file name="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/control/GuiceXmlRpcServlet.java">
-<violation beginline="8" endline="8" begincolumn="1" endcolumn="41" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.server.control" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'org.apache.xmlrpc.XmlRpcException'
-</violation>
-<violation beginline="9" endline="9" begincolumn="1" endcolumn="55" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.server.control" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'org.apache.xmlrpc.server.PropertyHandlerMapping'
-</violation>
-<violation beginline="10" endline="10" begincolumn="1" endcolumn="53" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.server.control" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'org.apache.xmlrpc.server.XmlRpcHandlerMapping'
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/control/reciever/PhotoReciever.java">

@@ -48,3 +48,7 @@ fspotcloud.client.demo
 fspotcloud.peer.db
 fspotcloud.peer
 fspotcloud.grapher
+fspotcloud.botdispatch.model.api
+fspotcloud.botdispatch.model
+fspotcloud.botdispatch.model.command
+fspotcloud.botdispatch.bot
