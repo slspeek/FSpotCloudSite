@@ -49,6 +49,8 @@ fspotcloud.peer.db
 fspotcloud.peer
 fspotcloud.grapher
 fspotcloud.botdispatch.model.api
+fspotcloud.botdispatch.bot
 fspotcloud.botdispatch.model
 fspotcloud.botdispatch.model.command
-fspotcloud.botdispatch.bot
+fspotcloud.botdispatch.controller.dispatch
+fspotcloud.botdispatch.controller.callback

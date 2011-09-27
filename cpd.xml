@@ -1,76 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pmd-cpd>
-<duplication lines="100" tokens="391">
-<file line="14" path="/home/steven/fspotcloud/bot-dispatch/gae-command/src/main/java/fspotcloud/botdispatch/model/command/CommandManager.java"/>
-<file line="14" path="/home/steven/fspotcloud/model/src/main/java/fspotcloud/server/model/command/CommandManager.java"/>
+<duplication lines="25" tokens="143">
+<file line="25" path="/home/steven/fspotcloud/bot-dispatch/bot/src/main/java/fspotcloud/botdispatch/bot/BotModule.java"/>
+<file line="34" path="/home/steven/fspotcloud/peer/src/main/java/fspotcloud/peer/BotModule.java"/>
 <codefragment>
 <![CDATA[
-public class CommandManager implements Commands {
-
-	private final Provider<PersistenceManager> pmProvider;
-
-	@Inject
-	public CommandManager(Provider<PersistenceManager> pmProvider) {
-		this.pmProvider = pmProvider;
+				Integer.valueOf(System.getProperty("stop.port", "4444")));
+		bind(Integer.class).annotatedWith(Names.named("pause")).toInstance(
+				Integer.valueOf(System.getProperty("pause", "10000")));
+		install(new FactoryModuleBuilder().implement(CommandWorker.class,
+				CommandWorkerImpl.class).build(CommandWorkerFactory.class));
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see fspotcloud.server.model.command.Commands#create()
-	 */
-	public Command create() {
-		return new CommandDO();
+	@Provides
+	XmlRpcClient provideXmlRpcClient(@Named("endpoint") String endpoint)
+			throws Exception {
+		// create configuration
+		XmlRpcClientConfigImpl config = new XmlRpcClientConfigImpl();
+		config.setServerURL(new URL(endpoint));
+		config.setEnabledForExtensions(true);
+		config.setConnectionTimeout(60 * 1000);
+		config.setReplyTimeout(60 * 1000);
+		XmlRpcClient controller = new XmlRpcClient();
+		// use Commons HttpClient as transport
+		controller.setTransportFactory(new XmlRpcCommonsTransportFactory(
+				controller));
+		// set configuration
+		controller.setConfig(config);
+		return controller;
 	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see fspotcloud.server.model.command.Commands#popOldestCommand()
-	 */
-	@SuppressWarnings("unchecked")
-	public Object[] popOldestCommand() {
-		PersistenceManager pm = pmProvider.get();
-		try {
-			Query query = pm.newQuery(CommandDO.class);
-			query.setOrdering("ctime");
-			query.setRange(0, 1);
-			List<CommandDO> cmdList = (List<CommandDO>) query.execute();
-			if (cmdList.size() > 0) {
-				Command oldest = cmdList.get(0);
-				Object[] result = new Object[2];
-				result[0] = oldest.getCmd();
-				result[1] = oldest.getArgs().toArray();
-				pm.deletePersistent(oldest);
-				return result;
-			} else {
-				return new Object[] {};
-			}
-		} finally {
-			pm.close();
-		}
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * fspotcloud.server.model.command.Commands#allReadyExists(java.lang.String,
-	 * java.util.List)
-	 */
-	@SuppressWarnings("unchecked")
-	public boolean allReadyExists(String cmd, List<String> args) {
-		PersistenceManager pm = pmProvider.get();
-		try {
-			Query query = pm.newQuery(CommandDO.class);
-			query.setFilter("cmd == cmdParam && argsString == argsStringParam");
-			query.declareParameters("String cmdParam, String argsStringParam");
-			List<CommandDO> rs = (List<CommandDO>) query.execute(cmd,
-					String.valueOf(args));
-			return rs.size() > 0;
-		} finally {
-			pm.close();
-		}
+}
+]]>
+</codefragment>
+</duplication>
+<duplication lines="32" tokens="105">
+<file line="25" path="/home/steven/fspotcloud/bot-dispatch/gae-command/src/main/java/fspotcloud/botdispatch/model/command/CommandManager.java"/>
+<file line="80" path="/home/steven/fspotcloud/model/src/main/java/fspotcloud/server/model/command/CommandManager.java"/>
+<codefragment>
+<![CDATA[
 	}
 
 	/*
@@ -103,143 +70,39 @@ public class CommandManager implements Commands {
 
 		return count;
 	}
-
-}
 ]]>
 </codefragment>
 </duplication>
-<duplication lines="96" tokens="189">
-<file line="15" path="/home/steven/fspotcloud/bot-dispatch/gae-command/src/main/java/fspotcloud/botdispatch/model/command/CommandDO.java"/>
-<file line="15" path="/home/steven/fspotcloud/model/src/main/java/fspotcloud/server/model/command/CommandDO.java"/>
+<duplication lines="27" tokens="103">
+<file line="12" path="/home/steven/fspotcloud/bot-dispatch/controller/src/main/java/fspotcloud/botdispatch/controller/callback/GuiceRequestProcessorFactoryFactory.java"/>
+<file line="12" path="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/control/GuiceRequestProcessorFactoryFactory.java"/>
 <codefragment>
 <![CDATA[
-@PersistenceCapable
-public class CommandDO implements Command {
-	@PrimaryKey
-	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-	private Key key;
+public class GuiceRequestProcessorFactoryFactory implements
+		RequestProcessorFactoryFactory {
 
-	@Persistent
-	private String cmd;
-
-	@Persistent
-	private List<String> args;
-
-	@Persistent
-	private String argsString;
-
-	@Persistent
-	private Date ctime;
-
-	public CommandDO() {
-		setCtime(new Date());
+	private static final Logger log = Logger.getLogger(GuiceRequestProcessorFactoryFactory.class
+			.getName());
+	
+	@Inject
+	private Injector injector;
+	@Inject
+	public GuiceRequestProcessorFactoryFactory(Injector injector) {
+		this.injector = injector;
 	}
-	/**
-	 * @param key
-	 *            the key to set
-	 */
-	public void setKey(Key key) {
-		this.key = key;
-	}
-
-	/* (non-Javadoc)
-	 * @see fspotcloud.server.model.command.Command#getKey()
-	 */
-	public Key getKey() {
-		return key;
-	}
-
-	/* (non-Javadoc)
-	 * @see fspotcloud.server.model.command.Command#setCmd(java.lang.String)
-	 */
-	public void setCmd(String cmd) {
-		this.cmd = cmd;
-	}
-
-	/* (non-Javadoc)
-	 * @see fspotcloud.server.model.command.Command#getCmd()
-	 */
-	public String getCmd() {
-		return cmd;
-	}
-
-	/* (non-Javadoc)
-	 * @see fspotcloud.server.model.command.Command#setArgs(java.util.List)
-	 */
-	public void setArgs(List<String> args) {
-		this.args = args;
-		setArgsString(String.valueOf(args));
-	}
-
-	/* (non-Javadoc)
-	 * @see fspotcloud.server.model.command.Command#getArgs()
-	 */
-	public List<String> getArgs() {
-		return args;
-	}
-
-	/**
-	 * @param argsString
-	 *            the argsString to set
-	 */
-	private void setArgsString(String argsString) {
-		this.argsString = argsString;
-	}
-
-	/**
-	 * @return the argsString
-	 */
-	private String getArgsString() {
-		return argsString;
-	}
-
-	/**
-	 * @param ctime
-	 *            the ctime to set
-	 */
-	public void setCtime(Date ctime) {
-		this.ctime = ctime;
-	}
-
-	/* (non-Javadoc)
-	 * @see fspotcloud.server.model.command.Command#getCtime()
-	 */
-	public Date getCtime() {
-		return ctime;
-	}
-
-}
-]]>
-</codefragment>
-</duplication>
-<duplication lines="25" tokens="143">
-<file line="25" path="/home/steven/fspotcloud/bot-dispatch/bot/src/main/java/fspotcloud/botdispatch/bot/BotModule.java"/>
-<file line="34" path="/home/steven/fspotcloud/peer/src/main/java/fspotcloud/peer/BotModule.java"/>
-<codefragment>
-<![CDATA[
-				Integer.valueOf(System.getProperty("stop.port", "4444")));
-		bind(Integer.class).annotatedWith(Names.named("pause")).toInstance(
-				Integer.valueOf(System.getProperty("pause", "10000")));
-		install(new FactoryModuleBuilder().implement(CommandWorker.class,
-				CommandWorkerImpl.class).build(CommandWorkerFactory.class));
-	}
-
-	@Provides
-	XmlRpcClient provideXmlRpcClient(@Named("endpoint") String endpoint)
-			throws Exception {
-		// create configuration
-		XmlRpcClientConfigImpl config = new XmlRpcClientConfigImpl();
-		config.setServerURL(new URL(endpoint));
-		config.setEnabledForExtensions(true);
-		config.setConnectionTimeout(60 * 1000);
-		config.setReplyTimeout(60 * 1000);
-		XmlRpcClient controller = new XmlRpcClient();
-		// use Commons HttpClient as transport
-		controller.setTransportFactory(new XmlRpcCommonsTransportFactory(
-				controller));
-		// set configuration
-		controller.setConfig(config);
-		return controller;
+	
+	@Override
+	public RequestProcessorFactory getRequestProcessorFactory(final Class pClass)
+			throws XmlRpcException {
+		return new RequestProcessorFactory() {
+			@SuppressWarnings("unchecked")
+			@Override
+			public Object getRequestProcessor(XmlRpcRequest pRequest)
+					throws XmlRpcException {
+				log.info("Called for " + pClass.getName());
+				return injector.getInstance(pClass);
+			}
+		};
 	}
 }
 ]]>
