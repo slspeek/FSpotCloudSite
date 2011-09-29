@@ -35,11 +35,11 @@
 <a class="jxr_linenumber" name="25" href="#25">25</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> Dispatch dispatch;
 <a class="jxr_linenumber" name="26" href="#26">26</a>  
 <a class="jxr_linenumber" name="27" href="#27">27</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> Action&lt;?&gt; action;
-<a class="jxr_linenumber" name="28" href="#28">28</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> String callbackId;
+<a class="jxr_linenumber" name="28" href="#28">28</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">long</strong> callbackId;
 <a class="jxr_linenumber" name="29" href="#29">29</a>  
 <a class="jxr_linenumber" name="30" href="#30">30</a>  	@Inject
 <a class="jxr_linenumber" name="31" href="#31">31</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../fspotcloud/botdispatch/bot/CommandWorkerImpl.html">CommandWorkerImpl</a>(<a href="../../../fspotcloud/botdispatch/bot/ResultSender.html">ResultSender</a> sender, Dispatch dispatch,
-<a class="jxr_linenumber" name="32" href="#32">32</a>  			@Assisted Action&lt;?&gt; action, @Assisted String callbackId) {
+<a class="jxr_linenumber" name="32" href="#32">32</a>  			@Assisted Action&lt;?&gt; action, @Assisted <strong class="jxr_keyword">long</strong> callbackId) {
 <a class="jxr_linenumber" name="33" href="#33">33</a>  		<strong class="jxr_keyword">super</strong>();
 <a class="jxr_linenumber" name="34" href="#34">34</a>  		<strong class="jxr_keyword">this</strong>.sender = sender;
 <a class="jxr_linenumber" name="35" href="#35">35</a>  		<strong class="jxr_keyword">this</strong>.dispatch = dispatch;

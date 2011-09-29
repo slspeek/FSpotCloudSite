@@ -1,4 +1,5 @@
 fspotcloud.botdispatch.bot
+fspotcloud.botdispatch.controller.callback
 fspotcloud.botdispatch.controller.dispatch
 fspotcloud.botdispatch.model
 fspotcloud.botdispatch.model.command
