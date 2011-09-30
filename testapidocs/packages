@@ -31,3 +31,4 @@ fspotcloud.botdispatch.model
 fspotcloud.botdispatch.bot
 fspotcloud.botdispatch.controller.dispatch
 fspotcloud.botdispatch.controller.callback
+fspotcloud.botdispatch.test
