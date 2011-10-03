@@ -56,3 +56,5 @@ fspotcloud.botdispatch.bot
 fspotcloud.botdispatch.controller.dispatch
 fspotcloud.botdispatch.controller.inject
 fspotcloud.botdispatch.controller.callback
+fspotcloud.botdispatch.testbot
+fspotcloud.botdispatch.testserver

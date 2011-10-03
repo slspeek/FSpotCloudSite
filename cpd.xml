@@ -33,6 +33,38 @@
 ]]>
 </codefragment>
 </duplication>
+<duplication lines="24" tokens="107">
+<file line="10" path="/home/steven/fspotcloud/bot-dispatch/test-bot/src/main/java/fspotcloud/botdispatch/testbot/StopListener.java"/>
+<file line="10" path="/home/steven/fspotcloud/peer/src/main/java/fspotcloud/peer/StopListener.java"/>
+<codefragment>
+<![CDATA[
+public class StopListener extends Thread {
+
+	final static private Logger log = Logger.getLogger(StopListener.class.getName());
+	final int stopPort;
+	private ServerSocket server;
+
+	@Inject
+	public StopListener(@Named("stop port") int port) {
+		this.stopPort = port;
+	}
+
+	public void run() {
+		try {
+			server = new ServerSocket(stopPort);
+			server.accept();
+		} catch (IOException e) {
+			log.warning("Could not listen on port " + stopPort);
+			log.warning("Aborting on request");
+			System.exit(-1);
+		}
+		System.exit(0);
+	}
+
+}
+]]>
+</codefragment>
+</duplication>
 <duplication lines="32" tokens="105">
 <file line="28" path="/home/steven/fspotcloud/bot-dispatch/gae-command/src/main/java/fspotcloud/botdispatch/model/command/CommandManager.java"/>
 <file line="80" path="/home/steven/fspotcloud/model/src/main/java/fspotcloud/server/model/command/CommandManager.java"/>
