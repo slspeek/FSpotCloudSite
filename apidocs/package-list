@@ -38,9 +38,12 @@ fspotcloud.client.view.action.api
 fspotcloud.grapher
 fspotcloud.peer
 fspotcloud.peer.db
+fspotcloud.peer.handlers
+fspotcloud.peer.inject
 fspotcloud.rpc
 fspotcloud.server.admin.actions
 fspotcloud.server.control
+fspotcloud.server.control.callback
 fspotcloud.server.control.reciever
 fspotcloud.server.control.task
 fspotcloud.server.cron
@@ -56,5 +59,6 @@ fspotcloud.server.model.tag
 fspotcloud.server.util
 fspotcloud.shared.admin
 fspotcloud.shared.dashboard.actions
+fspotcloud.shared.peer.rpc.actions
 fspotcloud.shared.photo
 fspotcloud.shared.tag

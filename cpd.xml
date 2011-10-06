@@ -2,7 +2,7 @@
 <pmd-cpd>
 <duplication lines="25" tokens="143">
 <file line="23" path="/home/steven/fspotcloud/bot-dispatch/bot/src/main/java/fspotcloud/botdispatch/bot/BotModule.java"/>
-<file line="34" path="/home/steven/fspotcloud/peer/src/main/java/fspotcloud/peer/BotModule.java"/>
+<file line="49" path="/home/steven/fspotcloud/peer/src/main/java/fspotcloud/peer/inject/BotModule.java"/>
 <codefragment>
 <![CDATA[
 				Integer.valueOf(System.getProperty("stop.port", "4444")));

@@ -21,13 +21,13 @@
 <a class="jxr_linenumber" name="11" href="#11">11</a>  
 <a class="jxr_linenumber" name="12" href="#12">12</a>  <strong class="jxr_keyword">import</strong> com.google.inject.Provider;
 <a class="jxr_linenumber" name="13" href="#13">13</a>  
-<a class="jxr_linenumber" name="14" href="#14">14</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.DatastoreTest;
+<a class="jxr_linenumber" name="14" href="#14">14</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.CloudcoverDatastoreTest;
 <a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.PersistenceManagerProvider;
 <a class="jxr_linenumber" name="16" href="#16">16</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.Tag;
 <a class="jxr_linenumber" name="17" href="#17">17</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.Tags;
 <a class="jxr_linenumber" name="18" href="#18">18</a>  <strong class="jxr_keyword">import</strong> fspotcloud.shared.tag.TagNode;
 <a class="jxr_linenumber" name="19" href="#19">19</a>  
-<a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../fspotcloud/server/model/tag/TagManagerTest.html">TagManagerTest</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../fspotcloud/server/model/DatastoreTest.html">DatastoreTest</a> {
+<a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../fspotcloud/server/model/tag/TagManagerTest.html">TagManagerTest</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../fspotcloud/server/model/CloudcoverDatastoreTest.html">CloudcoverDatastoreTest</a> {
 <a class="jxr_linenumber" name="21" href="#21">21</a>  
 <a class="jxr_linenumber" name="22" href="#22">22</a>  	<strong class="jxr_keyword">private</strong> Provider&lt;PersistenceManager&gt; pmProviver = <strong class="jxr_keyword">new</strong> PersistenceManagerProvider();
 <a class="jxr_linenumber" name="23" href="#23">23</a>  	<strong class="jxr_keyword">private</strong> Tags tagManager = <strong class="jxr_keyword">new</strong> TagManager(pmProviver);
