@@ -1,38 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pmd-cpd>
-<duplication lines="25" tokens="143">
-<file line="23" path="/home/steven/fspotcloud/bot-dispatch/bot/src/main/java/fspotcloud/botdispatch/bot/BotModule.java"/>
-<file line="49" path="/home/steven/fspotcloud/peer/src/main/java/fspotcloud/peer/inject/BotModule.java"/>
-<codefragment>
-<![CDATA[
-				Integer.valueOf(System.getProperty("stop.port", "4444")));
-		bind(Integer.class).annotatedWith(Names.named("pause")).toInstance(
-				Integer.valueOf(System.getProperty("pause", "10000")));
-		install(new FactoryModuleBuilder().implement(CommandWorker.class,
-				CommandWorkerImpl.class).build(CommandWorkerFactory.class));
-	}
-
-	@Provides
-	XmlRpcClient provideXmlRpcClient(@Named("endpoint") String endpoint)
-			throws Exception {
-		// create configuration
-		XmlRpcClientConfigImpl config = new XmlRpcClientConfigImpl();
-		config.setServerURL(new URL(endpoint));
-		config.setEnabledForExtensions(true);
-		config.setConnectionTimeout(60 * 1000);
-		config.setReplyTimeout(60 * 1000);
-		XmlRpcClient controller = new XmlRpcClient();
-		// use Commons HttpClient as transport
-		controller.setTransportFactory(new XmlRpcCommonsTransportFactory(
-				controller));
-		// set configuration
-		controller.setConfig(config);
-		return controller;
-	}
-}
-]]>
-</codefragment>
-</duplication>
 <duplication lines="24" tokens="107">
 <file line="10" path="/home/steven/fspotcloud/bot-dispatch/test-bot/src/main/java/fspotcloud/botdispatch/testbot/StopListener.java"/>
 <file line="10" path="/home/steven/fspotcloud/peer/src/main/java/fspotcloud/peer/StopListener.java"/>
@@ -61,81 +28,6 @@ public class StopListener extends Thread {
 		System.exit(0);
 	}
 
-}
-]]>
-</codefragment>
-</duplication>
-<duplication lines="32" tokens="105">
-<file line="28" path="/home/steven/fspotcloud/bot-dispatch/gae-command/src/main/java/fspotcloud/botdispatch/model/command/CommandManager.java"/>
-<file line="80" path="/home/steven/fspotcloud/model/src/main/java/fspotcloud/server/model/command/CommandManager.java"/>
-<codefragment>
-<![CDATA[
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * fspotcloud.server.model.command.Commands#save(fspotcloud.server.model
-	 * .command.Command)
-	 */
-	public void save(Command c) {
-		PersistenceManager pm = pmProvider.get();
-		try {
-			pm.makePersistent(c);
-		} finally {
-			pm.close();
-		}
-	}
-
-	@Override
-	public int getCountUnderAThousend() {
-		PersistenceManager pm = pmProvider.get();
-		int count = -1;
-		try {
-			Query query = pm.newQuery(CommandDO.class);
-			List<CommandDO> rs = (List<CommandDO>) query.execute();
-			count =  rs.size();;
-		} finally {
-			pm.close();
-		}
-
-		return count;
-	}
-]]>
-</codefragment>
-</duplication>
-<duplication lines="27" tokens="103">
-<file line="12" path="/home/steven/fspotcloud/bot-dispatch/controller/src/main/java/fspotcloud/botdispatch/controller/callback/GuiceRequestProcessorFactoryFactory.java"/>
-<file line="12" path="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/control/GuiceRequestProcessorFactoryFactory.java"/>
-<codefragment>
-<![CDATA[
-public class GuiceRequestProcessorFactoryFactory implements
-		RequestProcessorFactoryFactory {
-
-	private static final Logger log = Logger.getLogger(GuiceRequestProcessorFactoryFactory.class
-			.getName());
-	
-	@Inject
-	private Injector injector;
-	@Inject
-	public GuiceRequestProcessorFactoryFactory(Injector injector) {
-		this.injector = injector;
-	}
-	
-	@Override
-	public RequestProcessorFactory getRequestProcessorFactory(final Class pClass)
-			throws XmlRpcException {
-		return new RequestProcessorFactory() {
-			@SuppressWarnings("unchecked")
-			@Override
-			public Object getRequestProcessor(XmlRpcRequest pRequest)
-					throws XmlRpcException {
-				log.info("Called for " + pClass.getName());
-				return injector.getInstance(pClass);
-			}
-		};
-	}
 }
 ]]>
 </codefragment>

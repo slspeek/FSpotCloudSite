@@ -45,7 +45,7 @@
 <a class="jxr_linenumber" name="35" href="#35">35</a>  
 <a class="jxr_linenumber" name="36" href="#36">36</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../fspotcloud/botdispatch/controller/callback/ControllerIntegrationTest.html">ControllerIntegrationTest</a> <strong class="jxr_keyword">extends</strong> DatastoreTest {
 <a class="jxr_linenumber" name="37" href="#37">37</a>  
-<a class="jxr_linenumber" name="38" href="#38">38</a>  	Provider&lt;PersistenceManager&gt; pmProvider = <strong class="jxr_keyword">new</strong> PersistenceManagerProvider();
+<a class="jxr_linenumber" name="38" href="#38">38</a>  	Provider&lt;PersistenceManager&gt; pmProvider = <strong class="jxr_keyword">new</strong> <a href="../../../../fspotcloud/botdispatch/model/PersistenceManagerProvider.html">PersistenceManagerProvider</a>();
 <a class="jxr_linenumber" name="39" href="#39">39</a>  	DispatchException error = <strong class="jxr_keyword">new</strong> ActionException(<span class="jxr_string">"Wrong"</span>);
 <a class="jxr_linenumber" name="40" href="#40">40</a>  	Commands commandManager;
 <a class="jxr_linenumber" name="41" href="#41">41</a>  	TestAction action = <strong class="jxr_keyword">new</strong> TestAction(<span class="jxr_string">"Your name here"</span>);
@@ -65,7 +65,7 @@
 <a class="jxr_linenumber" name="55" href="#55">55</a>  		<strong class="jxr_keyword">super</strong>.setUp();
 <a class="jxr_linenumber" name="56" href="#56">56</a>  		report = mock(HeavyReport.<strong class="jxr_keyword">class</strong>);
 <a class="jxr_linenumber" name="57" href="#57">57</a>  		injector = Guice.createInjector(<strong class="jxr_keyword">new</strong> ControllerModule(),
-<a class="jxr_linenumber" name="58" href="#58">58</a>  				<strong class="jxr_keyword">new</strong> HeavyReportModule(report), <strong class="jxr_keyword">new</strong> CommandModelModule());
+<a class="jxr_linenumber" name="58" href="#58">58</a>  				<strong class="jxr_keyword">new</strong> HeavyReportModule(report), <strong class="jxr_keyword">new</strong> <a href="../../../../fspotcloud/botdispatch/model/CommandModelModule.html">CommandModelModule</a>());
 <a class="jxr_linenumber" name="59" href="#59">59</a>  		handlerFactory = injector.getInstance(ResultHandlerFactory.<strong class="jxr_keyword">class</strong>);
 <a class="jxr_linenumber" name="60" href="#60">60</a>  		errorHandlerFactory = injector.getInstance(ErrorHandlerFactory.<strong class="jxr_keyword">class</strong>);
 <a class="jxr_linenumber" name="61" href="#61">61</a>  		captor = ArgumentCaptor.forClass(Throwable.<strong class="jxr_keyword">class</strong>);
