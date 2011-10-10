@@ -6,8 +6,8 @@ fspotcloud.server.model.tag
 fspotcloud.server.model.peerdatabase
 fspotcloud.server.model.photo
 fspotcloud.shared.peer.rpc.actions
-fspotcloud.botdispatch.model
 fspotcloud.botdispatch.model.command
+fspotcloud.botdispatch.model
 fspotcloud.botdispatch.bot
 fspotcloud.botdispatch.controller.dispatch
 fspotcloud.botdispatch.controller.callback
