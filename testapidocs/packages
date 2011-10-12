@@ -29,5 +29,6 @@ fspotcloud.client.view.action
 fspotcloud.client.place
 fspotcloud.peer.db
 fspotcloud.peer
+fspotcloud.peer.handlers
 fspotcloud.test
 fspotcloud.botdispatch.test
