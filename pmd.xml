@@ -1,32 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2011-10-12T22:07:44.990">
-<file name="/home/steven/fspotcloud/bot-dispatch/bot/src/main/java/fspotcloud/botdispatch/bot/Bot.java">
-<violation beginline="16" endline="16" begincolumn="27" endcolumn="31" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.botdispatch.bot" class="Bot" variable="pause" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
-Avoid unused private fields such as 'pause'.
-</violation>
-</file>
-<file name="/home/steven/fspotcloud/bot-dispatch/bot/src/main/java/fspotcloud/botdispatch/bot/CommandWorkerImpl.java">
-<violation beginline="6" endline="6" begincolumn="1" endcolumn="31" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.botdispatch.bot" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'java.util.logging.Level'
-</violation>
-<violation beginline="11" endline="11" begincolumn="1" endcolumn="60" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.botdispatch.bot" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'net.customware.gwt.dispatch.shared.DispatchException'
-</violation>
-<violation beginline="12" endline="12" begincolumn="1" endcolumn="49" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.botdispatch.bot" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'net.customware.gwt.dispatch.shared.Result'
-</violation>
-<violation beginline="14" endline="14" begincolumn="1" endcolumn="41" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.botdispatch.bot" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'org.apache.xmlrpc.XmlRpcException'
-</violation>
-<violation beginline="21" endline="21" begincolumn="37" endcolumn="39" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.botdispatch.bot" class="CommandWorkerImpl" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
-Avoid unused private fields such as 'log'.
-</violation>
-</file>
-<file name="/home/steven/fspotcloud/bot-dispatch/controller/src/main/java/fspotcloud/botdispatch/controller/callback/Controller.java">
-<violation beginline="10" endline="10" begincolumn="1" endcolumn="60" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.botdispatch.controller.callback" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'net.customware.gwt.dispatch.shared.DispatchException'
-</violation>
-</file>
+<pmd version="4.2.5" timestamp="2011-10-13T22:55:04.267">
 <file name="/home/steven/fspotcloud/bot-dispatch/controller/src/main/java/fspotcloud/botdispatch/controller/callback/ErrorHandlerImpl.java">
 <violation beginline="18" endline="18" begincolumn="32" endcolumn="45" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.botdispatch.controller.callback" class="ErrorHandlerImpl" variable="commandManager" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'commandManager'.
@@ -41,11 +14,6 @@ Avoid unused imports such as 'com.google.appengine.api.datastore.KeyFactory'
 </violation>
 <violation beginline="46" endline="46" begincolumn="44" endcolumn="44" rule="EmptyStatementNotInLoop" ruleset="Basic Rules" package="fspotcloud.botdispatch.model.command" class="CommandManager" method="getCountUnderAThousend" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyStatementNotInLoop" priority="3">
 An empty statement (semicolon) not part of a loop
-</violation>
-</file>
-<file name="/home/steven/fspotcloud/bot-dispatch/integration-test/src/main/java/fspotcloud/botdispatch/testserver/TestServlet.java">
-<violation beginline="7" endline="7" begincolumn="1" endcolumn="32" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.botdispatch.testserver" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'java.util.logging.Logger'
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/bot-dispatch/test/src/main/java/fspotcloud/botdispatch/test/TestAsyncCallback.java">
@@ -166,6 +134,9 @@ Avoid unused local variables such as 'oneHourAgo'.
 Avoid unused private fields such as 'log'.
 </violation>
 </file>
+<suppressedviolation filename="/home/steven/fspotcloud/bot-dispatch/bot/src/main/java/fspotcloud/botdispatch/bot/CommandWorkerImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/bot-dispatch/controller/src/main/java/fspotcloud/botdispatch/controller/callback/GuiceRequestProcessorFactoryFactory.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/bot-dispatch/controller/src/main/java/fspotcloud/botdispatch/controller/callback/GuiceXmlRpcServlet.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/bot-dispatch/controller/src/main/java/fspotcloud/botdispatch/controller/inject/ControllerServletModule.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/data/IndexingUtil.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/GlobalShortcutController.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>

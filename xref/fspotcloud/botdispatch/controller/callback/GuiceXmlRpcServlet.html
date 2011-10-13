@@ -23,15 +23,15 @@
 <a class="jxr_linenumber" name="13" href="#13">13</a>  @SuppressWarnings(<span class="jxr_string">"serial"</span>)
 <a class="jxr_linenumber" name="14" href="#14">14</a>  @Singleton
 <a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../fspotcloud/botdispatch/controller/callback/GuiceXmlRpcServlet.html">GuiceXmlRpcServlet</a> <strong class="jxr_keyword">extends</strong> XmlRpcServlet {
-<a class="jxr_linenumber" name="16" href="#16">16</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger log = Logger.getLogger(GuiceXmlRpcServlet.<strong class="jxr_keyword">class</strong>
-<a class="jxr_linenumber" name="17" href="#17">17</a>  			.getName());
-<a class="jxr_linenumber" name="18" href="#18">18</a>  
-<a class="jxr_linenumber" name="19" href="#19">19</a>  	@Inject
-<a class="jxr_linenumber" name="20" href="#20">20</a>  	<strong class="jxr_keyword">private</strong> <a href="../../../../fspotcloud/botdispatch/controller/callback/GuiceRequestProcessorFactoryFactory.html">GuiceRequestProcessorFactoryFactory</a> guiceFactoryFactory;
-<a class="jxr_linenumber" name="21" href="#21">21</a>  
-<a class="jxr_linenumber" name="22" href="#22">22</a>  	@Override
-<a class="jxr_linenumber" name="23" href="#23">23</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> init(ServletConfig pConfig) <strong class="jxr_keyword">throws</strong> ServletException {
-<a class="jxr_linenumber" name="24" href="#24">24</a>  		log.info(<span class="jxr_string">"Init called"</span>);
+<a class="jxr_linenumber" name="16" href="#16">16</a>  	@SuppressWarnings(<span class="jxr_string">"unused"</span>)
+<a class="jxr_linenumber" name="17" href="#17">17</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger log = Logger.getLogger(GuiceXmlRpcServlet.<strong class="jxr_keyword">class</strong>
+<a class="jxr_linenumber" name="18" href="#18">18</a>  			.getName());
+<a class="jxr_linenumber" name="19" href="#19">19</a>  
+<a class="jxr_linenumber" name="20" href="#20">20</a>  	@Inject
+<a class="jxr_linenumber" name="21" href="#21">21</a>  	<strong class="jxr_keyword">private</strong> <a href="../../../../fspotcloud/botdispatch/controller/callback/GuiceRequestProcessorFactoryFactory.html">GuiceRequestProcessorFactoryFactory</a> guiceFactoryFactory;
+<a class="jxr_linenumber" name="22" href="#22">22</a>  
+<a class="jxr_linenumber" name="23" href="#23">23</a>  	@Override
+<a class="jxr_linenumber" name="24" href="#24">24</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> init(ServletConfig pConfig) <strong class="jxr_keyword">throws</strong> ServletException {
 <a class="jxr_linenumber" name="25" href="#25">25</a>  		setRequestProcessorFactoryFactory(guiceFactoryFactory);
 <a class="jxr_linenumber" name="26" href="#26">26</a>  		<strong class="jxr_keyword">super</strong>.init(pConfig);
 <a class="jxr_linenumber" name="27" href="#27">27</a>  	}

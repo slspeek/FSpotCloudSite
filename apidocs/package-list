@@ -43,6 +43,7 @@ fspotcloud.peer.inject
 fspotcloud.rpc
 fspotcloud.server.admin.actions
 fspotcloud.server.control.callback
+fspotcloud.server.control.hook
 fspotcloud.server.control.task
 fspotcloud.server.cron
 fspotcloud.server.inject

@@ -21,6 +21,7 @@ fspotcloud.server.cron
 fspotcloud.server.main
 fspotcloud.server.mapreduce
 fspotcloud.server.inject
+fspotcloud.server.control.hook
 fspotcloud.server.control.task
 fspotcloud.server.control.callback
 fspotcloud.server.util
