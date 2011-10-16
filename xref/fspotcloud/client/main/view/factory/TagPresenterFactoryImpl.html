@@ -10,22 +10,22 @@
 
 <a class="jxr_linenumber" name="1" href="#1">1</a>   <strong class="jxr_keyword">package</strong> fspotcloud.client.main.view.factory;
 <a class="jxr_linenumber" name="2" href="#2">2</a>   
-<a class="jxr_linenumber" name="3" href="#3">3</a>   <strong class="jxr_keyword">import</strong> java.util.logging.Level;
-<a class="jxr_linenumber" name="4" href="#4">4</a>   <strong class="jxr_keyword">import</strong> java.util.logging.Logger;
-<a class="jxr_linenumber" name="5" href="#5">5</a>   
-<a class="jxr_linenumber" name="6" href="#6">6</a>   <strong class="jxr_keyword">import</strong> com.google.inject.Inject;
-<a class="jxr_linenumber" name="7" href="#7">7</a>   
-<a class="jxr_linenumber" name="8" href="#8">8</a>   <strong class="jxr_keyword">import</strong> fspotcloud.client.main.ui.TagViewImpl;
-<a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.TagActivity;
-<a class="jxr_linenumber" name="10" href="#10">10</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ButtonPanelView;
-<a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ImageRasterPresenterFactory;
-<a class="jxr_linenumber" name="12" href="#12">12</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ImageRasterView;
-<a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.TagPresenterFactory;
-<a class="jxr_linenumber" name="14" href="#14">14</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.TagView.TagPresenter;
-<a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.TreeView.TreePresenter;
-<a class="jxr_linenumber" name="16" href="#16">16</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.place.BasePlace;
-<a class="jxr_linenumber" name="17" href="#17">17</a>  
-<a class="jxr_linenumber" name="18" href="#18">18</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../fspotcloud/client/main/view/factory/TagPresenterFactoryImpl.html">TagPresenterFactoryImpl</a> <strong class="jxr_keyword">implements</strong> <a href="../../../../../fspotcloud/client/main/view/api/TagPresenterFactory.html">TagPresenterFactory</a> {
+<a class="jxr_linenumber" name="3" href="#3">3</a>   <strong class="jxr_keyword">import</strong> java.util.logging.Logger;
+<a class="jxr_linenumber" name="4" href="#4">4</a>   
+<a class="jxr_linenumber" name="5" href="#5">5</a>   <strong class="jxr_keyword">import</strong> com.google.inject.Inject;
+<a class="jxr_linenumber" name="6" href="#6">6</a>   
+<a class="jxr_linenumber" name="7" href="#7">7</a>   <strong class="jxr_keyword">import</strong> fspotcloud.client.main.ui.TagViewImpl;
+<a class="jxr_linenumber" name="8" href="#8">8</a>   <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.TagActivity;
+<a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ButtonPanelView;
+<a class="jxr_linenumber" name="10" href="#10">10</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ImageRasterPresenterFactory;
+<a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.ImageRasterView;
+<a class="jxr_linenumber" name="12" href="#12">12</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.TagPresenterFactory;
+<a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.TagView.TagPresenter;
+<a class="jxr_linenumber" name="14" href="#14">14</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.main.view.api.TreeView.TreePresenter;
+<a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.place.BasePlace;
+<a class="jxr_linenumber" name="16" href="#16">16</a>  
+<a class="jxr_linenumber" name="17" href="#17">17</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../fspotcloud/client/main/view/factory/TagPresenterFactoryImpl.html">TagPresenterFactoryImpl</a> <strong class="jxr_keyword">implements</strong> <a href="../../../../../fspotcloud/client/main/view/api/TagPresenterFactory.html">TagPresenterFactory</a> {
+<a class="jxr_linenumber" name="18" href="#18">18</a>  	@SuppressWarnings(<span class="jxr_string">"unused"</span>)
 <a class="jxr_linenumber" name="19" href="#19">19</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger log = Logger
 <a class="jxr_linenumber" name="20" href="#20">20</a>  			.getLogger(TagPresenterFactoryImpl.<strong class="jxr_keyword">class</strong>.getName());
 <a class="jxr_linenumber" name="21" href="#21">21</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <a href="../../../../../fspotcloud/client/main/ui/TagViewImpl.html">TagViewImpl</a> tagView;
@@ -53,18 +53,13 @@
 <a class="jxr_linenumber" name="43" href="#43">43</a>  
 <a class="jxr_linenumber" name="44" href="#44">44</a>  	@Override
 <a class="jxr_linenumber" name="45" href="#45">45</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../../fspotcloud/client/main/view/api/TagView.html">TagPresenter</a> get(<a href="../../../../../fspotcloud/client/place/BasePlace.html">BasePlace</a> place) {
-<a class="jxr_linenumber" name="46" href="#46">46</a>  		TagPresenter presenter = <strong class="jxr_keyword">new</strong> <a href="../../../../../fspotcloud/client/main/view/TagActivity.html">TagActivity</a>(tagView);
-<a class="jxr_linenumber" name="47" href="#47">47</a>  		<strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="48" href="#48">48</a>  			treePresenter.setPlace(place);
-<a class="jxr_linenumber" name="49" href="#49">49</a>  			ImageRasterView.ImageRasterPresenter rasterPresenter = rasterFactory
-<a class="jxr_linenumber" name="50" href="#50">50</a>  					.get(place, tagView.getImageRasterView());
-<a class="jxr_linenumber" name="51" href="#51">51</a>  			rasterPresenter.init();
-<a class="jxr_linenumber" name="52" href="#52">52</a>  		} <strong class="jxr_keyword">catch</strong> (Exception e) {
-<a class="jxr_linenumber" name="53" href="#53">53</a>  			log.log(Level.SEVERE, <span class="jxr_string">"get in init"</span>, e);
-<a class="jxr_linenumber" name="54" href="#54">54</a>  		}
-<a class="jxr_linenumber" name="55" href="#55">55</a>  		<strong class="jxr_keyword">return</strong> presenter;
-<a class="jxr_linenumber" name="56" href="#56">56</a>  	}
-<a class="jxr_linenumber" name="57" href="#57">57</a>  }
+<a class="jxr_linenumber" name="46" href="#46">46</a>  		<strong class="jxr_keyword">final</strong> ImageRasterView.ImageRasterPresenter rasterPresenter = rasterFactory
+<a class="jxr_linenumber" name="47" href="#47">47</a>  				.get(place, tagView.getImageRasterView());
+<a class="jxr_linenumber" name="48" href="#48">48</a>  		TagPresenter presenter = <strong class="jxr_keyword">new</strong> <a href="../../../../../fspotcloud/client/main/view/TagActivity.html">TagActivity</a>(tagView, rasterPresenter);
+<a class="jxr_linenumber" name="49" href="#49">49</a>  		treePresenter.setPlace(place);
+<a class="jxr_linenumber" name="50" href="#50">50</a>  		<strong class="jxr_keyword">return</strong> presenter;
+<a class="jxr_linenumber" name="51" href="#51">51</a>  	}
+<a class="jxr_linenumber" name="52" href="#52">52</a>  }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>
