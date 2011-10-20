@@ -44,7 +44,6 @@ fspotcloud.client.main.event.raster
 fspotcloud.client.data
 fspotcloud.client.view.action
 fspotcloud.client.view.action.api
-fspotcloud.client.util
 fspotcloud.client.admin
 fspotcloud.client.admin.ui
 fspotcloud.client.admin.view
