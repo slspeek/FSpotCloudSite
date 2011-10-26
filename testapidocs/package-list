@@ -7,10 +7,13 @@ fspotcloud.botdispatch.model.command
 fspotcloud.botdispatch.test
 fspotcloud.client.main
 fspotcloud.client.main.data
+fspotcloud.client.main.event
+fspotcloud.client.main.gin
 fspotcloud.client.main.help
 fspotcloud.client.main.shared
 fspotcloud.client.main.ui
 fspotcloud.client.main.view
+fspotcloud.client.main.view.api
 fspotcloud.client.place
 fspotcloud.client.view.action
 fspotcloud.peer
