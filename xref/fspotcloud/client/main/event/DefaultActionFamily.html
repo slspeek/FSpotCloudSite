@@ -21,34 +21,36 @@
 <a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> fspotcloud.client.view.action.api.UserAction;
 <a class="jxr_linenumber" name="12" href="#12">12</a>  
 <a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../fspotcloud/client/main/event/DefaultActionFamily.html">DefaultActionFamily</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../fspotcloud/client/main/event/AbstractActionFamily.html">AbstractActionFamily</a> {
-<a class="jxr_linenumber" name="14" href="#14">14</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger log = Logger.getLogger(DefaultActionFamily.<strong class="jxr_keyword">class</strong>
-<a class="jxr_linenumber" name="15" href="#15">15</a>  			.getName());
-<a class="jxr_linenumber" name="16" href="#16">16</a>  
-<a class="jxr_linenumber" name="17" href="#17">17</a>  	
-<a class="jxr_linenumber" name="18" href="#18">18</a>  	List&lt;ActionGroup&gt; allGroups;
-<a class="jxr_linenumber" name="19" href="#19">19</a>  	List&lt;UserAction&gt; allActions = <strong class="jxr_keyword">new</strong> ArrayList&lt;UserAction&gt;();
-<a class="jxr_linenumber" name="20" href="#20">20</a>  
-<a class="jxr_linenumber" name="21" href="#21">21</a>  	@Inject
-<a class="jxr_linenumber" name="22" href="#22">22</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../fspotcloud/client/main/event/DefaultActionFamily.html">DefaultActionFamily</a>(@Named(<span class="jxr_string">"application"</span>) <a href="../../../../fspotcloud/client/main/event/AbstractActionMap.html">AbstractActionMap</a> application,
-<a class="jxr_linenumber" name="23" href="#23">23</a>  			@Named(<span class="jxr_string">"navigation"</span>) <a href="../../../../fspotcloud/client/main/event/AbstractActionMap.html">AbstractActionMap</a> navigation,
-<a class="jxr_linenumber" name="24" href="#24">24</a>  			@Named(<span class="jxr_string">"slideshow"</span>) <a href="../../../../fspotcloud/client/main/event/AbstractActionMap.html">AbstractActionMap</a> slideshow,
-<a class="jxr_linenumber" name="25" href="#25">25</a>  			@Named(<span class="jxr_string">"raster"</span>) <a href="../../../../fspotcloud/client/main/event/AbstractActionMap.html">AbstractActionMap</a> raster, 
-<a class="jxr_linenumber" name="26" href="#26">26</a>  			@Named(<span class="jxr_string">"about"</span>) <a href="../../../../fspotcloud/client/main/event/AbstractActionMap.html">AbstractActionMap</a> about) {
-<a class="jxr_linenumber" name="27" href="#27">27</a>  		<strong class="jxr_keyword">super</strong>(<span class="jxr_string">"All action groups"</span>);
-<a class="jxr_linenumber" name="28" href="#28">28</a>  		addMap(application);
-<a class="jxr_linenumber" name="29" href="#29">29</a>  		addMap(about);
-<a class="jxr_linenumber" name="30" href="#30">30</a>  		addMap(raster);
-<a class="jxr_linenumber" name="31" href="#31">31</a>  		addMap(navigation);
-<a class="jxr_linenumber" name="32" href="#32">32</a>  		addMap(slideshow);
-<a class="jxr_linenumber" name="33" href="#33">33</a>  		initAllActions();
-<a class="jxr_linenumber" name="34" href="#34">34</a>  	}
-<a class="jxr_linenumber" name="35" href="#35">35</a>  
-<a class="jxr_linenumber" name="36" href="#36">36</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> initAllActions() {
-<a class="jxr_linenumber" name="37" href="#37">37</a>  		<strong class="jxr_keyword">for</strong> (ActionMap group : allMaps()) {
-<a class="jxr_linenumber" name="38" href="#38">38</a>  			allActions.addAll(group.allActions());
-<a class="jxr_linenumber" name="39" href="#39">39</a>  		}
-<a class="jxr_linenumber" name="40" href="#40">40</a>  	}
-<a class="jxr_linenumber" name="41" href="#41">41</a>  }
+<a class="jxr_linenumber" name="14" href="#14">14</a>  
+<a class="jxr_linenumber" name="15" href="#15">15</a>  	@SuppressWarnings(<span class="jxr_string">"unused"</span>)
+<a class="jxr_linenumber" name="16" href="#16">16</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger log = Logger
+<a class="jxr_linenumber" name="17" href="#17">17</a>  			.getLogger(DefaultActionFamily.<strong class="jxr_keyword">class</strong>.getName());
+<a class="jxr_linenumber" name="18" href="#18">18</a>  
+<a class="jxr_linenumber" name="19" href="#19">19</a>  	List&lt;ActionGroup&gt; allGroups;
+<a class="jxr_linenumber" name="20" href="#20">20</a>  	List&lt;UserAction&gt; allActions = <strong class="jxr_keyword">new</strong> ArrayList&lt;UserAction&gt;();
+<a class="jxr_linenumber" name="21" href="#21">21</a>  
+<a class="jxr_linenumber" name="22" href="#22">22</a>  	@Inject
+<a class="jxr_linenumber" name="23" href="#23">23</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../fspotcloud/client/main/event/DefaultActionFamily.html">DefaultActionFamily</a>(
+<a class="jxr_linenumber" name="24" href="#24">24</a>  			@Named(<span class="jxr_string">"application"</span>) <a href="../../../../fspotcloud/client/main/event/AbstractActionMap.html">AbstractActionMap</a> application,
+<a class="jxr_linenumber" name="25" href="#25">25</a>  			@Named(<span class="jxr_string">"navigation"</span>) <a href="../../../../fspotcloud/client/main/event/AbstractActionMap.html">AbstractActionMap</a> navigation,
+<a class="jxr_linenumber" name="26" href="#26">26</a>  			@Named(<span class="jxr_string">"slideshow"</span>) <a href="../../../../fspotcloud/client/main/event/AbstractActionMap.html">AbstractActionMap</a> slideshow,
+<a class="jxr_linenumber" name="27" href="#27">27</a>  			@Named(<span class="jxr_string">"raster"</span>) <a href="../../../../fspotcloud/client/main/event/AbstractActionMap.html">AbstractActionMap</a> raster,
+<a class="jxr_linenumber" name="28" href="#28">28</a>  			@Named(<span class="jxr_string">"about"</span>) <a href="../../../../fspotcloud/client/main/event/AbstractActionMap.html">AbstractActionMap</a> about) {
+<a class="jxr_linenumber" name="29" href="#29">29</a>  		<strong class="jxr_keyword">super</strong>(<span class="jxr_string">"All action groups"</span>);
+<a class="jxr_linenumber" name="30" href="#30">30</a>  		addMap(application);
+<a class="jxr_linenumber" name="31" href="#31">31</a>  		addMap(about);
+<a class="jxr_linenumber" name="32" href="#32">32</a>  		addMap(raster);
+<a class="jxr_linenumber" name="33" href="#33">33</a>  		addMap(navigation);
+<a class="jxr_linenumber" name="34" href="#34">34</a>  		addMap(slideshow);
+<a class="jxr_linenumber" name="35" href="#35">35</a>  		initAllActions();
+<a class="jxr_linenumber" name="36" href="#36">36</a>  	}
+<a class="jxr_linenumber" name="37" href="#37">37</a>  
+<a class="jxr_linenumber" name="38" href="#38">38</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> initAllActions() {
+<a class="jxr_linenumber" name="39" href="#39">39</a>  		<strong class="jxr_keyword">for</strong> (ActionMap group : allMaps()) {
+<a class="jxr_linenumber" name="40" href="#40">40</a>  			allActions.addAll(group.allActions());
+<a class="jxr_linenumber" name="41" href="#41">41</a>  		}
+<a class="jxr_linenumber" name="42" href="#42">42</a>  	}
+<a class="jxr_linenumber" name="43" href="#43">43</a>  }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>
