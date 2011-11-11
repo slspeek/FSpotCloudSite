@@ -43,7 +43,7 @@
 <a class="jxr_linenumber" name="33" href="#33">33</a>  
 <a class="jxr_linenumber" name="34" href="#34">34</a>  	<strong class="jxr_keyword">public</strong> List&lt;TagNode&gt; loadTagTree() {
 <a class="jxr_linenumber" name="35" href="#35">35</a>  		PeerDatabase p = defaultPeer.get();
-<a class="jxr_linenumber" name="36" href="#36">36</a>  		<strong class="jxr_keyword">if</strong> (false<em class="jxr_comment">/*<em class="jxr_comment"> p.getCachedTagTree() != null */</em>) {</em>
+<a class="jxr_linenumber" name="36" href="#36">36</a>  		<strong class="jxr_keyword">if</strong> (p.getCachedTagTree() != <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="37" href="#37">37</a>  			log.info(<span class="jxr_string">"Got the tree from cache HIT"</span>);
 <a class="jxr_linenumber" name="38" href="#38">38</a>  			<strong class="jxr_keyword">return</strong> p.getCachedTagTree();
 <a class="jxr_linenumber" name="39" href="#39">39</a>  		} <strong class="jxr_keyword">else</strong> {
