@@ -13,7 +13,6 @@ fspotcloud.botdispatch.controller.dispatch
 fspotcloud.botdispatch.controller.inject
 fspotcloud.botdispatch.controller.callback
 fspotcloud.server.cron
-fspotcloud.server.mapreduce
 fspotcloud.server.inject
 fspotcloud.server.control.task.photoimport
 fspotcloud.server.control.task

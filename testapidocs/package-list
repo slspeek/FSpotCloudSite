@@ -25,7 +25,6 @@ fspotcloud.server.control.task
 fspotcloud.server.control.task.photoimport
 fspotcloud.server.cron
 fspotcloud.server.inject
-fspotcloud.server.mapreduce
 fspotcloud.server.model
 fspotcloud.server.model.peerdatabase
 fspotcloud.server.model.photo
