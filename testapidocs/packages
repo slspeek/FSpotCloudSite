@@ -1,6 +1,9 @@
 fspotcloud.shared.tag
 fspotcloud.shared.photo
 fspotcloud.shared.admin
+fspotcloud.taskqueuedispatch
+fspotcloud.taskqueuedispatch.inject
+fspotcloud.taskqueuedispatch.integration.test
 fspotcloud.server.model
 fspotcloud.server.model.tag
 fspotcloud.server.model.peerdatabase

@@ -35,4 +35,7 @@ fspotcloud.shared.admin
 fspotcloud.shared.peer.rpc.actions
 fspotcloud.shared.photo
 fspotcloud.shared.tag
+fspotcloud.taskqueuedispatch
+fspotcloud.taskqueuedispatch.inject
+fspotcloud.taskqueuedispatch.integration.test
 fspotcloud.test

@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pmd-cpd>
+<duplication lines="26" tokens="135">
+<file line="27" path="/home/steven/fspotcloud/bot-dispatch/integration-test/src/main/java/fspotcloud/botdispatch/testserver/TestServlet.java"/>
+<file line="23" path="/home/steven/fspotcloud/taskqueue-dispatch/integration/src/main/java/fspotcloud/taskqueuedispatch/integration/test/TestServlet.java"/>
+<codefragment>
+<![CDATA[
+	TaskQueueDispatch dispatch;
+	
+	@SuppressWarnings("rawtypes")
+	@Inject
+	List results;
+
+	@Override
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String name = request.getParameter("name");
+		if (name != null) {
+			dispatch.execute(new TestAction(name), new TestCallback());
+		}
+		String second = request.getParameter("second");
+		if (second != null) {
+			dispatch.execute(new SecondAction(second), new TestCallback());
+		}
+		OutputStream out = response.getOutputStream();
+		PrintWriter p = new PrintWriter(out);
+		p.write(outputHTML());
+		p.close();
+		out.close();
+	}
+
+	private String outputHTML() {
+		String result = "<html><h1>TaskQueueDispatch Test Servlet</h1><div>";
+]]>
+</codefragment>
+</duplication>
 <duplication lines="24" tokens="107">
 <file line="10" path="/home/steven/fspotcloud/bot-dispatch/test-bot/src/main/java/fspotcloud/botdispatch/testbot/StopListener.java"/>
 <file line="10" path="/home/steven/fspotcloud/peer/src/main/java/fspotcloud/peer/StopListener.java"/>
