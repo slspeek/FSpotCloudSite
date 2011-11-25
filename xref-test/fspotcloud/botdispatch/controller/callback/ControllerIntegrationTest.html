@@ -69,7 +69,7 @@
 <a class="jxr_linenumber" name="59" href="#59">59</a>  		handlerFactory = injector.getInstance(ResultHandlerFactory.<strong class="jxr_keyword">class</strong>);
 <a class="jxr_linenumber" name="60" href="#60">60</a>  		errorHandlerFactory = injector.getInstance(ErrorHandlerFactory.<strong class="jxr_keyword">class</strong>);
 <a class="jxr_linenumber" name="61" href="#61">61</a>  		captor = ArgumentCaptor.forClass(Throwable.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="62" href="#62">62</a>  		commandManager = <strong class="jxr_keyword">new</strong> CommandManager(pmProvider);
+<a class="jxr_linenumber" name="62" href="#62">62</a>  		commandManager = <strong class="jxr_keyword">new</strong> CommandManager(pmProvider, 300);
 <a class="jxr_linenumber" name="63" href="#63">63</a>  		controller = <strong class="jxr_keyword">new</strong> Controller(commandManager, handlerFactory,
 <a class="jxr_linenumber" name="64" href="#64">64</a>  				errorHandlerFactory, <strong class="jxr_keyword">new</strong> NullControllerHook());
 <a class="jxr_linenumber" name="65" href="#65">65</a>  		serializedResult = SerializationUtils.serialize(result);
