@@ -11,20 +11,25 @@
 <a class="jxr_linenumber" name="1" href="#1">1</a>   <strong class="jxr_keyword">package</strong> fspotcloud.server.control.task;
 <a class="jxr_linenumber" name="2" href="#2">2</a>   
 <a class="jxr_linenumber" name="3" href="#3">3</a>   <strong class="jxr_keyword">import</strong> net.customware.gwt.dispatch.server.guice.ActionHandlerModule;
-<a class="jxr_linenumber" name="4" href="#4">4</a>   <strong class="jxr_keyword">import</strong> fspotcloud.server.control.task.actions.intern.PhotoImportScheduleAction;
-<a class="jxr_linenumber" name="5" href="#5">5</a>   <strong class="jxr_keyword">import</strong> fspotcloud.server.control.task.actions.intern.TagImportAction;
-<a class="jxr_linenumber" name="6" href="#6">6</a>   <strong class="jxr_keyword">import</strong> fspotcloud.server.control.task.photoimport.PhotoImportScheduleHandler;
-<a class="jxr_linenumber" name="7" href="#7">7</a>   <strong class="jxr_keyword">import</strong> fspotcloud.server.control.task.tagimport.TagImportHandler;
-<a class="jxr_linenumber" name="8" href="#8">8</a>   
-<a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../fspotcloud/server/control/task/TaskActionsModule.html">TaskActionsModule</a> <strong class="jxr_keyword">extends</strong> ActionHandlerModule {
-<a class="jxr_linenumber" name="10" href="#10">10</a>  
-<a class="jxr_linenumber" name="11" href="#11">11</a>  	@Override
-<a class="jxr_linenumber" name="12" href="#12">12</a>  	<strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> configureHandlers() {
-<a class="jxr_linenumber" name="13" href="#13">13</a>  		bindHandler(PhotoImportScheduleAction.<strong class="jxr_keyword">class</strong>, PhotoImportScheduleHandler.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="14" href="#14">14</a>  		bindHandler(TagImportAction.<strong class="jxr_keyword">class</strong>, TagImportHandler.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="15" href="#15">15</a>  	}
-<a class="jxr_linenumber" name="16" href="#16">16</a>  
-<a class="jxr_linenumber" name="17" href="#17">17</a>  }
+<a class="jxr_linenumber" name="4" href="#4">4</a>   <strong class="jxr_keyword">import</strong> fspotcloud.server.control.task.actions.intern.DeletePhotos;
+<a class="jxr_linenumber" name="5" href="#5">5</a>   <strong class="jxr_keyword">import</strong> fspotcloud.server.control.task.actions.intern.DeleteTags;
+<a class="jxr_linenumber" name="6" href="#6">6</a>   <strong class="jxr_keyword">import</strong> fspotcloud.server.control.task.actions.intern.PhotoImportScheduleAction;
+<a class="jxr_linenumber" name="7" href="#7">7</a>   <strong class="jxr_keyword">import</strong> fspotcloud.server.control.task.actions.intern.TagImportAction;
+<a class="jxr_linenumber" name="8" href="#8">8</a>   <strong class="jxr_keyword">import</strong> fspotcloud.server.control.task.photodelete.DeletePhotosHandler;
+<a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> fspotcloud.server.control.task.photoimport.PhotoImportScheduleHandler;
+<a class="jxr_linenumber" name="10" href="#10">10</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.control.task.tagdelete.DeleteTagsHandler;
+<a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.control.task.tagimport.TagImportHandler;
+<a class="jxr_linenumber" name="12" href="#12">12</a>  
+<a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../fspotcloud/server/control/task/TaskActionsModule.html">TaskActionsModule</a> <strong class="jxr_keyword">extends</strong> ActionHandlerModule {
+<a class="jxr_linenumber" name="14" href="#14">14</a>  
+<a class="jxr_linenumber" name="15" href="#15">15</a>  	@Override
+<a class="jxr_linenumber" name="16" href="#16">16</a>  	<strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> configureHandlers() {
+<a class="jxr_linenumber" name="17" href="#17">17</a>  		bindHandler(PhotoImportScheduleAction.<strong class="jxr_keyword">class</strong>, PhotoImportScheduleHandler.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="18" href="#18">18</a>  		bindHandler(TagImportAction.<strong class="jxr_keyword">class</strong>, TagImportHandler.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="19" href="#19">19</a>  		bindHandler(DeleteTags.<strong class="jxr_keyword">class</strong>, DeleteTagsHandler.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="20" href="#20">20</a>  		bindHandler(DeletePhotos.<strong class="jxr_keyword">class</strong>, DeletePhotosHandler.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="21" href="#21">21</a>  	}
+<a class="jxr_linenumber" name="22" href="#22">22</a>  }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

@@ -15,14 +15,12 @@ fspotcloud.botdispatch.bot
 fspotcloud.botdispatch.controller.dispatch
 fspotcloud.botdispatch.controller.inject
 fspotcloud.botdispatch.controller.callback
-fspotcloud.server.cron
 fspotcloud.server.inject
 fspotcloud.server.control.task.photoimport
 fspotcloud.server.control.task.actions.intern
 fspotcloud.server.control.callback
 fspotcloud.server.util
 fspotcloud.server.admin.actions
-fspotcloud.server.test
 fspotcloud.client.main.help
 fspotcloud.client.main
 fspotcloud.client.main.ui

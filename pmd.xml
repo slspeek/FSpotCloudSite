@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2011-11-25T23:35:15.109">
+<pmd version="4.2.5" timestamp="2011-11-29T01:59:23.661">
 <file name="/home/steven/fspotcloud/bot-dispatch/controller/src/main/java/fspotcloud/botdispatch/controller/callback/ErrorHandlerImpl.java">
 <violation beginline="18" endline="18" begincolumn="32" endcolumn="45" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.botdispatch.controller.callback" class="ErrorHandlerImpl" variable="commandManager" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'commandManager'.
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/bot-dispatch/gae-command/src/main/java/fspotcloud/botdispatch/model/command/CommandManager.java">
-<violation beginline="47" endline="47" begincolumn="44" endcolumn="44" rule="EmptyStatementNotInLoop" ruleset="Basic Rules" package="fspotcloud.botdispatch.model.command" class="CommandManager" method="getCountUnderAThousend" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyStatementNotInLoop" priority="3">
+<violation beginline="48" endline="48" begincolumn="44" endcolumn="44" rule="EmptyStatementNotInLoop" ruleset="Basic Rules" package="fspotcloud.botdispatch.model.command" class="CommandManager" method="getCountUnderAThousend" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyStatementNotInLoop" priority="3">
 An empty statement (semicolon) not part of a loop
 </violation>
 </file>
@@ -122,8 +122,8 @@ Avoid unused private fields such as 'log'.
 Avoid empty catch blocks
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/model/src/main/java/fspotcloud/server/model/photo/PhotoManager.java">
-<violation beginline="22" endline="22" begincolumn="37" endcolumn="39" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.server.model.photo" class="PhotoManager" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<file name="/home/steven/fspotcloud/model/src/main/java/fspotcloud/server/model/tag/TagManager.java">
+<violation beginline="29" endline="29" begincolumn="37" endcolumn="39" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.server.model.tag" class="TagManager" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'log'.
 </violation>
 </file>
@@ -159,21 +159,6 @@ Avoid unused imports such as 'java.util.List'
 Avoid unused imports such as 'fspotcloud.botdispatch.controller.dispatch.ControllerDispatchAsync'
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/mapreduce/CounterCompletedServlet.java">
-<violation beginline="59" endline="59" begincolumn="33" endcolumn="42" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="fspotcloud.server.mapreduce" class="CounterCompletedServlet" method="doPost" variable="imageCount" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
-Avoid unused local variables such as 'imageCount'.
-</violation>
-</file>
-<file name="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/mapreduce/MapReduceStateUtil.java">
-<violation beginline="64" endline="64" begincolumn="22" endcolumn="31" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="fspotcloud.server.mapreduce" class="MapReduceStateUtil" method="getActiveStates" variable="oneHourAgo" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
-Avoid unused local variables such as 'oneHourAgo'.
-</violation>
-</file>
-<file name="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/mapreduce/MapReduceUtil.java">
-<violation beginline="9" endline="9" begincolumn="37" endcolumn="39" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.server.mapreduce" class="MapReduceUtil" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
-Avoid unused private fields such as 'log'.
-</violation>
-</file>
 <file name="/home/steven/fspotcloud/taskqueue-dispatch/dispatch/src/main/java/fspotcloud/taskqueuedispatch/NullCallback.java">
 <violation beginline="20" endline="20" begincolumn="24" endcolumn="41" rule="OverrideBothEqualsAndHashcode" ruleset="Basic Rules" package="fspotcloud.taskqueuedispatch" class="NullCallback" method="equals" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#OverrideBothEqualsAndHashcode" priority="3">
 Ensure you override both equals() and hashCode()
@@ -196,10 +181,9 @@ Ensure you override both equals() and hashCode()
 <suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/api/ButtonPanelPresenterProvider.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/factory/SingleImageViewActivityFactoryImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'controlsPresenter'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/factory/TagPresenterFactoryImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/model/src/main/java/fspotcloud/server/model/photo/PhotoManager.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/admin/actions/CommandDeleteAllHandler.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/admin/actions/CountPhotosHandler.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/admin/actions/GetMetaDataHandler.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/inject/FSpotCloudServletModule.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/mapreduce/DeleteAllMapper.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/taskqueue-dispatch/dispatch/src/main/java/fspotcloud/taskqueuedispatch/inject/TaskQueueDispatchServletModule.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 </pmd>

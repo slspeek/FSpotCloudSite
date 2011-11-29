@@ -47,11 +47,11 @@ fspotcloud.server.control.task
 fspotcloud.server.control.task.actions.intern
 fspotcloud.server.control.task.photodelete
 fspotcloud.server.control.task.photoimport
+fspotcloud.server.control.task.tagdelete
 fspotcloud.server.control.task.tagimport
 fspotcloud.server.cron
 fspotcloud.server.inject
 fspotcloud.server.main
-fspotcloud.server.mapreduce
 fspotcloud.server.model
 fspotcloud.server.model.api
 fspotcloud.server.model.peerdatabase
