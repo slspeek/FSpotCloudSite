@@ -57,28 +57,29 @@
 <a class="jxr_linenumber" name="47" href="#47">47</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> init() {
 <a class="jxr_linenumber" name="48" href="#48">48</a>  		buttonPanelView.setWidgetCount(actions.allActions().size() + 1);
 <a class="jxr_linenumber" name="49" href="#49">49</a>  		addAction(actions.get(SlideshowType.SLIDESHOW_SLOWER));
-<a class="jxr_linenumber" name="50" href="#50">50</a>  		addAction(actions.get(SlideshowType.SLIDESHOW__END));
-<a class="jxr_linenumber" name="51" href="#51">51</a>  	
-<a class="jxr_linenumber" name="52" href="#52">52</a>  		Widget w = slideshowView.asWidget();
-<a class="jxr_linenumber" name="53" href="#53">53</a>  		buttonPanelView.add(w);
-<a class="jxr_linenumber" name="54" href="#54">54</a>  		
-<a class="jxr_linenumber" name="55" href="#55">55</a>  		addAction(actions.get(SlideshowType.SLIDESHOW_START));
-<a class="jxr_linenumber" name="56" href="#56">56</a>  		addAction(actions.get(SlideshowType.SLIDESHOW_FASTER));
-<a class="jxr_linenumber" name="57" href="#57">57</a>  	}
-<a class="jxr_linenumber" name="58" href="#58">58</a>  
-<a class="jxr_linenumber" name="59" href="#59">59</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> addAction(<a href="../../../../../fspotcloud/client/view/action/api/UserAction.html">UserAction</a> action) {
-<a class="jxr_linenumber" name="60" href="#60">60</a>  		UserButtonView.UserButtonPresenter buttonPresenter = buttonPresenterFactory
-<a class="jxr_linenumber" name="61" href="#61">61</a>  				.get(action);
-<a class="jxr_linenumber" name="62" href="#62">62</a>  		buttonPresenter.init();
-<a class="jxr_linenumber" name="63" href="#63">63</a>  		buttonPanelView.add(buttonPresenter.getView());
-<a class="jxr_linenumber" name="64" href="#64">64</a>  	}
-<a class="jxr_linenumber" name="65" href="#65">65</a>  
-<a class="jxr_linenumber" name="66" href="#66">66</a>  	@Override
-<a class="jxr_linenumber" name="67" href="#67">67</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../../fspotcloud/client/main/view/SlideshowControlsPresenter.html">SlideshowControlsPresenter</a> get() {
-<a class="jxr_linenumber" name="68" href="#68">68</a>  		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../fspotcloud/client/main/view/SlideshowControlsPresenter.html">SlideshowControlsPresenter</a>(slideshowPresenter, buttonPanelView);
-<a class="jxr_linenumber" name="69" href="#69">69</a>  	}
-<a class="jxr_linenumber" name="70" href="#70">70</a>  	
-<a class="jxr_linenumber" name="71" href="#71">71</a>  }
+<a class="jxr_linenumber" name="50" href="#50">50</a>  		addAction(actions.get(SlideshowType.SLIDESHOW_START));
+<a class="jxr_linenumber" name="51" href="#51">51</a>  		addAction(actions.get(SlideshowType.SLIDESHOW_PAUSE));
+<a class="jxr_linenumber" name="52" href="#52">52</a>  	
+<a class="jxr_linenumber" name="53" href="#53">53</a>  		Widget w = slideshowView.asWidget();
+<a class="jxr_linenumber" name="54" href="#54">54</a>  		buttonPanelView.add(w);
+<a class="jxr_linenumber" name="55" href="#55">55</a>  		
+<a class="jxr_linenumber" name="56" href="#56">56</a>  		addAction(actions.get(SlideshowType.SLIDESHOW__END));
+<a class="jxr_linenumber" name="57" href="#57">57</a>  		addAction(actions.get(SlideshowType.SLIDESHOW_FASTER));
+<a class="jxr_linenumber" name="58" href="#58">58</a>  	}
+<a class="jxr_linenumber" name="59" href="#59">59</a>  
+<a class="jxr_linenumber" name="60" href="#60">60</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> addAction(<a href="../../../../../fspotcloud/client/view/action/api/UserAction.html">UserAction</a> action) {
+<a class="jxr_linenumber" name="61" href="#61">61</a>  		UserButtonView.UserButtonPresenter buttonPresenter = buttonPresenterFactory
+<a class="jxr_linenumber" name="62" href="#62">62</a>  				.get(action);
+<a class="jxr_linenumber" name="63" href="#63">63</a>  		buttonPresenter.init();
+<a class="jxr_linenumber" name="64" href="#64">64</a>  		buttonPanelView.add(buttonPresenter.getView());
+<a class="jxr_linenumber" name="65" href="#65">65</a>  	}
+<a class="jxr_linenumber" name="66" href="#66">66</a>  
+<a class="jxr_linenumber" name="67" href="#67">67</a>  	@Override
+<a class="jxr_linenumber" name="68" href="#68">68</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../../fspotcloud/client/main/view/SlideshowControlsPresenter.html">SlideshowControlsPresenter</a> get() {
+<a class="jxr_linenumber" name="69" href="#69">69</a>  		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../fspotcloud/client/main/view/SlideshowControlsPresenter.html">SlideshowControlsPresenter</a>(slideshowPresenter, buttonPanelView);
+<a class="jxr_linenumber" name="70" href="#70">70</a>  	}
+<a class="jxr_linenumber" name="71" href="#71">71</a>  	
+<a class="jxr_linenumber" name="72" href="#72">72</a>  }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>
