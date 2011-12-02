@@ -19,7 +19,6 @@ fspotcloud.server.inject
 fspotcloud.server.control.task.photoimport
 fspotcloud.server.control.task.actions.intern
 fspotcloud.server.control.callback
-fspotcloud.server.util
 fspotcloud.server.admin.actions
 fspotcloud.client.main.help
 fspotcloud.client.main

@@ -57,7 +57,6 @@ fspotcloud.server.model.api
 fspotcloud.server.model.peerdatabase
 fspotcloud.server.model.photo
 fspotcloud.server.model.tag
-fspotcloud.server.util
 fspotcloud.shared.admin
 fspotcloud.shared.dashboard.actions
 fspotcloud.shared.peer.rpc.actions

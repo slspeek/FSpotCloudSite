@@ -31,7 +31,6 @@ fspotcloud.server.control.task.photodelete
 fspotcloud.server.control.task
 fspotcloud.server.control.task.actions.intern
 fspotcloud.server.control.callback
-fspotcloud.server.util
 fspotcloud.server.admin.actions
 fspotcloud.client.main.help
 fspotcloud.client.main
