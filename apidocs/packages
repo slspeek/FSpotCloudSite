@@ -3,6 +3,7 @@ fspotcloud.shared.tag
 fspotcloud.shared.photo
 fspotcloud.shared.dashboard.actions
 fspotcloud.shared.admin
+fspotcloud.test
 fspotcloud.taskqueuedispatch
 fspotcloud.taskqueuedispatch.inject
 fspotcloud.taskqueuedispatch.integration.test

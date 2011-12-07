@@ -65,3 +65,4 @@ fspotcloud.shared.tag
 fspotcloud.taskqueuedispatch
 fspotcloud.taskqueuedispatch.inject
 fspotcloud.taskqueuedispatch.integration.test
+fspotcloud.test
