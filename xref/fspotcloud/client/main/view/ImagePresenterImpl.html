@@ -62,7 +62,7 @@
 <a class="jxr_linenumber" name="52" href="#52">52</a>  				date = DateTimeFormat.getFormat(PredefinedFormat.DATE_MEDIUM).format(info.getDate());
 <a class="jxr_linenumber" name="53" href="#53">53</a>  			} <strong class="jxr_keyword">else</strong> {
 <a class="jxr_linenumber" name="54" href="#54">54</a>  				date = DateTimeFormat.getFormat(PredefinedFormat.DATE_FULL).format(info.getDate()) + <span class="jxr_string">" "</span> +
-<a class="jxr_linenumber" name="55" href="#55">55</a>  				DateTimeFormat.getFormat(PredefinedFormat.TIME_MEDIUM).format(info.getDate()) ;
+<a class="jxr_linenumber" name="55" href="#55">55</a>  				DateTimeFormat.getFormat(PredefinedFormat.TIME_MEDIUM).format(info.getDate())  + <span class="jxr_string">"(v"</span>+info.getVersion()+<span class="jxr_string">")"</span>;
 <a class="jxr_linenumber" name="56" href="#56">56</a>  			}
 <a class="jxr_linenumber" name="57" href="#57">57</a>  			imageView.setDescription(date);
 <a class="jxr_linenumber" name="58" href="#58">58</a>  			String url = <span class="jxr_string">"/image?id="</span> + photoId;

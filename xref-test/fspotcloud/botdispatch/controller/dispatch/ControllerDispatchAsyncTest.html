@@ -23,14 +23,14 @@
 <a class="jxr_linenumber" name="13" href="#13">13</a>  
 <a class="jxr_linenumber" name="14" href="#14">14</a>  	Commands commandManager;
 <a class="jxr_linenumber" name="15" href="#15">15</a>  	TestAction action;
-<a class="jxr_linenumber" name="16" href="#16">16</a>  	ControllerDispatchAsyncImpl target;
+<a class="jxr_linenumber" name="16" href="#16">16</a>  	DefaultControllerDispatchAsync target;
 <a class="jxr_linenumber" name="17" href="#17">17</a>  	AsyncCallback&lt;TestResult&gt; callback;
 <a class="jxr_linenumber" name="18" href="#18">18</a>  
 <a class="jxr_linenumber" name="19" href="#19">19</a>  	@Override
 <a class="jxr_linenumber" name="20" href="#20">20</a>  	<strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> setUp() <strong class="jxr_keyword">throws</strong> Exception {
 <a class="jxr_linenumber" name="21" href="#21">21</a>  		commandManager = mock(Commands.<strong class="jxr_keyword">class</strong>);
 <a class="jxr_linenumber" name="22" href="#22">22</a>  		action = <strong class="jxr_keyword">new</strong> TestAction(<span class="jxr_string">"Jim"</span>);
-<a class="jxr_linenumber" name="23" href="#23">23</a>  		target = <strong class="jxr_keyword">new</strong> ControllerDispatchAsyncImpl(commandManager);
+<a class="jxr_linenumber" name="23" href="#23">23</a>  		target = <strong class="jxr_keyword">new</strong> DefaultControllerDispatchAsync(commandManager);
 <a class="jxr_linenumber" name="24" href="#24">24</a>  		callback = <strong class="jxr_keyword">new</strong> AsyncCallback&lt;TestResult&gt; () {
 <a class="jxr_linenumber" name="25" href="#25">25</a>  
 <a class="jxr_linenumber" name="26" href="#26">26</a>  			@Override
