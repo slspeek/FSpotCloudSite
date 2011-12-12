@@ -20,10 +20,10 @@ fspotcloud.botdispatch.controller.inject
 fspotcloud.botdispatch.controller.callback
 fspotcloud.server.inject
 fspotcloud.server.control.task.tagimport
-fspotcloud.server.control.task.photoimport
 fspotcloud.server.control.task.tagdelete
 fspotcloud.server.control.task.photodelete
 fspotcloud.server.control.task.actions.intern
+fspotcloud.server.control.task.photoupdate
 fspotcloud.server.control.callback
 fspotcloud.server.admin.integration
 fspotcloud.server.admin.actions

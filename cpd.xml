@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pmd-cpd>
+<duplication lines="34" tokens="163">
+<file line="56" path="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/control/task/photodelete/DeletePhotosHandler.java"/>
+<file line="59" path="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/control/task/photoremove/RemovePhotosFromTagHandler.java"/>
+<codefragment>
+<![CDATA[
+			Iterator<PhotoRemovedFromTag> it) {
+		Photo photo = photos.getById(key);
+		if (photo != null) {
+			boolean moreImports = false;
+			for (String tagId : photo.getTagList()) {
+				Tag tagRelated = tagManager.getById(tagId);
+				if (tagRelated != null) {
+					if (!deleteTagId.equals(tagId)) {
+						if (tagRelated.isImportIssued()) {
+							moreImports = true;
+							break;
+						}
+					}
+				}
+			}
+			if (!moreImports) {
+				photos.delete(key);
+				tag.getCachedPhotoList().remove(find(tag.getCachedPhotoList(), key));
+			}
+		}
+		it.remove();
+		
+	}
+
+	private PhotoInfo find(SortedSet<PhotoInfo> set, String id) {
+		for(PhotoInfo info: set) {
+			if (info.getId().equals(id)) {
+				return info;
+			}
+		} 
+		return null;
+	}
+
+}
+]]>
+</codefragment>
+</duplication>
 <duplication lines="26" tokens="135">
 <file line="27" path="/home/steven/fspotcloud/bot-dispatch/integration-test/src/main/java/fspotcloud/botdispatch/testserver/TestServlet.java"/>
 <file line="23" path="/home/steven/fspotcloud/taskqueue-dispatch/integration/src/main/java/fspotcloud/taskqueuedispatch/integration/test/TestServlet.java"/>

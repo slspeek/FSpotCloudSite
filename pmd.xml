@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2011-12-09T22:42:03.823">
+<pmd version="4.2.5" timestamp="2011-12-12T02:07:03.825">
 <file name="/home/steven/fspotcloud/bot-dispatch/gae-command/src/main/java/fspotcloud/botdispatch/model/command/CommandManager.java">
 <violation beginline="48" endline="48" begincolumn="44" endcolumn="44" rule="EmptyStatementNotInLoop" ruleset="Basic Rules" package="fspotcloud.botdispatch.model.command" class="CommandManager" method="getCountUnderAThousend" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyStatementNotInLoop" priority="3">
 An empty statement (semicolon) not part of a loop
@@ -114,14 +114,14 @@ Avoid empty catch blocks
 Avoid unused private fields such as 'log'.
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/control/callback/TagDataCallback.java">
-<violation beginline="55" endline="57" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="fspotcloud.server.control.callback" class="TagDataCallback" method="importNewImages" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+<file name="/home/steven/fspotcloud/peer/src/main/java/fspotcloud/peer/db/Data.java">
+<violation beginline="313" endline="315" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="fspotcloud.peer.db" class="Data" method="isPhotoInTag" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
 Avoid empty catch blocks
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/control/task/actions/intern/PhotoImportScheduleAction.java">
-<violation beginline="4" endline="4" begincolumn="1" endcolumn="22" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.server.control.task.actions.intern" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'java.util.List'
+<file name="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/control/callback/TagDataCallback.java">
+<violation beginline="55" endline="57" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="fspotcloud.server.control.callback" class="TagDataCallback" method="importNewImages" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/control/task/photodelete/DeletePhotosHandler.java">
@@ -129,6 +129,14 @@ Avoid unused imports such as 'java.util.List'
 These nested if statements could be combined
 </violation>
 <violation beginline="64" endline="67" begincolumn="49" endcolumn="49" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="fspotcloud.server.control.task.photodelete" class="DeletePhotosHandler" method="checkForDeletion" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="3">
+These nested if statements could be combined
+</violation>
+</file>
+<file name="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/control/task/photoremove/RemovePhotosFromTagHandler.java">
+<violation beginline="66" endline="71" begincolumn="41" endcolumn="41" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="fspotcloud.server.control.task.photoremove" class="RemovePhotosFromTagHandler" method="checkForDeletion" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="3">
+These nested if statements could be combined
+</violation>
+<violation beginline="67" endline="70" begincolumn="49" endcolumn="49" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="fspotcloud.server.control.task.photoremove" class="RemovePhotosFromTagHandler" method="checkForDeletion" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="3">
 These nested if statements could be combined
 </violation>
 </file>
