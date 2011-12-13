@@ -52,39 +52,29 @@
 <a class="jxr_linenumber" name="42" href="#42">42</a>  			bas.close();
 <a class="jxr_linenumber" name="43" href="#43">43</a>  		}
 <a class="jxr_linenumber" name="44" href="#44">44</a>  
-<a class="jxr_linenumber" name="45" href="#45">45</a>  		System.out.println(<span class="jxr_string">"Exit value: "</span> + convert.waitFor());
-<a class="jxr_linenumber" name="46" href="#46">46</a>  		byte[] data = bas.toByteArray();
-<a class="jxr_linenumber" name="47" href="#47">47</a>  		<strong class="jxr_keyword">return</strong> data;
-<a class="jxr_linenumber" name="48" href="#48">48</a>  	}
-<a class="jxr_linenumber" name="49" href="#49">49</a>  
-<a class="jxr_linenumber" name="50" href="#50">50</a>  	<strong class="jxr_keyword">private</strong> String[] getCommand(String path, <strong class="jxr_keyword">int</strong> width, <strong class="jxr_keyword">int</strong> height) {
-<a class="jxr_linenumber" name="51" href="#51">51</a>  		String[] result = <strong class="jxr_keyword">new</strong> String[10];
-<a class="jxr_linenumber" name="52" href="#52">52</a>  		result[0] = <span class="jxr_string">"/usr/bin/convert"</span>;
-<a class="jxr_linenumber" name="53" href="#53">53</a>  		result[1] = <span class="jxr_string">"-auto-orient"</span>;
-<a class="jxr_linenumber" name="54" href="#54">54</a>  		result[2] = <span class="jxr_string">"-quality"</span>;
-<a class="jxr_linenumber" name="55" href="#55">55</a>  		result[3] = <span class="jxr_string">"50"</span>;
-<a class="jxr_linenumber" name="56" href="#56">56</a>  		result[4] = <span class="jxr_string">"-compress"</span>;
-<a class="jxr_linenumber" name="57" href="#57">57</a>  		result[5] = <span class="jxr_string">"JPEG"</span>;
-<a class="jxr_linenumber" name="58" href="#58">58</a>  		result[6] = <span class="jxr_string">"-geometry"</span>;
-<a class="jxr_linenumber" name="59" href="#59">59</a>  		result[7] = width + <span class="jxr_string">"x"</span> + height;
-<a class="jxr_linenumber" name="60" href="#60">60</a>  		result[8] = path;
-<a class="jxr_linenumber" name="61" href="#61">61</a>  		result[9] = <span class="jxr_string">"-"</span>;
-<a class="jxr_linenumber" name="62" href="#62">62</a>  		<strong class="jxr_keyword">return</strong> result;
-<a class="jxr_linenumber" name="63" href="#63">63</a>  	}
-<a class="jxr_linenumber" name="64" href="#64">64</a>  
-<a class="jxr_linenumber" name="65" href="#65">65</a>  	<em class="jxr_comment">// private String[] getCommand(String path, int width, int height) {</em>
-<a class="jxr_linenumber" name="66" href="#66">66</a>  	<em class="jxr_comment">// String[] result = new String[2];</em>
-<a class="jxr_linenumber" name="67" href="#67">67</a>  	<em class="jxr_comment">// result[0] = "/bin/ls";</em>
-<a class="jxr_linenumber" name="68" href="#68">68</a>  	<em class="jxr_comment">// result[1] = path;</em>
-<a class="jxr_linenumber" name="69" href="#69">69</a>  	<em class="jxr_comment">// return result;</em>
-<a class="jxr_linenumber" name="70" href="#70">70</a>  	<em class="jxr_comment">// }</em>
-<a class="jxr_linenumber" name="71" href="#71">71</a>  
-<a class="jxr_linenumber" name="72" href="#72">72</a>  	<strong class="jxr_keyword">public</strong> String escape(String path) {
-<a class="jxr_linenumber" name="73" href="#73">73</a>  		<strong class="jxr_keyword">return</strong> path.replaceAll(<span class="jxr_string">"&#92;&#92;("</span>, <span class="jxr_string">"&#92;&#92;&#92;&#92;("</span>).replaceAll(<span class="jxr_string">"&#92;&#92;)"</span>, <span class="jxr_string">"&#92;&#92;&#92;&#92;)"</span>)
-<a class="jxr_linenumber" name="74" href="#74">74</a>  				.replaceAll(<span class="jxr_string">" "</span>, <span class="jxr_string">"&#92;&#92;&#92;&#92; "</span>);
-<a class="jxr_linenumber" name="75" href="#75">75</a>  	}
-<a class="jxr_linenumber" name="76" href="#76">76</a>  
-<a class="jxr_linenumber" name="77" href="#77">77</a>  }
+<a class="jxr_linenumber" name="45" href="#45">45</a>  		<strong class="jxr_keyword">int</strong> returnValue = convert.waitFor();
+<a class="jxr_linenumber" name="46" href="#46">46</a>  		<strong class="jxr_keyword">if</strong> (returnValue != 0) {
+<a class="jxr_linenumber" name="47" href="#47">47</a>  			<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> RuntimeException(<span class="jxr_string">"convert ran on an error"</span>);
+<a class="jxr_linenumber" name="48" href="#48">48</a>  		}
+<a class="jxr_linenumber" name="49" href="#49">49</a>  		byte[] data = bas.toByteArray();
+<a class="jxr_linenumber" name="50" href="#50">50</a>  		<strong class="jxr_keyword">return</strong> data;
+<a class="jxr_linenumber" name="51" href="#51">51</a>  	}
+<a class="jxr_linenumber" name="52" href="#52">52</a>  
+<a class="jxr_linenumber" name="53" href="#53">53</a>  	<strong class="jxr_keyword">private</strong> String[] getCommand(String path, <strong class="jxr_keyword">int</strong> width, <strong class="jxr_keyword">int</strong> height) {
+<a class="jxr_linenumber" name="54" href="#54">54</a>  		String[] result = <strong class="jxr_keyword">new</strong> String[10];
+<a class="jxr_linenumber" name="55" href="#55">55</a>  		result[0] = <span class="jxr_string">"/usr/bin/convert"</span>;
+<a class="jxr_linenumber" name="56" href="#56">56</a>  		result[1] = <span class="jxr_string">"-auto-orient"</span>;
+<a class="jxr_linenumber" name="57" href="#57">57</a>  		result[2] = <span class="jxr_string">"-quality"</span>;
+<a class="jxr_linenumber" name="58" href="#58">58</a>  		result[3] = <span class="jxr_string">"50"</span>;
+<a class="jxr_linenumber" name="59" href="#59">59</a>  		result[4] = <span class="jxr_string">"-compress"</span>;
+<a class="jxr_linenumber" name="60" href="#60">60</a>  		result[5] = <span class="jxr_string">"JPEG"</span>;
+<a class="jxr_linenumber" name="61" href="#61">61</a>  		result[6] = <span class="jxr_string">"-geometry"</span>;
+<a class="jxr_linenumber" name="62" href="#62">62</a>  		result[7] = width + <span class="jxr_string">"x"</span> + height;
+<a class="jxr_linenumber" name="63" href="#63">63</a>  		result[8] = path;
+<a class="jxr_linenumber" name="64" href="#64">64</a>  		result[9] = <span class="jxr_string">"-"</span>;
+<a class="jxr_linenumber" name="65" href="#65">65</a>  		<strong class="jxr_keyword">return</strong> result;
+<a class="jxr_linenumber" name="66" href="#66">66</a>  	}
+<a class="jxr_linenumber" name="67" href="#67">67</a>  }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>
