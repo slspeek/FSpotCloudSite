@@ -15,10 +15,10 @@
 -docencoding
 'UTF-8'
 -doctitle
-'F-Spot Cloud Java Edition 0.40-7.5.7 API'
+'F-Spot Cloud Java Edition 0.40-7.5.8 API'
 -linkoffline
 'http://download.oracle.com/javase/6/docs/api' '/home/steven/fspotcloud/target/javadoc-bundle-options'
 -use
 -version
 -windowtitle
-'F-Spot Cloud Java Edition 0.40-7.5.7 API'
+'F-Spot Cloud Java Edition 0.40-7.5.8 API'

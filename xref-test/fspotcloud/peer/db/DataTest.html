@@ -72,8 +72,8 @@
 <a class="jxr_linenumber" name="62" href="#62">62</a>  
 <a class="jxr_linenumber" name="63" href="#63">63</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">void</strong> testGetImageURL() <strong class="jxr_keyword">throws</strong> MalformedURLException,
 <a class="jxr_linenumber" name="64" href="#64">64</a>  			SQLException {
-<a class="jxr_linenumber" name="65" href="#65">65</a>  		URL url = data.getImageURL(<span class="jxr_string">"20"</span>);
-<a class="jxr_linenumber" name="66" href="#66">66</a>  		assertEquals(<span class="jxr_string">"file:/home/steven/Photos/2010/06/22/img_0859-1.jpg"</span>, String.valueOf(url));
+<a class="jxr_linenumber" name="65" href="#65">65</a>  		String url = data.getImageURL(<span class="jxr_string">"20"</span>);
+<a class="jxr_linenumber" name="66" href="#66">66</a>  		assertEquals(<span class="jxr_string">"file:///home/steven/Photos/2010/06/22/img_0859-1.jpg"</span>, String.valueOf(url));
 <a class="jxr_linenumber" name="67" href="#67">67</a>  		
 <a class="jxr_linenumber" name="68" href="#68">68</a>  	}
 <a class="jxr_linenumber" name="69" href="#69">69</a>  	
