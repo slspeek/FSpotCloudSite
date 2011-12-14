@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2011-12-13T22:42:02.445">
+<pmd version="4.2.5" timestamp="2011-12-14T23:28:45.012">
 <file name="/home/steven/fspotcloud/bot-dispatch/gae-command/src/main/java/fspotcloud/botdispatch/model/command/CommandManager.java">
 <violation beginline="48" endline="48" begincolumn="44" endcolumn="44" rule="EmptyStatementNotInLoop" ruleset="Basic Rules" package="fspotcloud.botdispatch.model.command" class="CommandManager" method="getCountUnderAThousend" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyStatementNotInLoop" priority="3">
 An empty statement (semicolon) not part of a loop
@@ -115,7 +115,7 @@ Avoid unused private fields such as 'log'.
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/peer/src/main/java/fspotcloud/peer/db/Data.java">
-<violation beginline="79" endline="81" begincolumn="19" endcolumn="17" rule="EmptyFinallyBlock" ruleset="Basic Rules" package="fspotcloud.peer.db" class="Data" method="getCount" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyFinallyBlock" priority="3">
+<violation beginline="81" endline="83" begincolumn="19" endcolumn="17" rule="EmptyFinallyBlock" ruleset="Basic Rules" package="fspotcloud.peer.db" class="Data" method="getCount" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyFinallyBlock" priority="3">
 Avoid empty finally blocks
 </violation>
 </file>
