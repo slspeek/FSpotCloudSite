@@ -10,102 +10,105 @@
 
 <a class="jxr_linenumber" name="1" href="#1">1</a>   <strong class="jxr_keyword">package</strong> fspotcloud.server.control.callback;
 <a class="jxr_linenumber" name="2" href="#2">2</a>   
-<a class="jxr_linenumber" name="3" href="#3">3</a>   <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> org.mockito.Mockito.mock;
-<a class="jxr_linenumber" name="4" href="#4">4</a>   <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> org.mockito.Mockito.verify;
-<a class="jxr_linenumber" name="5" href="#5">5</a>   <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> org.mockito.Mockito.when;
-<a class="jxr_linenumber" name="6" href="#6">6</a>   
-<a class="jxr_linenumber" name="7" href="#7">7</a>   <strong class="jxr_keyword">import</strong> java.io.ByteArrayOutputStream;
-<a class="jxr_linenumber" name="8" href="#8">8</a>   <strong class="jxr_keyword">import</strong> java.io.ObjectOutputStream;
-<a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> java.util.ArrayList;
-<a class="jxr_linenumber" name="10" href="#10">10</a>  <strong class="jxr_keyword">import</strong> java.util.Date;
-<a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> java.util.List;
-<a class="jxr_linenumber" name="12" href="#12">12</a>  
-<a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">import</strong> junit.framework.TestCase;
-<a class="jxr_linenumber" name="14" href="#14">14</a>  
-<a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">import</strong> org.mockito.ArgumentCaptor;
+<a class="jxr_linenumber" name="3" href="#3">3</a>   <strong class="jxr_keyword">import</strong> org.testng.annotations.Test;
+<a class="jxr_linenumber" name="4" href="#4">4</a>   <strong class="jxr_keyword">import</strong> org.testng.annotations.BeforeMethod;
+<a class="jxr_linenumber" name="5" href="#5">5</a>   <strong class="jxr_keyword">import</strong> org.testng.Assert;
+<a class="jxr_linenumber" name="6" href="#6">6</a>   <strong class="jxr_keyword">import</strong> org.testng.AssertJUnit;
+<a class="jxr_linenumber" name="7" href="#7">7</a>   <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> org.mockito.Mockito.mock;
+<a class="jxr_linenumber" name="8" href="#8">8</a>   <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> org.mockito.Mockito.verify;
+<a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> org.mockito.Mockito.when;
+<a class="jxr_linenumber" name="10" href="#10">10</a>  
+<a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> java.io.ByteArrayOutputStream;
+<a class="jxr_linenumber" name="12" href="#12">12</a>  <strong class="jxr_keyword">import</strong> java.io.ObjectOutputStream;
+<a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">import</strong> java.util.ArrayList;
+<a class="jxr_linenumber" name="14" href="#14">14</a>  <strong class="jxr_keyword">import</strong> java.util.Date;
+<a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">import</strong> java.util.List;
 <a class="jxr_linenumber" name="16" href="#16">16</a>  
-<a class="jxr_linenumber" name="17" href="#17">17</a>  <strong class="jxr_keyword">import</strong> com.google.appengine.repackaged.com.google.common.collect.ImmutableList;
+<a class="jxr_linenumber" name="17" href="#17">17</a>  <strong class="jxr_keyword">import</strong> org.mockito.ArgumentCaptor;
 <a class="jxr_linenumber" name="18" href="#18">18</a>  
-<a class="jxr_linenumber" name="19" href="#19">19</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.PeerDatabase;
-<a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.PeerDatabases;
-<a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.Photo;
-<a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.Photos;
-<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.Tags;
-<a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.peerdatabase.PeerDatabaseDO;
-<a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.photo.PhotoDO;
-<a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.tag.TagDO;
-<a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> fspotcloud.shared.peer.rpc.actions.PhotoData;
-<a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> fspotcloud.shared.peer.rpc.actions.PhotoDataResult;
-<a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> fspotcloud.shared.photo.PhotoInfo;
-<a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> fspotcloud.shared.tag.TagNode;
-<a class="jxr_linenumber" name="31" href="#31">31</a>  
-<a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../fspotcloud/server/control/callback/PhotoDataCallbackTest.html">PhotoDataCallbackTest</a> <strong class="jxr_keyword">extends</strong> TestCase {
-<a class="jxr_linenumber" name="33" href="#33">33</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> VERSION = 15;
-<a class="jxr_linenumber" name="34" href="#34">34</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> byte[] IMAGE_DATA = <strong class="jxr_keyword">new</strong> byte[] { 0, 1};
-<a class="jxr_linenumber" name="35" href="#35">35</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> byte[] THUMB_DATA = <strong class="jxr_keyword">new</strong> byte[] {0};
-<a class="jxr_linenumber" name="36" href="#36">36</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> String DESCRIPTION = <span class="jxr_string">"description"</span>;
-<a class="jxr_linenumber" name="37" href="#37">37</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> String PHOTO_ID = <span class="jxr_string">"1"</span>;
-<a class="jxr_linenumber" name="38" href="#38">38</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> String TAG_ID = <span class="jxr_string">"fooMock"</span>;
-<a class="jxr_linenumber" name="39" href="#39">39</a>  	Photos photoManager;
-<a class="jxr_linenumber" name="40" href="#40">40</a>  	PeerDatabases peerDatabases;
-<a class="jxr_linenumber" name="41" href="#41">41</a>  	PeerDatabase peer;
-<a class="jxr_linenumber" name="42" href="#42">42</a>  	Tags tagManager;
-<a class="jxr_linenumber" name="43" href="#43">43</a>  	Photo photo1;
-<a class="jxr_linenumber" name="44" href="#44">44</a>  	PhotoDataResult result;
-<a class="jxr_linenumber" name="45" href="#45">45</a>  	PhotoData data;
-<a class="jxr_linenumber" name="46" href="#46">46</a>  	Date date = <strong class="jxr_keyword">new</strong> Date(10);
-<a class="jxr_linenumber" name="47" href="#47">47</a>  	PhotoDataCallback callback;
-<a class="jxr_linenumber" name="48" href="#48">48</a>  	ArgumentCaptor&lt;List&lt;Photo&gt;&gt; argumentCaptor = (ArgumentCaptor&lt;List&lt;Photo&gt;&gt;) (Object) ArgumentCaptor
-<a class="jxr_linenumber" name="49" href="#49">49</a>  			.forClass(List.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="50" href="#50">50</a>  	<strong class="jxr_keyword">private</strong> ArrayList&lt;PhotoData&gt; dataList;
-<a class="jxr_linenumber" name="51" href="#51">51</a>  	<strong class="jxr_keyword">private</strong> TagDO tag1;
-<a class="jxr_linenumber" name="52" href="#52">52</a>  
-<a class="jxr_linenumber" name="53" href="#53">53</a>  	@Override
-<a class="jxr_linenumber" name="54" href="#54">54</a>  	<strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> setUp() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="55" href="#55">55</a>  		photoManager = mock(Photos.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="56" href="#56">56</a>  		tagManager = mock(Tags.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="57" href="#57">57</a>  		photo1 = <strong class="jxr_keyword">new</strong> PhotoDO();
-<a class="jxr_linenumber" name="58" href="#58">58</a>  		tag1 = <strong class="jxr_keyword">new</strong> TagDO();
-<a class="jxr_linenumber" name="59" href="#59">59</a>  		tag1.setId(TAG_ID);
-<a class="jxr_linenumber" name="60" href="#60">60</a>  		photo1.setId(PHOTO_ID);
-<a class="jxr_linenumber" name="61" href="#61">61</a>  		data = <strong class="jxr_keyword">new</strong> PhotoData(PHOTO_ID, DESCRIPTION, date, IMAGE_DATA, THUMB_DATA, ImmutableList.of(TAG_ID), VERSION);
-<a class="jxr_linenumber" name="62" href="#62">62</a>  		dataList = <strong class="jxr_keyword">new</strong> ArrayList&lt;PhotoData&gt;();
-<a class="jxr_linenumber" name="63" href="#63">63</a>  		dataList.add(data);
-<a class="jxr_linenumber" name="64" href="#64">64</a>  		result = <strong class="jxr_keyword">new</strong> PhotoDataResult(dataList);
-<a class="jxr_linenumber" name="65" href="#65">65</a>  		when(photoManager.getOrNew(PHOTO_ID)).thenReturn(photo1);
-<a class="jxr_linenumber" name="66" href="#66">66</a>  		when(tagManager.getById(TAG_ID)).thenReturn(tag1);
-<a class="jxr_linenumber" name="67" href="#67">67</a>  		peer = <strong class="jxr_keyword">new</strong> PeerDatabaseDO();
-<a class="jxr_linenumber" name="68" href="#68">68</a>  		peerDatabases = mock(PeerDatabases.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="69" href="#69">69</a>  		when(peerDatabases.get()).thenReturn(peer);
-<a class="jxr_linenumber" name="70" href="#70">70</a>  		callback = <strong class="jxr_keyword">new</strong> PhotoDataCallback(photoManager, tagManager, peerDatabases);
-<a class="jxr_linenumber" name="71" href="#71">71</a>  		<strong class="jxr_keyword">super</strong>.setUp();
-<a class="jxr_linenumber" name="72" href="#72">72</a>  	}
-<a class="jxr_linenumber" name="73" href="#73">73</a>  
-<a class="jxr_linenumber" name="74" href="#74">74</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testSerialize() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="75" href="#75">75</a>  		ByteArrayOutputStream bos = <strong class="jxr_keyword">new</strong> ByteArrayOutputStream();
-<a class="jxr_linenumber" name="76" href="#76">76</a>  		ObjectOutputStream out = <strong class="jxr_keyword">new</strong> ObjectOutputStream(bos);
-<a class="jxr_linenumber" name="77" href="#77">77</a>  		out.writeObject(callback);
-<a class="jxr_linenumber" name="78" href="#78">78</a>  		out.close();
-<a class="jxr_linenumber" name="79" href="#79">79</a>  	}
-<a class="jxr_linenumber" name="80" href="#80">80</a>  
-<a class="jxr_linenumber" name="81" href="#81">81</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testOnSuccess() {
-<a class="jxr_linenumber" name="82" href="#82">82</a>  		peer.setCachedTagTree(<strong class="jxr_keyword">new</strong> ArrayList&lt;TagNode&gt;());
-<a class="jxr_linenumber" name="83" href="#83">83</a>  		callback.onSuccess(result);
-<a class="jxr_linenumber" name="84" href="#84">84</a>  		assertEquals(date, photo1.getDate());
-<a class="jxr_linenumber" name="85" href="#85">85</a>  		assertEquals(DESCRIPTION, photo1.getDescription());
-<a class="jxr_linenumber" name="86" href="#86">86</a>  		verify(photoManager).saveAll(argumentCaptor.capture());
-<a class="jxr_linenumber" name="87" href="#87">87</a>  		assertEquals(photo1, argumentCaptor.getValue().get(0));
-<a class="jxr_linenumber" name="88" href="#88">88</a>  		assertEquals(IMAGE_DATA, photo1.getImage().getBytes());
-<a class="jxr_linenumber" name="89" href="#89">89</a>  		assertEquals(THUMB_DATA, photo1.getThumb().getBytes());
-<a class="jxr_linenumber" name="90" href="#90">90</a>  		assertTrue(photo1.isThumbLoaded());
-<a class="jxr_linenumber" name="91" href="#91">91</a>  		assertTrue(photo1.isImageLoaded());
-<a class="jxr_linenumber" name="92" href="#92">92</a>  		PhotoInfo info = tag1.getCachedPhotoList().first(); 
-<a class="jxr_linenumber" name="93" href="#93">93</a>  		assertEquals(PHOTO_ID, info.getId());
-<a class="jxr_linenumber" name="94" href="#94">94</a>  		assertEquals(VERSION, info.getVersion());
-<a class="jxr_linenumber" name="95" href="#95">95</a>  		assertNull(peer.getCachedTagTree());
-<a class="jxr_linenumber" name="96" href="#96">96</a>  	}
-<a class="jxr_linenumber" name="97" href="#97">97</a>  
-<a class="jxr_linenumber" name="98" href="#98">98</a>  }
+<a class="jxr_linenumber" name="19" href="#19">19</a>  <strong class="jxr_keyword">import</strong> com.google.appengine.repackaged.com.google.common.collect.ImmutableList;
+<a class="jxr_linenumber" name="20" href="#20">20</a>  
+<a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.PeerDatabase;
+<a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.PeerDatabases;
+<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.Photo;
+<a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.Photos;
+<a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.Tags;
+<a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.peerdatabase.PeerDatabaseDO;
+<a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.photo.PhotoDO;
+<a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.tag.TagDO;
+<a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> fspotcloud.shared.peer.rpc.actions.PhotoData;
+<a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> fspotcloud.shared.peer.rpc.actions.PhotoDataResult;
+<a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> fspotcloud.shared.photo.PhotoInfo;
+<a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> fspotcloud.shared.tag.TagNode;
+<a class="jxr_linenumber" name="33" href="#33">33</a>  
+<a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../fspotcloud/server/control/callback/PhotoDataCallbackTest.html">PhotoDataCallbackTest</a> {
+<a class="jxr_linenumber" name="35" href="#35">35</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> VERSION = 15;
+<a class="jxr_linenumber" name="36" href="#36">36</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> byte[] IMAGE_DATA = <strong class="jxr_keyword">new</strong> byte[] { 0, 1};
+<a class="jxr_linenumber" name="37" href="#37">37</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> byte[] THUMB_DATA = <strong class="jxr_keyword">new</strong> byte[] {0};
+<a class="jxr_linenumber" name="38" href="#38">38</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> String DESCRIPTION = <span class="jxr_string">"description"</span>;
+<a class="jxr_linenumber" name="39" href="#39">39</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> String PHOTO_ID = <span class="jxr_string">"1"</span>;
+<a class="jxr_linenumber" name="40" href="#40">40</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> String TAG_ID = <span class="jxr_string">"fooMock"</span>;
+<a class="jxr_linenumber" name="41" href="#41">41</a>  	Photos photoManager;
+<a class="jxr_linenumber" name="42" href="#42">42</a>  	PeerDatabases peerDatabases;
+<a class="jxr_linenumber" name="43" href="#43">43</a>  	PeerDatabase peer;
+<a class="jxr_linenumber" name="44" href="#44">44</a>  	Tags tagManager;
+<a class="jxr_linenumber" name="45" href="#45">45</a>  	Photo photo1;
+<a class="jxr_linenumber" name="46" href="#46">46</a>  	PhotoDataResult result;
+<a class="jxr_linenumber" name="47" href="#47">47</a>  	PhotoData data;
+<a class="jxr_linenumber" name="48" href="#48">48</a>  	Date date = <strong class="jxr_keyword">new</strong> Date(10);
+<a class="jxr_linenumber" name="49" href="#49">49</a>  	PhotoDataCallback callback;
+<a class="jxr_linenumber" name="50" href="#50">50</a>  	ArgumentCaptor&lt;List&lt;Photo&gt;&gt; argumentCaptor = (ArgumentCaptor&lt;List&lt;Photo&gt;&gt;) (Object) ArgumentCaptor
+<a class="jxr_linenumber" name="51" href="#51">51</a>  			.forClass(List.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="52" href="#52">52</a>  	<strong class="jxr_keyword">private</strong> ArrayList&lt;PhotoData&gt; dataList;
+<a class="jxr_linenumber" name="53" href="#53">53</a>  	<strong class="jxr_keyword">private</strong> TagDO tag1;
+<a class="jxr_linenumber" name="54" href="#54">54</a>  
+<a class="jxr_linenumber" name="55" href="#55">55</a>  	@BeforeMethod
+<a class="jxr_linenumber" name="56" href="#56">56</a>  	<strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> setUp() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="57" href="#57">57</a>  		photoManager = mock(Photos.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="58" href="#58">58</a>  		tagManager = mock(Tags.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="59" href="#59">59</a>  		photo1 = <strong class="jxr_keyword">new</strong> PhotoDO();
+<a class="jxr_linenumber" name="60" href="#60">60</a>  		tag1 = <strong class="jxr_keyword">new</strong> TagDO();
+<a class="jxr_linenumber" name="61" href="#61">61</a>  		tag1.setId(TAG_ID);
+<a class="jxr_linenumber" name="62" href="#62">62</a>  		photo1.setId(PHOTO_ID);
+<a class="jxr_linenumber" name="63" href="#63">63</a>  		data = <strong class="jxr_keyword">new</strong> PhotoData(PHOTO_ID, DESCRIPTION, date, IMAGE_DATA, THUMB_DATA, ImmutableList.of(TAG_ID), VERSION);
+<a class="jxr_linenumber" name="64" href="#64">64</a>  		dataList = <strong class="jxr_keyword">new</strong> ArrayList&lt;PhotoData&gt;();
+<a class="jxr_linenumber" name="65" href="#65">65</a>  		dataList.add(data);
+<a class="jxr_linenumber" name="66" href="#66">66</a>  		result = <strong class="jxr_keyword">new</strong> PhotoDataResult(dataList);
+<a class="jxr_linenumber" name="67" href="#67">67</a>  		when(photoManager.getOrNew(PHOTO_ID)).thenReturn(photo1);
+<a class="jxr_linenumber" name="68" href="#68">68</a>  		when(tagManager.getById(TAG_ID)).thenReturn(tag1);
+<a class="jxr_linenumber" name="69" href="#69">69</a>  		peer = <strong class="jxr_keyword">new</strong> PeerDatabaseDO();
+<a class="jxr_linenumber" name="70" href="#70">70</a>  		peerDatabases = mock(PeerDatabases.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="71" href="#71">71</a>  		when(peerDatabases.get()).thenReturn(peer);
+<a class="jxr_linenumber" name="72" href="#72">72</a>  		callback = <strong class="jxr_keyword">new</strong> PhotoDataCallback(photoManager, tagManager, peerDatabases);
+<a class="jxr_linenumber" name="73" href="#73">73</a>  	}
+<a class="jxr_linenumber" name="74" href="#74">74</a>  
+<a class="jxr_linenumber" name="75" href="#75">75</a>  	@Test
+<a class="jxr_linenumber" name="76" href="#76">76</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testSerialize() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="77" href="#77">77</a>  		ByteArrayOutputStream bos = <strong class="jxr_keyword">new</strong> ByteArrayOutputStream();
+<a class="jxr_linenumber" name="78" href="#78">78</a>  		ObjectOutputStream out = <strong class="jxr_keyword">new</strong> ObjectOutputStream(bos);
+<a class="jxr_linenumber" name="79" href="#79">79</a>  		out.writeObject(callback);
+<a class="jxr_linenumber" name="80" href="#80">80</a>  		out.close();
+<a class="jxr_linenumber" name="81" href="#81">81</a>  	}
+<a class="jxr_linenumber" name="82" href="#82">82</a>  
+<a class="jxr_linenumber" name="83" href="#83">83</a>  	@Test
+<a class="jxr_linenumber" name="84" href="#84">84</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testOnSuccess() {
+<a class="jxr_linenumber" name="85" href="#85">85</a>  		peer.setCachedTagTree(<strong class="jxr_keyword">new</strong> ArrayList&lt;TagNode&gt;());
+<a class="jxr_linenumber" name="86" href="#86">86</a>  		callback.onSuccess(result);
+<a class="jxr_linenumber" name="87" href="#87">87</a>  		AssertJUnit.assertEquals(date, photo1.getDate());
+<a class="jxr_linenumber" name="88" href="#88">88</a>  		AssertJUnit.assertEquals(DESCRIPTION, photo1.getDescription());
+<a class="jxr_linenumber" name="89" href="#89">89</a>  		verify(photoManager).saveAll(argumentCaptor.capture());
+<a class="jxr_linenumber" name="90" href="#90">90</a>  		AssertJUnit.assertEquals(photo1, argumentCaptor.getValue().get(0));
+<a class="jxr_linenumber" name="91" href="#91">91</a>  		AssertJUnit.assertEquals(IMAGE_DATA, photo1.getImage().getBytes());
+<a class="jxr_linenumber" name="92" href="#92">92</a>  		AssertJUnit.assertEquals(THUMB_DATA, photo1.getThumb().getBytes());
+<a class="jxr_linenumber" name="93" href="#93">93</a>  		AssertJUnit.assertTrue(photo1.isThumbLoaded());
+<a class="jxr_linenumber" name="94" href="#94">94</a>  		AssertJUnit.assertTrue(photo1.isImageLoaded());
+<a class="jxr_linenumber" name="95" href="#95">95</a>  		PhotoInfo info = tag1.getCachedPhotoList().first(); 
+<a class="jxr_linenumber" name="96" href="#96">96</a>  		AssertJUnit.assertEquals(PHOTO_ID, info.getId());
+<a class="jxr_linenumber" name="97" href="#97">97</a>  		AssertJUnit.assertEquals(VERSION, info.getVersion());
+<a class="jxr_linenumber" name="98" href="#98">98</a>  		AssertJUnit.assertNull(peer.getCachedTagTree());
+<a class="jxr_linenumber" name="99" href="#99">99</a>  	}
+<a class="jxr_linenumber" name="100" href="#100">100</a> 
+<a class="jxr_linenumber" name="101" href="#101">101</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

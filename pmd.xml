@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2011-12-14T23:28:45.012">
+<pmd version="4.2.5" timestamp="2011-12-17T00:33:51.227">
 <file name="/home/steven/fspotcloud/bot-dispatch/gae-command/src/main/java/fspotcloud/botdispatch/model/command/CommandManager.java">
 <violation beginline="48" endline="48" begincolumn="44" endcolumn="44" rule="EmptyStatementNotInLoop" ruleset="Basic Rules" package="fspotcloud.botdispatch.model.command" class="CommandManager" method="getCountUnderAThousend" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyStatementNotInLoop" priority="3">
 An empty statement (semicolon) not part of a loop
@@ -143,17 +143,6 @@ These nested if statements could be combined
 <file name="/home/steven/fspotcloud/taskqueue-dispatch/dispatch/src/main/java/fspotcloud/taskqueuedispatch/NullCallback.java">
 <violation beginline="20" endline="20" begincolumn="24" endcolumn="41" rule="OverrideBothEqualsAndHashcode" ruleset="Basic Rules" package="fspotcloud.taskqueuedispatch" class="NullCallback" method="equals" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#OverrideBothEqualsAndHashcode" priority="3">
 Ensure you override both equals() and hashCode()
-</violation>
-</file>
-<file name="/home/steven/fspotcloud/test-util/src/main/java/fspotcloud/test/Mocktest.java">
-<violation beginline="4" endline="4" begincolumn="1" endcolumn="39" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.test" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'org.mockito.Matchers.any'
-</violation>
-<violation beginline="5" endline="5" begincolumn="15" endcolumn="38" rule="DuplicateImports" ruleset="Import Statement Rules" package="fspotcloud.test" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#DuplicateImports" priority="4">
-Avoid duplicate imports such as 'org.mockito.Mockito.mock'
-</violation>
-<violation beginline="6" endline="6" begincolumn="15" endcolumn="40" rule="DuplicateImports" ruleset="Import Statement Rules" package="fspotcloud.test" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#DuplicateImports" priority="4">
-Avoid duplicate imports such as 'org.mockito.Mockito.verify'
 </violation>
 </file>
 <suppressedviolation filename="/home/steven/fspotcloud/bot-dispatch/bot/src/main/java/fspotcloud/botdispatch/bot/CommandWorkerImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
