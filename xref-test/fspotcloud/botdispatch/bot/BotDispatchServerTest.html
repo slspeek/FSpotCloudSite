@@ -53,7 +53,7 @@
 <a class="jxr_linenumber" name="43" href="#43">43</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testEmptyStart() <strong class="jxr_keyword">throws</strong> XmlRpcException, IOException, ClassNotFoundException {
 <a class="jxr_linenumber" name="44" href="#44">44</a>  		when(remote.execute(-1L,<strong class="jxr_keyword">null</strong>)).thenReturn(<strong class="jxr_keyword">new</strong> Object[] { -1L, <strong class="jxr_keyword">null</strong>});
 <a class="jxr_linenumber" name="45" href="#45">45</a>  		target.runForever(1);
-<a class="jxr_linenumber" name="46" href="#46">46</a>  		verify(pauser).pause(10000);
+<a class="jxr_linenumber" name="46" href="#46">46</a>  		verify(pauser).pause();
 <a class="jxr_linenumber" name="47" href="#47">47</a>  	}
 <a class="jxr_linenumber" name="48" href="#48">48</a>  	
 <a class="jxr_linenumber" name="49" href="#49">49</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testStart() <strong class="jxr_keyword">throws</strong> XmlRpcException, IOException, ClassNotFoundException {
@@ -61,7 +61,7 @@
 <a class="jxr_linenumber" name="51" href="#51">51</a>  		when(remote.execute(1000L,serializedResult)).thenReturn(<strong class="jxr_keyword">new</strong> Object[] { -1L, <strong class="jxr_keyword">null</strong>});
 <a class="jxr_linenumber" name="52" href="#52">52</a>  		target.runForever(2);
 <a class="jxr_linenumber" name="53" href="#53">53</a>  		verify(remote).execute(1000L, serializedResult);
-<a class="jxr_linenumber" name="54" href="#54">54</a>  		verify(pauser).pause(10000);
+<a class="jxr_linenumber" name="54" href="#54">54</a>  		verify(pauser).pause();
 <a class="jxr_linenumber" name="55" href="#55">55</a>  	}
 <a class="jxr_linenumber" name="56" href="#56">56</a>  }
 </pre>

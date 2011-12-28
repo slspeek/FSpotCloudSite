@@ -19,6 +19,7 @@ fspotcloud.client.view.action
 fspotcloud.peer
 fspotcloud.peer.db
 fspotcloud.peer.handlers
+fspotcloud.peer.inject
 fspotcloud.server.admin.actions
 fspotcloud.server.admin.integration
 fspotcloud.server.control.callback

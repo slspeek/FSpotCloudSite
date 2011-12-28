@@ -34,7 +34,7 @@
 <a class="jxr_linenumber" name="24" href="#24">24</a>  				<span class="jxr_string">"http://"</span> + System.getProperty(<span class="jxr_string">"endpoint"</span>, <span class="jxr_string">"localhost:8080"</span>) + <span class="jxr_string">"/xmlrpc/"</span>
 <a class="jxr_linenumber" name="25" href="#25">25</a>  						+ System.getProperty(<span class="jxr_string">"bot.secret"</span>));
 <a class="jxr_linenumber" name="26" href="#26">26</a>  		bind(Integer.<strong class="jxr_keyword">class</strong>).annotatedWith(Names.named(<span class="jxr_string">"pause"</span>)).toInstance(
-<a class="jxr_linenumber" name="27" href="#27">27</a>  				Integer.valueOf(System.getProperty(<span class="jxr_string">"pause"</span>, <span class="jxr_string">"10000"</span>)));
+<a class="jxr_linenumber" name="27" href="#27">27</a>  				Integer.valueOf(System.getProperty(<span class="jxr_string">"pause"</span>, <span class="jxr_string">"10"</span>)));
 <a class="jxr_linenumber" name="28" href="#28">28</a>  		install(<strong class="jxr_keyword">new</strong> FactoryModuleBuilder().implement(CommandWorker.<strong class="jxr_keyword">class</strong>,
 <a class="jxr_linenumber" name="29" href="#29">29</a>  				CommandWorkerImpl.<strong class="jxr_keyword">class</strong>).build(CommandWorkerFactory.<strong class="jxr_keyword">class</strong>));
 <a class="jxr_linenumber" name="30" href="#30">30</a>  	}

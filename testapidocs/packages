@@ -17,6 +17,7 @@ fspotcloud.botdispatch.controller.callback
 fspotcloud.shared.peer.rpc.actions
 fspotcloud.peer.db
 fspotcloud.peer
+fspotcloud.peer.inject
 fspotcloud.peer.handlers
 fspotcloud.server.inject
 fspotcloud.server.control.task.tagimport

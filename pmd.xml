@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2011-12-17T00:33:51.227">
+<pmd version="4.2.5" timestamp="2011-12-28T23:49:26.406">
+<file name="/home/steven/fspotcloud/bot-dispatch/bot/src/main/java/fspotcloud/botdispatch/bot/Bot.java">
+<violation beginline="15" endline="15" begincolumn="30" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.botdispatch.bot" class="Bot" variable="pauser" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'pauser'.
+</violation>
+</file>
+<file name="/home/steven/fspotcloud/bot-dispatch/bot/src/main/java/fspotcloud/botdispatch/bot/BotDispatchServerImpl.java">
+<violation beginline="22" endline="22" begincolumn="27" endcolumn="31" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.botdispatch.bot" class="BotDispatchServerImpl" variable="pause" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'pause'.
+</violation>
+<violation beginline="64" endline="64" begincolumn="33" endcolumn="33" rule="EmptyStatementNotInLoop" ruleset="Basic Rules" package="fspotcloud.botdispatch.bot" class="BotDispatchServerImpl" method="runForever" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyStatementNotInLoop" priority="3">
+An empty statement (semicolon) not part of a loop
+</violation>
+</file>
 <file name="/home/steven/fspotcloud/bot-dispatch/gae-command/src/main/java/fspotcloud/botdispatch/model/command/CommandManager.java">
 <violation beginline="48" endline="48" begincolumn="44" endcolumn="44" rule="EmptyStatementNotInLoop" ruleset="Basic Rules" package="fspotcloud.botdispatch.model.command" class="CommandManager" method="getCountUnderAThousend" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyStatementNotInLoop" priority="3">
 An empty statement (semicolon) not part of a loop
@@ -35,6 +48,11 @@ Avoid unused local variables such as 'runner'.
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/GlobalShortcutController.java">
 <violation beginline="41" endline="43" begincolumn="33" endcolumn="33" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="fspotcloud.client.main" class="GlobalShortcutController$Preview" method="onPreviewNativeEvent" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="3">
 These nested if statements could be combined
+</violation>
+</file>
+<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/ImageRasterViewImpl.java">
+<violation beginline="47" endline="47" begincolumn="33" endcolumn="41" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.main.ui" class="ImageRasterViewImpl" variable="resources" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'resources'.
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/SingleImageViewImpl.java">
@@ -115,13 +133,8 @@ Avoid unused private fields such as 'log'.
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/peer/src/main/java/fspotcloud/peer/db/Data.java">
-<violation beginline="81" endline="83" begincolumn="19" endcolumn="17" rule="EmptyFinallyBlock" ruleset="Basic Rules" package="fspotcloud.peer.db" class="Data" method="getCount" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyFinallyBlock" priority="3">
+<violation beginline="82" endline="84" begincolumn="19" endcolumn="17" rule="EmptyFinallyBlock" ruleset="Basic Rules" package="fspotcloud.peer.db" class="Data" method="getCount" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyFinallyBlock" priority="3">
 Avoid empty finally blocks
-</violation>
-</file>
-<file name="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/control/callback/TagDataCallback.java">
-<violation beginline="55" endline="57" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="fspotcloud.server.control.callback" class="TagDataCallback" method="importNewImages" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
-Avoid empty catch blocks
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/control/task/photodelete/DeletePhotosHandler.java">

@@ -30,7 +30,7 @@
 <a class="jxr_linenumber" name="20" href="#20">20</a>  		bind(Pauser.<strong class="jxr_keyword">class</strong>).to(PauserImpl.<strong class="jxr_keyword">class</strong>);
 <a class="jxr_linenumber" name="21" href="#21">21</a>  		bind(RemoteExecutor.<strong class="jxr_keyword">class</strong>).to(LocalRemoteExecutor.<strong class="jxr_keyword">class</strong>);
 <a class="jxr_linenumber" name="22" href="#22">22</a>  		bind(Integer.<strong class="jxr_keyword">class</strong>).annotatedWith(Names.named(<span class="jxr_string">"pause"</span>)).toInstance(
-<a class="jxr_linenumber" name="23" href="#23">23</a>  				Integer.valueOf(System.getProperty(<span class="jxr_string">"pause"</span>, <span class="jxr_string">"100"</span>)));
+<a class="jxr_linenumber" name="23" href="#23">23</a>  				Integer.valueOf(System.getProperty(<span class="jxr_string">"pause"</span>, <span class="jxr_string">"0"</span>)));
 <a class="jxr_linenumber" name="24" href="#24">24</a>  		install(<strong class="jxr_keyword">new</strong> FactoryModuleBuilder().implement(CommandWorker.<strong class="jxr_keyword">class</strong>,
 <a class="jxr_linenumber" name="25" href="#25">25</a>  				CommandWorkerImpl.<strong class="jxr_keyword">class</strong>).build(CommandWorkerFactory.<strong class="jxr_keyword">class</strong>));
 <a class="jxr_linenumber" name="26" href="#26">26</a>  	}
