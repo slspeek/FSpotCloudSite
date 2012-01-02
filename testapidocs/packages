@@ -1,19 +1,10 @@
 fspotcloud.shared.tag
 fspotcloud.shared.photo
 fspotcloud.shared.admin
-fspotcloud.taskqueuedispatch
-fspotcloud.taskqueuedispatch.inject
-fspotcloud.taskqueuedispatch.integration.test
 fspotcloud.server.model
 fspotcloud.server.model.tag
 fspotcloud.server.model.peerdatabase
 fspotcloud.server.model.photo
-fspotcloud.botdispatch.model.command
-fspotcloud.botdispatch.model
-fspotcloud.botdispatch.bot
-fspotcloud.botdispatch.controller.dispatch
-fspotcloud.botdispatch.controller.inject
-fspotcloud.botdispatch.controller.callback
 fspotcloud.shared.peer.rpc.actions
 fspotcloud.peer.db
 fspotcloud.peer
@@ -40,4 +31,3 @@ fspotcloud.client.main.event
 fspotcloud.client.view.action
 fspotcloud.client.place
 fspotcloud.test
-fspotcloud.botdispatch.test

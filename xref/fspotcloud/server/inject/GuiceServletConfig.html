@@ -28,9 +28,9 @@
 <a class="jxr_linenumber" name="18" href="#18">18</a>  		Injector i = Guice.createInjector(<strong class="jxr_keyword">new</strong> <a href="../../../fspotcloud/server/inject/FSpotCloudServletModule.html">FSpotCloudServletModule</a>(),
 <a class="jxr_linenumber" name="19" href="#19">19</a>  				<strong class="jxr_keyword">new</strong> <a href="../../../fspotcloud/server/inject/FSpotCloudModule.html">FSpotCloudModule</a>(), <strong class="jxr_keyword">new</strong> AdminActionsModule(), <strong class="jxr_keyword">new</strong> ModelModule(),
 <a class="jxr_linenumber" name="20" href="#20">20</a>  				<strong class="jxr_keyword">new</strong> <a href="../../../fspotcloud/server/control/task/TaskModule.html">TaskModule</a>(), <strong class="jxr_keyword">new</strong> FSCControllerModule(),
-<a class="jxr_linenumber" name="21" href="#21">21</a>  				<strong class="jxr_keyword">new</strong> <a href="../../../fspotcloud/botdispatch/controller/inject/ControllerServletModule.html">ControllerServletModule</a>(), <strong class="jxr_keyword">new</strong> MinimalCommandModelModule(),
-<a class="jxr_linenumber" name="22" href="#22">22</a>  				<strong class="jxr_keyword">new</strong> <a href="../../../fspotcloud/taskqueuedispatch/inject/TaskQueueDispatchModule.html">TaskQueueDispatchModule</a>(),
-<a class="jxr_linenumber" name="23" href="#23">23</a>  				<strong class="jxr_keyword">new</strong> <a href="../../../fspotcloud/taskqueuedispatch/inject/TaskQueueDispatchServletModule.html">TaskQueueDispatchServletModule</a>(), <strong class="jxr_keyword">new</strong> TaskActionsModule());
+<a class="jxr_linenumber" name="21" href="#21">21</a>  				<strong class="jxr_keyword">new</strong> ControllerServletModule(), <strong class="jxr_keyword">new</strong> MinimalCommandModelModule(),
+<a class="jxr_linenumber" name="22" href="#22">22</a>  				<strong class="jxr_keyword">new</strong> TaskQueueDispatchModule(),
+<a class="jxr_linenumber" name="23" href="#23">23</a>  				<strong class="jxr_keyword">new</strong> TaskQueueDispatchServletModule(), <strong class="jxr_keyword">new</strong> TaskActionsModule());
 <a class="jxr_linenumber" name="24" href="#24">24</a>  		<strong class="jxr_keyword">return</strong> i;
 <a class="jxr_linenumber" name="25" href="#25">25</a>  	}
 <a class="jxr_linenumber" name="26" href="#26">26</a>  }

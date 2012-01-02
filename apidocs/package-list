@@ -1,13 +1,3 @@
-fspotcloud.botdispatch.bot
-fspotcloud.botdispatch.controller.callback
-fspotcloud.botdispatch.controller.dispatch
-fspotcloud.botdispatch.controller.inject
-fspotcloud.botdispatch.model
-fspotcloud.botdispatch.model.api
-fspotcloud.botdispatch.model.command
-fspotcloud.botdispatch.test
-fspotcloud.botdispatch.testbot
-fspotcloud.botdispatch.testserver
 fspotcloud.client.admin
 fspotcloud.client.admin.gin
 fspotcloud.client.admin.ui
@@ -63,7 +53,4 @@ fspotcloud.shared.dashboard.actions
 fspotcloud.shared.peer.rpc.actions
 fspotcloud.shared.photo
 fspotcloud.shared.tag
-fspotcloud.taskqueuedispatch
-fspotcloud.taskqueuedispatch.inject
-fspotcloud.taskqueuedispatch.integration.test
 fspotcloud.test

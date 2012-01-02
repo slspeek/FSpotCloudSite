@@ -1,31 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2011-12-28T23:49:26.406">
-<file name="/home/steven/fspotcloud/bot-dispatch/bot/src/main/java/fspotcloud/botdispatch/bot/Bot.java">
-<violation beginline="15" endline="15" begincolumn="30" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.botdispatch.bot" class="Bot" variable="pauser" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
-Avoid unused private fields such as 'pauser'.
-</violation>
-</file>
-<file name="/home/steven/fspotcloud/bot-dispatch/bot/src/main/java/fspotcloud/botdispatch/bot/BotDispatchServerImpl.java">
-<violation beginline="22" endline="22" begincolumn="27" endcolumn="31" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.botdispatch.bot" class="BotDispatchServerImpl" variable="pause" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
-Avoid unused private fields such as 'pause'.
-</violation>
-<violation beginline="64" endline="64" begincolumn="33" endcolumn="33" rule="EmptyStatementNotInLoop" ruleset="Basic Rules" package="fspotcloud.botdispatch.bot" class="BotDispatchServerImpl" method="runForever" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyStatementNotInLoop" priority="3">
-An empty statement (semicolon) not part of a loop
-</violation>
-</file>
-<file name="/home/steven/fspotcloud/bot-dispatch/gae-command/src/main/java/fspotcloud/botdispatch/model/command/CommandManager.java">
-<violation beginline="48" endline="48" begincolumn="44" endcolumn="44" rule="EmptyStatementNotInLoop" ruleset="Basic Rules" package="fspotcloud.botdispatch.model.command" class="CommandManager" method="getCountUnderAThousend" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyStatementNotInLoop" priority="3">
-An empty statement (semicolon) not part of a loop
-</violation>
-</file>
-<file name="/home/steven/fspotcloud/bot-dispatch/test/src/main/java/fspotcloud/botdispatch/test/TestAsyncCallback.java">
-<violation beginline="6" endline="6" begincolumn="1" endcolumn="60" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.botdispatch.test" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'net.customware.gwt.dispatch.shared.DispatchException'
-</violation>
-<violation beginline="14" endline="14" begincolumn="37" endcolumn="39" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.botdispatch.test" class="TestAsyncCallback" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
-Avoid unused private fields such as 'log'.
-</violation>
-</file>
+<pmd version="4.2.5" timestamp="2012-01-02T23:23:22.394">
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/admin/DashboardEntryPoint.java">
 <violation beginline="8" endline="8" begincolumn="1" endcolumn="53" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'com.google.gwt.user.client.ui.RootLayoutPanel'
@@ -153,16 +127,6 @@ These nested if statements could be combined
 These nested if statements could be combined
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/taskqueue-dispatch/dispatch/src/main/java/fspotcloud/taskqueuedispatch/NullCallback.java">
-<violation beginline="20" endline="20" begincolumn="24" endcolumn="41" rule="OverrideBothEqualsAndHashcode" ruleset="Basic Rules" package="fspotcloud.taskqueuedispatch" class="NullCallback" method="equals" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#OverrideBothEqualsAndHashcode" priority="3">
-Ensure you override both equals() and hashCode()
-</violation>
-</file>
-<suppressedviolation filename="/home/steven/fspotcloud/bot-dispatch/bot/src/main/java/fspotcloud/botdispatch/bot/CommandWorkerImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/bot-dispatch/bot/src/main/java/fspotcloud/botdispatch/bot/RemoteExecutorImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/bot-dispatch/controller/src/main/java/fspotcloud/botdispatch/controller/callback/GuiceRequestProcessorFactoryFactory.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/bot-dispatch/controller/src/main/java/fspotcloud/botdispatch/controller/callback/GuiceXmlRpcServlet.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/bot-dispatch/controller/src/main/java/fspotcloud/botdispatch/controller/inject/ControllerServletModule.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/data/IndexingUtil.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/HideControlsAction.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/TreeFocusAction.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
@@ -184,5 +148,4 @@ Ensure you override both equals() and hashCode()
 <suppressedviolation filename="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/admin/actions/GetMetaDataHandler.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/control/task/photoupdate/PhotoUpdateHandler.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/inject/FSpotCloudServletModule.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/taskqueue-dispatch/dispatch/src/main/java/fspotcloud/taskqueuedispatch/inject/TaskQueueDispatchServletModule.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 </pmd>

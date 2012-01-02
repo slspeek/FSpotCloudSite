@@ -23,11 +23,11 @@
 <a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../fspotcloud/server/control/task/tagdelete/DeleteTagsHandler.html">DeleteTagsHandler</a> <strong class="jxr_keyword">extends</strong>
 <a class="jxr_linenumber" name="14" href="#14">14</a>  		SimpleActionHandler&lt;DeleteTags, VoidResult&gt; {
 <a class="jxr_linenumber" name="15" href="#15">15</a>  
-<a class="jxr_linenumber" name="16" href="#16">16</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <a href="../../../../../fspotcloud/taskqueuedispatch/TaskQueueDispatch.html">TaskQueueDispatch</a> dispatchAsync;
+<a class="jxr_linenumber" name="16" href="#16">16</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> TaskQueueDispatch dispatchAsync;
 <a class="jxr_linenumber" name="17" href="#17">17</a>  	<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">private</strong> <a href="../../../../../fspotcloud/server/model/api/Tags.html">Tags</a> tagManager;
 <a class="jxr_linenumber" name="18" href="#18">18</a>  
 <a class="jxr_linenumber" name="19" href="#19">19</a>  	@Inject
-<a class="jxr_linenumber" name="20" href="#20">20</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../../fspotcloud/server/control/task/tagdelete/DeleteTagsHandler.html">DeleteTagsHandler</a>(<a href="../../../../../fspotcloud/taskqueuedispatch/TaskQueueDispatch.html">TaskQueueDispatch</a> dispatchAsync, <a href="../../../../../fspotcloud/server/model/api/Tags.html">Tags</a> tagManager) {
+<a class="jxr_linenumber" name="20" href="#20">20</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../../fspotcloud/server/control/task/tagdelete/DeleteTagsHandler.html">DeleteTagsHandler</a>(TaskQueueDispatch dispatchAsync, <a href="../../../../../fspotcloud/server/model/api/Tags.html">Tags</a> tagManager) {
 <a class="jxr_linenumber" name="21" href="#21">21</a>  		<strong class="jxr_keyword">super</strong>();
 <a class="jxr_linenumber" name="22" href="#22">22</a>  		<strong class="jxr_keyword">this</strong>.dispatchAsync = dispatchAsync;
 <a class="jxr_linenumber" name="23" href="#23">23</a>  		<strong class="jxr_keyword">this</strong>.tagManager = tagManager;
