@@ -47,11 +47,11 @@
 <a class="jxr_linenumber" name="37" href="#37">37</a>  		String id = request.getParameter(<span class="jxr_string">"id"</span>);
 <a class="jxr_linenumber" name="38" href="#38">38</a>  		<strong class="jxr_keyword">boolean</strong> thumb = (request.getParameter(<span class="jxr_string">"thumb"</span>) != <strong class="jxr_keyword">null</strong>);
 <a class="jxr_linenumber" name="39" href="#39">39</a>  		Photo photo = photoManager.getById(id);
-<a class="jxr_linenumber" name="40" href="#40">40</a>  		Blob imageData = thumb ? photo.getThumb() : photo.getImage();
+<a class="jxr_linenumber" name="40" href="#40">40</a>  		byte[] imageData = thumb ? photo.getThumb() : photo.getImage();
 <a class="jxr_linenumber" name="41" href="#41">41</a>  		response.setContentType(<span class="jxr_string">"image/jpeg"</span>);
 <a class="jxr_linenumber" name="42" href="#42">42</a>  		setCacheExpireDate(response, 3600 * 24 * 365);
 <a class="jxr_linenumber" name="43" href="#43">43</a>  		OutputStream out = response.getOutputStream();
-<a class="jxr_linenumber" name="44" href="#44">44</a>  		out.write(imageData.getBytes());
+<a class="jxr_linenumber" name="44" href="#44">44</a>  		out.write(imageData);
 <a class="jxr_linenumber" name="45" href="#45">45</a>  		out.close();
 <a class="jxr_linenumber" name="46" href="#46">46</a>  	}
 <a class="jxr_linenumber" name="47" href="#47">47</a>  

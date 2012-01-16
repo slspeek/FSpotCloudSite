@@ -25,6 +25,10 @@ fspotcloud.client.place.api
 fspotcloud.client.view.action
 fspotcloud.client.view.action.api
 fspotcloud.grapher
+fspotcloud.model.jpa
+fspotcloud.model.jpa.peerdatabase
+fspotcloud.model.jpa.photo
+fspotcloud.model.jpa.tag
 fspotcloud.peer
 fspotcloud.peer.db
 fspotcloud.peer.handlers

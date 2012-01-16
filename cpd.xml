@@ -1,5 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pmd-cpd>
+<duplication lines="70" tokens="196">
+<file line="37" path="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/tag/TagEntity.java"/>
+<file line="39" path="/home/steven/fspotcloud/model/src/main/java/fspotcloud/server/model/tag/TagDO.java"/>
+<codefragment>
+<![CDATA[
+    @Override
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    @Override
+    public void setParent(String parent) {
+        this.parent = parent;
+    }
+
+    @Override
+    public String getParent() {
+        return parent;
+    }
+
+    @Override
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+    @Override
+    public int getCount() {
+        return count;
+    }
+
+    @Override
+    public void setTagName(String tagName) {
+        this.tagName = tagName;
+    }
+
+    @Override
+    public String getTagName() {
+        return tagName;
+    }
+
+    @Override
+    public void setParentId(String parentId) {
+        this.parentId = parentId;
+    }
+
+    @Override
+    public String getParentId() {
+        return parentId;
+    }
+
+    @Override
+    public void setCachedPhotoList(TreeSet<PhotoInfo> cachedPhotoList) {
+        this.cachedPhotoList = cachedPhotoList;
+    }
+
+    @Override
+    public TreeSet<PhotoInfo> getCachedPhotoList() {
+        return cachedPhotoList;
+    }
+
+    @Override
+    public void setImportIssued(boolean importIssued) {
+        this.importIssued = importIssued;
+    }
+
+    @Override
+    public boolean isImportIssued() {
+        return importIssued;
+    }
+
+    @Override
+    public String getId() {
+        return id;
+    }
+}
+]]>
+</codefragment>
+</duplication>
+<duplication lines="28" tokens="167">
+<file line="27" path="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/tag/TagManager.java"/>
+<file line="40" path="/home/steven/fspotcloud/model/src/main/java/fspotcloud/server/model/tag/TagManager.java"/>
+<codefragment>
+<![CDATA[
+		this.pmProvider = pmProvider;
+		this.maxDelete = maxDelete;
+	}
+
+	public List<TagNode> getTags() {
+		List<TagNode> result = new ArrayList<TagNode>();
+		for (Tag tag : getTagDOList()) {
+			TagNode node = new TagNode();
+			node.setId(tag.getId());
+			node.setImportIssued(tag.isImportIssued());
+			node.setParentId(tag.getParentId());
+			node.setTagName(tag.getTagName());
+			node.setCount(tag.getCount());
+			SortedSet<PhotoInfo> photoList = tag.getCachedPhotoList();
+			if (photoList != null) {
+				node.setCachedPhotoList(new PhotoInfoStore(photoList));
+			} else {
+				throw new IllegalStateException(
+						"photoList field of Tag should not be null");
+			}
+			result.add(node);
+		}
+
+		return result;
+	}
+
+	public List<String> getTagKeys() {
+		List<String> result = new ArrayList<String>();
+]]>
+</codefragment>
+</duplication>
 <duplication lines="34" tokens="163">
 <file line="56" path="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/control/task/photodelete/DeletePhotosHandler.java"/>
 <file line="59" path="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/control/task/photoremove/RemovePhotosFromTagHandler.java"/>

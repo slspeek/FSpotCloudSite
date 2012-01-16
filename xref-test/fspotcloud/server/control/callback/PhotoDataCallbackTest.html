@@ -98,8 +98,8 @@
 <a class="jxr_linenumber" name="88" href="#88">88</a>  		AssertJUnit.assertEquals(DESCRIPTION, photo1.getDescription());
 <a class="jxr_linenumber" name="89" href="#89">89</a>  		verify(photoManager).saveAll(argumentCaptor.capture());
 <a class="jxr_linenumber" name="90" href="#90">90</a>  		AssertJUnit.assertEquals(photo1, argumentCaptor.getValue().get(0));
-<a class="jxr_linenumber" name="91" href="#91">91</a>  		AssertJUnit.assertEquals(IMAGE_DATA, photo1.getImage().getBytes());
-<a class="jxr_linenumber" name="92" href="#92">92</a>  		AssertJUnit.assertEquals(THUMB_DATA, photo1.getThumb().getBytes());
+<a class="jxr_linenumber" name="91" href="#91">91</a>  		AssertJUnit.assertEquals(IMAGE_DATA, photo1.getImage());
+<a class="jxr_linenumber" name="92" href="#92">92</a>  		AssertJUnit.assertEquals(THUMB_DATA, photo1.getThumb());
 <a class="jxr_linenumber" name="93" href="#93">93</a>  		AssertJUnit.assertTrue(photo1.isThumbLoaded());
 <a class="jxr_linenumber" name="94" href="#94">94</a>  		AssertJUnit.assertTrue(photo1.isImageLoaded());
 <a class="jxr_linenumber" name="95" href="#95">95</a>  		PhotoInfo info = tag1.getCachedPhotoList().first(); 

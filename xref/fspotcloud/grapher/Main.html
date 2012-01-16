@@ -18,36 +18,37 @@
 <a class="jxr_linenumber" name="8" href="#8">8</a>   <strong class="jxr_keyword">import</strong> fspotcloud.peer.inject.PeerActionsModule;
 <a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> fspotcloud.peer.inject.PeerModule;
 <a class="jxr_linenumber" name="10" href="#10">10</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.control.task.TaskModule;
-<a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.inject.FSCControllerModule;
-<a class="jxr_linenumber" name="12" href="#12">12</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.inject.FSpotCloudModule;
+<a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.inject.ServerControllerModule;
+<a class="jxr_linenumber" name="12" href="#12">12</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.inject.ServerModule;
 <a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.ModelModule;
 <a class="jxr_linenumber" name="14" href="#14">14</a>  
 <a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../fspotcloud/grapher/Main.html">Main</a> {
-<a class="jxr_linenumber" name="16" href="#16">16</a>  	Injector serverInjector = Guice.createInjector(<strong class="jxr_keyword">new</strong> <a href="../../fspotcloud/server/inject/FSpotCloudModule.html">FSpotCloudModule</a>(),
-<a class="jxr_linenumber" name="17" href="#17">17</a>  			<strong class="jxr_keyword">new</strong> <a href="../../fspotcloud/server/model/ModelModule.html">ModelModule</a>(), <strong class="jxr_keyword">new</strong> fspotcloud.server.inject.AdminActionsModule(), <strong class="jxr_keyword">new</strong> TaskModule(), <strong class="jxr_keyword">new</strong> FSCControllerModule(),
-<a class="jxr_linenumber" name="18" href="#18">18</a>  			<strong class="jxr_keyword">new</strong> ControllerServletModule(), <strong class="jxr_keyword">new</strong> MinimalCommandModelModule());
-<a class="jxr_linenumber" name="19" href="#19">19</a>  	Injector modelInjector = Guice.createInjector(<strong class="jxr_keyword">new</strong> <a href="../../fspotcloud/server/model/ModelModule.html">ModelModule</a>());
-<a class="jxr_linenumber" name="20" href="#20">20</a>  	Injector peerInjector = Guice.createInjector(<strong class="jxr_keyword">new</strong> <a href="../../fspotcloud/peer/inject/PeerModule.html">PeerModule</a>(),  <strong class="jxr_keyword">new</strong> PeerActionsModule());
-<a class="jxr_linenumber" name="21" href="#21">21</a>  
-<a class="jxr_linenumber" name="22" href="#22">22</a>  	<em class="jxr_comment">// Injector clientInjector = Guice.createInjector(new GinModuleAdapter(new</em>
-<a class="jxr_linenumber" name="23" href="#23">23</a>  	<em class="jxr_comment">// FakeForGrapherAppModule()));</em>
-<a class="jxr_linenumber" name="24" href="#24">24</a>  
-<a class="jxr_linenumber" name="25" href="#25">25</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> main(String[] args) <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="26" href="#26">26</a>  		Main g = <strong class="jxr_keyword">new</strong> <a href="../../fspotcloud/grapher/Main.html">Main</a>();
-<a class="jxr_linenumber" name="27" href="#27">27</a>  		g.plotAll();
-<a class="jxr_linenumber" name="28" href="#28">28</a>  
-<a class="jxr_linenumber" name="29" href="#29">29</a>  	}
-<a class="jxr_linenumber" name="30" href="#30">30</a>  
-<a class="jxr_linenumber" name="31" href="#31">31</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> plotAll() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="32" href="#32">32</a>  		plot(modelInjector, <span class="jxr_string">"model"</span>);
-<a class="jxr_linenumber" name="33" href="#33">33</a>  		plot(serverInjector, <span class="jxr_string">"server"</span>);
-<a class="jxr_linenumber" name="34" href="#34">34</a>  		plot(peerInjector, <span class="jxr_string">"peer"</span>);
-<a class="jxr_linenumber" name="35" href="#35">35</a>  	}
-<a class="jxr_linenumber" name="36" href="#36">36</a>  
-<a class="jxr_linenumber" name="37" href="#37">37</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> plot(Injector injector, String name) <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="38" href="#38">38</a>  		<strong class="jxr_keyword">new</strong> <a href="../../fspotcloud/grapher/Grapher.html">Grapher</a>(injector, name);
-<a class="jxr_linenumber" name="39" href="#39">39</a>  	}
-<a class="jxr_linenumber" name="40" href="#40">40</a>  }
+<a class="jxr_linenumber" name="16" href="#16">16</a>  
+<a class="jxr_linenumber" name="17" href="#17">17</a>      Injector serverInjector = Guice.createInjector(<strong class="jxr_keyword">new</strong> <a href="../../fspotcloud/server/inject/ServerModule.html">ServerModule</a>(),
+<a class="jxr_linenumber" name="18" href="#18">18</a>              <strong class="jxr_keyword">new</strong> <a href="../../fspotcloud/server/model/ModelModule.html">ModelModule</a>(), <strong class="jxr_keyword">new</strong> fspotcloud.server.inject.AdminActionsModule(),
+<a class="jxr_linenumber" name="19" href="#19">19</a>              <strong class="jxr_keyword">new</strong> <a href="../../fspotcloud/server/control/task/TaskModule.html">TaskModule</a>(), <strong class="jxr_keyword">new</strong> ServerControllerModule(),
+<a class="jxr_linenumber" name="20" href="#20">20</a>              <strong class="jxr_keyword">new</strong> ControllerServletModule(), <strong class="jxr_keyword">new</strong> MinimalCommandModelModule());
+<a class="jxr_linenumber" name="21" href="#21">21</a>      Injector modelInjector = Guice.createInjector(<strong class="jxr_keyword">new</strong> <a href="../../fspotcloud/server/model/ModelModule.html">ModelModule</a>());
+<a class="jxr_linenumber" name="22" href="#22">22</a>      Injector peerInjector = Guice.createInjector(<strong class="jxr_keyword">new</strong> <a href="../../fspotcloud/peer/inject/PeerModule.html">PeerModule</a>(), <strong class="jxr_keyword">new</strong> PeerActionsModule());
+<a class="jxr_linenumber" name="23" href="#23">23</a>  
+<a class="jxr_linenumber" name="24" href="#24">24</a>      <em class="jxr_comment">// Injector clientInjector = Guice.createInjector(new GinModuleAdapter(new</em>
+<a class="jxr_linenumber" name="25" href="#25">25</a>      <em class="jxr_comment">// FakeForGrapherAppModule()));</em>
+<a class="jxr_linenumber" name="26" href="#26">26</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> main(String[] args) <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="27" href="#27">27</a>          <a href="../../fspotcloud/grapher/Main.html">Main</a> g = <strong class="jxr_keyword">new</strong> <a href="../../fspotcloud/grapher/Main.html">Main</a>();
+<a class="jxr_linenumber" name="28" href="#28">28</a>          g.plotAll();
+<a class="jxr_linenumber" name="29" href="#29">29</a>  
+<a class="jxr_linenumber" name="30" href="#30">30</a>      }
+<a class="jxr_linenumber" name="31" href="#31">31</a>  
+<a class="jxr_linenumber" name="32" href="#32">32</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> plotAll() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="33" href="#33">33</a>          plot(modelInjector, <span class="jxr_string">"model"</span>);
+<a class="jxr_linenumber" name="34" href="#34">34</a>          plot(serverInjector, <span class="jxr_string">"server"</span>);
+<a class="jxr_linenumber" name="35" href="#35">35</a>          plot(peerInjector, <span class="jxr_string">"peer"</span>);
+<a class="jxr_linenumber" name="36" href="#36">36</a>      }
+<a class="jxr_linenumber" name="37" href="#37">37</a>  
+<a class="jxr_linenumber" name="38" href="#38">38</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> plot(Injector injector, String name) <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="39" href="#39">39</a>          <strong class="jxr_keyword">new</strong> <a href="../../fspotcloud/grapher/Grapher.html">Grapher</a>(injector, name);
+<a class="jxr_linenumber" name="40" href="#40">40</a>      }
+<a class="jxr_linenumber" name="41" href="#41">41</a>  }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

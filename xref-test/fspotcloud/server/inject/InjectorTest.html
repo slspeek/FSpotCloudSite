@@ -16,31 +16,20 @@
 <a class="jxr_linenumber" name="6" href="#6">6</a>   <strong class="jxr_keyword">import</strong> com.google.inject.Injector;
 <a class="jxr_linenumber" name="7" href="#7">7</a>   
 <a class="jxr_linenumber" name="8" href="#8">8</a>   <strong class="jxr_keyword">import</strong> fspotcloud.botdispatch.controller.dispatch.ControllerDispatchAsync;
-<a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> fspotcloud.botdispatch.controller.inject.ControllerServletModule;
-<a class="jxr_linenumber" name="10" href="#10">10</a>  <strong class="jxr_keyword">import</strong> fspotcloud.botdispatch.model.MinimalCommandModelModule;
-<a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.control.task.TaskActionsModule;
-<a class="jxr_linenumber" name="12" href="#12">12</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.control.task.TaskModule;
-<a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.ModelModule;
-<a class="jxr_linenumber" name="14" href="#14">14</a>  <strong class="jxr_keyword">import</strong> fspotcloud.taskqueuedispatch.inject.TaskQueueDispatchModule;
-<a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">import</strong> fspotcloud.taskqueuedispatch.inject.TaskQueueDispatchServletModule;
-<a class="jxr_linenumber" name="16" href="#16">16</a>  
-<a class="jxr_linenumber" name="17" href="#17">17</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../fspotcloud/server/inject/InjectorTest.html">InjectorTest</a> {
-<a class="jxr_linenumber" name="18" href="#18">18</a>  	@Test
-<a class="jxr_linenumber" name="19" href="#19">19</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testInjector() {
-<a class="jxr_linenumber" name="20" href="#20">20</a>  		Injector injector = Guice.createInjector(<strong class="jxr_keyword">new</strong> FSpotCloudServletModule(),
-<a class="jxr_linenumber" name="21" href="#21">21</a>  				<strong class="jxr_keyword">new</strong> FSpotCloudModule(), <strong class="jxr_keyword">new</strong> AdminActionsModule(), <strong class="jxr_keyword">new</strong> ModelModule(),
-<a class="jxr_linenumber" name="22" href="#22">22</a>  				<strong class="jxr_keyword">new</strong> TaskModule(), <strong class="jxr_keyword">new</strong> FSCControllerModule(),
-<a class="jxr_linenumber" name="23" href="#23">23</a>  				<strong class="jxr_keyword">new</strong> ControllerServletModule(), <strong class="jxr_keyword">new</strong> MinimalCommandModelModule(),
-<a class="jxr_linenumber" name="24" href="#24">24</a>  				<strong class="jxr_keyword">new</strong> TaskQueueDispatchModule(),
-<a class="jxr_linenumber" name="25" href="#25">25</a>  				<strong class="jxr_keyword">new</strong> TaskQueueDispatchServletModule(), <strong class="jxr_keyword">new</strong> TaskActionsModule());
-<a class="jxr_linenumber" name="26" href="#26">26</a>  		AssertJUnit.assertNotNull(injector);
-<a class="jxr_linenumber" name="27" href="#27">27</a>  		<em class="jxr_comment">// PeerDatabases defaultPeer =</em>
-<a class="jxr_linenumber" name="28" href="#28">28</a>  		<em class="jxr_comment">// injector.getInstance(PeerDatabases.class);</em>
-<a class="jxr_linenumber" name="29" href="#29">29</a>  		ControllerDispatchAsync controller = injector
-<a class="jxr_linenumber" name="30" href="#30">30</a>  				.getInstance(ControllerDispatchAsync.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="31" href="#31">31</a>  		AssertJUnit.assertNotNull(controller);
-<a class="jxr_linenumber" name="32" href="#32">32</a>  	}
-<a class="jxr_linenumber" name="33" href="#33">33</a>  }
+<a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.PeerDatabases;
+<a class="jxr_linenumber" name="10" href="#10">10</a>  
+<a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../fspotcloud/server/inject/InjectorTest.html">InjectorTest</a> {
+<a class="jxr_linenumber" name="12" href="#12">12</a>  	@Test
+<a class="jxr_linenumber" name="13" href="#13">13</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testInjector() {
+<a class="jxr_linenumber" name="14" href="#14">14</a>  		Injector injector = Guice.createInjector(<strong class="jxr_keyword">new</strong> J2eeTotalModule());
+<a class="jxr_linenumber" name="15" href="#15">15</a>  		AssertJUnit.assertNotNull(injector);
+<a class="jxr_linenumber" name="16" href="#16">16</a>  		PeerDatabases defaultPeer =
+<a class="jxr_linenumber" name="17" href="#17">17</a>  		 injector.getInstance(PeerDatabases.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="18" href="#18">18</a>  		ControllerDispatchAsync controller = injector
+<a class="jxr_linenumber" name="19" href="#19">19</a>  				.getInstance(ControllerDispatchAsync.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="20" href="#20">20</a>  		AssertJUnit.assertNotNull(controller);
+<a class="jxr_linenumber" name="21" href="#21">21</a>  	}
+<a class="jxr_linenumber" name="22" href="#22">22</a>  }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

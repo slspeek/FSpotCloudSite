@@ -9,11 +9,11 @@ fspotcloud.server.model.tag
 fspotcloud.server.model
 fspotcloud.server.model.peerdatabase
 fspotcloud.server.model.photo
+fspotcloud.model.jpa.tag
+fspotcloud.model.jpa
+fspotcloud.model.jpa.peerdatabase
+fspotcloud.model.jpa.photo
 fspotcloud.shared.peer.rpc.actions
-fspotcloud.peer.db
-fspotcloud.peer
-fspotcloud.peer.inject
-fspotcloud.peer.handlers
 fspotcloud.server.cron
 fspotcloud.server.main
 fspotcloud.server.inject
@@ -27,6 +27,10 @@ fspotcloud.server.control.task.actions.intern
 fspotcloud.server.control.task.photoupdate
 fspotcloud.server.control.callback
 fspotcloud.server.admin.actions
+fspotcloud.peer.db
+fspotcloud.peer
+fspotcloud.peer.inject
+fspotcloud.peer.handlers
 fspotcloud.client.main.help
 fspotcloud.client.main
 fspotcloud.client.main.api
