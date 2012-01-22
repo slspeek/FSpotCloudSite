@@ -3,6 +3,7 @@ fspotcloud.shared.tag
 fspotcloud.shared.photo
 fspotcloud.shared.dashboard.actions
 fspotcloud.shared.admin
+fspotcloud.shared.peer.rpc.actions
 fspotcloud.test
 fspotcloud.server.model.api
 fspotcloud.server.model.tag
@@ -13,7 +14,6 @@ fspotcloud.model.jpa.tag
 fspotcloud.model.jpa
 fspotcloud.model.jpa.peerdatabase
 fspotcloud.model.jpa.photo
-fspotcloud.shared.peer.rpc.actions
 fspotcloud.server.cron
 fspotcloud.server.main
 fspotcloud.server.inject
