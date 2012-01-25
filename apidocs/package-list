@@ -47,6 +47,7 @@ fspotcloud.server.control.task.tagimport
 fspotcloud.server.cron
 fspotcloud.server.inject
 fspotcloud.server.main
+fspotcloud.server.main.user
 fspotcloud.server.model
 fspotcloud.server.model.api
 fspotcloud.server.model.peerdatabase
@@ -54,7 +55,10 @@ fspotcloud.server.model.photo
 fspotcloud.server.model.tag
 fspotcloud.shared.admin
 fspotcloud.shared.dashboard.actions
+fspotcloud.shared.main.actions
 fspotcloud.shared.peer.rpc.actions
 fspotcloud.shared.photo
 fspotcloud.shared.tag
 fspotcloud.test
+fspotcloud.user
+fspotcloud.user.gae

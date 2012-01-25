@@ -2,10 +2,12 @@ fspotcloud.shared.tag
 fspotcloud.shared.photo
 fspotcloud.shared.admin
 fspotcloud.shared.peer.rpc.actions
+fspotcloud.user.gae
 fspotcloud.server.model
 fspotcloud.server.model.tag
 fspotcloud.server.model.peerdatabase
 fspotcloud.server.model.photo
+fspotcloud.server.main.user
 fspotcloud.server.inject
 fspotcloud.server.control.task.tagimport
 fspotcloud.server.control.task.tagdelete

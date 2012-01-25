@@ -22,6 +22,7 @@ fspotcloud.server.control.task.photoupdate
 fspotcloud.server.control.task.tagdelete
 fspotcloud.server.control.task.tagimport
 fspotcloud.server.inject
+fspotcloud.server.main.user
 fspotcloud.server.model
 fspotcloud.server.model.peerdatabase
 fspotcloud.server.model.photo
@@ -31,3 +32,4 @@ fspotcloud.shared.peer.rpc.actions
 fspotcloud.shared.photo
 fspotcloud.shared.tag
 fspotcloud.test
+fspotcloud.user.gae

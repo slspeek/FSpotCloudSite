@@ -1,9 +1,12 @@
 fspotcloud.rpc
 fspotcloud.shared.tag
+fspotcloud.shared.main.actions
 fspotcloud.shared.photo
 fspotcloud.shared.dashboard.actions
 fspotcloud.shared.admin
 fspotcloud.shared.peer.rpc.actions
+fspotcloud.user
+fspotcloud.user.gae
 fspotcloud.test
 fspotcloud.server.model.api
 fspotcloud.server.model.tag
@@ -16,6 +19,7 @@ fspotcloud.model.jpa.peerdatabase
 fspotcloud.model.jpa.photo
 fspotcloud.server.cron
 fspotcloud.server.main
+fspotcloud.server.main.user
 fspotcloud.server.inject
 fspotcloud.server.control.hook
 fspotcloud.server.control.task.tagimport
