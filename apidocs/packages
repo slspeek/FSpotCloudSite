@@ -7,6 +7,7 @@ fspotcloud.shared.admin
 fspotcloud.shared.peer.rpc.actions
 fspotcloud.user
 fspotcloud.user.gae
+fspotcloud.user.openid
 fspotcloud.test
 fspotcloud.server.model.api
 fspotcloud.server.model.tag

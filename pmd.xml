@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2012-01-25T23:27:10.475">
+<pmd version="4.2.5" timestamp="2012-01-26T23:21:21.529">
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/admin/DashboardEntryPoint.java">
 <violation beginline="8" endline="8" begincolumn="1" endcolumn="53" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'com.google.gwt.user.client.ui.RootLayoutPanel'
@@ -164,6 +164,19 @@ These nested if statements could be combined
 </violation>
 <violation beginline="67" endline="70" begincolumn="49" endcolumn="49" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="fspotcloud.server.control.task.photoremove" class="RemovePhotosFromTagHandler" method="checkForDeletion" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="3">
 These nested if statements could be combined
+</violation>
+</file>
+<file name="/home/steven/fspotcloud/user-service-openid/src/main/java/fspotcloud/user/openid/OpenIdUserModule.java">
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="40" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.user.openid" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'com.google.inject.AbstractModule'
+</violation>
+</file>
+<file name="/home/steven/fspotcloud/user-service-openid/src/main/java/fspotcloud/user/openid/OpenIdUserService.java">
+<violation beginline="9" endline="9" begincolumn="1" endcolumn="47" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.user.openid" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'com.google.inject.servlet.RequestScoped'
+</violation>
+<violation beginline="10" endline="10" begincolumn="1" endcolumn="47" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.user.openid" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'com.google.inject.servlet.SessionScoped'
 </violation>
 </file>
 <suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/data/IndexingUtil.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>

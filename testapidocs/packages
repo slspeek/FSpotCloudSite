@@ -3,6 +3,7 @@ fspotcloud.shared.photo
 fspotcloud.shared.admin
 fspotcloud.shared.peer.rpc.actions
 fspotcloud.user.gae
+fspotcloud.user.openid
 fspotcloud.server.model
 fspotcloud.server.model.tag
 fspotcloud.server.model.peerdatabase

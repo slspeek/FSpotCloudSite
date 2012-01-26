@@ -62,3 +62,4 @@ fspotcloud.shared.tag
 fspotcloud.test
 fspotcloud.user
 fspotcloud.user.gae
+fspotcloud.user.openid

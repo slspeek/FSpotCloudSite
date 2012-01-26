@@ -33,3 +33,4 @@ fspotcloud.shared.photo
 fspotcloud.shared.tag
 fspotcloud.test
 fspotcloud.user.gae
+fspotcloud.user.openid
