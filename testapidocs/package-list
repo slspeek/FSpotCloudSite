@@ -9,6 +9,10 @@ fspotcloud.client.main.view
 fspotcloud.client.main.view.api
 fspotcloud.client.place
 fspotcloud.client.view.action
+fspotcloud.model.api.test
+fspotcloud.model.api.test.peerdatabase
+fspotcloud.model.api.test.photo
+fspotcloud.model.api.test.tag
 fspotcloud.peer
 fspotcloud.peer.db
 fspotcloud.peer.handlers
@@ -27,10 +31,13 @@ fspotcloud.server.model
 fspotcloud.server.model.peerdatabase
 fspotcloud.server.model.photo
 fspotcloud.server.model.tag
+fspotcloud.server.model.test
 fspotcloud.shared.admin
+fspotcloud.shared.main.actions
 fspotcloud.shared.peer.rpc.actions
 fspotcloud.shared.photo
 fspotcloud.shared.tag
 fspotcloud.test
+fspotcloud.user
 fspotcloud.user.gae
 fspotcloud.user.openid

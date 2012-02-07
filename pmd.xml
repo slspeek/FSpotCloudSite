@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2012-01-26T23:21:21.529">
+<pmd version="4.2.5" timestamp="2012-02-07T22:02:10.478">
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/admin/DashboardEntryPoint.java">
 <violation beginline="8" endline="8" begincolumn="1" endcolumn="53" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'com.google.gwt.user.client.ui.RootLayoutPanel'
@@ -12,6 +12,23 @@ Avoid unused imports such as 'fspotcloud.client.admin.view.DashboardPresenter'
 </violation>
 <violation beginline="13" endline="13" begincolumn="1" endcolumn="54" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'fspotcloud.client.admin.view.api.DashboardView'
+</violation>
+</file>
+<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/admin/MVPSetup.java">
+<violation beginline="10" endline="10" begincolumn="1" endcolumn="41" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'com.google.gwt.user.client.Window'
+</violation>
+<violation beginline="11" endline="11" begincolumn="1" endcolumn="52" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'com.google.gwt.user.client.rpc.AsyncCallback'
+</violation>
+<violation beginline="20" endline="20" begincolumn="1" endcolumn="50" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'fspotcloud.shared.main.actions.GetUserInfo'
+</violation>
+<violation beginline="21" endline="21" begincolumn="1" endcolumn="47" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'fspotcloud.shared.main.actions.UserInfo'
+</violation>
+<violation beginline="30" endline="30" begincolumn="35" endcolumn="49" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.admin" class="MVPSetup" variable="userInformation" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'userInformation'.
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/demo/DemoAction.java">
@@ -101,20 +118,38 @@ Avoid unused private fields such as 'log'.
 Avoid unused imports such as 'java.util.SortedSet'
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/peerdatabase/PeerDatabaseManager.java">
-<violation beginline="8" endline="8" begincolumn="1" endcolumn="27" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.model.jpa.peerdatabase" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+<file name="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/fspotcloud/model/jpa/peerdatabase/PeerDatabaseManager.java">
+<violation beginline="6" endline="6" begincolumn="1" endcolumn="49" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.model.jpa.peerdatabase" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'fspotcloud.server.model.api.PeerDatabases'
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="22" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.model.jpa.peerdatabase" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.util.Date'
+</violation>
+<violation beginline="13" endline="13" begincolumn="33" endcolumn="47" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.model.jpa.peerdatabase" class="PeerDatabaseManager" variable="DEFAULT_PEER_ID" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'DEFAULT_PEER_ID'.
+</violation>
+<violation beginline="14" endline="14" begincolumn="33" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.model.jpa.peerdatabase" class="PeerDatabaseManager" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'log'.
+</violation>
+</file>
+<file name="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/fspotcloud/model/jpa/photo/PhotoEntity.java">
+<violation beginline="8" endline="8" begincolumn="1" endcolumn="27" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.model.jpa.photo" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'java.util.ArrayList'
 </violation>
-<violation beginline="16" endline="16" begincolumn="33" endcolumn="44" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.model.jpa.peerdatabase" class="PeerDatabaseManager" variable="DEFAULT_PEER" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
-Avoid unused private fields such as 'DEFAULT_PEER'.
+<violation beginline="9" endline="9" begincolumn="1" endcolumn="22" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.model.jpa.photo" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.util.Date'
+</violation>
+<violation beginline="10" endline="10" begincolumn="1" endcolumn="22" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.model.jpa.photo" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.util.List'
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/photo/PhotoManager.java">
-<violation beginline="13" endline="13" begincolumn="1" endcolumn="24" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.model.jpa.photo" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'java.util.Arrays'
+<file name="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/fspotcloud/model/jpa/tag/TagEntity.java">
+<violation beginline="6" endline="6" begincolumn="1" endcolumn="39" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.model.jpa.tag" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'fspotcloud.server.model.api.Tag'
 </violation>
-</file>
-<file name="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/tag/TagEntity.java">
+<violation beginline="8" endline="8" begincolumn="1" endcolumn="28" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.model.jpa.tag" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.io.Serializable'
+</violation>
 <violation beginline="9" endline="9" begincolumn="1" endcolumn="27" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.model.jpa.tag" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'java.util.SortedSet'
 </violation>
@@ -122,11 +157,44 @@ Avoid unused imports such as 'java.util.SortedSet'
 Avoid unused imports such as 'org.hibernate.annotations.GenericGenerator'
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/tag/TagManager.java">
-<violation beginline="20" endline="20" begincolumn="33" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.model.jpa.tag" class="TagManager" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<file name="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/fspotcloud/model/jpa/tag/TagManager.java">
+<violation beginline="12" endline="12" begincolumn="33" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.model.jpa.tag" class="TagManager" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'log'.
 </violation>
-<violation beginline="22" endline="22" begincolumn="27" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.model.jpa.tag" class="TagManager" variable="maxDelete" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+</file>
+<file name="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/peerdatabase/PeerDatabaseEntityBase.java">
+<violation beginline="4" endline="4" begincolumn="1" endcolumn="37" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.model.jpa.peerdatabase" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'fspotcloud.shared.tag.TagNode'
+</violation>
+<violation beginline="6" endline="6" begincolumn="1" endcolumn="27" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.model.jpa.peerdatabase" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.util.ArrayList'
+</violation>
+<violation beginline="8" endline="8" begincolumn="1" endcolumn="22" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.model.jpa.peerdatabase" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.util.List'
+</violation>
+<violation beginline="10" endline="10" begincolumn="1" endcolumn="50" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.model.jpa.peerdatabase" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'org.apache.commons.lang.SerializationUtils'
+</violation>
+</file>
+<file name="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/tag/TagEntityBase.java">
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="41" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.model.jpa.tag" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'fspotcloud.shared.photo.PhotoInfo'
+</violation>
+<violation beginline="9" endline="9" begincolumn="1" endcolumn="27" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.model.jpa.tag" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.util.SortedSet'
+</violation>
+<violation beginline="10" endline="10" begincolumn="1" endcolumn="25" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.model.jpa.tag" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.util.TreeSet'
+</violation>
+<violation beginline="12" endline="12" begincolumn="1" endcolumn="50" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.model.jpa.tag" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'org.hibernate.annotations.GenericGenerator'
+</violation>
+</file>
+<file name="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/tag/TagManagerBase.java">
+<violation beginline="20" endline="20" begincolumn="33" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.model.jpa.tag" class="TagManagerBase" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'log'.
+</violation>
+<violation beginline="22" endline="22" begincolumn="27" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.model.jpa.tag" class="TagManagerBase" variable="maxDelete" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'maxDelete'.
 </violation>
 </file>
@@ -166,6 +234,11 @@ These nested if statements could be combined
 These nested if statements could be combined
 </violation>
 </file>
+<file name="/home/steven/fspotcloud/user-service-api/src/main/java/fspotcloud/user/AdminPermission.java">
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="35" rule="ImportFromSamePackage" ruleset="Import Statement Rules" package="fspotcloud.user" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#ImportFromSamePackage" priority="3">
+No need to import a type that lives in the same package
+</violation>
+</file>
 <file name="/home/steven/fspotcloud/user-service-openid/src/main/java/fspotcloud/user/openid/OpenIdUserModule.java">
 <violation beginline="7" endline="7" begincolumn="1" endcolumn="40" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.user.openid" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'com.google.inject.AbstractModule'
@@ -195,7 +268,8 @@ Avoid unused imports such as 'com.google.inject.servlet.SessionScoped'
 <suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/factory/ButtonPanelPresenterProvider.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/factory/SingleImageViewActivityFactoryImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'controlsPresenter'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/factory/TagPresenterFactoryImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/photo/PhotoManager.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/fspotcloud/model/jpa/photo/PhotoManager.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/photo/PhotoManagerBase.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/model/src/main/java/fspotcloud/server/model/photo/PhotoManager.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/admin/actions/CommandDeleteAllHandler.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 <suppressedviolation filename="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/admin/actions/GetMetaDataHandler.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
