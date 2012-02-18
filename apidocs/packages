@@ -18,6 +18,9 @@ fspotcloud.model.jpa.tag
 fspotcloud.model.jpa
 fspotcloud.model.jpa.peerdatabase
 fspotcloud.model.jpa.photo
+fspotcloud.model.jpa.gae.tag
+fspotcloud.model.jpa.gae.peerdatabase
+fspotcloud.model.jpa.gae.photo
 fspotcloud.server.cron
 fspotcloud.server.main
 fspotcloud.server.main.user

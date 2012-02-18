@@ -72,6 +72,43 @@
 ]]>
 </codefragment>
 </duplication>
+<duplication lines="29" tokens="129">
+<file line="14" path="/home/steven/fspotcloud/model-jpa-gae/src/main/java/fspotcloud/model/jpa/gae/peerdatabase/PeerDatabaseEntity.java"/>
+<file line="13" path="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/fspotcloud/model/jpa/peerdatabase/PeerDatabaseEntity.java"/>
+<codefragment>
+<![CDATA[
+@Entity
+public class PeerDatabaseEntity extends PeerDatabaseEntityBase {
+
+    @Lob
+    byte[] cachedTagTreeData;
+    transient private ArrayList<TagNode> cachedTagTree = null;
+
+    public PeerDatabaseEntity() {
+    }
+
+    @Override
+    public void setCachedTagTree(List<TagNode> cachedTagTree) {
+        if (cachedTagTree == null) {
+            this.cachedTagTree = null;
+            this.cachedTagTreeData = null;
+        } else {
+            this.cachedTagTree = new ArrayList<TagNode>(cachedTagTree);
+            this.cachedTagTreeData = SerializationUtils.serialize(this.cachedTagTree);
+        }
+    }
+
+    @Override
+    public List<TagNode> getCachedTagTree() {
+        if (cachedTagTree == null && cachedTagTreeData != null) {
+            cachedTagTree = (ArrayList<TagNode>) SerializationUtils.deserialize(cachedTagTreeData);
+        }
+        return cachedTagTree;
+    }
+}
+]]>
+</codefragment>
+</duplication>
 <duplication lines="47" tokens="128">
 <file line="35" path="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/tag/TagEntityBase.java"/>
 <file line="39" path="/home/steven/fspotcloud/model/src/main/java/fspotcloud/server/model/tag/TagDO.java"/>
@@ -124,6 +161,24 @@
 
     @Override
     public void setCachedPhotoList(TreeSet<PhotoInfo> cachedPhotoList) {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="104">
+<file line="14" path="/home/steven/fspotcloud/model-jpa-gae/src/main/java/fspotcloud/model/jpa/ModelModule.java"/>
+<file line="14" path="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/fspotcloud/model/jpa/ModelModule.java"/>
+<codefragment>
+<![CDATA[
+public class ModelModule extends AbstractModule {
+
+    @Override
+    protected void configure() {
+        bind(Photos.class).to(PhotoManager.class).in(Singleton.class);
+        bind(PeerDatabases.class).to(PeerDatabaseManager.class).in(
+                Singleton.class);
+        bind(Tags.class).to(TagManager.class).in(Singleton.class);
+        bind(Integer.class).annotatedWith(Names.named("maxDelete")).toInstance(new Integer(100));
+        install(new JpaPersistModule("derby"));
 ]]>
 </codefragment>
 </duplication>

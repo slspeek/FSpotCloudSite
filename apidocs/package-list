@@ -26,6 +26,9 @@ fspotcloud.client.view.action
 fspotcloud.client.view.action.api
 fspotcloud.grapher
 fspotcloud.model.jpa
+fspotcloud.model.jpa.gae.peerdatabase
+fspotcloud.model.jpa.gae.photo
+fspotcloud.model.jpa.gae.tag
 fspotcloud.model.jpa.peerdatabase
 fspotcloud.model.jpa.photo
 fspotcloud.model.jpa.tag
