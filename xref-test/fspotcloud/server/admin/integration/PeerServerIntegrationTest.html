@@ -68,7 +68,7 @@
 <a class="jxr_linenumber" name="58" href="#58">58</a>  
 <a class="jxr_linenumber" name="59" href="#59">59</a>      @AfterMethod
 <a class="jxr_linenumber" name="60" href="#60">60</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> tearDown() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="61" href="#61">61</a>          tags.deleteAll(tags.getTagKeys());
+<a class="jxr_linenumber" name="61" href="#61">61</a>          tags.deleteBulk(1000);
 <a class="jxr_linenumber" name="62" href="#62">62</a>          <em class="jxr_comment">// Make this the call to TestNgGuiceBerry.tearDown as late as possible</em>
 <a class="jxr_linenumber" name="63" href="#63">63</a>          toTearDown.tearDown();
 <a class="jxr_linenumber" name="64" href="#64">64</a>      }

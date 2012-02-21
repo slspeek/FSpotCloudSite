@@ -17,14 +17,14 @@
 <a class="jxr_linenumber" name="7" href="#7">7</a>   <strong class="jxr_keyword">import</strong> javax.inject.Named;
 <a class="jxr_linenumber" name="8" href="#8">8</a>   <strong class="jxr_keyword">import</strong> javax.persistence.EntityManager;
 <a class="jxr_linenumber" name="9" href="#9">9</a>   
-<a class="jxr_linenumber" name="10" href="#10">10</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../fspotcloud/model/jpa/tag/TagManager.html">TagManager</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../fspotcloud/model/jpa/tag/TagManagerBase.html">TagManagerBase</a> {
+<a class="jxr_linenumber" name="10" href="#10">10</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../fspotcloud/model/jpa/tag/TagManager.html">TagManager</a> <strong class="jxr_keyword">extends</strong> TagManagerBase&lt;Tag, TagEntity&gt;  {
 <a class="jxr_linenumber" name="11" href="#11">11</a>  
 <a class="jxr_linenumber" name="12" href="#12">12</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger log = Logger.getLogger(TagManager.<strong class="jxr_keyword">class</strong>.getName());
 <a class="jxr_linenumber" name="13" href="#13">13</a>  
 <a class="jxr_linenumber" name="14" href="#14">14</a>      @Inject
 <a class="jxr_linenumber" name="15" href="#15">15</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../fspotcloud/model/jpa/tag/TagManager.html">TagManager</a>(Provider&lt;EntityManager&gt; pmProvider,
 <a class="jxr_linenumber" name="16" href="#16">16</a>              @Named(<span class="jxr_string">"maxDelete"</span>) Integer maxDelete) {
-<a class="jxr_linenumber" name="17" href="#17">17</a>          <strong class="jxr_keyword">super</strong>(pmProvider, maxDelete);
+<a class="jxr_linenumber" name="17" href="#17">17</a>          <strong class="jxr_keyword">super</strong>(TagEntity.<strong class="jxr_keyword">class</strong>,pmProvider, maxDelete);
 <a class="jxr_linenumber" name="18" href="#18">18</a>      }
 <a class="jxr_linenumber" name="19" href="#19">19</a>  
 <a class="jxr_linenumber" name="20" href="#20">20</a>      @Override

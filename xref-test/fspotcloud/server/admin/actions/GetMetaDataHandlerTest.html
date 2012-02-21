@@ -22,9 +22,9 @@
 <a class="jxr_linenumber" name="12" href="#12">12</a>  <strong class="jxr_keyword">import</strong> org.testng.annotations.Test;
 <a class="jxr_linenumber" name="13" href="#13">13</a>  
 <a class="jxr_linenumber" name="14" href="#14">14</a>  <strong class="jxr_keyword">import</strong> fspotcloud.botdispatch.model.api.Commands;
-<a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.PeerDatabase;
-<a class="jxr_linenumber" name="16" href="#16">16</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.PeerDatabases;
-<a class="jxr_linenumber" name="17" href="#17">17</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.peerdatabase.PeerDatabaseDO;
+<a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">import</strong> fspotcloud.model.jpa.peerdatabase.PeerDatabaseEntity;
+<a class="jxr_linenumber" name="16" href="#16">16</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.PeerDatabase;
+<a class="jxr_linenumber" name="17" href="#17">17</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.PeerDatabases;
 <a class="jxr_linenumber" name="18" href="#18">18</a>  <strong class="jxr_keyword">import</strong> fspotcloud.shared.admin.GetMetaDataResult;
 <a class="jxr_linenumber" name="19" href="#19">19</a>  <strong class="jxr_keyword">import</strong> fspotcloud.shared.dashboard.actions.GetMetaData;
 <a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">import</strong> fspotcloud.user.AdminPermission;
@@ -43,7 +43,7 @@
 <a class="jxr_linenumber" name="33" href="#33">33</a>  	@BeforeMethod
 <a class="jxr_linenumber" name="34" href="#34">34</a>  	<strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> setUp() <strong class="jxr_keyword">throws</strong> Exception {
 <a class="jxr_linenumber" name="35" href="#35">35</a>  		MockitoAnnotations.initMocks(<strong class="jxr_keyword">this</strong>);
-<a class="jxr_linenumber" name="36" href="#36">36</a>  		pd = <strong class="jxr_keyword">new</strong> PeerDatabaseDO();
+<a class="jxr_linenumber" name="36" href="#36">36</a>  		pd = <strong class="jxr_keyword">new</strong> PeerDatabaseEntity();
 <a class="jxr_linenumber" name="37" href="#37">37</a>  		handler = <strong class="jxr_keyword">new</strong> GetMetaDataHandler(commandManager, defaultPeer, adminPermission);
 <a class="jxr_linenumber" name="38" href="#38">38</a>  	}
 <a class="jxr_linenumber" name="39" href="#39">39</a>  

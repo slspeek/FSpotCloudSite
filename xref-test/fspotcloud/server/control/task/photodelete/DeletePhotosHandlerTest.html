@@ -31,14 +31,14 @@
 <a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">import</strong> org.testng.annotations.Test;
 <a class="jxr_linenumber" name="22" href="#22">22</a>  
 <a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> com.google.appengine.repackaged.com.google.common.collect.ImmutableList;
-<a class="jxr_linenumber" name="24" href="#24">24</a>  
-<a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.control.task.actions.intern.DeletePhotos;
-<a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.Photo;
-<a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.Photos;
-<a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.Tag;
-<a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.Tags;
-<a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.photo.PhotoDO;
-<a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.tag.TagDO;
+<a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> fspotcloud.model.jpa.photo.PhotoEntity;
+<a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> fspotcloud.model.jpa.tag.TagEntity;
+<a class="jxr_linenumber" name="26" href="#26">26</a>  
+<a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.control.task.actions.intern.DeletePhotos;
+<a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.Photo;
+<a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.Photos;
+<a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.Tag;
+<a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> fspotcloud.server.model.api.Tags;
 <a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> fspotcloud.shared.photo.PhotoInfo;
 <a class="jxr_linenumber" name="33" href="#33">33</a>  <strong class="jxr_keyword">import</strong> fspotcloud.taskqueuedispatch.TaskQueueDispatch;
 <a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../fspotcloud/server/control/task/photodelete/DeletePhotosHandlerTest.html">DeletePhotosHandlerTest</a> {
@@ -71,14 +71,14 @@
 <a class="jxr_linenumber" name="61" href="#61">61</a>  	<strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> setUp() <strong class="jxr_keyword">throws</strong> Exception {
 <a class="jxr_linenumber" name="62" href="#62">62</a>  		MockitoAnnotations.initMocks(<strong class="jxr_keyword">this</strong>);
 <a class="jxr_linenumber" name="63" href="#63">63</a>  		handler = <strong class="jxr_keyword">new</strong> DeletePhotosHandler(MAX_DELETE_TICKS, dispatchAsync, photos, tagManager);
-<a class="jxr_linenumber" name="64" href="#64">64</a>  		tag3 = <strong class="jxr_keyword">new</strong> TagDO();
+<a class="jxr_linenumber" name="64" href="#64">64</a>  		tag3 = <strong class="jxr_keyword">new</strong> TagEntity();
 <a class="jxr_linenumber" name="65" href="#65">65</a>  		tag3.setId(<span class="jxr_string">"3"</span>);
 <a class="jxr_linenumber" name="66" href="#66">66</a>  		tag3.setImportIssued(<strong class="jxr_keyword">true</strong>);
-<a class="jxr_linenumber" name="67" href="#67">67</a>  		tag = <strong class="jxr_keyword">new</strong> TagDO();
+<a class="jxr_linenumber" name="67" href="#67">67</a>  		tag = <strong class="jxr_keyword">new</strong> TagEntity();
 <a class="jxr_linenumber" name="68" href="#68">68</a>  		tag.setId(TAG_ID);
-<a class="jxr_linenumber" name="69" href="#69">69</a>  		photoA = <strong class="jxr_keyword">new</strong> PhotoDO();
+<a class="jxr_linenumber" name="69" href="#69">69</a>  		photoA = <strong class="jxr_keyword">new</strong> PhotoEntity();
 <a class="jxr_linenumber" name="70" href="#70">70</a>  		photoA.setTagList(tagIdListA);
-<a class="jxr_linenumber" name="71" href="#71">71</a>  		photoB = <strong class="jxr_keyword">new</strong> PhotoDO();
+<a class="jxr_linenumber" name="71" href="#71">71</a>  		photoB = <strong class="jxr_keyword">new</strong> PhotoEntity();
 <a class="jxr_linenumber" name="72" href="#72">72</a>  		photoB.setTagList(tagIdListB);
 <a class="jxr_linenumber" name="73" href="#73">73</a>  		photoInfoA = <strong class="jxr_keyword">new</strong> PhotoInfo(ID_A, <span class="jxr_string">""</span>, <strong class="jxr_keyword">new</strong> Date(10));
 <a class="jxr_linenumber" name="74" href="#74">74</a>  		photoInfoB = <strong class="jxr_keyword">new</strong> PhotoInfo(ID_B, <span class="jxr_string">""</span>, <strong class="jxr_keyword">new</strong> Date(100000));
@@ -102,20 +102,21 @@
 <a class="jxr_linenumber" name="92" href="#92">92</a>  <em class="jxr_javadoccomment">	 */</em>
 <a class="jxr_linenumber" name="93" href="#93">93</a>  	@Test
 <a class="jxr_linenumber" name="94" href="#94">94</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testExecute() <strong class="jxr_keyword">throws</strong> DispatchException {
-<a class="jxr_linenumber" name="95" href="#95">95</a>  		handler.execute(<strong class="jxr_keyword">new</strong> DeletePhotos(TAG_ID, infoList), <strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="96" href="#96">96</a>  		AssertJUnit.assertEquals(1, tag.getCachedPhotoList().size());
-<a class="jxr_linenumber" name="97" href="#97">97</a>  		verify(photos).delete(ID_A);
+<a class="jxr_linenumber" name="95" href="#95">95</a>  		AssertJUnit.assertEquals(2, tag.getCachedPhotoList().size());
+<a class="jxr_linenumber" name="96" href="#96">96</a>  		handler.execute(<strong class="jxr_keyword">new</strong> DeletePhotos(TAG_ID, infoList), <strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="97" href="#97">97</a>  		verify(photos).delete(photoA);
 <a class="jxr_linenumber" name="98" href="#98">98</a>  		verify(photos).getById(ID_A);
-<a class="jxr_linenumber" name="99" href="#99">99</a>  		verifyNoMoreInteractions(photos);
-<a class="jxr_linenumber" name="100" href="#100">100</a> 		verify(dispatchAsync).execute(nextCallCaptor.capture());
-<a class="jxr_linenumber" name="101" href="#101">101</a> 		AssertJUnit.assertEquals(TAG_ID, nextCallCaptor.getValue().getTagId());
-<a class="jxr_linenumber" name="102" href="#102">102</a> 		handler.execute(<strong class="jxr_keyword">new</strong> DeletePhotos(TAG_ID, infoList), <strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="103" href="#103">103</a> 		verifyNoMoreInteractions(dispatchAsync);
-<a class="jxr_linenumber" name="104" href="#104">104</a> 		verify(photos).getById(ID_B);
-<a class="jxr_linenumber" name="105" href="#105">105</a> 		verifyNoMoreInteractions(photos);
-<a class="jxr_linenumber" name="106" href="#106">106</a> 		AssertJUnit.assertEquals(1, tag.getCachedPhotoList().size());
-<a class="jxr_linenumber" name="107" href="#107">107</a> 	}
-<a class="jxr_linenumber" name="108" href="#108">108</a> }
+<a class="jxr_linenumber" name="99" href="#99">99</a>  		AssertJUnit.assertEquals(1, tag.getCachedPhotoList().size());
+<a class="jxr_linenumber" name="100" href="#100">100</a> 		verifyNoMoreInteractions(photos);
+<a class="jxr_linenumber" name="101" href="#101">101</a> 		verify(dispatchAsync).execute(nextCallCaptor.capture());
+<a class="jxr_linenumber" name="102" href="#102">102</a> 		AssertJUnit.assertEquals(TAG_ID, nextCallCaptor.getValue().getTagId());
+<a class="jxr_linenumber" name="103" href="#103">103</a> 		handler.execute(<strong class="jxr_keyword">new</strong> DeletePhotos(TAG_ID, infoList), <strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="104" href="#104">104</a> 		verifyNoMoreInteractions(dispatchAsync);
+<a class="jxr_linenumber" name="105" href="#105">105</a> 		verify(photos).getById(ID_B);
+<a class="jxr_linenumber" name="106" href="#106">106</a> 		verifyNoMoreInteractions(photos);
+<a class="jxr_linenumber" name="107" href="#107">107</a> 		AssertJUnit.assertEquals(1, tag.getCachedPhotoList().size());
+<a class="jxr_linenumber" name="108" href="#108">108</a> 	}
+<a class="jxr_linenumber" name="109" href="#109">109</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>
