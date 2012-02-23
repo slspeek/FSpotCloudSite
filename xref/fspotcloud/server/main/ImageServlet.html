@@ -45,7 +45,7 @@
 <a class="jxr_linenumber" name="35" href="#35">35</a>  			<strong class="jxr_keyword">throws</strong> ServletException, IOException {
 <a class="jxr_linenumber" name="36" href="#36">36</a>  		String id = request.getParameter(<span class="jxr_string">"id"</span>);
 <a class="jxr_linenumber" name="37" href="#37">37</a>  		<strong class="jxr_keyword">boolean</strong> thumb = (request.getParameter(<span class="jxr_string">"thumb"</span>) != <strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="38" href="#38">38</a>  		Photo photo = photoManager.getById(id);
+<a class="jxr_linenumber" name="38" href="#38">38</a>  		Photo photo = photoManager.find(id);
 <a class="jxr_linenumber" name="39" href="#39">39</a>  		byte[] imageData = thumb ? photo.getThumb() : photo.getImage();
 <a class="jxr_linenumber" name="40" href="#40">40</a>  		response.setContentType(<span class="jxr_string">"image/jpeg"</span>);
 <a class="jxr_linenumber" name="41" href="#41">41</a>  		setCacheExpireDate(response, 3600 * 24 * 365);

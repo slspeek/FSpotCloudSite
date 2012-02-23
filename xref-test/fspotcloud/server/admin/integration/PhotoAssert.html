@@ -30,11 +30,11 @@
 <a class="jxr_linenumber" name="20" href="#20">20</a>      Photos photos;
 <a class="jxr_linenumber" name="21" href="#21">21</a>  
 <a class="jxr_linenumber" name="22" href="#22">22</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> verifyPhotoRemoved(String id) {
-<a class="jxr_linenumber" name="23" href="#23">23</a>          Assert.assertNull(photos.getById(id));
+<a class="jxr_linenumber" name="23" href="#23">23</a>          Assert.assertNull(photos.find(id));
 <a class="jxr_linenumber" name="24" href="#24">24</a>      }
 <a class="jxr_linenumber" name="25" href="#25">25</a>  
 <a class="jxr_linenumber" name="26" href="#26">26</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> assertPhotoLoaded(String id) {
-<a class="jxr_linenumber" name="27" href="#27">27</a>          Assert.assertNotNull(photos.getById(id));
+<a class="jxr_linenumber" name="27" href="#27">27</a>          Assert.assertNotNull(photos.find(id));
 <a class="jxr_linenumber" name="28" href="#28">28</a>      }
 <a class="jxr_linenumber" name="29" href="#29">29</a>  
 <a class="jxr_linenumber" name="30" href="#30">30</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> assertPhotosRemoved(String... allIds) {

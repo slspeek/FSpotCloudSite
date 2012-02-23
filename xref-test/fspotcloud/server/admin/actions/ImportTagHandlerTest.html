@@ -53,7 +53,7 @@
 <a class="jxr_linenumber" name="43" href="#43">43</a>  		tag = <strong class="jxr_keyword">new</strong> TagEntity();
 <a class="jxr_linenumber" name="44" href="#44">44</a>  		tag.setId(TAG_ID);
 <a class="jxr_linenumber" name="45" href="#45">45</a>  		tag.setCount(COUNT);
-<a class="jxr_linenumber" name="46" href="#46">46</a>  		when(tagManager.getById(TAG_ID)).thenReturn(tag);
+<a class="jxr_linenumber" name="46" href="#46">46</a>  		when(tagManager.find(TAG_ID)).thenReturn(tag);
 <a class="jxr_linenumber" name="47" href="#47">47</a>  	}
 <a class="jxr_linenumber" name="48" href="#48">48</a>  
 <a class="jxr_linenumber" name="49" href="#49">49</a>  	@Test

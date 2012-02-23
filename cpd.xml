@@ -98,9 +98,65 @@ public class TagEntity implements Serializable, Tag {
 ]]>
 </codefragment>
 </duplication>
+<duplication lines="48" tokens="262">
+<file line="28" path="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/photo/CachedPhotoManagerBase.java"/>
+<file line="26" path="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/photo/PhotoManagerBase.java"/>
+<codefragment>
+<![CDATA[
+        super(entityType, emProvider);
+        this.entityManagerProvider = emProvider;
+    }
+
+    private void detach(Photo photo) {
+        List<String> tagList = photo.getTagList();
+        photo.setTagList(new ArrayList<String>(tagList));
+    }
+
+    @Override
+    public Photo find(String key) {
+        EntityManager em = entityManagerProvider.get();
+        em.getTransaction().begin();
+        Photo attachted = em.find(getEntityClass(), key);
+        if (attachted != null) {
+            detach(attachted);
+        }
+        em.getTransaction().commit();
+        return attachted;
+    }
+
+    @Override
+    public List<Photo> findAll(int max) {
+        EntityManager em = entityManagerProvider.get();
+        em.getTransaction().begin();
+        try {
+            Query query = em.createQuery("select c from "
+                    + getEntityClass().getName() + " AS c");
+            query.setMaxResults(max);
+            @SuppressWarnings("unchecked")
+            List<Photo> rs = (List<Photo>) query.getResultList();
+            List<Photo> result = new ArrayList<Photo>();
+            result.addAll(rs);
+            final List<Photo> all = result;
+            for (Photo photo : all) {
+                detach(photo);
+            }
+            em.getTransaction().commit();
+            return all;
+        } finally {
+            em.close();
+        }
+    }
+
+    protected abstract Photo newPhoto();
+
+    protected abstract Class<? extends Photo> getEntityClass();
+}
+]]>
+</codefragment>
+</duplication>
 <duplication lines="71" tokens="196">
 <file line="39" path="/home/steven/fspotcloud/model-jpa-gae/src/main/java/fspotcloud/model/jpa/gae/photo/PhotoEntity.java"/>
-<file line="38" path="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/fspotcloud/model/jpa/photo/PhotoEntity.java"/>
+<file line="39" path="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/fspotcloud/model/jpa/photo/PhotoEntity.java"/>
 <codefragment>
 <![CDATA[
     }
@@ -177,6 +233,94 @@ public class TagEntity implements Serializable, Tag {
 ]]>
 </codefragment>
 </duplication>
+<duplication lines="40" tokens="184">
+<file line="24" path="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/peerdatabase/CachedPeerDatabaseManagerBase.java"/>
+<file line="21" path="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/peerdatabase/PeerDatabaseManagerBase.java"/>
+<codefragment>
+<![CDATA[
+        super(entityType, entityManagerProvider);
+        this.entityManagerProvider = entityManagerProvider;
+    }
+
+    public T get() {
+        T peer;
+        peer = getInstance();
+        return peer;
+    }
+
+    private T getInstance() {
+        EntityManager pm = entityManagerProvider.get();
+        pm.getTransaction().begin();
+        T peerDatabase;
+        peerDatabase = (T) pm.find(getEntityClass(), DEFAULT_PEER_ID);
+        if (peerDatabase == null) {
+            log.info("Default peer not found, creating one.");
+            peerDatabase = newInstance();
+            peerDatabase.setId(DEFAULT_PEER_ID);
+            peerDatabase.setPeerPhotoCount(0);
+            peerDatabase.setPhotoCount(0);
+            peerDatabase.setTagCount(0);
+            peerDatabase.setPeerName("No given name");
+            peerDatabase.setPeerLastContact(new Date(0));
+            pm.persist(peerDatabase);
+        }
+        pm.getTransaction().commit();
+        return peerDatabase;
+    }
+
+    public void touchPeerContact() {
+        T dp = get();
+        dp.setPeerLastContact(new Date());
+        save(dp);
+    }
+
+    protected abstract T newInstance();
+
+    protected abstract Class<? extends PeerDatabase> getEntityClass();
+}
+]]>
+</codefragment>
+</duplication>
+<duplication lines="32" tokens="170">
+<file line="30" path="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/tag/CachedTagManagerBase.java"/>
+<file line="28" path="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/tag/TagManagerBase.java"/>
+<codefragment>
+<![CDATA[
+        super(entityType, emProvider);
+        this.emProvider = emProvider;
+        this.maxDelete = maxDelete;
+    }
+
+    @Override
+    public List<TagNode> getTags() {
+        List<TagNode> result = new ArrayList<TagNode>();
+        for (Tag tag : findAll(1000)) {
+            TagNode node = new TagNode();
+            node.setId(tag.getId());
+            node.setImportIssued(tag.isImportIssued());
+            node.setParentId(tag.getParentId());
+            node.setTagName(tag.getTagName());
+            node.setCount(tag.getCount());
+            SortedSet<PhotoInfo> photoList = tag.getCachedPhotoList();
+            if (photoList != null) {
+                node.setCachedPhotoList(new PhotoInfoStore(photoList));
+            } else {
+                throw new IllegalStateException(
+                        "photoList field of Tag should not be null");
+            }
+            result.add(node);
+        }
+
+        return result;
+    }
+
+    protected abstract Tag newTag();
+
+    protected abstract Class<? extends Tag> getEntityClass();
+}
+]]>
+</codefragment>
+</duplication>
 <duplication lines="49" tokens="138">
 <file line="24" path="/home/steven/fspotcloud/model-jpa-gae/src/main/java/fspotcloud/model/jpa/gae/peerdatabase/PeerDatabaseEntity.java"/>
 <file line="23" path="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/fspotcloud/model/jpa/peerdatabase/PeerDatabaseEntity.java"/>
@@ -234,8 +378,47 @@ public class TagEntity implements Serializable, Tag {
 ]]>
 </codefragment>
 </duplication>
+<duplication lines="12" tokens="136">
+<file line="25" path="/home/steven/fspotcloud/model-jpa-gae/src/main/java/fspotcloud/model/jpa/CachedModelModule.java"/>
+<file line="15" path="/home/steven/fspotcloud/model-jpa-gae/src/main/java/fspotcloud/model/jpa/ModelModule.java"/>
+<codefragment>
+<![CDATA[
+public class ModelModule extends AbstractModule {
+
+    @Override
+    protected void configure() {
+        bind(Photos.class).to(PhotoManager.class).in(Singleton.class);
+        bind(PeerDatabases.class).to(PeerDatabaseManager.class).in(
+                Singleton.class);
+        bind(Tags.class).to(TagManager.class).in(Singleton.class);
+        bind(Integer.class).annotatedWith(Names.named("maxDelete")).toInstance(new Integer(100));
+          bind(EntityManager.class).toProvider(EMProvider.class);
+        bind(String.class).annotatedWith(Names.named("persistence-unit")).toInstance("gae");
+        System.out.println("ModelModule configured.");
+]]>
+</codefragment>
+</duplication>
 <duplication lines="11" tokens="131">
 <file line="15" path="/home/steven/fspotcloud/model-jpa-gae/src/main/java/fspotcloud/model/jpa/ModelModule.java"/>
+<file line="15" path="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/fspotcloud/model/jpa/ModelModule.java"/>
+<codefragment>
+<![CDATA[
+public class ModelModule extends AbstractModule {
+
+    @Override
+    protected void configure() {
+        bind(Photos.class).to(PhotoManager.class).in(Singleton.class);
+        bind(PeerDatabases.class).to(PeerDatabaseManager.class).in(
+                Singleton.class);
+        bind(Tags.class).to(TagManager.class).in(Singleton.class);
+        bind(Integer.class).annotatedWith(Names.named("maxDelete")).toInstance(new Integer(100));
+        bind(EntityManager.class).toProvider(EMProvider.class);
+        bind(String.class).annotatedWith(Names.named("persistence-unit")).toInstance("derby");
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="128">
+<file line="25" path="/home/steven/fspotcloud/model-jpa-gae/src/main/java/fspotcloud/model/jpa/CachedModelModule.java"/>
 <file line="15" path="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/fspotcloud/model/jpa/ModelModule.java"/>
 <codefragment>
 <![CDATA[

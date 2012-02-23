@@ -66,7 +66,7 @@
 <a class="jxr_linenumber" name="56" href="#56">56</a>  
 <a class="jxr_linenumber" name="57" href="#57">57</a>  	@Override
 <a class="jxr_linenumber" name="58" href="#58">58</a>  	<strong class="jxr_keyword">public</strong> List&lt;String&gt; keysForTag(String tagId) {
-<a class="jxr_linenumber" name="59" href="#59">59</a>  		Tag tag = tagManager.getById(tagId);
+<a class="jxr_linenumber" name="59" href="#59">59</a>  		Tag tag = tagManager.find(tagId);
 <a class="jxr_linenumber" name="60" href="#60">60</a>  		List&lt;String&gt; result = <strong class="jxr_keyword">new</strong> ArrayList&lt;String&gt;();
 <a class="jxr_linenumber" name="61" href="#61">61</a>  		<strong class="jxr_keyword">for</strong> (PhotoInfo photo : tag.getCachedPhotoList()) {
 <a class="jxr_linenumber" name="62" href="#62">62</a>  			result.add(photo.getId());

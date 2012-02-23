@@ -53,7 +53,7 @@
 <a class="jxr_linenumber" name="43" href="#43">43</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> onSuccess(<a href="../../../../fspotcloud/shared/peer/rpc/actions/TagDataResult.html">TagDataResult</a> result) {
 <a class="jxr_linenumber" name="44" href="#44">44</a>  		<strong class="jxr_keyword">for</strong> (TagData data : result.getTagDataList()) {
 <a class="jxr_linenumber" name="45" href="#45">45</a>  			String keyName = data.getTagId();
-<a class="jxr_linenumber" name="46" href="#46">46</a>  			Tag tag = tagManager.getOrNew(keyName);
+<a class="jxr_linenumber" name="46" href="#46">46</a>  			Tag tag = tagManager.findOrNew(keyName);
 <a class="jxr_linenumber" name="47" href="#47">47</a>  			<strong class="jxr_keyword">int</strong> previousCount = tag.getCount();
 <a class="jxr_linenumber" name="48" href="#48">48</a>  			recieveTag(data, tag);
 <a class="jxr_linenumber" name="49" href="#49">49</a>  			tagManager.save(tag);

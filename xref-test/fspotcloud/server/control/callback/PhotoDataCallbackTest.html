@@ -70,8 +70,8 @@
 <a class="jxr_linenumber" name="60" href="#60">60</a>  		dataList = <strong class="jxr_keyword">new</strong> ArrayList&lt;PhotoData&gt;();
 <a class="jxr_linenumber" name="61" href="#61">61</a>  		dataList.add(data);
 <a class="jxr_linenumber" name="62" href="#62">62</a>  		result = <strong class="jxr_keyword">new</strong> PhotoDataResult(dataList);
-<a class="jxr_linenumber" name="63" href="#63">63</a>  		when(photoManager.getOrNew(PHOTO_ID)).thenReturn(photo1);
-<a class="jxr_linenumber" name="64" href="#64">64</a>  		when(tagManager.getById(TAG_ID)).thenReturn(tag1);
+<a class="jxr_linenumber" name="63" href="#63">63</a>  		when(photoManager.findOrNew(PHOTO_ID)).thenReturn(photo1);
+<a class="jxr_linenumber" name="64" href="#64">64</a>  		when(tagManager.find(TAG_ID)).thenReturn(tag1);
 <a class="jxr_linenumber" name="65" href="#65">65</a>  		peer = <strong class="jxr_keyword">new</strong> PeerDatabaseEntity();
 <a class="jxr_linenumber" name="66" href="#66">66</a>  		peerDatabases = mock(PeerDatabases.<strong class="jxr_keyword">class</strong>);
 <a class="jxr_linenumber" name="67" href="#67">67</a>  		when(peerDatabases.get()).thenReturn(peer);

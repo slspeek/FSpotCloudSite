@@ -50,7 +50,7 @@
 <a class="jxr_linenumber" name="40" href="#40">40</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../../fspotcloud/shared/dashboard/actions/VoidResult.html">VoidResult</a> execute(<a href="../../../../../fspotcloud/server/control/task/actions/intern/RemovePhotosFromTagAction.html">RemovePhotosFromTagAction</a> action,
 <a class="jxr_linenumber" name="41" href="#41">41</a>              ExecutionContext context) <strong class="jxr_keyword">throws</strong> DispatchException {
 <a class="jxr_linenumber" name="42" href="#42">42</a>  
-<a class="jxr_linenumber" name="43" href="#43">43</a>          <a href="../../../../../fspotcloud/server/model/api/Tag.html">Tag</a> tag = tagManager.getById(action.getTagId());
+<a class="jxr_linenumber" name="43" href="#43">43</a>          <a href="../../../../../fspotcloud/server/model/api/Tag.html">Tag</a> tag = tagManager.find(action.getTagId());
 <a class="jxr_linenumber" name="44" href="#44">44</a>          Iterator&lt;PhotoRemovedFromTag&gt; it = action.getToBoDeleted().iterator();
 <a class="jxr_linenumber" name="45" href="#45">45</a>          <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; MAX_DELETE_TICKS &amp;&amp; it.hasNext(); i++) {
 <a class="jxr_linenumber" name="46" href="#46">46</a>              <a href="../../../../../fspotcloud/shared/peer/rpc/actions/PhotoRemovedFromTag.html">PhotoRemovedFromTag</a> operation = it.next();
@@ -66,11 +66,11 @@
 <a class="jxr_linenumber" name="56" href="#56">56</a>  
 <a class="jxr_linenumber" name="57" href="#57">57</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> checkForDeletion(<a href="../../../../../fspotcloud/server/model/api/Tag.html">Tag</a> tag, String deleteTagId, String key,
 <a class="jxr_linenumber" name="58" href="#58">58</a>              Iterator&lt;PhotoRemovedFromTag&gt; it) {
-<a class="jxr_linenumber" name="59" href="#59">59</a>          <a href="../../../../../fspotcloud/server/model/api/Photo.html">Photo</a> photo = photos.getById(key);
+<a class="jxr_linenumber" name="59" href="#59">59</a>          <a href="../../../../../fspotcloud/server/model/api/Photo.html">Photo</a> photo = photos.find(key);
 <a class="jxr_linenumber" name="60" href="#60">60</a>          <strong class="jxr_keyword">if</strong> (photo != <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="61" href="#61">61</a>              <strong class="jxr_keyword">boolean</strong> moreImports = false;
 <a class="jxr_linenumber" name="62" href="#62">62</a>              <strong class="jxr_keyword">for</strong> (String tagId : photo.getTagList()) {
-<a class="jxr_linenumber" name="63" href="#63">63</a>                  <a href="../../../../../fspotcloud/server/model/api/Tag.html">Tag</a> tagRelated = tagManager.getById(tagId);
+<a class="jxr_linenumber" name="63" href="#63">63</a>                  <a href="../../../../../fspotcloud/server/model/api/Tag.html">Tag</a> tagRelated = tagManager.find(tagId);
 <a class="jxr_linenumber" name="64" href="#64">64</a>                  <strong class="jxr_keyword">if</strong> (tagRelated != <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="65" href="#65">65</a>                      <strong class="jxr_keyword">if</strong> (!deleteTagId.equals(tagId)) {
 <a class="jxr_linenumber" name="66" href="#66">66</a>                          <strong class="jxr_keyword">if</strong> (tagRelated.isImportIssued()) {
