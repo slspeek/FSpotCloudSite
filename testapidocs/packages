@@ -11,6 +11,7 @@ fspotcloud.model.api.test.tag
 fspotcloud.model.api.test.peerdatabase
 fspotcloud.model.api.test.photo
 fspotcloud.server.model.test
+fspotcloud.model.jpa.peerdatabase
 fspotcloud.server.model.test.gae
 fspotcloud.model.jpa.gae.peerdatabase
 fspotcloud.server.main.user

@@ -14,6 +14,7 @@ fspotcloud.model.api.test.peerdatabase
 fspotcloud.model.api.test.photo
 fspotcloud.model.api.test.tag
 fspotcloud.model.jpa.gae.peerdatabase
+fspotcloud.model.jpa.peerdatabase
 fspotcloud.peer
 fspotcloud.peer.db
 fspotcloud.peer.handlers

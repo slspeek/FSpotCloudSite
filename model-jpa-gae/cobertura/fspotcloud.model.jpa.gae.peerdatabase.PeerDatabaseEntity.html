@@ -48,7 +48,7 @@
   <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;16</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;<span class="comment"> */</span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;17</td>  <td class="nbHitsCovered">&nbsp;9</td>  <td class="src"><pre class="src">&nbsp;@Entity</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;17</td>  <td class="nbHitsCovered">&nbsp;12</td>  <td class="src"><pre class="src">&nbsp;@Entity</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;18</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;<span class="keyword">public</span> <span class="keyword">class</span> PeerDatabaseEntity <span class="keyword">implements</span> PeerDatabase, Serializable</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;19</td>  <td class="nbHits">&nbsp;</td>
@@ -81,10 +81,10 @@
   <td class="src"><pre class="src">&nbsp;    @Basic</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;33</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">long</span> photoCount;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;34</td>  <td class="nbHitsCovered">&nbsp;25</td>  <td class="src"><pre class="src">&nbsp;    @Basic</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;34</td>  <td class="nbHitsCovered">&nbsp;28</td>  <td class="src"><pre class="src">&nbsp;    @Basic</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;35</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> String thumbDimension = <span class="string">"512x384"</span>;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;36</td>  <td class="nbHitsCovered">&nbsp;25</td>  <td class="src"><pre class="src">&nbsp;    @Basic</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;36</td>  <td class="nbHitsCovered">&nbsp;28</td>  <td class="src"><pre class="src">&nbsp;    @Basic</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;37</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> String imageDimension = <span class="string">"1024x768"</span>;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;38</td>  <td class="nbHits">&nbsp;</td>
@@ -146,7 +146,7 @@
   <td class="src"><pre class="src">&nbsp;    @Override</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;71</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> String getId() {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;72</td>  <td class="nbHitsCovered">&nbsp;3</td>  <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> id;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;72</td>  <td class="nbHitsCovered">&nbsp;6</td>  <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> id;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;73</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;74</td>  <td class="nbHits">&nbsp;</td>
@@ -235,14 +235,14 @@
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;124</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    </pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;125</td>  <td class="nbHitsCovered">&nbsp;25</td>  <td class="src"><pre class="src">&nbsp;    @Basic</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;125</td>  <td class="nbHitsCovered">&nbsp;28</td>  <td class="src"><pre class="src">&nbsp;    @Basic</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;126</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    Blob cachedTagTreeData = <span class="keyword">null</span>;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;127</td>  <td class="nbHitsCovered">&nbsp;25</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">transient</span> <span class="keyword">private</span> ArrayList&lt;TagNode&gt; cachedTagTree = <span class="keyword">null</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;127</td>  <td class="nbHitsCovered">&nbsp;28</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">transient</span> <span class="keyword">private</span> ArrayList&lt;TagNode&gt; cachedTagTree = <span class="keyword">null</span>;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;128</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;129</td>  <td class="nbHitsCovered">&nbsp;25</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> PeerDatabaseEntity() {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;130</td>  <td class="nbHitsCovered">&nbsp;25</td>  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;129</td>  <td class="nbHitsCovered">&nbsp;28</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> PeerDatabaseEntity() {</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;130</td>  <td class="nbHitsCovered">&nbsp;28</td>  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;131</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;132</td>  <td class="nbHits">&nbsp;</td>
@@ -276,6 +276,6 @@
   <td class="src"><pre class="src">&nbsp;}</pre></td></tr>
 </table>
 
-<div class="footer">Report generated by <a href="http://cobertura.sourceforge.net/" target="_top">Cobertura</a> 1.9.4.1 on 24-2-12 0:30.</div>
+<div class="footer">Report generated by <a href="http://cobertura.sourceforge.net/" target="_top">Cobertura</a> 1.9.4.1 on 25-2-12 1:05.</div>
 </body>
 </html>

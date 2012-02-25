@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2012-02-24T00:24:30.936">
+<pmd version="4.2.5" timestamp="2012-02-25T01:02:04.862">
 <file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/admin/DashboardEntryPoint.java">
 <violation beginline="8" endline="8" begincolumn="1" endcolumn="53" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'com.google.gwt.user.client.ui.RootLayoutPanel'
@@ -138,6 +138,11 @@ Avoid unused imports such as 'javax.persistence.Query'
 <file name="/home/steven/fspotcloud/model-jpa-gae/src/main/java/fspotcloud/model/jpa/gae/tag/TagManager.java">
 <violation beginline="15" endline="15" begincolumn="33" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.model.jpa.gae.tag" class="TagManager" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'log'.
+</violation>
+</file>
+<file name="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/fspotcloud/model/jpa/peerdatabase/PeerDatabaseEntity.java">
+<violation beginline="3" endline="3" begincolumn="1" endcolumn="38" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.model.jpa.peerdatabase" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'com.google.common.base.Objects'
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/fspotcloud/model/jpa/peerdatabase/PeerDatabaseManager.java">
