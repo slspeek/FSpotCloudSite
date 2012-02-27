@@ -21,30 +21,29 @@
 <a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> com.thoughtworks.selenium.Selenium;
 <a class="jxr_linenumber" name="12" href="#12">12</a>  
 <a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../fspotcloud/test/TabularITest.html">TabularITest</a> {
-<a class="jxr_linenumber" name="14" href="#14">14</a>  	@Rule
-<a class="jxr_linenumber" name="15" href="#15">15</a>  	<strong class="jxr_keyword">public</strong> GuiceBerryRule guiceBerry = <strong class="jxr_keyword">new</strong> GuiceBerryRule(
-<a class="jxr_linenumber" name="16" href="#16">16</a>  			FSCGuiceberryEnv.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="17" href="#17">17</a>  
-<a class="jxr_linenumber" name="18" href="#18">18</a>  	@Inject
-<a class="jxr_linenumber" name="19" href="#19">19</a>  	Selenium selenium;
+<a class="jxr_linenumber" name="14" href="#14">14</a>  
+<a class="jxr_linenumber" name="15" href="#15">15</a>      @Rule
+<a class="jxr_linenumber" name="16" href="#16">16</a>      <strong class="jxr_keyword">public</strong> GuiceBerryRule guiceBerry = <strong class="jxr_keyword">new</strong> GuiceBerryRule(
+<a class="jxr_linenumber" name="17" href="#17">17</a>              SeleniumGuiceBerryEnv.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="18" href="#18">18</a>      @Inject
+<a class="jxr_linenumber" name="19" href="#19">19</a>      Selenium selenium;
 <a class="jxr_linenumber" name="20" href="#20">20</a>  
-<a class="jxr_linenumber" name="21" href="#21">21</a>  	@Test
-<a class="jxr_linenumber" name="22" href="#22">22</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testTabular() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="23" href="#23">23</a>  		selenium.open(<span class="jxr_string">"/"</span>);
-<a class="jxr_linenumber" name="24" href="#24">24</a>  		selenium.waitForPageToLoad(<span class="jxr_string">"30000"</span>);
-<a class="jxr_linenumber" name="25" href="#25">25</a>  		selenium.click(<span class="jxr_string">"gwt-debug-image-view-4x0"</span>);
-<a class="jxr_linenumber" name="26" href="#26">26</a>  		selenium.waitForPageToLoad(<span class="jxr_string">"30000"</span>);
-<a class="jxr_linenumber" name="27" href="#27">27</a>  		selenium.click(<span class="jxr_string">"gwt-debug-image-view-0x0"</span>);
-<a class="jxr_linenumber" name="28" href="#28">28</a>  		selenium.waitForPageToLoad(<span class="jxr_string">"30000"</span>);
+<a class="jxr_linenumber" name="21" href="#21">21</a>      @Test
+<a class="jxr_linenumber" name="22" href="#22">22</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testTabular() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="23" href="#23">23</a>          selenium.open(<span class="jxr_string">"/"</span>);
+<a class="jxr_linenumber" name="24" href="#24">24</a>          selenium.waitForPageToLoad(<span class="jxr_string">"30000"</span>);
+<a class="jxr_linenumber" name="25" href="#25">25</a>          selenium.click(<span class="jxr_string">"gwt-debug-image-view-4x0"</span>);
+<a class="jxr_linenumber" name="26" href="#26">26</a>          selenium.waitForPageToLoad(<span class="jxr_string">"30000"</span>);
+<a class="jxr_linenumber" name="27" href="#27">27</a>          selenium.click(<span class="jxr_string">"gwt-debug-image-view-0x0"</span>);
+<a class="jxr_linenumber" name="28" href="#28">28</a>          selenium.waitForPageToLoad(<span class="jxr_string">"30000"</span>);
 <a class="jxr_linenumber" name="29" href="#29">29</a>  
-<a class="jxr_linenumber" name="30" href="#30">30</a>  		selenium.open(<span class="jxr_string">"/#BasePlace:1:12:2:2:false:true"</span>);
-<a class="jxr_linenumber" name="31" href="#31">31</a>  		selenium.waitForPageToLoad(<span class="jxr_string">"30000"</span>);
-<a class="jxr_linenumber" name="32" href="#32">32</a>  		selenium.click(<span class="jxr_string">"gwt-debug-back"</span>);
-<a class="jxr_linenumber" name="33" href="#33">33</a>  		selenium.waitForPageToLoad(<span class="jxr_string">"30000"</span>);
-<a class="jxr_linenumber" name="34" href="#34">34</a>  		Assert.assertEquals(<span class="jxr_string">"image?id=6&amp;thumb"</span>, selenium
-<a class="jxr_linenumber" name="35" href="#35">35</a>  				.getAttribute(<span class="jxr_string">"//*[@id=\&quot;gwt-debug-image-view-0x1\&quot;]@src"</span>));
-<a class="jxr_linenumber" name="36" href="#36">36</a>  	}
-<a class="jxr_linenumber" name="37" href="#37">37</a>  }
+<a class="jxr_linenumber" name="30" href="#30">30</a>          selenium.open(<span class="jxr_string">"/#BasePlace:1:12:2:2:false:true"</span>);
+<a class="jxr_linenumber" name="31" href="#31">31</a>          selenium.waitForPageToLoad(<span class="jxr_string">"30000"</span>);
+<a class="jxr_linenumber" name="32" href="#32">32</a>          selenium.click(<span class="jxr_string">"gwt-debug-back"</span>);
+<a class="jxr_linenumber" name="33" href="#33">33</a>          selenium.waitForPageToLoad(<span class="jxr_string">"30000"</span>);
+<a class="jxr_linenumber" name="34" href="#34">34</a>          Assert.assertEquals(<span class="jxr_string">"image?id=6&amp;thumb"</span>, selenium.getAttribute(<span class="jxr_string">"//*[@id=\&quot;gwt-debug-image-view-0x1\&quot;]@src"</span>));
+<a class="jxr_linenumber" name="35" href="#35">35</a>      }
+<a class="jxr_linenumber" name="36" href="#36">36</a>  }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

@@ -25,13 +25,13 @@
 <a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../fspotcloud/test/IntersectionDeleteITest.html">IntersectionDeleteITest</a> {
 <a class="jxr_linenumber" name="16" href="#16">16</a>  	@Rule
 <a class="jxr_linenumber" name="17" href="#17">17</a>  	<strong class="jxr_keyword">public</strong> GuiceBerryRule guiceBerry = <strong class="jxr_keyword">new</strong> GuiceBerryRule(
-<a class="jxr_linenumber" name="18" href="#18">18</a>  			FSCGuiceberryEnv.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="18" href="#18">18</a>  			SeleniumGuiceBerryEnv.<strong class="jxr_keyword">class</strong>);
 <a class="jxr_linenumber" name="19" href="#19">19</a>  
 <a class="jxr_linenumber" name="20" href="#20">20</a>  	@Inject
 <a class="jxr_linenumber" name="21" href="#21">21</a>  	Selenium selenium;
 <a class="jxr_linenumber" name="22" href="#22">22</a>  
 <a class="jxr_linenumber" name="23" href="#23">23</a>  	@Inject
-<a class="jxr_linenumber" name="24" href="#24">24</a>  	LoginBot login;
+<a class="jxr_linenumber" name="24" href="#24">24</a>  	ILogin login;
 <a class="jxr_linenumber" name="25" href="#25">25</a>  	
 <a class="jxr_linenumber" name="26" href="#26">26</a>  	@Test
 <a class="jxr_linenumber" name="27" href="#27">27</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testImport() <strong class="jxr_keyword">throws</strong> Exception {
