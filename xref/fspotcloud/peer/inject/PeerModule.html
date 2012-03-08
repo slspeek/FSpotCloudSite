@@ -21,24 +21,22 @@
 <a class="jxr_linenumber" name="11" href="#11">11</a>  
 <a class="jxr_linenumber" name="12" href="#12">12</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../fspotcloud/peer/inject/PeerModule.html">PeerModule</a> <strong class="jxr_keyword">extends</strong> AbstractModule {
 <a class="jxr_linenumber" name="13" href="#13">13</a>  
-<a class="jxr_linenumber" name="14" href="#14">14</a>  	<strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> configure() {
-<a class="jxr_linenumber" name="15" href="#15">15</a>  		bind(Data.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="16" href="#16">16</a>  		bind(ImageData.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="17" href="#17">17</a>  		bind(String.<strong class="jxr_keyword">class</strong>).annotatedWith(Names.named(<span class="jxr_string">"JDBC URL"</span>))
-<a class="jxr_linenumber" name="18" href="#18">18</a>  				.toProvider(CopyDatabase.<strong class="jxr_keyword">class</strong>).in(Singleton.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="19" href="#19">19</a>  		bind(String.<strong class="jxr_keyword">class</strong>)
-<a class="jxr_linenumber" name="20" href="#20">20</a>  				.annotatedWith(Names.named(<span class="jxr_string">"DatabasePath"</span>))
-<a class="jxr_linenumber" name="21" href="#21">21</a>  				.toInstance(
-<a class="jxr_linenumber" name="22" href="#22">22</a>  						System.getProperty(
-<a class="jxr_linenumber" name="23" href="#23">23</a>  								<span class="jxr_string">"db"</span>,
-<a class="jxr_linenumber" name="24" href="#24">24</a>  								System.getProperty(<span class="jxr_string">"user.home"</span>)
-<a class="jxr_linenumber" name="25" href="#25">25</a>  										+ <span class="jxr_string">"/fspotcloud/peer/src/test/resources/photos.db"</span>));
-<a class="jxr_linenumber" name="26" href="#26">26</a>  		bind(String.<strong class="jxr_keyword">class</strong>).annotatedWith(Names.named(<span class="jxr_string">"WorkDir"</span>)).toInstance(
-<a class="jxr_linenumber" name="27" href="#27">27</a>  				System.getProperty(<span class="jxr_string">"user.dir"</span>));
-<a class="jxr_linenumber" name="28" href="#28">28</a>  		bind(Integer.<strong class="jxr_keyword">class</strong>).annotatedWith(Names.named(<span class="jxr_string">"stop port"</span>)).toInstance(
-<a class="jxr_linenumber" name="29" href="#29">29</a>  				Integer.valueOf(System.getProperty(<span class="jxr_string">"stop.port"</span>, <span class="jxr_string">"4444"</span>)));
-<a class="jxr_linenumber" name="30" href="#30">30</a>  	}
-<a class="jxr_linenumber" name="31" href="#31">31</a>  }
+<a class="jxr_linenumber" name="14" href="#14">14</a>      @Override
+<a class="jxr_linenumber" name="15" href="#15">15</a>      <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> configure() {
+<a class="jxr_linenumber" name="16" href="#16">16</a>          bind(Data.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="17" href="#17">17</a>          bind(ImageData.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="18" href="#18">18</a>          bind(String.<strong class="jxr_keyword">class</strong>).annotatedWith(Names.named(<span class="jxr_string">"JDBC URL"</span>)).toProvider(CopyDatabase.<strong class="jxr_keyword">class</strong>).in(Singleton.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="19" href="#19">19</a>          bind(String.<strong class="jxr_keyword">class</strong>).annotatedWith(Names.named(<span class="jxr_string">"DatabasePath"</span>)).toInstance(
+<a class="jxr_linenumber" name="20" href="#20">20</a>                  System.getProperty(
+<a class="jxr_linenumber" name="21" href="#21">21</a>                  <span class="jxr_string">"db"</span>,
+<a class="jxr_linenumber" name="22" href="#22">22</a>                  System.getProperty(<span class="jxr_string">"user.dir"</span>)
+<a class="jxr_linenumber" name="23" href="#23">23</a>                  + <span class="jxr_string">"/src/test/resources/photos.db"</span>));
+<a class="jxr_linenumber" name="24" href="#24">24</a>          bind(String.<strong class="jxr_keyword">class</strong>).annotatedWith(Names.named(<span class="jxr_string">"WorkDir"</span>)).toInstance(
+<a class="jxr_linenumber" name="25" href="#25">25</a>                  System.getProperty(<span class="jxr_string">"user.dir"</span>));
+<a class="jxr_linenumber" name="26" href="#26">26</a>          bind(Integer.<strong class="jxr_keyword">class</strong>).annotatedWith(Names.named(<span class="jxr_string">"stop port"</span>)).toInstance(
+<a class="jxr_linenumber" name="27" href="#27">27</a>                  Integer.valueOf(System.getProperty(<span class="jxr_string">"stop.port"</span>, <span class="jxr_string">"4444"</span>)));
+<a class="jxr_linenumber" name="28" href="#28">28</a>      }
+<a class="jxr_linenumber" name="29" href="#29">29</a>  }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

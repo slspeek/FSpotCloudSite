@@ -48,7 +48,7 @@
 <a class="jxr_linenumber" name="38" href="#38">38</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String photoDirectoryOverride;
 <a class="jxr_linenumber" name="39" href="#39">39</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String photoDirectoryOriginalPath;
 <a class="jxr_linenumber" name="40" href="#40">40</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <a href="../../../fspotcloud/peer/ImageData.html">ImageData</a> imageData = <strong class="jxr_keyword">new</strong> <a href="../../../fspotcloud/peer/ImageData.html">ImageData</a>();
-<a class="jxr_linenumber" name="41" href="#41">41</a>  	<strong class="jxr_keyword">private</strong> Connection connection;;
+<a class="jxr_linenumber" name="41" href="#41">41</a>  	<strong class="jxr_keyword">private</strong> Connection connection;
 <a class="jxr_linenumber" name="42" href="#42">42</a>  
 <a class="jxr_linenumber" name="43" href="#43">43</a>  	@Inject
 <a class="jxr_linenumber" name="44" href="#44">44</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../fspotcloud/peer/db/Data.html">Data</a>(@Named(<span class="jxr_string">"JDBC URL"</span>) String jdbcURL) {
@@ -264,7 +264,7 @@
 <a class="jxr_linenumber" name="254" href="#254">254</a> 			rs = stmt
 <a class="jxr_linenumber" name="255" href="#255">255</a> 					.executeQuery(<span class="jxr_string">"SELECT id, description, time, default_version_id "</span>
 <a class="jxr_linenumber" name="256" href="#256">256</a> 							+ <span class="jxr_string">"FROM photos WHERE id=\&quot;"</span> + photoId + <span class="jxr_string">"\&quot;"</span>);
-<a class="jxr_linenumber" name="257" href="#257">257</a> 			<strong class="jxr_keyword">while</strong> (rs.next()) {
+<a class="jxr_linenumber" name="257" href="#257">257</a> 			<strong class="jxr_keyword">if</strong> (rs.next()) {
 <a class="jxr_linenumber" name="258" href="#258">258</a> 				<strong class="jxr_keyword">int</strong> version = rs.getInt(4);
 <a class="jxr_linenumber" name="259" href="#259">259</a> 				<strong class="jxr_keyword">return</strong> version;
 <a class="jxr_linenumber" name="260" href="#260">260</a> 			}
