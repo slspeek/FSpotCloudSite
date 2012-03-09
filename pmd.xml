@@ -1,273 +1,231 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2012-03-08T01:25:22.179">
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/admin/DashboardEntryPoint.java">
-<violation beginline="8" endline="8" begincolumn="1" endcolumn="53" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+<pmd version="4.2.5" timestamp="2012-03-09T01:02:01.896">
+<file name="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/admin/DashboardEntryPoint.java">
+<violation beginline="8" endline="8" begincolumn="1" endcolumn="53" rule="UnusedImports" ruleset="Import Statement Rules" package="com.googlecode.fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'com.google.gwt.user.client.ui.RootLayoutPanel'
 </violation>
-<violation beginline="9" endline="9" begincolumn="1" endcolumn="44" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+<violation beginline="9" endline="9" begincolumn="1" endcolumn="44" rule="UnusedImports" ruleset="Import Statement Rules" package="com.googlecode.fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'com.google.gwt.user.client.ui.Widget'
 </violation>
-<violation beginline="12" endline="12" begincolumn="1" endcolumn="55" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'fspotcloud.client.admin.view.DashboardPresenter'
+<violation beginline="12" endline="12" begincolumn="1" endcolumn="70" rule="UnusedImports" ruleset="Import Statement Rules" package="com.googlecode.fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'com.googlecode.fspotcloud.client.admin.view.DashboardPresenter'
 </violation>
-<violation beginline="13" endline="13" begincolumn="1" endcolumn="54" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'fspotcloud.client.admin.view.api.DashboardView'
+<violation beginline="13" endline="13" begincolumn="1" endcolumn="69" rule="UnusedImports" ruleset="Import Statement Rules" package="com.googlecode.fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'com.googlecode.fspotcloud.client.admin.view.api.DashboardView'
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/admin/MVPSetup.java">
-<violation beginline="10" endline="10" begincolumn="1" endcolumn="41" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'com.google.gwt.user.client.Window'
-</violation>
-<violation beginline="11" endline="11" begincolumn="1" endcolumn="52" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'com.google.gwt.user.client.rpc.AsyncCallback'
-</violation>
-<violation beginline="20" endline="20" begincolumn="1" endcolumn="50" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'fspotcloud.shared.main.actions.GetUserInfo'
-</violation>
-<violation beginline="21" endline="21" begincolumn="1" endcolumn="47" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'fspotcloud.shared.main.actions.UserInfo'
-</violation>
-<violation beginline="30" endline="30" begincolumn="35" endcolumn="49" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.admin" class="MVPSetup" variable="userInformation" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<file name="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/admin/MVPSetup.java">
+<violation beginline="26" endline="26" begincolumn="35" endcolumn="49" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.googlecode.fspotcloud.client.admin" class="MVPSetup" variable="userInformation" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'userInformation'.
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/demo/DemoAction.java">
-<violation beginline="78" endline="78" begincolumn="36" endcolumn="41" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="fspotcloud.client.demo" class="DemoAction" method="run" variable="runner" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+<file name="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/demo/DemoAction.java">
+<violation beginline="78" endline="78" begincolumn="36" endcolumn="41" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="com.googlecode.fspotcloud.client.demo" class="DemoAction" method="run" variable="runner" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
 Avoid unused local variables such as 'runner'.
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/GlobalShortcutController.java">
-<violation beginline="41" endline="43" begincolumn="33" endcolumn="33" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="fspotcloud.client.main" class="GlobalShortcutController$Preview" method="onPreviewNativeEvent" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="3">
+<file name="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/main/GlobalShortcutController.java">
+<violation beginline="41" endline="43" begincolumn="33" endcolumn="33" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="com.googlecode.fspotcloud.client.main" class="GlobalShortcutController$Preview" method="onPreviewNativeEvent" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="3">
 These nested if statements could be combined
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/ImageRasterViewImpl.java">
-<violation beginline="47" endline="47" begincolumn="33" endcolumn="41" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.main.ui" class="ImageRasterViewImpl" variable="resources" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<file name="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/main/ui/ImageRasterViewImpl.java">
+<violation beginline="47" endline="47" begincolumn="33" endcolumn="41" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.googlecode.fspotcloud.client.main.ui" class="ImageRasterViewImpl" variable="resources" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'resources'.
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/SingleImageViewImpl.java">
-<violation beginline="42" endline="42" begincolumn="54" endcolumn="62" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.main.ui" class="SingleImageViewImpl" variable="presenter" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<file name="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/main/ui/SingleImageViewImpl.java">
+<violation beginline="42" endline="42" begincolumn="54" endcolumn="62" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.googlecode.fspotcloud.client.main.ui" class="SingleImageViewImpl" variable="presenter" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'presenter'.
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/UserButtonViewImpl.java">
-<violation beginline="15" endline="15" begincolumn="33" endcolumn="41" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.main.ui" class="UserButtonViewImpl" variable="resources" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<file name="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/main/ui/UserButtonViewImpl.java">
+<violation beginline="15" endline="15" begincolumn="33" endcolumn="41" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.googlecode.fspotcloud.client.main.ui" class="UserButtonViewImpl" variable="resources" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'resources'.
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/SingleImageActivity.java">
-<violation beginline="8" endline="8" begincolumn="1" endcolumn="48" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.main.view" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+<file name="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/main/view/SingleImageActivity.java">
+<violation beginline="8" endline="8" begincolumn="1" endcolumn="48" rule="UnusedImports" ruleset="Import Statement Rules" package="com.googlecode.fspotcloud.client.main.view" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'com.google.gwt.event.dom.client.KeyCodes'
 </violation>
-<violation beginline="12" endline="12" begincolumn="1" endcolumn="65" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.main.view" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'fspotcloud.client.main.event.application.ApplicationEvent'
+<violation beginline="12" endline="12" begincolumn="1" endcolumn="80" rule="UnusedImports" ruleset="Import Statement Rules" package="com.googlecode.fspotcloud.client.main.view" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'com.googlecode.fspotcloud.client.main.event.application.ApplicationEvent'
 </violation>
-<violation beginline="13" endline="13" begincolumn="1" endcolumn="64" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.main.view" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'fspotcloud.client.main.event.application.ApplicationType'
+<violation beginline="13" endline="13" begincolumn="1" endcolumn="79" rule="UnusedImports" ruleset="Import Statement Rules" package="com.googlecode.fspotcloud.client.main.view" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'com.googlecode.fspotcloud.client.main.event.application.ApplicationType'
 </violation>
-<violation beginline="16" endline="16" begincolumn="1" endcolumn="47" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.main.view" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'fspotcloud.client.view.action.KeyStroke'
+<violation beginline="16" endline="16" begincolumn="1" endcolumn="62" rule="UnusedImports" ruleset="Import Statement Rules" package="com.googlecode.fspotcloud.client.main.view" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'com.googlecode.fspotcloud.client.view.action.KeyStroke'
 </violation>
-<violation beginline="26" endline="26" begincolumn="26" endcolumn="33" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.main.view" class="SingleImageActivity" variable="eventBus" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<violation beginline="26" endline="26" begincolumn="26" endcolumn="33" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.googlecode.fspotcloud.client.main.view" class="SingleImageActivity" variable="eventBus" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'eventBus'.
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/SlideshowControlsPresenter.java">
-<violation beginline="15" endline="15" begincolumn="39" endcolumn="42" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.main.view" class="SlideshowControlsPresenter" variable="view" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<file name="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/main/view/SlideshowControlsPresenter.java">
+<violation beginline="15" endline="15" begincolumn="39" endcolumn="42" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.googlecode.fspotcloud.client.main.view" class="SlideshowControlsPresenter" variable="view" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'view'.
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/TreePresenterImpl.java">
-<violation beginline="56" endline="56" begincolumn="1" endcolumn="1" rule="EmptyStatementNotInLoop" ruleset="Basic Rules" package="fspotcloud.client.main.view" class="TreePresenterImpl" method="setModel" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyStatementNotInLoop" priority="3">
+<file name="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/main/view/TreePresenterImpl.java">
+<violation beginline="56" endline="56" begincolumn="1" endcolumn="1" rule="EmptyStatementNotInLoop" ruleset="Basic Rules" package="com.googlecode.fspotcloud.client.main.view" class="TreePresenterImpl" method="setModel" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyStatementNotInLoop" priority="3">
 An empty statement (semicolon) not part of a loop
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/UserButtonPresenterImpl.java">
-<violation beginline="16" endline="16" begincolumn="37" endcolumn="39" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.main.view" class="UserButtonPresenterImpl" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<file name="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/main/view/UserButtonPresenterImpl.java">
+<violation beginline="16" endline="16" begincolumn="37" endcolumn="39" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.googlecode.fspotcloud.client.main.view" class="UserButtonPresenterImpl" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'log'.
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/api/SingleImageView.java">
-<violation beginline="6" endline="6" begincolumn="1" endcolumn="47" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.client.main.view.api" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'fspotcloud.client.view.action.KeyStroke'
+<file name="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/main/view/api/SingleImageView.java">
+<violation beginline="6" endline="6" begincolumn="1" endcolumn="62" rule="UnusedImports" ruleset="Import Statement Rules" package="com.googlecode.fspotcloud.client.main.view.api" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'com.googlecode.fspotcloud.client.view.action.KeyStroke'
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/factory/TagPresenterFactoryImpl.java">
-<violation beginline="24" endline="24" begincolumn="60" endcolumn="79" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.main.view.factory" class="TagPresenterFactoryImpl" variable="buttonPanelPresenter" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<file name="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/main/view/factory/TagPresenterFactoryImpl.java">
+<violation beginline="24" endline="24" begincolumn="60" endcolumn="79" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.googlecode.fspotcloud.client.main.view.factory" class="TagPresenterFactoryImpl" variable="buttonPanelPresenter" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'buttonPanelPresenter'.
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/place/NavigatorImpl.java">
-<violation beginline="102" endline="102" begincolumn="25" endcolumn="25" rule="EmptyStatementNotInLoop" ruleset="Basic Rules" package="fspotcloud.client.place" class="NavigatorImpl" method="stepSize" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyStatementNotInLoop" priority="3">
+<file name="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/place/NavigatorImpl.java">
+<violation beginline="102" endline="102" begincolumn="25" endcolumn="25" rule="EmptyStatementNotInLoop" ruleset="Basic Rules" package="com.googlecode.fspotcloud.client.place" class="NavigatorImpl" method="stepSize" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyStatementNotInLoop" priority="3">
 An empty statement (semicolon) not part of a loop
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/place/SlideshowPlace.java">
-<violation beginline="38" endline="38" begincolumn="24" endcolumn="49" rule="OverrideBothEqualsAndHashcode" ruleset="Basic Rules" package="fspotcloud.client.place" class="SlideshowPlace" method="equals" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#OverrideBothEqualsAndHashcode" priority="3">
+<file name="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/place/SlideshowPlace.java">
+<violation beginline="38" endline="38" begincolumn="24" endcolumn="49" rule="OverrideBothEqualsAndHashcode" ruleset="Basic Rules" package="com.googlecode.fspotcloud.client.place" class="SlideshowPlace" method="equals" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#OverrideBothEqualsAndHashcode" priority="3">
 Ensure you override both equals() and hashCode()
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/view/action/UserActionImpl.java">
-<violation beginline="17" endline="17" begincolumn="37" endcolumn="39" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.client.view.action" class="UserActionImpl" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<file name="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/view/action/UserActionImpl.java">
+<violation beginline="17" endline="17" begincolumn="37" endcolumn="39" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.googlecode.fspotcloud.client.view.action" class="UserActionImpl" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'log'.
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/model-jpa-gae/src/main/java/fspotcloud/model/jpa/gae/peerdatabase/PeerDatabaseManager.java">
-<violation beginline="9" endline="9" begincolumn="1" endcolumn="22" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.model.jpa.gae.peerdatabase" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'java.util.Date'
-</violation>
-<violation beginline="16" endline="16" begincolumn="33" endcolumn="47" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.model.jpa.gae.peerdatabase" class="PeerDatabaseManager" variable="DEFAULT_PEER_ID" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<file name="/home/steven/fspotcloud/model-jpa-gae/src/main/java/com/googlecode/fspotcloud/model/jpa/gae/peerdatabase/PeerDatabaseManager.java">
+<violation beginline="15" endline="15" begincolumn="33" endcolumn="47" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.googlecode.fspotcloud.model.jpa.gae.peerdatabase" class="PeerDatabaseManager" variable="DEFAULT_PEER_ID" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'DEFAULT_PEER_ID'.
 </violation>
-<violation beginline="17" endline="17" begincolumn="33" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.model.jpa.gae.peerdatabase" class="PeerDatabaseManager" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<violation beginline="16" endline="16" begincolumn="33" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.googlecode.fspotcloud.model.jpa.gae.peerdatabase" class="PeerDatabaseManager" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'log'.
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/model-jpa-gae/src/main/java/fspotcloud/model/jpa/gae/photo/PhotoManager.java">
-<violation beginline="9" endline="9" begincolumn="1" endcolumn="27" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.model.jpa.gae.photo" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'java.util.ArrayList'
-</violation>
-<violation beginline="10" endline="10" begincolumn="1" endcolumn="22" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.model.jpa.gae.photo" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'java.util.List'
-</violation>
-<violation beginline="13" endline="13" begincolumn="1" endcolumn="31" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.model.jpa.gae.photo" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'javax.persistence.Query'
-</violation>
-</file>
-<file name="/home/steven/fspotcloud/model-jpa-gae/src/main/java/fspotcloud/model/jpa/gae/tag/TagManager.java">
-<violation beginline="15" endline="15" begincolumn="33" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.model.jpa.gae.tag" class="TagManager" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<file name="/home/steven/fspotcloud/model-jpa-gae/src/main/java/com/googlecode/fspotcloud/model/jpa/gae/tag/TagManager.java">
+<violation beginline="15" endline="15" begincolumn="33" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.googlecode.fspotcloud.model.jpa.gae.tag" class="TagManager" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'log'.
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/fspotcloud/model/jpa/ModelModule.java">
-<violation beginline="17" endline="17" begincolumn="33" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.model.jpa" class="ModelModule" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<file name="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/com/googlecode/fspotcloud/model/jpa/ModelModule.java">
+<violation beginline="17" endline="17" begincolumn="33" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.googlecode.fspotcloud.model.jpa" class="ModelModule" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'log'.
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/fspotcloud/model/jpa/peerdatabase/PeerDatabaseEntity.java">
-<violation beginline="3" endline="3" begincolumn="1" endcolumn="38" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.model.jpa.peerdatabase" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'com.google.common.base.Objects'
-</violation>
-</file>
-<file name="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/fspotcloud/model/jpa/peerdatabase/PeerDatabaseManager.java">
-<violation beginline="12" endline="12" begincolumn="33" endcolumn="47" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.model.jpa.peerdatabase" class="PeerDatabaseManager" variable="DEFAULT_PEER_ID" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<file name="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/com/googlecode/fspotcloud/model/jpa/peerdatabase/PeerDatabaseManager.java">
+<violation beginline="12" endline="12" begincolumn="33" endcolumn="47" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.googlecode.fspotcloud.model.jpa.peerdatabase" class="PeerDatabaseManager" variable="DEFAULT_PEER_ID" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'DEFAULT_PEER_ID'.
 </violation>
-<violation beginline="13" endline="13" begincolumn="33" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.model.jpa.peerdatabase" class="PeerDatabaseManager" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<violation beginline="13" endline="13" begincolumn="33" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.googlecode.fspotcloud.model.jpa.peerdatabase" class="PeerDatabaseManager" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'log'.
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/fspotcloud/model/jpa/tag/TagManager.java">
-<violation beginline="12" endline="12" begincolumn="33" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.model.jpa.tag" class="TagManager" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<file name="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/com/googlecode/fspotcloud/model/jpa/tag/TagManager.java">
+<violation beginline="12" endline="12" begincolumn="33" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.googlecode.fspotcloud.model.jpa.tag" class="TagManager" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'log'.
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/peerdatabase/CachedPeerDatabaseManagerBase.java">
-<violation beginline="5" endline="5" begincolumn="1" endcolumn="41" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.model.jpa.peerdatabase" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'fspotcloud.server.model.api.Photo'
-</violation>
-</file>
-<file name="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/tag/CachedTagManagerBase.java">
-<violation beginline="23" endline="23" begincolumn="33" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.model.jpa.tag" class="CachedTagManagerBase" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<file name="/home/steven/fspotcloud/model-jpa/src/main/java/com/googlecode/fspotcloud/model/jpa/tag/CachedTagManagerBase.java">
+<violation beginline="23" endline="23" begincolumn="33" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.googlecode.fspotcloud.model.jpa.tag" class="CachedTagManagerBase" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'log'.
 </violation>
-<violation beginline="24" endline="24" begincolumn="43" endcolumn="52" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.model.jpa.tag" class="CachedTagManagerBase" variable="emProvider" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<violation beginline="24" endline="24" begincolumn="43" endcolumn="52" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.googlecode.fspotcloud.model.jpa.tag" class="CachedTagManagerBase" variable="emProvider" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'emProvider'.
 </violation>
-<violation beginline="25" endline="25" begincolumn="27" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.model.jpa.tag" class="CachedTagManagerBase" variable="maxDelete" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<violation beginline="25" endline="25" begincolumn="27" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.googlecode.fspotcloud.model.jpa.tag" class="CachedTagManagerBase" variable="maxDelete" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'maxDelete'.
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/tag/TagManagerBase.java">
-<violation beginline="21" endline="21" begincolumn="33" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.model.jpa.tag" class="TagManagerBase" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<file name="/home/steven/fspotcloud/model-jpa/src/main/java/com/googlecode/fspotcloud/model/jpa/tag/TagManagerBase.java">
+<violation beginline="21" endline="21" begincolumn="33" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.googlecode.fspotcloud.model.jpa.tag" class="TagManagerBase" variable="log" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'log'.
 </violation>
-<violation beginline="22" endline="22" begincolumn="43" endcolumn="52" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.model.jpa.tag" class="TagManagerBase" variable="emProvider" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<violation beginline="22" endline="22" begincolumn="43" endcolumn="52" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.googlecode.fspotcloud.model.jpa.tag" class="TagManagerBase" variable="emProvider" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'emProvider'.
 </violation>
-<violation beginline="23" endline="23" begincolumn="27" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="fspotcloud.model.jpa.tag" class="TagManagerBase" variable="maxDelete" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+<violation beginline="23" endline="23" begincolumn="27" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.googlecode.fspotcloud.model.jpa.tag" class="TagManagerBase" variable="maxDelete" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'maxDelete'.
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/peer/src/main/java/fspotcloud/peer/db/Data.java">
-<violation beginline="82" endline="84" begincolumn="19" endcolumn="17" rule="EmptyFinallyBlock" ruleset="Basic Rules" package="fspotcloud.peer.db" class="Data" method="getCount" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyFinallyBlock" priority="3">
+<file name="/home/steven/fspotcloud/peer/src/main/java/com/googlecode/fspotcloud/peer/db/Data.java">
+<violation beginline="82" endline="84" begincolumn="19" endcolumn="17" rule="EmptyFinallyBlock" ruleset="Basic Rules" package="com.googlecode.fspotcloud.peer.db" class="Data" method="getCount" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyFinallyBlock" priority="3">
 Avoid empty finally blocks
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/control/callback/PhotoDataCallback.java">
-<violation beginline="4" endline="4" begincolumn="8" endcolumn="26" rule="DuplicateImports" ruleset="Import Statement Rules" package="fspotcloud.server.control.callback" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#DuplicateImports" priority="4">
+<file name="/home/steven/fspotcloud/server/src/main/java/com/googlecode/fspotcloud/server/control/callback/PhotoDataCallback.java">
+<violation beginline="4" endline="4" begincolumn="8" endcolumn="26" rule="DuplicateImports" ruleset="Import Statement Rules" package="com.googlecode.fspotcloud.server.control.callback" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#DuplicateImports" priority="4">
 Avoid duplicate imports such as 'java.util.ArrayList'
 </violation>
-<violation beginline="5" endline="5" begincolumn="8" endcolumn="21" rule="DuplicateImports" ruleset="Import Statement Rules" package="fspotcloud.server.control.callback" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#DuplicateImports" priority="4">
+<violation beginline="5" endline="5" begincolumn="8" endcolumn="21" rule="DuplicateImports" ruleset="Import Statement Rules" package="com.googlecode.fspotcloud.server.control.callback" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#DuplicateImports" priority="4">
 Avoid duplicate imports such as 'java.util.Date'
 </violation>
-<violation beginline="6" endline="6" begincolumn="8" endcolumn="21" rule="DuplicateImports" ruleset="Import Statement Rules" package="fspotcloud.server.control.callback" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#DuplicateImports" priority="4">
+<violation beginline="6" endline="6" begincolumn="8" endcolumn="21" rule="DuplicateImports" ruleset="Import Statement Rules" package="com.googlecode.fspotcloud.server.control.callback" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#DuplicateImports" priority="4">
 Avoid duplicate imports such as 'java.util.List'
 </violation>
-<violation beginline="7" endline="7" begincolumn="8" endcolumn="26" rule="DuplicateImports" ruleset="Import Statement Rules" package="fspotcloud.server.control.callback" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#DuplicateImports" priority="4">
-Avoid duplicate imports such as 'java.util.SortedSet'
-</violation>
-<violation beginline="7" endline="7" begincolumn="1" endcolumn="27" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.server.control.callback" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'java.util.SortedSet'
-</violation>
 </file>
-<file name="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/control/task/photodelete/DeletePhotosHandler.java">
-<violation beginline="63" endline="68" begincolumn="21" endcolumn="21" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="fspotcloud.server.control.task.photodelete" class="DeletePhotosHandler" method="checkForDeletion" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="3">
+<file name="/home/steven/fspotcloud/server/src/main/java/com/googlecode/fspotcloud/server/control/task/photodelete/DeletePhotosHandler.java">
+<violation beginline="63" endline="68" begincolumn="21" endcolumn="21" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="com.googlecode.fspotcloud.server.control.task.photodelete" class="DeletePhotosHandler" method="checkForDeletion" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="3">
 These nested if statements could be combined
 </violation>
-<violation beginline="64" endline="67" begincolumn="25" endcolumn="25" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="fspotcloud.server.control.task.photodelete" class="DeletePhotosHandler" method="checkForDeletion" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="3">
+<violation beginline="64" endline="67" begincolumn="25" endcolumn="25" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="com.googlecode.fspotcloud.server.control.task.photodelete" class="DeletePhotosHandler" method="checkForDeletion" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="3">
 These nested if statements could be combined
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/control/task/photoremove/RemovePhotosFromTagHandler.java">
-<violation beginline="65" endline="70" begincolumn="21" endcolumn="21" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="fspotcloud.server.control.task.photoremove" class="RemovePhotosFromTagHandler" method="checkForDeletion" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="3">
+<file name="/home/steven/fspotcloud/server/src/main/java/com/googlecode/fspotcloud/server/control/task/photoremove/RemovePhotosFromTagHandler.java">
+<violation beginline="65" endline="70" begincolumn="21" endcolumn="21" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="com.googlecode.fspotcloud.server.control.task.photoremove" class="RemovePhotosFromTagHandler" method="checkForDeletion" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="3">
 These nested if statements could be combined
 </violation>
-<violation beginline="66" endline="69" begincolumn="25" endcolumn="25" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="fspotcloud.server.control.task.photoremove" class="RemovePhotosFromTagHandler" method="checkForDeletion" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="3">
+<violation beginline="66" endline="69" begincolumn="25" endcolumn="25" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="com.googlecode.fspotcloud.server.control.task.photoremove" class="RemovePhotosFromTagHandler" method="checkForDeletion" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="3">
 These nested if statements could be combined
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/user-service-api/src/main/java/fspotcloud/user/AdminPermission.java">
-<violation beginline="7" endline="7" begincolumn="1" endcolumn="35" rule="ImportFromSamePackage" ruleset="Import Statement Rules" package="fspotcloud.user" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#ImportFromSamePackage" priority="3">
+<file name="/home/steven/fspotcloud/user-service-api/src/main/java/com/googlecode/fspotcloud/user/AdminPermission.java">
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="50" rule="ImportFromSamePackage" ruleset="Import Statement Rules" package="com.googlecode.fspotcloud.user" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#ImportFromSamePackage" priority="3">
 No need to import a type that lives in the same package
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/user-service-openid/src/main/java/fspotcloud/user/openid/OpenIdUserModule.java">
-<violation beginline="7" endline="7" begincolumn="1" endcolumn="40" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.user.openid" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+<file name="/home/steven/fspotcloud/user-service-openid/src/main/java/com/googlecode/fspotcloud/user/openid/OpenIdUserModule.java">
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="40" rule="UnusedImports" ruleset="Import Statement Rules" package="com.googlecode.fspotcloud.user.openid" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'com.google.inject.AbstractModule'
 </violation>
 </file>
-<file name="/home/steven/fspotcloud/user-service-openid/src/main/java/fspotcloud/user/openid/OpenIdUserService.java">
-<violation beginline="9" endline="9" begincolumn="1" endcolumn="47" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.user.openid" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+<file name="/home/steven/fspotcloud/user-service-openid/src/main/java/com/googlecode/fspotcloud/user/openid/OpenIdUserService.java">
+<violation beginline="9" endline="9" begincolumn="1" endcolumn="47" rule="UnusedImports" ruleset="Import Statement Rules" package="com.googlecode.fspotcloud.user.openid" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'com.google.inject.servlet.RequestScoped'
 </violation>
-<violation beginline="10" endline="10" begincolumn="1" endcolumn="47" rule="UnusedImports" ruleset="Import Statement Rules" package="fspotcloud.user.openid" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+<violation beginline="10" endline="10" begincolumn="1" endcolumn="47" rule="UnusedImports" ruleset="Import Statement Rules" package="com.googlecode.fspotcloud.user.openid" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'com.google.inject.servlet.SessionScoped'
 </violation>
 </file>
-<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/data/IndexingUtil.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/HideControlsAction.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/TreeFocusAction.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/event/DefaultActionFamily.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/ImageRasterViewImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/TagViewImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'presenter'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/ui/TimerImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/ButtonPanelPresenterImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'view'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/ImagePresenterImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'resources'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/SingleImageActivity.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/SlideshowControlsPresenter.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'slideshowPresenter'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/TagActivity.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/TagCell.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/factory/ButtonPanelPresenterProvider.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/factory/SingleImageViewActivityFactoryImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'controlsPresenter'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/fspotcloud/client/main/view/factory/TagPresenterFactoryImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/model-jpa-gae/src/main/java/fspotcloud/model/jpa/gae/photo/PhotoManager.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/fspotcloud/model/jpa/photo/PhotoManager.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/photo/CachedPhotoManagerBase.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/photo/PhotoManagerBase.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/admin/actions/CommandDeleteAllHandler.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/admin/actions/GetMetaDataHandler.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/control/task/photoupdate/PhotoUpdateHandler.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
-<suppressedviolation filename="/home/steven/fspotcloud/server/src/main/java/fspotcloud/server/inject/ServerServletModule.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/data/IndexingUtil.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/main/HideControlsAction.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/main/TreeFocusAction.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/main/event/DefaultActionFamily.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/main/ui/ImageRasterViewImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/main/ui/TagViewImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'presenter'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/main/ui/TimerImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/main/view/ButtonPanelPresenterImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'view'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/main/view/ImagePresenterImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'resources'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/main/view/SingleImageActivity.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/main/view/SlideshowControlsPresenter.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'slideshowPresenter'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/main/view/TagActivity.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/main/view/TagCell.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/main/view/factory/ButtonPanelPresenterProvider.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/main/view/factory/SingleImageViewActivityFactoryImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'controlsPresenter'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/main/view/factory/TagPresenterFactoryImpl.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/model-jpa-gae/src/main/java/com/googlecode/fspotcloud/model/jpa/gae/photo/PhotoManager.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/com/googlecode/fspotcloud/model/jpa/photo/PhotoManager.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/model-jpa/src/main/java/com/googlecode/fspotcloud/model/jpa/photo/CachedPhotoManagerBase.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/model-jpa/src/main/java/com/googlecode/fspotcloud/model/jpa/photo/PhotoManagerBase.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/server/src/main/java/com/googlecode/fspotcloud/server/admin/actions/CommandDeleteAllHandler.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/server/src/main/java/com/googlecode/fspotcloud/server/admin/actions/GetMetaDataHandler.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/server/src/main/java/com/googlecode/fspotcloud/server/control/task/photoupdate/PhotoUpdateHandler.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
+<suppressedviolation filename="/home/steven/fspotcloud/server/src/main/java/com/googlecode/fspotcloud/server/inject/ServerServletModule.java" suppressiontype="annotation" msg="Avoid unused private fields such as 'log'." usermsg=""/>
 </pmd>

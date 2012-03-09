@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pmd-cpd>
 <duplication lines="48" tokens="262">
-<file line="28" path="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/photo/CachedPhotoManagerBase.java"/>
-<file line="26" path="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/photo/PhotoManagerBase.java"/>
+<file line="28" path="/home/steven/fspotcloud/model-jpa/src/main/java/com/googlecode/fspotcloud/model/jpa/photo/CachedPhotoManagerBase.java"/>
+<file line="26" path="/home/steven/fspotcloud/model-jpa/src/main/java/com/googlecode/fspotcloud/model/jpa/photo/PhotoManagerBase.java"/>
 <codefragment>
 <![CDATA[
         super(entityType, emProvider);
@@ -57,8 +57,8 @@
 </codefragment>
 </duplication>
 <duplication lines="71" tokens="196">
-<file line="39" path="/home/steven/fspotcloud/model-jpa-gae/src/main/java/fspotcloud/model/jpa/gae/photo/PhotoEntity.java"/>
-<file line="39" path="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/fspotcloud/model/jpa/photo/PhotoEntity.java"/>
+<file line="39" path="/home/steven/fspotcloud/model-jpa-gae/src/main/java/com/googlecode/fspotcloud/model/jpa/gae/photo/PhotoEntity.java"/>
+<file line="39" path="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/com/googlecode/fspotcloud/model/jpa/photo/PhotoEntity.java"/>
 <codefragment>
 <![CDATA[
     }
@@ -136,8 +136,8 @@
 </codefragment>
 </duplication>
 <duplication lines="40" tokens="184">
-<file line="24" path="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/peerdatabase/CachedPeerDatabaseManagerBase.java"/>
-<file line="21" path="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/peerdatabase/PeerDatabaseManagerBase.java"/>
+<file line="23" path="/home/steven/fspotcloud/model-jpa/src/main/java/com/googlecode/fspotcloud/model/jpa/peerdatabase/CachedPeerDatabaseManagerBase.java"/>
+<file line="21" path="/home/steven/fspotcloud/model-jpa/src/main/java/com/googlecode/fspotcloud/model/jpa/peerdatabase/PeerDatabaseManagerBase.java"/>
 <codefragment>
 <![CDATA[
         super(entityType, entityManagerProvider);
@@ -184,8 +184,8 @@
 </codefragment>
 </duplication>
 <duplication lines="67" tokens="183">
-<file line="34" path="/home/steven/fspotcloud/model-jpa-gae/src/main/java/fspotcloud/model/jpa/gae/tag/TagEntity.java"/>
-<file line="33" path="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/fspotcloud/model/jpa/tag/TagEntity.java"/>
+<file line="34" path="/home/steven/fspotcloud/model-jpa-gae/src/main/java/com/googlecode/fspotcloud/model/jpa/gae/tag/TagEntity.java"/>
+<file line="33" path="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/com/googlecode/fspotcloud/model/jpa/tag/TagEntity.java"/>
 <codefragment>
 <![CDATA[
     private byte[] photoListData = SerializationUtils.serialize(new TreeSet<PhotoInfo>());
@@ -259,8 +259,8 @@
 </codefragment>
 </duplication>
 <duplication lines="32" tokens="170">
-<file line="30" path="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/tag/CachedTagManagerBase.java"/>
-<file line="28" path="/home/steven/fspotcloud/model-jpa/src/main/java/fspotcloud/model/jpa/tag/TagManagerBase.java"/>
+<file line="30" path="/home/steven/fspotcloud/model-jpa/src/main/java/com/googlecode/fspotcloud/model/jpa/tag/CachedTagManagerBase.java"/>
+<file line="28" path="/home/steven/fspotcloud/model-jpa/src/main/java/com/googlecode/fspotcloud/model/jpa/tag/TagManagerBase.java"/>
 <codefragment>
 <![CDATA[
         super(entityType, emProvider);
@@ -299,8 +299,8 @@
 </codefragment>
 </duplication>
 <duplication lines="48" tokens="138">
-<file line="24" path="/home/steven/fspotcloud/model-jpa-gae/src/main/java/fspotcloud/model/jpa/gae/peerdatabase/PeerDatabaseEntity.java"/>
-<file line="24" path="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/fspotcloud/model/jpa/peerdatabase/PeerDatabaseEntity.java"/>
+<file line="24" path="/home/steven/fspotcloud/model-jpa-gae/src/main/java/com/googlecode/fspotcloud/model/jpa/gae/peerdatabase/PeerDatabaseEntity.java"/>
+<file line="23" path="/home/steven/fspotcloud/model-jpa-j2ee/src/main/java/com/googlecode/fspotcloud/model/jpa/peerdatabase/PeerDatabaseEntity.java"/>
 <codefragment>
 <![CDATA[
     @Basic
