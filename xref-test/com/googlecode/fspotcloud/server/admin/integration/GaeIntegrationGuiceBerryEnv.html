@@ -140,8 +140,8 @@
 <a class="jxr_linenumber" name="130" href="#130">130</a>         bind(String.<strong class="jxr_keyword">class</strong>).annotatedWith(Names.named(<span class="jxr_string">"DatabasePath"</span>)).toInstance(
 <a class="jxr_linenumber" name="131" href="#131">131</a>                 System.getProperty(
 <a class="jxr_linenumber" name="132" href="#132">132</a>                 <span class="jxr_string">"db"</span>,
-<a class="jxr_linenumber" name="133" href="#133">133</a>                 System.getProperty(<span class="jxr_string">"user.home"</span>)
-<a class="jxr_linenumber" name="134" href="#134">134</a>                 + <span class="jxr_string">"/fspotcloud/peer/src/test/resources/photos.db"</span>));
+<a class="jxr_linenumber" name="133" href="#133">133</a>                 System.getProperty(<span class="jxr_string">"user.dir"</span>)
+<a class="jxr_linenumber" name="134" href="#134">134</a>                 + <span class="jxr_string">"/../peer/src/test/resources/photos.db"</span>));
 <a class="jxr_linenumber" name="135" href="#135">135</a>         bind(String.<strong class="jxr_keyword">class</strong>).annotatedWith(Names.named(<span class="jxr_string">"WorkDir"</span>)).toInstance(
 <a class="jxr_linenumber" name="136" href="#136">136</a>                 System.getProperty(<span class="jxr_string">"user.dir"</span>));
 <a class="jxr_linenumber" name="137" href="#137">137</a>         bind(Integer.<strong class="jxr_keyword">class</strong>).annotatedWith(Names.named(<span class="jxr_string">"stop port"</span>)).toInstance(

@@ -15,8 +15,8 @@
 <a class="jxr_linenumber" name="5" href="#5">5</a>   <strong class="jxr_keyword">import</strong> net.customware.gwt.dispatch.shared.ActionException;
 <a class="jxr_linenumber" name="6" href="#6">6</a>   <strong class="jxr_keyword">import</strong> net.customware.gwt.dispatch.shared.DispatchException;
 <a class="jxr_linenumber" name="7" href="#7">7</a>   
-<a class="jxr_linenumber" name="8" href="#8">8</a>   <strong class="jxr_keyword">import</strong> com.google.gwt.user.client.rpc.AsyncCallback;
-<a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> com.google.inject.Inject;
+<a class="jxr_linenumber" name="8" href="#8">8</a>   <strong class="jxr_keyword">import</strong> com.google.inject.Inject;
+<a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> com.googlecode.botdispatch.SerializableAsyncCallback;
 <a class="jxr_linenumber" name="10" href="#10">10</a>  
 <a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> com.googlecode.botdispatch.controller.dispatch.ControllerDispatchAsync;
 <a class="jxr_linenumber" name="12" href="#12">12</a>  <strong class="jxr_keyword">import</strong> com.googlecode.fspotcloud.server.control.callback.PeerMetaDataCallback;
@@ -44,7 +44,7 @@
 <a class="jxr_linenumber" name="34" href="#34">34</a>          adminPermission.chechAdminPermission();
 <a class="jxr_linenumber" name="35" href="#35">35</a>          <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="36" href="#36">36</a>              <a href="../../../../../../com/googlecode/fspotcloud/shared/peer/rpc/actions/GetPeerMetaData.html">GetPeerMetaData</a> metaAction = <strong class="jxr_keyword">new</strong> <a href="../../../../../../com/googlecode/fspotcloud/shared/peer/rpc/actions/GetPeerMetaData.html">GetPeerMetaData</a>();
-<a class="jxr_linenumber" name="37" href="#37">37</a>              AsyncCallback&lt;PeerMetaDataResult&gt; callback = <strong class="jxr_keyword">new</strong> <a href="../../../../../../com/googlecode/fspotcloud/server/control/callback/PeerMetaDataCallback.html">PeerMetaDataCallback</a>(<strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="37" href="#37">37</a>              SerializableAsyncCallback&lt;PeerMetaDataResult&gt; callback = <strong class="jxr_keyword">new</strong> <a href="../../../../../../com/googlecode/fspotcloud/server/control/callback/PeerMetaDataCallback.html">PeerMetaDataCallback</a>(<strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>);
 <a class="jxr_linenumber" name="38" href="#38">38</a>              dispatch.execute(metaAction, callback);
 <a class="jxr_linenumber" name="39" href="#39">39</a>          } <strong class="jxr_keyword">catch</strong> (Exception e) {
 <a class="jxr_linenumber" name="40" href="#40">40</a>              <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> ActionException(e);

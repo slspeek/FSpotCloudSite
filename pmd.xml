@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2012-03-09T01:02:01.896">
+<pmd version="4.2.5" timestamp="2012-04-04T23:59:43.516">
 <file name="/home/steven/fspotcloud/client/src/main/java/com/googlecode/fspotcloud/client/admin/DashboardEntryPoint.java">
 <violation beginline="8" endline="8" begincolumn="1" endcolumn="53" rule="UnusedImports" ruleset="Import Statement Rules" package="com.googlecode.fspotcloud.client.admin" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'com.google.gwt.user.client.ui.RootLayoutPanel'
@@ -160,13 +160,13 @@ Avoid empty finally blocks
 </violation>
 </file>
 <file name="/home/steven/fspotcloud/server/src/main/java/com/googlecode/fspotcloud/server/control/callback/PhotoDataCallback.java">
-<violation beginline="4" endline="4" begincolumn="8" endcolumn="26" rule="DuplicateImports" ruleset="Import Statement Rules" package="com.googlecode.fspotcloud.server.control.callback" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#DuplicateImports" priority="4">
+<violation beginline="3" endline="3" begincolumn="8" endcolumn="26" rule="DuplicateImports" ruleset="Import Statement Rules" package="com.googlecode.fspotcloud.server.control.callback" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#DuplicateImports" priority="4">
 Avoid duplicate imports such as 'java.util.ArrayList'
 </violation>
-<violation beginline="5" endline="5" begincolumn="8" endcolumn="21" rule="DuplicateImports" ruleset="Import Statement Rules" package="com.googlecode.fspotcloud.server.control.callback" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#DuplicateImports" priority="4">
+<violation beginline="4" endline="4" begincolumn="8" endcolumn="21" rule="DuplicateImports" ruleset="Import Statement Rules" package="com.googlecode.fspotcloud.server.control.callback" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#DuplicateImports" priority="4">
 Avoid duplicate imports such as 'java.util.Date'
 </violation>
-<violation beginline="6" endline="6" begincolumn="8" endcolumn="21" rule="DuplicateImports" ruleset="Import Statement Rules" package="com.googlecode.fspotcloud.server.control.callback" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#DuplicateImports" priority="4">
+<violation beginline="5" endline="5" begincolumn="8" endcolumn="21" rule="DuplicateImports" ruleset="Import Statement Rules" package="com.googlecode.fspotcloud.server.control.callback" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#DuplicateImports" priority="4">
 Avoid duplicate imports such as 'java.util.List'
 </violation>
 </file>
